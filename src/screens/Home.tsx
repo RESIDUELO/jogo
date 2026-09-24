@@ -84,9 +84,14 @@ export function Home() {
             ⚔️ JOGAR
           </Btn>
           {online.backend && (
-            <button onClick={() => store.nav({ name: 'account' })} className="w-full text-center text-xs mt-3 text-sky-300">
-              {online.account ? `🌐 Online como ${online.profile?.name ?? player.name}${online.account.isGuest ? ' (visitante)' : ''}` : '🌐 Jogue online: entre como visitante ou crie uma conta'}
-            </button>
+            <>
+              <Btn big className="w-full mt-3 text-2xl py-5" onClick={() => store.nav(online.account ? { name: 'play' } : { name: 'account' })}>
+                🌐 JOGAR ONLINE
+              </Btn>
+              <button onClick={() => store.nav({ name: 'account' })} className="w-full text-center text-xs mt-2 text-sky-300">
+                {online.account ? `Online como ${online.profile?.name ?? player.name}${online.account.isGuest ? ' (visitante)' : ''}` : 'Entre como visitante ou crie uma conta'}
+              </button>
+            </>
           )}
           <div className="text-center text-[11px] text-white/40 mt-2">{fmtInt(store.cards.length)} flashcards</div>
         </div>
