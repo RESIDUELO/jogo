@@ -1,22 +1,24 @@
 // Backend online SIMULADO (só para desenvolvimento/testes): "servidor" em
 // localStorage, compartilhado entre abas/iframes da mesma origem. Ativado com
 // ?online=mock na URL; ?slot=A|B separa sessões para simular dois jogadores.
-import type { Account, OnlineBackend, OnlineMatchRow, OnlineProfile } from './types';
+import { CHALLENGE_TTL_MS, type Account, type Challenge, type LobbyEntry, type OnlineBackend, type OnlineMatchRow, type OnlineProfile } from './types';
 
 interface Db {
   accounts: Record<string, { id: string; password: string }>;
   profiles: Record<string, OnlineProfile>;
   matches: Record<string, OnlineMatchRow>;
-  queue: Record<string, { rating: number; key: string; config: unknown; ranked: boolean; match: string | null; created: number; seen: number }>;
+  lobby: Record<string, LobbyEntry>;
+  challenges: Record<string, Challenge>;
 }
 const DB_KEY = 'mock.db';
 const EV = 'mock-db-change';
 
 function load(): Db {
   try {
-    return JSON.parse(localStorage.getItem(DB_KEY) || '') as Db;
+    const db = JSON.parse(localStorage.getItem(DB_KEY) || '') as Db;
+    return { ...db, lobby: db.lobby ?? {}, challenges: db.challenges ?? {} };
   } catch {
-    return { accounts: {}, profiles: {}, matches: {}, queue: {} };
+    return { accounts: {}, profiles: {}, matches: {}, lobby: {}, challenges: {} };
   }
 }
 function save(db: Db) {
@@ -124,39 +126,92 @@ export function createMockBackend(slot: string): OnlineBackend {
         .sort((a, b) => b[order] - a[order])
         .slice(0, limit);
     },
-    async findMatch(setup, key, rating, window, ranked) {
-      await delay();
+    async lobbyEnter(p, ranked) {
       const a = need();
       const db = load();
-      const mine = db.queue[a.id];
-      if (mine?.match) {
-        const m = mine.match;
-        delete db.queue[a.id];
-        save(db);
-        return m;
-      }
-      const t = Date.now();
-      const cand = Object.entries(db.queue)
-        .filter(([uid, q]) => uid !== a.id && q.key === key && !q.match && Math.abs(q.rating - rating) <= window && t - q.seen < 15000)
-        .sort((x, y) => x[1].created - y[1].created)[0];
-      if (cand) {
-        const mid = id();
-        db.matches[mid] = { id: mid, code: null, status: 'active', ranked, config: setup, player_a: cand[0], player_b: a.id, state: null, version: 0, updated_at: now() };
-        db.queue[cand[0]].match = mid;
-        delete db.queue[a.id];
-        save(db);
-        return mid;
-      }
-      db.queue[a.id] = { rating, key, config: setup, ranked, match: null, created: mine && mine.key === key ? mine.created : t, seen: t };
+      db.lobby[a.id] = { user_id: a.id, name: p.name, avatar: p.avatar, level: p.level, rating: p.rating, ranked, is_guest: p.isGuest, seen_at: now() };
       save(db);
-      return null;
     },
-    async leaveQueue() {
+    async lobbyLeave() {
       const a = me();
       if (!a) return;
       const db = load();
-      delete db.queue[a.id];
+      delete db.lobby[a.id];
       save(db);
+    },
+    async lobbyList(ranked) {
+      await delay();
+      const a = me();
+      const t = Date.now();
+      return Object.values(load().lobby).filter((l) => l.user_id !== a?.id && l.ranked === ranked && t - Date.parse(l.seen_at) < 20_000);
+    },
+    async sendChallenge(to, setup, ranked) {
+      await delay();
+      const a = need();
+      const db = load();
+      const mine = db.lobby[a.id];
+      const target = db.lobby[to];
+      if (!mine) throw new Error('Entre na busca de adversário primeiro');
+      if (!target || Date.now() - Date.parse(target.seen_at) > 20_000) throw new Error('Essa pessoa não está mais disponível');
+      for (const c of Object.values(db.challenges)) {
+        if (c.from_id === a.id && c.status === 'pending') {
+          c.status = 'cancelled';
+          if (db.matches[c.match_id]) db.matches[c.match_id].status = 'abandoned';
+        }
+      }
+      const mid = id();
+      db.matches[mid] = { id: mid, code: null, status: 'waiting', ranked, config: setup, player_a: a.id, player_b: null, state: null, version: 0, updated_at: now() };
+      const cid = id();
+      db.challenges[cid] = { id: cid, from_id: a.id, to_id: to, from_name: mine.name, from_avatar: mine.avatar, from_level: mine.level, from_rating: mine.rating, match_id: mid, setup, ranked, status: 'pending', created_at: now() };
+      save(db);
+      return cid;
+    },
+    async getChallenge(cid) {
+      return load().challenges[cid] ?? null;
+    },
+    async myChallenges() {
+      await delay();
+      const a = me();
+      const t = Date.now();
+      return Object.values(load().challenges).filter((c) => c.to_id === a?.id && c.status === 'pending' && t - Date.parse(c.created_at) < CHALLENGE_TTL_MS);
+    },
+    async answerChallenge(cid, accept) {
+      await delay();
+      const a = need();
+      const db = load();
+      const c = db.challenges[cid];
+      if (!c || c.to_id !== a.id) throw new Error('Convite não encontrado');
+      if (c.status !== 'pending' || Date.now() - Date.parse(c.created_at) > CHALLENGE_TTL_MS) throw new Error('Esse convite não vale mais');
+      const m = db.matches[c.match_id];
+      if (!accept) {
+        c.status = 'declined';
+        if (m?.status === 'waiting') m.status = 'abandoned';
+        save(db);
+        return null;
+      }
+      if (!m || m.status !== 'waiting' || m.player_b) throw new Error('Esse convite não vale mais');
+      Object.assign(m, { player_b: a.id, status: 'active', updated_at: now() });
+      c.status = 'accepted';
+      for (const o of Object.values(db.challenges)) {
+        if (o.to_id === a.id && o.status === 'pending') {
+          o.status = 'declined';
+          if (db.matches[o.match_id]) db.matches[o.match_id].status = 'abandoned';
+        }
+      }
+      delete db.lobby[a.id];
+      delete db.lobby[c.from_id];
+      save(db);
+      return m.id;
+    },
+    async cancelChallenge(cid) {
+      const a = need();
+      const db = load();
+      const c = db.challenges[cid];
+      if (c && c.from_id === a.id && c.status === 'pending') {
+        c.status = 'cancelled';
+        if (db.matches[c.match_id]?.status === 'waiting') db.matches[c.match_id].status = 'abandoned';
+        save(db);
+      }
     },
     async createInvite(setup) {
       const a = need();

@@ -1,15 +1,18 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { sfx } from '../audio/sfx';
 import { BOTS, BOT_TIERS, type BotTier } from '../data/bots';
+import { CAT } from '../data/categories';
+import { COSMETIC } from '../data/shop';
 import { LEAGUES } from '../data/progression';
 import { configFor } from '../engine/match';
-import { DEFAULT_SETUP, inTopics, setupAreas, TIME_OPTIONS } from '../engine/cards';
+import { DEFAULT_SETUP, inTopics, setupAreas, TIME_OPTIONS, topicLabel } from '../engine/cards';
 import { leagueFor, levelFromXp, nextLeague } from '../engine/progression';
 import { closestBot } from '../services/matchmaking';
-import { setupKey } from '../services/online';
+import { CHALLENGE_TTL_MS, type Challenge, type LobbyEntry, type LobbyMe } from '../services/online';
 import { useOnline } from '../state/online';
 import { useStore } from '../state/store';
-import type { MatchSetupData } from '../types';
-import { Avatar, Bar, Btn, Card, Header, Seg } from '../ui/common';
+import type { CategoryId, MatchSetupData } from '../types';
+import { Avatar, Bar, Btn, Card, Empty, Header, Modal, Seg } from '../ui/common';
 import { TopicPicker } from '../ui/TopicPicker';
 
 const SETUP_KEY = 'rdl.setup';
@@ -259,98 +262,233 @@ function OnlineCard({ setup }: { setup: MatchSetupData }) {
   );
 }
 
-/** Matchmaking: rating parecido primeiro, janela crescente e, sem ninguém, BOT. */
+/** Resumo do que foi escolhido para a partida (temas, tempo, duração). */
+export function setupSummary(s: MatchSetupData): string {
+  const topics = s.topics.length ? s.topics.slice(0, 3).map((t) => topicLabel(t) || CAT[t as CategoryId]?.name || t).join(', ') + (s.topics.length > 3 ? ` +${s.topics.length - 3}` : '') : 'Todos os temas';
+  return `${topics} · ${fmtTime(s.timeSec)} por pergunta · ${s.long ? 'longa' : 'rápida'}`;
+}
+
+/** Sala de espera: mostra quem está disponível; tocar em "Jogar" envia um convite que a outra pessoa aceita ou recusa. */
 export function OnlineSearchScreen({ setup, ranked }: { setup: MatchSetupData; ranked: boolean }) {
   const store = useStore();
   const online = useOnline();
   const me = store.player!;
-  const [window_, setWindow] = useState(50);
-  const [elapsed, setElapsed] = useState(0);
-  const [timeout, setTimedOut] = useState(false);
-  const [err, setErr] = useState('');
-  const stop = useRef(false);
+  const backend = online.backend;
+  const [people, setPeople] = useState<LobbyEntry[] | null>(null);
+  const [incoming, setIncoming] = useState<Challenge[]>([]);
+  const [outgoing, setOutgoing] = useState<{ id: string; name: string; at: number } | null>(null);
+  const [msg, setMsg] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [now, setNow] = useState(Date.now());
+  const outRef = useRef(outgoing);
+  outRef.current = outgoing;
+  const leaving = useRef(false);
+  const seenIncoming = useRef(new Set<string>());
 
+  const lobbyMe = (): LobbyMe => ({
+    name: online.profile?.name ?? me.name,
+    avatar: COSMETIC[me.cosmetics.avatar]?.value ?? '🩺',
+    level: levelFromXp(me.xp).level,
+    rating: me.rating,
+    isGuest: !!online.account?.isGuest,
+  });
+
+  const goMatch = (matchId: string) => {
+    leaving.current = true;
+    store.nav({ name: 'onlineMatch', matchId });
+  };
+
+  // presença na sala de espera + lista + convites recebidos
   useEffect(() => {
-    if (!online.backend || !online.account) return;
-    stop.current = false;
-    const start = Date.now();
-    const key = setupKey(setup, ranked);
-    let w = 50;
-    const loop = async () => {
-      while (!stop.current) {
-        try {
-          const mid = await online.backend!.findMatch(setup, key, me.rating, w, ranked);
-          if (mid) {
-            stop.current = true;
-            store.nav({ name: 'onlineMatch', matchId: mid });
-            return;
-          }
-        } catch (e) {
-          setErr(String((e as Error).message));
-        }
-        const el = Date.now() - start;
-        setElapsed(el);
-        if (el > 30_000) {
-          setTimedOut(true);
-          return; // continua na fila até o usuário decidir
-        }
-        w = Math.min(600, w + 50);
-        setWindow(w);
-        await new Promise((r) => setTimeout(r, 2000));
+    if (!backend || !online.account) return;
+    let alive = true;
+    const beat = () => backend.lobbyEnter(lobbyMe(), ranked).catch((e) => setMsg(String((e as Error).message)));
+    const refresh = async () => {
+      try {
+        const [list, inc] = await Promise.all([backend.lobbyList(ranked), backend.myChallenges()]);
+        if (!alive) return;
+        setPeople(list.sort((x, y) => Math.abs(x.rating - me.rating) - Math.abs(y.rating - me.rating)));
+        setIncoming(inc);
+        if (inc.some((c) => !seenIncoming.current.has(c.id))) sfx.land();
+        inc.forEach((c) => seenIncoming.current.add(c.id));
+      } catch (e) {
+        if (alive) setMsg(String((e as Error).message));
       }
     };
-    void loop();
+    void beat().then(refresh);
+    const hb = setInterval(beat, 5000);
+    const poll = setInterval(refresh, 3000);
+    const tick = setInterval(() => setNow(Date.now()), 1000);
     return () => {
-      stop.current = true;
-      void online.backend?.leaveQueue();
+      alive = false;
+      clearInterval(hb);
+      clearInterval(poll);
+      clearInterval(tick);
+      if (outRef.current) void backend.cancelChallenge(outRef.current.id).catch(() => {});
+      if (!leaving.current) void backend.lobbyLeave().catch(() => {});
     };
-  }, [online.backend, online.account]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [backend, online.account, ranked]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // convite enviado: espera a resposta
+  useEffect(() => {
+    if (!backend || !outgoing) return;
+    const t = setInterval(async () => {
+      const c = await backend.getChallenge(outgoing.id).catch(() => null);
+      if (!c || outRef.current?.id !== outgoing.id) return;
+      if (c.status === 'accepted') {
+        setOutgoing(null);
+        outRef.current = null;
+        goMatch(c.match_id);
+      } else if (c.status === 'declined') {
+        setOutgoing(null);
+        setMsg(`${outgoing.name} recusou o convite.`);
+      } else if (c.status === 'cancelled') {
+        setOutgoing(null);
+      } else if (Date.now() - outgoing.at > CHALLENGE_TTL_MS) {
+        void backend.cancelChallenge(outgoing.id).catch(() => {});
+        setOutgoing(null);
+        setMsg(`${outgoing.name} não respondeu a tempo.`);
+      }
+    }, 2000);
+    return () => clearInterval(t);
+  }, [backend, outgoing]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  async function challenge(p: LobbyEntry) {
+    if (!backend) return;
+    setBusy(true);
+    setMsg('');
+    try {
+      const id = await backend.sendChallenge(p.user_id, setup, ranked);
+      setOutgoing({ id, name: p.name, at: Date.now() });
+    } catch (e) {
+      setMsg(String((e as Error).message));
+    }
+    setBusy(false);
+  }
+  async function cancelOutgoing() {
+    if (!backend || !outgoing) return;
+    const id = outgoing.id;
+    setOutgoing(null);
+    await backend.cancelChallenge(id).catch(() => {});
+  }
+  async function answer(c: Challenge, accept: boolean) {
+    if (!backend) return;
+    setBusy(true);
+    setMsg('');
+    try {
+      const mid = await backend.answerChallenge(c.id, accept);
+      if (mid) {
+        if (outRef.current) await backend.cancelChallenge(outRef.current.id).catch(() => {});
+        outRef.current = null;
+        goMatch(mid);
+      } else setIncoming((xs) => xs.filter((x) => x.id !== c.id));
+    } catch (e) {
+      setMsg(String((e as Error).message));
+      setIncoming((xs) => xs.filter((x) => x.id !== c.id));
+    }
+    setBusy(false);
+  }
 
   const bot = useMemo(() => closestBot(me.rating), [me.rating]);
-  const keepWaiting = () => {
-    setTimedOut(false);
-    store.nav({ name: 'onlineSearch', setup, ranked });
-  };
+  const invite = incoming[0];
+  const secsLeft = (at: number) => Math.max(0, Math.ceil((at + CHALLENGE_TTL_MS - now) / 1000));
+
+  if (!backend || !online.account)
+    return (
+      <div className="pb-10">
+        <Header title="Buscar adversário" />
+        <Empty icon="🌐" text="Entre como visitante ou com sua conta para jogar online.">
+          <Btn onClick={() => store.nav({ name: 'account' })}>Entrar</Btn>
+        </Empty>
+      </div>
+    );
 
   return (
     <div className="pb-10">
-      <Header title={ranked ? 'Ranqueada online' : 'Buscar adversário'} />
-      <Card className="p-6 text-center">
-        {!timeout ? (
-          <>
-            <div className="mx-auto w-20 h-20 rounded-full border-4 border-sky-400/30 border-t-sky-400 animate-spin" />
-            <div className="font-display text-lg mt-3">Procurando jogador...</div>
-            <div className="text-sm text-white/60">
-              Rating {me.rating} ± {window_} · {Math.round(elapsed / 1000)} s
-            </div>
-          </>
-        ) : (
-          <>
+      <Header title={ranked ? 'Ranqueada online' : 'Buscar adversário'} subtitle="Toque em Jogar e espere a pessoa aceitar" />
+
+      <Card className="p-3 mb-3 text-xs text-white/60">
+        <b className="text-white/80">Seu convite:</b> {setupSummary(setup)}
+        <span className="block text-white/40 mt-0.5">Quem convida escolhe os temas e o tempo (em Jogar, antes de buscar).</span>
+      </Card>
+
+      {outgoing && (
+        <Card className="p-4 mb-3 border-sky-400/40 text-center">
+          <div className="mx-auto w-10 h-10 rounded-full border-4 border-sky-400/30 border-t-sky-400 animate-spin" />
+          <div className="font-display mt-2">Aguardando {outgoing.name} aceitar...</div>
+          <div className="text-xs text-white/50">{secsLeft(outgoing.at)} s</div>
+          <Btn variant="ghost" className="mt-2" onClick={cancelOutgoing}>
+            Cancelar convite
+          </Btn>
+        </Card>
+      )}
+
+      {msg && <p className="text-sm text-amber-300 mb-3 text-center">{msg}</p>}
+
+      <Card className="p-4">
+        <div className="flex items-center justify-between mb-3">
+          <div className="font-display font-semibold">🟢 Disponíveis agora</div>
+          <div className="text-xs text-white/40">{people ? people.length : '…'}</div>
+        </div>
+        {people === null ? (
+          <div className="py-6 text-center text-white/50 animate-pulse">Carregando...</div>
+        ) : people.length === 0 ? (
+          <div className="py-6 text-center">
             <div className="text-4xl">🌙</div>
-            <div className="font-display text-lg mt-1">Ninguém disponível agora</div>
-            <p className="text-sm text-white/60">Você não precisa esperar: jogue contra um BOT com a mesma configuração, ou continue na fila.</p>
-            <div className="flex items-center justify-center gap-3 my-3">
-              <div className="text-4xl">{bot.avatar}</div>
-              <div className="text-left">
-                <div className="font-display font-semibold">{bot.name}</div>
-                <div className="text-xs text-white/50">Rating {BOT_TIERS[bot.tier].rating}</div>
+            <p className="text-sm text-white/70 mt-1">Ninguém disponível agora.</p>
+            <p className="text-xs text-white/45 mt-1">Fique nesta tela: você aparece para quem abrir "Buscar adversário", e quem entrar aparece aqui.</p>
+          </div>
+        ) : (
+          <div className="space-y-2">
+            {people.map((p) => (
+              <div key={p.user_id} className="flex items-center gap-3 rounded-2xl bg-black/25 border border-white/10 p-3">
+                <div className="text-3xl">{p.avatar}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-semibold truncate">
+                    {p.name} {p.is_guest && <span className="text-[10px] text-white/40">visitante</span>}
+                  </div>
+                  <div className="text-xs text-white/50">
+                    Nível {p.level} · Rating {p.rating}
+                  </div>
+                </div>
+                <Btn disabled={busy || !!outgoing} onClick={() => challenge(p)}>
+                  Jogar
+                </Btn>
               </div>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-2">
-              <Btn variant="secondary" onClick={keepWaiting}>
-                Continuar esperando
-              </Btn>
-              <Btn variant="gold" onClick={() => store.nav({ name: 'match', config: { mode: ranked ? 'ranked' : 'pvp-bot', botId: bot.id, setup } })}>
-                Jogar contra BOT
-              </Btn>
-            </div>
-          </>
+            ))}
+          </div>
         )}
-        {err && <p className="text-sm text-rose-300 mt-3">{err}</p>}
-        <Btn variant="ghost" className="mt-4" onClick={() => store.back()}>
-          Cancelar
+      </Card>
+
+      <Card className="p-4 mt-3">
+        <div className="text-sm text-white/60 mb-2">Não quer esperar?</div>
+        <Btn variant="gold" className="w-full" onClick={() => store.nav({ name: 'match', config: { mode: ranked ? 'ranked' : 'pvp-bot', botId: bot.id, setup } })}>
+          {bot.avatar} Jogar contra {bot.name}
         </Btn>
       </Card>
+
+      <Modal open={!!invite} onClose={() => invite && answer(invite, false)} title="Convite para jogar">
+        {invite && (
+          <div className="text-center">
+            <div className="text-5xl">{invite.from_avatar}</div>
+            <div className="font-display text-xl font-bold mt-1">{invite.from_name}</div>
+            <div className="text-xs text-white/50">
+              Nível {invite.from_level} · Rating {invite.from_rating}
+            </div>
+            <p className="mt-3 text-white/80">quer jogar com você{invite.ranked ? ' (ranqueada)' : ''}!</p>
+            <p className="mt-2 text-xs text-white/60 rounded-xl bg-black/25 p-2">{setupSummary(invite.setup)}</p>
+            <div className="text-xs text-white/40 mt-2">{secsLeft(Date.parse(invite.created_at))} s para responder</div>
+            <div className="grid grid-cols-2 gap-2 mt-4">
+              <Btn variant="secondary" disabled={busy} onClick={() => answer(invite, false)}>
+                Recusar
+              </Btn>
+              <Btn variant="gold" disabled={busy} onClick={() => answer(invite, true)}>
+                Aceitar
+              </Btn>
+            </div>
+          </div>
+        )}
+      </Modal>
     </div>
   );
 }

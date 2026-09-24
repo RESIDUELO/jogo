@@ -59,10 +59,19 @@ export interface OnlineBackend {
   getProfile(id: string): Promise<OnlineProfile | null>;
   saveProfile(p: Partial<OnlineProfile> & { id: string }): Promise<void>;
   ranking(order: 'xp' | 'rating' | 'week_xp', limit?: number): Promise<OnlineProfile[]>;
-  /** Procura adversário na fila (mesma configuração, rating dentro da janela). Chamado em
-   *  intervalos; também informa se alguém me pareou enquanto eu esperava. Retorna id da partida ou null. */
-  findMatch(setup: MatchSetupData, key: string, rating: number, window: number, ranked: boolean): Promise<string | null>;
-  leaveQueue(): Promise<void>;
+  /** Sala de espera: entra/renova (chamado a cada poucos segundos) e sai. */
+  lobbyEnter(me: LobbyMe, ranked: boolean): Promise<void>;
+  lobbyLeave(): Promise<void>;
+  /** Quem está disponível agora (sem incluir eu). */
+  lobbyList(ranked: boolean): Promise<LobbyEntry[]>;
+  /** Desafia alguém da sala de espera (quem desafia define temas e tempo). Retorna o id do convite. */
+  sendChallenge(to: string, setup: MatchSetupData, ranked: boolean): Promise<string>;
+  getChallenge(id: string): Promise<Challenge | null>;
+  /** Convites recebidos ainda válidos. */
+  myChallenges(): Promise<Challenge[]>;
+  /** Aceita (retorna o id da partida) ou recusa (null). */
+  answerChallenge(id: string, accept: boolean): Promise<string | null>;
+  cancelChallenge(id: string): Promise<void>;
   createInvite(setup: MatchSetupData): Promise<{ id: string; code: string }>;
   joinInvite(code: string): Promise<string>;
   getMatch(id: string): Promise<OnlineMatchRow>;
@@ -72,6 +81,41 @@ export interface OnlineBackend {
   myOpenMatches(): Promise<OnlineMatchRow[]>;
 }
 
-export function setupKey(s: MatchSetupData, ranked: boolean): string {
-  return JSON.stringify({ t: [...s.topics].sort(), s: s.timeSec, f: s.format, l: !!s.long, r: ranked });
+export interface LobbyMe {
+  name: string;
+  avatar: string;
+  level: number;
+  rating: number;
+  isGuest: boolean;
 }
+
+export interface LobbyEntry {
+  user_id: string;
+  name: string;
+  avatar: string;
+  level: number;
+  rating: number;
+  ranked: boolean;
+  is_guest: boolean;
+  seen_at: string;
+}
+
+export type ChallengeStatus = 'pending' | 'accepted' | 'declined' | 'cancelled';
+
+export interface Challenge {
+  id: string;
+  from_id: string;
+  to_id: string;
+  from_name: string;
+  from_avatar: string;
+  from_level: number;
+  from_rating: number;
+  match_id: string;
+  setup: MatchSetupData;
+  ranked: boolean;
+  status: ChallengeStatus;
+  created_at: string;
+}
+
+/** Tempo para a pessoa desafiada responder. */
+export const CHALLENGE_TTL_MS = 60_000;

@@ -1,6 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
-import type { MatchSetupData } from '../../types';
-import type { Account, OnlineBackend, OnlineMatchRow, OnlineProfile } from './types';
+import type { Account, Challenge, LobbyEntry, OnlineBackend, OnlineMatchRow, OnlineProfile } from './types';
 
 const CODE_CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const genCode = () => Array.from({ length: 6 }, () => CODE_CHARS[Math.floor(Math.random() * CODE_CHARS.length)]).join('');
@@ -62,14 +61,42 @@ export async function createSupabaseBackend(url: string, anonKey: string): Promi
       fail(error);
       return (data ?? []) as OnlineProfile[];
     },
-    async findMatch(setup: MatchSetupData, key, rating, window, ranked) {
-      const { data, error } = await sb.rpc('find_match', { p_config: setup, p_key: key, p_rating: rating, p_window: window, p_ranked: ranked });
+    async lobbyEnter(me, ranked) {
+      const { error } = await sb.rpc('lobby_enter', { p_name: me.name, p_avatar: me.avatar, p_level: me.level, p_rating: me.rating, p_ranked: ranked, p_guest: me.isGuest });
+      fail(error);
+    },
+    async lobbyLeave() {
+      const { data } = await sb.auth.getSession();
+      if (data.session) await sb.from('lobby').delete().eq('user_id', data.session.user.id);
+    },
+    async lobbyList(ranked) {
+      const { data, error } = await sb.rpc('lobby_list', { p_ranked: ranked });
+      fail(error);
+      return (data ?? []) as LobbyEntry[];
+    },
+    async sendChallenge(to, setup, ranked) {
+      const { data, error } = await sb.rpc('send_challenge', { p_to: to, p_setup: setup, p_ranked: ranked });
+      fail(error);
+      return data as string;
+    },
+    async getChallenge(id) {
+      const { data, error } = await sb.from('challenges').select('*').eq('id', id).maybeSingle();
+      fail(error);
+      return data as Challenge | null;
+    },
+    async myChallenges() {
+      const { data, error } = await sb.rpc('my_challenges');
+      fail(error);
+      return (data ?? []) as Challenge[];
+    },
+    async answerChallenge(id, accept) {
+      const { data, error } = await sb.rpc('answer_challenge', { p_id: id, p_accept: accept });
       fail(error);
       return (data as string | null) ?? null;
     },
-    async leaveQueue() {
-      const { data } = await sb.auth.getSession();
-      if (data.session) await sb.from('mm_queue').delete().eq('user_id', data.session.user.id);
+    async cancelChallenge(id) {
+      const { error } = await sb.rpc('cancel_challenge', { p_id: id });
+      fail(error);
     },
     async createInvite(setup) {
       const { data: s } = await sb.auth.getSession();
