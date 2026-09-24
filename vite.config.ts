@@ -29,17 +29,16 @@ export default defineConfig({
         ],
       },
       workbox: {
-        // app + banco de questões + imagens das questões ficam disponíveis offline
-        globPatterns: ['**/*.{js,css,html,png,svg,ico,woff2}', 'banco/*.json', 'banco/img/*.jpg'],
-        globIgnores: ['banco/orig/**'],
+        // app + baralho de flashcards ficam disponíveis offline
+        globPatterns: ['**/*.{js,css,html,png,svg,ico,woff2}', 'cards/deck.json'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         navigateFallback: 'index.html',
         runtimeCaching: [
           {
-            // recortes originais das provas (~20 MB): guardados conforme são abertos
-            urlPattern: ({ url }) => url.pathname.includes('/banco/orig/'),
+            // imagens dos cartões: guardadas conforme aparecem
+            urlPattern: ({ url }) => url.pathname.includes('/cards/img/'),
             handler: 'CacheFirst',
-            options: { cacheName: 'questoes-originais', expiration: { maxEntries: 800 } },
+            options: { cacheName: 'cartoes-img', expiration: { maxEntries: 2000 } },
           },
           {
             urlPattern: ({ url }) => url.pathname.endsWith('/online-config.json'),

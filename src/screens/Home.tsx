@@ -15,13 +15,13 @@ const MENU: { s: Screen; label: string; icon: string; color: string }[] = [
   { s: { name: 'training' }, label: 'TREINO', icon: '📚', color: '#8b5cf6' },
   { s: { name: 'ranked' }, label: 'RANQUEADO', icon: '🏆', color: '#f59e0b' },
   { s: { name: 'missions' }, label: 'MISSÕES', icon: '🎯', color: '#ec4899' },
-  { s: { name: 'wrong' }, label: 'QUESTÕES ERRADAS', icon: '🔁', color: '#ef4444' },
+  { s: { name: 'wrong' }, label: 'CARTÕES ERRADOS', icon: '🔁', color: '#ef4444' },
   { s: { name: 'stats' }, label: 'MEU DESEMPENHO', icon: '📊', color: '#3b82f6' },
   { s: { name: 'ranking' }, label: 'RANKING', icon: '🥇', color: '#eab308' },
   { s: { name: 'profile' }, label: 'PERFIL', icon: '🪪', color: '#22c55e' },
   { s: { name: 'achievements' }, label: 'CONQUISTAS', icon: '🏅', color: '#f97316' },
   { s: { name: 'shop' }, label: 'LOJA', icon: '🛍️', color: '#14b8a6' },
-  { s: { name: 'bank' }, label: 'BANCO DE QUESTÕES', icon: '🗂️', color: '#6366f1' },
+  { s: { name: 'bank' }, label: 'BARALHO', icon: '🗂️', color: '#6366f1' },
   { s: { name: 'account' }, label: 'CONTA ONLINE', icon: '🌐', color: '#0ea5e9' },
   { s: { name: 'settings' }, label: 'AJUSTES', icon: '⚙️', color: '#475569' },
 ];
@@ -72,7 +72,7 @@ export function Home() {
           <div className="font-display text-4xl sm:text-5xl font-bold tracking-tight">
             Resi<span className="text-amber-300">duelo</span>
           </div>
-          <p className="text-white/70 text-sm mt-1">Duelos de questões reais de residência. Gire, responda, conquiste as 5 coroas.</p>
+          <p className="text-white/70 text-sm mt-1">Duelos de flashcards de residência. Gire, responda, conquiste as coroas.</p>
           <div className="flex gap-1.5 mt-3">
             {CATEGORY_IDS.map((c) => (
               <span key={c} className="w-9 h-9 rounded-full grid place-items-center text-lg animate-bob" style={{ background: CAT[c].color, animationDelay: `${CATEGORY_IDS.indexOf(c) * 150}ms` }}>
@@ -88,7 +88,7 @@ export function Home() {
               {online.account ? `🌐 Online como ${online.profile?.name ?? player.name}${online.account.isGuest ? ' (visitante)' : ''}` : '🌐 Jogue online: entre como visitante ou crie uma conta'}
             </button>
           )}
-          <div className="text-center text-[11px] text-white/40 mt-2">{fmtInt(store.questions.filter((q) => q.status === 'ativa').length)} questões ativas · {store.exams.length} provas</div>
+          <div className="text-center text-[11px] text-white/40 mt-2">{fmtInt(store.cards.length)} flashcards</div>
         </div>
       </div>
 
@@ -119,7 +119,7 @@ export function Home() {
             );
           })}
         </div>
-        {!playedToday && <p className="text-xs text-white/50 mt-2">Responda uma questão hoje para manter sua sequência.</p>}
+        {!playedToday && <p className="text-xs text-white/50 mt-2">Responda um cartão hoje para manter sua sequência.</p>}
       </Card>
 
       {/* menu */}
@@ -143,7 +143,7 @@ export function Home() {
       <Card className="p-4">
         <div className="font-display font-semibold mb-2">📈 Seu desempenho nesta semana</div>
         {stats.week.total.n === 0 ? (
-          <p className="text-sm text-white/60">Ainda sem questões nesta semana. Uma partida rápida = ~10 questões de residência.</p>
+          <p className="text-sm text-white/60">Ainda sem cartões nesta semana. Uma partida rápida = ~10 flashcards.</p>
         ) : (
           <div className="space-y-1.5">
             {CATEGORY_IDS.map((c) => {
@@ -176,7 +176,7 @@ export function Home() {
           <div className="mt-3 rounded-xl bg-violet-500/15 border border-violet-400/30 p-3 flex items-center gap-3">
             <div className="text-2xl">{CAT[rec.cat].icon}</div>
             <div className="flex-1 text-sm">
-              <b>Recomendação:</b> {rec.count} questões de {CAT[rec.cat].full} <span className="text-white/50">({rec.reason})</span>
+              <b>Recomendação:</b> {rec.count} cartões de {CAT[rec.cat].full} <span className="text-white/50">({rec.reason})</span>
             </div>
             <Btn onClick={() => store.nav({ name: 'trainingRun', config: { count: rec.count, categories: [rec.cat], wrongOnly: false } })}>Treinar</Btn>
           </div>

@@ -2,8 +2,9 @@ import { useMemo, useRef, useState } from 'react';
 import { sfx } from '../audio/sfx';
 import { CAT } from '../data/categories';
 import { COSMETIC } from '../data/shop';
-import { matchRewards, scoreAnswer, QUESTION_TIME_MS } from '../engine/scoring';
-import { isPlayable, pickQuestion } from '../engine/selection';
+import { matchRewards, scoreAnswer } from '../engine/scoring';
+import { matchPool } from '../engine/matchUtils';
+import { pickQuestion } from '../engine/selection';
 import { uid } from '../engine/util';
 import { useStore, type TrainingLaunch } from '../state/store';
 import type { CategoryId, MatchSummary, PowerUpId, Question, ReportItem } from '../types';
@@ -15,14 +16,16 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
   const store = useStore();
   const player = store.player!;
   const id = useRef(uid('t-'));
+  const format = config.format ?? 'mc';
+  const limitMs = (config.timeSec ?? 60) * 1000;
   const pool = useMemo(() => {
-    let qs = store.questions.filter((q) => isPlayable(q, 'treino', player.settings.includeAnnulledInStudy));
+    let qs = [...store.qById.values()];
     if (config.questionIds) {
       const set = new Set(config.questionIds);
-      qs = store.questions.filter((q) => set.has(q.id) && q.answer);
+      qs = qs.filter((q) => set.has(q.id));
     }
     if (config.categories.length) qs = qs.filter((q) => config.categories.includes(q.category));
-    if (config.exams?.length) qs = qs.filter((q) => config.exams!.includes(q.examId));
+    if (config.topics?.length) qs = matchPool(qs, { topics: config.topics });
     return qs;
     // pool fixo durante o treino
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -31,8 +34,9 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
   const used = useRef(new Set<string>());
   const next = (): Question | undefined => {
     const q = pickQuestion(pool, store.history, { exclude: used.current, wrongOnly: config.wrongOnly && !config.questionIds });
-    if (q) used.current.add(q.id);
-    return q;
+    if (!q) return undefined;
+    used.current.add(q.id);
+    return store.play(q.id, format);
   };
   const [q, setQ] = useState<Question | undefined>(() => next());
   const [n, setN] = useState(1);
@@ -111,8 +115,8 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
         <Header title="Treino" />
         <div className="text-center py-16">
           <div className="text-5xl mb-3">🎉</div>
-          <p className="text-white/70">Nenhuma questão disponível com esses filtros.</p>
-          {config.wrongOnly && <p className="text-white/50 text-sm mt-1">Você ainda não tem questões erradas — ótimo sinal!</p>}
+          <p className="text-white/70">Nenhum flashcard disponível com esses filtros.</p>
+          {config.wrongOnly && <p className="text-white/50 text-sm mt-1">Você ainda não tem cartões errados — ótimo sinal!</p>}
           <Btn className="mt-6" onClick={() => store.back()}>
             Voltar
           </Btn>
@@ -127,7 +131,7 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
     <div className="pb-10">
       <Header
         title={title}
-        subtitle={total === Infinity ? `Questão ${n} · treino infinito` : `Questão ${n} de ${total}`}
+        subtitle={total === Infinity ? `Cartão ${n} · treino infinito` : `Cartão ${n} de ${total}`}
         right={
           <Btn variant="ghost" onClick={() => (stats.answered ? setConfirmEnd(true) : store.back())}>
             Encerrar
@@ -143,7 +147,7 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
       </div>
       <QuestionPlay
         question={q}
-        limitMs={QUESTION_TIME_MS}
+        limitMs={limitMs}
         inventory={player.inventory}
         onUsePowerup={usePowerup}
         onSwap={() => {
@@ -157,7 +161,7 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
       />
       <Particles burst={burst} color={COSMETIC[player.cosmetics.effect]?.value ?? 'multi'} count={50} />
       <Modal open={confirmEnd} onClose={() => setConfirmEnd(false)} title="Encerrar treino?">
-        <p className="text-white/70 mb-4">Você respondeu {stats.answered} questões. O progresso já foi salvo.</p>
+        <p className="text-white/70 mb-4">Você respondeu {stats.answered} cartões. O progresso já foi salvo.</p>
         <div className="flex gap-2">
           <Btn variant="secondary" className="flex-1" onClick={() => setConfirmEnd(false)}>
             Continuar

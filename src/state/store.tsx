@@ -13,8 +13,9 @@ import { buildHistory, type QHistory } from '../engine/selection';
 import { dayStreak } from '../engine/stats';
 import { dayKey } from '../engine/util';
 import { playerRepo } from '../services/playerRepo';
-import { questionRepo } from '../services/questionRepo';
-import type { AnswerRecord, ExamMeta, MatchSetupData, MatchSummary, Player, Question } from '../types';
+import { cardRepo } from '../services/questionRepo';
+import { toQuestion } from '../engine/cards';
+import type { AnswerFormat, AnswerRecord, Flashcard, MatchSetupData, MatchSummary, Player, Question } from '../types';
 
 export type Screen = (
   | { name: 'home' }
@@ -53,7 +54,9 @@ export interface TrainingLaunch {
   categories: string[]; // vazio = todas
   wrongOnly: boolean;
   questionIds?: string[]; // lista fixa (ex.: revisar erradas de uma partida)
-  exams?: string[]; // provas escolhidas (vazio = todas)
+  topics?: string[]; // temas escolhidos (vazio = todos)
+  timeSec?: number; // tempo por cartão
+  format?: AnswerFormat;
 }
 
 export interface Toast {
@@ -64,9 +67,11 @@ export interface Toast {
 interface Store {
   ready: boolean;
   error?: string;
-  questions: Question[];
+  cards: Flashcard[];
+  /** Cartão por id, já como pergunta no formato flashcard (relatórios, revisão). */
   qById: Map<string, Question>;
-  exams: ExamMeta[];
+  /** Pergunta jogável no formato escolhido (múltipla escolha gera as alternativas). */
+  play: (id: string, format: AnswerFormat) => Question | undefined;
   players: Player[];
   player: Player | null;
   answers: AnswerRecord[];
@@ -97,8 +102,7 @@ const Ctx = createContext<Store | null>(null);
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
   const [error, setError] = useState<string>();
-  const [questions, setQuestions] = useState<Question[]>([]);
-  const [exams, setExams] = useState<ExamMeta[]>([]);
+  const [cards, setCards] = useState<Flashcard[]>([]);
   const [players, setPlayers] = useState<Player[]>(() => playerRepo.listPlayers());
   const [activeId, setActiveId] = useState<string | null>(() => playerRepo.getActiveId());
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
@@ -111,11 +115,10 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const player = players.find((p) => p.id === activeId) ?? null;
 
   useEffect(() => {
-    questionRepo
+    cardRepo
       .loadAll()
-      .then(({ questions, exams }) => {
-        setQuestions(questions);
-        setExams(exams);
+      .then((cards) => {
+        setCards(cards);
         setReady(true);
       })
       .catch((e) => setError(String(e)));
@@ -131,7 +134,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setSoundEnabled(player?.settings.sound ?? true);
   }, [player?.settings.sound]);
 
-  const qById = useMemo(() => new Map(questions.map((q) => [q.id, q])), [questions]);
+  const qById = useMemo(() => new Map(cards.map((c) => [c.id, toQuestion(c, 'flash', cards)])), [cards]);
+  const cardById = useMemo(() => new Map(cards.map((c) => [c.id, c])), [cards]);
+  const play = useCallback(
+    (id: string, format: AnswerFormat) => {
+      const c = cardById.get(id);
+      return c && toQuestion(c, format, cards);
+    },
+    [cardById, cards],
+  );
   const history = useMemo(() => buildHistory(answers), [answers]);
 
   const emit = useCallback((events: GameEvent[], pid?: string) => {
@@ -160,9 +171,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const store: Store = {
     ready,
     error,
-    questions,
+    cards,
     qById,
-    exams,
+    play,
     players,
     player,
     answers,

@@ -1,5 +1,5 @@
-# Importa provas novas, monta o banco de questões e publica o site (GitHub Pages).
-# Para lançar provas: coloque os PDFs na pasta provas/ (nome INSTITUICAO-...-ANO.pdf).
+# Monta o baralho de flashcards (pasta flashcards/, arquivos .apkg do Anki) e publica o site (GitHub Pages).
+# Para lançar baralhos: coloque os .apkg na pasta flashcards/ e diga a área em tools/cards-map.json.
 name: Site
 
 on:
@@ -25,19 +25,16 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Importar provas novas e montar o banco
-        run: |
-          pip install --quiet pymupdf pillow
-          python tools/import_provas.py
-          python tools/build_bank.py
+      - name: Montar o baralho
+        run: python tools/build_cards.py
 
-      - name: Salvar no repositório o que foi importado
+      - name: Salvar no repositório o baralho montado
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tools/raw public/banco
+          git add public/cards
           if ! git diff --cached --quiet; then
-            git commit -m "Banco de questões: provas importadas automaticamente [skip ci]"
+            git commit -m "Baralho: flashcards montados automaticamente [skip ci]"
             git push
           fi
 

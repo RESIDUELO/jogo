@@ -40,7 +40,7 @@ export function LineChart({ points, height = 160, color = '#a78bfa', yMax = 1, f
           <circle cx={x(i)} cy={y(p.v)} r={3.5} fill={color}>
             <title>
               {p.label}: {fmt(p.v)}
-              {bars ? ` · ${bars[i]} questões` : ''}
+              {bars ? ` · ${bars[i]} cartões` : ''}
             </title>
           </circle>
           {i % step === 0 && (

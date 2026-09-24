@@ -68,5 +68,3 @@ export function matchRewards(opts: { mode: MatchMode; result: 'win' | 'loss' | '
   return { xp, coins };
 }
 
-/** Tempo por questão: 2 minutos, suficiente para ler o caso clínico com calma. */
-export const QUESTION_TIME_MS = 120_000;

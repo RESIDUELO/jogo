@@ -1,40 +1,58 @@
-import { useMemo, useState } from 'react';
-import { CAT, CATEGORY_IDS } from '../data/categories';
-import { isPlayable } from '../engine/selection';
+import { useEffect, useMemo, useState } from 'react';
+import { inTopics } from '../engine/cards';
 import { useStore } from '../state/store';
-import type { CategoryId } from '../types';
+import type { AnswerFormat } from '../types';
 import { Btn, Card, Header, Seg } from '../ui/common';
-import { ExamPicker } from '../ui/ExamPicker';
+import { TopicPicker } from '../ui/TopicPicker';
+import { FormatPicker, TimePicker } from './PlayModes';
+
+const KEY = 'rdl.trainSetup';
+interface TrainPrefs {
+  count: number | 'inf';
+  topics: string[];
+  timeSec: number;
+  format: AnswerFormat;
+  wrongOnly: boolean;
+}
+const DEFAULTS: TrainPrefs = { count: 10, topics: [], timeSec: 60, format: 'flash', wrongOnly: false };
+function load(): TrainPrefs {
+  try {
+    return { ...DEFAULTS, ...JSON.parse(localStorage.getItem(KEY) || '{}') };
+  } catch {
+    return DEFAULTS;
+  }
+}
 
 export function TrainingSetup() {
   const store = useStore();
-  const player = store.player!;
-  const [count, setCount] = useState<number | 'inf'>(10);
-  const [cats, setCats] = useState<CategoryId[]>([]);
-  const [wrongOnly, setWrongOnly] = useState(false);
-  const [exams, setExams] = useState<string[]>([]);
+  const [t, setT] = useState<TrainPrefs>(load);
+  const set = (p: Partial<TrainPrefs>) => setT((x) => ({ ...x, ...p }));
+  useEffect(() => {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(t));
+    } catch {
+      /* sem armazenamento */
+    }
+  }, [t]);
 
-  const available = useMemo(() => {
-    return store.questions.filter(
-      (q) =>
-        isPlayable(q, 'treino', player.settings.includeAnnulledInStudy) &&
-        (!cats.length || cats.includes(q.category)) &&
-        (!exams.length || exams.includes(q.examId)) &&
-        (!wrongOnly || (store.history.get(q.id)?.wrong ?? 0) > 0),
-    ).length;
-  }, [store.questions, cats, exams, wrongOnly, store.history, player.settings.includeAnnulledInStudy]);
-
-  const toggle = (c: CategoryId) => setCats((cs) => (cs.includes(c) ? cs.filter((x) => x !== c) : [...cs, c]));
+  const available = useMemo(
+    () => store.cards.filter((c) => inTopics(c, t.topics) && (!t.wrongOnly || (store.history.get(c.id)?.wrong ?? 0) > 0)).length,
+    [store.cards, t.topics, t.wrongOnly, store.history],
+  );
 
   return (
     <div className="pb-10">
       <Header title="Modo Treino" subtitle="Jogue sozinho, no seu ritmo" />
       <Card className="p-4 space-y-5">
         <div>
+          <div className="font-display font-semibold mb-2">🎯 Temas</div>
+          <TopicPicker cards={store.cards} topics={t.topics} onChange={(topics) => set({ topics })} />
+        </div>
+        <div>
           <div className="font-display font-semibold mb-2">Quantidade</div>
           <Seg
-            value={count}
-            onChange={setCount}
+            value={t.count}
+            onChange={(count) => set({ count })}
             options={[
               { v: 10, label: '10' },
               { v: 20, label: '20' },
@@ -44,41 +62,30 @@ export function TrainingSetup() {
           />
         </div>
         <div>
-          <div className="font-display font-semibold mb-2">Categorias</div>
-          <div className="flex flex-wrap gap-2">
-            <button onClick={() => setCats([])} className={`rounded-xl px-3 py-2 text-sm font-semibold border ${!cats.length ? 'bg-violet-500 border-violet-400' : 'bg-black/20 border-white/10'}`}>
-              🌈 Todas
-            </button>
-            {CATEGORY_IDS.map((c) => {
-              const on = cats.includes(c);
-              return (
-                <button key={c} onClick={() => toggle(c)} className="rounded-xl px-3 py-2 text-sm font-semibold border transition" style={{ background: on ? CAT[c].color : 'rgba(0,0,0,.2)', borderColor: on ? CAT[c].color : 'rgba(255,255,255,.1)' }}>
-                  {CAT[c].icon} {CAT[c].name}
-                </button>
-              );
-            })}
-          </div>
+          <div className="font-display font-semibold mb-2">⏱️ Tempo por cartão</div>
+          <TimePicker value={t.timeSec} onChange={(timeSec) => set({ timeSec })} />
         </div>
         <div>
-          <div className="font-display font-semibold mb-2">Provas</div>
-          <ExamPicker selected={exams} onChange={setExams} />
+          <div className="font-display font-semibold mb-2">🃏 Como responder</div>
+          <FormatPicker value={t.format} onChange={(format) => set({ format })} />
         </div>
         <label className="flex items-center gap-3 cursor-pointer">
-          <input type="checkbox" checked={wrongOnly} onChange={(e) => setWrongOnly(e.target.checked)} className="w-5 h-5 accent-violet-500" />
+          <input type="checkbox" checked={t.wrongOnly} onChange={(e) => set({ wrongOnly: e.target.checked })} className="w-5 h-5 accent-violet-500" />
           <span>
-            <b>Somente questões que errei</b>
+            <b>Somente cartões que errei</b>
             <span className="block text-xs text-white/50">Revisão focada nas suas falhas</span>
           </span>
         </label>
-        <div className="text-sm text-white/60">{available} questões disponíveis com esses filtros.</div>
-        <Btn big className="w-full" disabled={!available} onClick={() => store.nav({ name: 'trainingRun', config: { count, categories: cats, wrongOnly, exams } })}>
+        <div className="text-sm text-white/60">{available} flashcards disponíveis com esses filtros.</div>
+        <Btn
+          big
+          className="w-full"
+          disabled={!available}
+          onClick={() => store.nav({ name: 'trainingRun', config: { count: t.count, categories: [], wrongOnly: t.wrongOnly, topics: t.topics, timeSec: t.timeSec, format: t.format } })}
+        >
           📚 COMEÇAR TREINO
         </Btn>
       </Card>
-      <p className="text-xs text-white/40 mt-3 text-center">
-        No treino, questões com gabarito divergente também aparecem (sinalizadas).{' '}
-        {player.settings.includeAnnulledInStudy ? 'Questões anuladas estão incluídas (Ajustes).' : 'Questões anuladas ficam de fora (pode incluir em Ajustes).'}
-      </p>
     </div>
   );
 }

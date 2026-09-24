@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { sfx } from '../audio/sfx';
-import { CAT, DIFFICULTY_COLOR, DIFFICULTY_LABEL } from '../data/categories';
+import { CAT } from '../data/categories';
 import { POWERUPS } from '../data/shop';
 import { shuffle } from '../engine/util';
 import type { Letter, PowerUpId, Question } from '../types';
@@ -42,7 +42,8 @@ interface Props {
 
 const CORRECT_MSGS = ['ACERTOU!', 'NA MOSCA!', 'DIAGNÓSTICO CERTEIRO!', 'MANDOU BEM!', 'CONDUTA CORRETA!'];
 const WRONG_MSGS = ['ERROU!', 'QUASE!', 'NÃO FOI DESSA VEZ!'];
-const WRONG_SUBS = ['Não deixe essa questão escapar novamente.', 'Ela vai voltar na sua revisão — anote o conceito.', 'Errar no jogo é melhor que errar na prova.'];
+const WRONG_SUBS = ['Esse cartão vai voltar na sua revisão.', 'Anote o conceito e tente de novo.', 'Errar no jogo é melhor que errar na prova.'];
+export const IMG_BASE = import.meta.env.BASE_URL + 'cards/img/';
 
 export function QuestionPlay(p: Props) {
   const q = p.question;
@@ -60,7 +61,9 @@ export function QuestionPlay(p: Props) {
   const [usedHere, setUsedHere] = useState<PowerUpId[]>([]);
   const [showFull, setShowFull] = useState(false);
   const [zoom, setZoom] = useState<string | null>(null);
-  const [showOrig, setShowOrig] = useState(false);
+  const [revealed, setRevealed] = useState(false); // flashcard: resposta visível
+  const [selfGrade, setSelfGrade] = useState<boolean | null>(null);
+  const flash = q.kind === 'flash';
   const t0 = useRef(performance.now());
   const lastSec = useRef(-1);
   const pickMsg = useRef(Math.random());
@@ -79,16 +82,20 @@ export function QuestionPlay(p: Props) {
     setDone(false);
     setHint(null);
     setUsedHere([]);
+    setRevealed(false);
+    setSelfGrade(null);
     t0.current = performance.now();
     lastSec.current = -1;
     pickMsg.current = Math.random();
   }, [q.id, p.limitMs]);
 
+  const revealedAt = useRef(0);
   const finish = useCallback(
-    (letter: Letter | null, second: boolean) => {
-      const ms = Math.min(limit, performance.now() - t0.current);
+    (letter: Letter | null, second: boolean, graded?: boolean) => {
+      const ms = Math.min(limit, (revealedAt.current || performance.now()) - t0.current);
       setDone(true);
-      const correct = letter !== null && letter === q.answer;
+      setRevealed(true);
+      const correct = graded !== undefined ? graded : letter !== null && letter === q.answer;
       if (correct) sfx.correct();
       else if (letter === null) sfx.timeout();
       else sfx.wrong();
@@ -97,9 +104,25 @@ export function QuestionPlay(p: Props) {
     [limit, q.answer],
   );
 
+  // flashcard: revelar a resposta para o tempo; depois a pessoa se autoavalia
+  const reveal = () => {
+    if (revealed || done) return;
+    revealedAt.current = performance.now();
+    setRevealed(true);
+    sfx.click();
+  };
+  const grade = (ok: boolean) => {
+    if (done) return;
+    setSelfGrade(ok);
+    finish(null, false, ok);
+  };
+  useEffect(() => {
+    revealedAt.current = 0;
+  }, [q.id]);
+
   // timer
   useEffect(() => {
-    if (done || p.readonly) return;
+    if (done || p.readonly || revealed) return;
     const id = setInterval(() => {
       const e = performance.now() - t0.current;
       setElapsed(e);
@@ -114,7 +137,7 @@ export function QuestionPlay(p: Props) {
       }
     }, 100);
     return () => clearInterval(id);
-  }, [done, limit, finish, usedSecond, p.readonly]);
+  }, [done, limit, finish, usedSecond, p.readonly, revealed]);
 
   const choose = useCallback(
     (l: Letter) => {
@@ -136,10 +159,18 @@ export function QuestionPlay(p: Props) {
   // teclado: A–E ou 1–5; Enter continua
   useEffect(() => {
     const h = (e: KeyboardEvent) => {
-      if (showFull || zoom || showOrig) return;
+      if (showFull || zoom) return;
       if (done && p.feedback && (e.key === 'Enter' || e.key === ' ')) {
         e.preventDefault();
         p.onContinue();
+        return;
+      }
+      if (flash && !done) {
+        if (!revealed && (e.key === ' ' || e.key === 'Enter')) {
+          e.preventDefault();
+          reveal();
+        } else if (revealed && (e.key === '1' || e.key.toLowerCase() === 'e')) grade(false);
+        else if (revealed && (e.key === '2' || e.key.toLowerCase() === 'a')) grade(true);
         return;
       }
       const k = e.key.toUpperCase();
@@ -149,10 +180,12 @@ export function QuestionPlay(p: Props) {
     };
     window.addEventListener('keydown', h);
     return () => window.removeEventListener('keydown', h);
-  }, [letters, choose, done, p, showFull, zoom, showOrig]);
+  }, [letters, choose, done, p, showFull, zoom, flash, revealed]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const wrongLetters = letters.filter((l) => l !== q.answer && !eliminated.includes(l));
   const canUse = (id: PowerUpId) =>
+    (!flash || id === 'time' || id === 'swap') &&
+    !revealed &&
     !done && !p.readonly && p.powerupsAllowed !== false && (p.inventory?.[id] ?? 0) > 0 && !usedHere.includes(id) && (p.powerupsLeft === undefined || p.powerupsLeft > 0) && (id !== 'swap' || !!p.onSwap);
 
   const use = (id: PowerUpId) => {
@@ -175,8 +208,8 @@ export function QuestionPlay(p: Props) {
   const secs = Math.ceil(left / 1000);
   const pct = left / limit;
   const danger = secs <= 5 && !done;
-  const timeout = done && chosen === null;
-  const correct = done && chosen === q.answer;
+  const timeout = done && chosen === null && selfGrade === null;
+  const correct = done && (flash ? selfGrade === true : chosen === q.answer);
   const fb = p.feedback;
 
   const altState = (l: Letter) => {
@@ -200,11 +233,7 @@ export function QuestionPlay(p: Props) {
               {cat.name}
               {p.crown && <span className="text-amber-300 animate-glow">👑 COROA</span>}
             </div>
-            <div className="text-[11px] text-white/50 truncate">
-              {q.institution} {q.year} · Q{q.number ?? '—'} ·{' '}
-              <span style={{ color: DIFFICULTY_COLOR[q.difficulty] }}>{DIFFICULTY_LABEL[q.difficulty]}</span>
-              {q.status !== 'ativa' && <span className="text-rose-300"> · {q.status.toUpperCase()}</span>}
-            </div>
+            <div className="text-[11px] text-white/50 truncate">{q.subtopic}</div>
           </div>
           {!p.readonly && (
             <div className={`relative w-14 h-14 shrink-0 ${danger ? 'animate-shake' : ''}`} key={danger ? secs : 'ok'}>
@@ -222,7 +251,7 @@ export function QuestionPlay(p: Props) {
                   style={{ transition: 'stroke-dasharray .1s linear' }}
                 />
               </svg>
-              <div className={`absolute inset-0 grid place-items-center font-display font-bold ${danger ? 'text-rose-400 text-lg' : 'text-[13px]'}`}>{done ? '✓' : `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, '0')}`}</div>
+              <div className={`absolute inset-0 grid place-items-center font-display font-bold ${danger ? 'text-rose-400 text-lg' : 'text-[13px]'}`}>{done || revealed ? '✓' : secs >= 60 ? `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, '0')}` : secs}</div>
             </div>
           )}
         </div>
@@ -230,22 +259,44 @@ export function QuestionPlay(p: Props) {
           <p className="text-[15px] sm:text-base leading-relaxed text-white/95 whitespace-pre-line">{q.text}</p>
           {q.images?.map((img) => (
             <button key={img} onClick={() => setZoom(img)} className="mt-3 block w-full rounded-xl overflow-hidden bg-white border border-white/10">
-              <img src={`${import.meta.env.BASE_URL}banco/img/${img}`} alt="Imagem da questão" className="w-full max-h-72 object-contain" loading="lazy" />
+              <img src={IMG_BASE + img} alt="Imagem do cartão" className="w-full max-h-72 object-contain" loading="lazy" />
             </button>
           ))}
-          {q.original?.length ? (
-            <button onClick={() => setShowOrig(true)} className="mt-3 text-xs text-sky-300 underline">
-              📄 ver questão original (PDF)
-            </button>
-          ) : null}
           {hint && <div className="mt-3 rounded-xl bg-amber-400/15 border border-amber-300/30 px-3 py-2 text-sm text-amber-100 animate-rise">💡 {hint}</div>}
           {secondChanceArmed && <div className="mt-3 rounded-xl bg-sky-400/15 border border-sky-300/30 px-3 py-2 text-sm text-sky-100">🔁 Segunda chance ativa: se errar, você tenta de novo.</div>}
           {firstWrong && !done && <div className="mt-3 rounded-xl bg-rose-400/15 border border-rose-300/30 px-3 py-2 text-sm text-rose-100 animate-shake">A alternativa {firstWrong} está errada. Tente de novo!</div>}
         </div>
       </div>
 
+      {/* flashcard: revelar e autoavaliar */}
+      {flash && (
+        <div className="mt-3">
+          {!revealed ? (
+            <Btn big className="w-full" onClick={reveal} disabled={done}>
+              👁 MOSTRAR RESPOSTA
+            </Btn>
+          ) : (
+            <div className="rounded-3xl border-2 border-violet-400/50 bg-violet-500/10 p-4 animate-pop">
+              <div className="text-[11px] uppercase tracking-wide text-violet-200/70 mb-1">Resposta</div>
+              <p className="text-[15px] leading-relaxed whitespace-pre-line">{q.answerText}</p>
+              {!done && (
+                <div className="grid grid-cols-2 gap-2 mt-4">
+                  <Btn variant="danger" big onClick={() => grade(false)}>
+                    ❌ Errei
+                  </Btn>
+                  <Btn variant="success" big onClick={() => grade(true)}>
+                    ✅ Acertei
+                  </Btn>
+                </div>
+              )}
+              {!done && <p className="text-[11px] text-white/40 text-center mt-2">Seja honesto: o cartão que você erra volta mais vezes para revisão.</p>}
+            </div>
+          )}
+        </div>
+      )}
+
       {/* alternativas */}
-      <div className="mt-3 grid gap-2">
+      <div className={`mt-3 grid gap-2 ${flash ? 'hidden' : ''}`}>
         {letters.map((l, i) => {
           const st = altState(l);
           return (
@@ -309,20 +360,22 @@ export function QuestionPlay(p: Props) {
                 </div>
               ) : (
                 <div className="text-sm mt-1 text-white/80">
-                  A resposta correta era <b className="text-emerald-300">{q.answer}</b>. <span className="text-white/60">{WRONG_SUBS[Math.floor(pickMsg.current * WRONG_SUBS.length)]}</span>
+                  <span className="text-white/60">{WRONG_SUBS[Math.floor(pickMsg.current * WRONG_SUBS.length)]}</span>
                   {fb.xp > 0 && <span className="text-violet-300"> +{fb.xp} XP</span>}
                 </div>
               )}
               {fb.extra && <div className="text-sm mt-1 text-amber-200">{fb.extra}</div>}
             </div>
           </div>
-          <div className="mt-3 text-sm leading-relaxed text-white/85 bg-black/20 rounded-2xl p-3">
-            <b>Resposta correta: {q.answer}.</b> {q.explanation}
-          </div>
-          {q.statusNote && <div className="mt-2 text-xs text-amber-200/80">⚠️ {q.statusNote}</div>}
+          {!flash && (
+            <div className="mt-3 text-sm leading-relaxed text-white/85 bg-black/20 rounded-2xl p-3 whitespace-pre-line">
+              <b className="text-emerald-300">Resposta{q.answer ? ` (${q.answer})` : ''}:</b> {q.explanation}
+            </div>
+          )}
+          {flash && q.explanation !== q.answerText && <div className="mt-3 text-sm text-white/80 bg-black/20 rounded-2xl p-3 whitespace-pre-line">{q.explanation.slice(q.answerText.length).trim()}</div>}
           <div className="mt-3 flex flex-col sm:flex-row gap-2">
             <Btn variant="ghost" className="flex-1" onClick={() => setShowFull(true)}>
-              📖 VER EXPLICAÇÃO COMPLETA
+              📖 VER CARTÃO COMPLETO
             </Btn>
             <Btn variant={correct ? 'success' : 'primary'} className="flex-1" onClick={p.onContinue} autoFocus>
               {p.continueLabel ?? 'CONTINUAR'} ›
@@ -332,9 +385,8 @@ export function QuestionPlay(p: Props) {
       )}
 
       <ExplanationModal q={q} open={showFull} onClose={() => setShowFull(false)} chosen={chosen} />
-      <OriginalModal q={q} open={showOrig} onClose={() => setShowOrig(false)} />
-      <Modal open={!!zoom} onClose={() => setZoom(null)} wide title="Imagem da questão">
-        {zoom && <img src={`${import.meta.env.BASE_URL}banco/img/${zoom}`} alt="" className="w-full rounded-xl bg-white" />}
+      <Modal open={!!zoom} onClose={() => setZoom(null)} wide title="Imagem do cartão">
+        {zoom && <img src={IMG_BASE + zoom} alt="" className="w-full rounded-xl bg-white" />}
       </Modal>
     </div>
   );
@@ -346,67 +398,47 @@ export function AltContent({ q, l }: { q: Question; l: Letter }) {
   return (
     <>
       {q.alternatives[l]}
-      {img && <img src={`${import.meta.env.BASE_URL}banco/img/${img}`} alt={`Alternativa ${l}`} className="mt-1 block w-full max-w-md rounded-lg bg-white" loading="lazy" />}
+      {img && <img src={IMG_BASE + img} alt={`Alternativa ${l}`} className="mt-1 block w-full max-w-md rounded-lg bg-white" loading="lazy" />}
     </>
-  );
-}
-
-export function OriginalModal({ q, open, onClose }: { q: Question; open: boolean; onClose: () => void }) {
-  return (
-    <Modal open={open} onClose={onClose} title={`Questão original — ${q.exam}, Q${q.number ?? ''}`} wide>
-      <div className="space-y-2">
-        {q.original?.map((o) => (
-          <img key={o} src={`${import.meta.env.BASE_URL}banco/orig/${o}`} alt="Recorte da prova original" className="w-full rounded-xl bg-white" />
-        ))}
-        <p className="text-xs text-white/50">Recorte da página da prova em PDF, exatamente como foi aplicada.</p>
-      </div>
-    </Modal>
   );
 }
 
 export function ExplanationModal({ q, open, onClose, chosen }: { q: Question; open: boolean; onClose: () => void; chosen?: Letter | null }) {
   const letters = altLetters(q);
+  const extra = q.explanation.startsWith(q.answerText) ? q.explanation.slice(q.answerText.length).trim() : '';
   return (
-    <Modal open={open} onClose={onClose} title="Explicação completa" wide>
+    <Modal open={open} onClose={onClose} title="Flashcard" wide>
       <div className="space-y-4 text-sm leading-relaxed">
         <div className="flex flex-wrap gap-2 text-xs">
           <span className="rounded-full px-2 py-1" style={{ background: CAT[q.category].color + '33', color: CAT[q.category].color }}>
             {CAT[q.category].icon} {CAT[q.category].full}
           </span>
-          <span className="rounded-full bg-white/10 px-2 py-1">{q.subtopic}</span>
-          <span className="rounded-full px-2 py-1" style={{ background: DIFFICULTY_COLOR[q.difficulty] + '33', color: DIFFICULTY_COLOR[q.difficulty] }}>
-            {DIFFICULTY_LABEL[q.difficulty]}
-          </span>
-        </div>
-        <p className="text-white/80 whitespace-pre-line">{q.text}</p>
-        {q.images?.map((img) => <img key={img} src={`${import.meta.env.BASE_URL}banco/img/${img}`} alt="" className="w-full max-h-80 object-contain rounded-xl bg-white" />)}
-        <div className="grid gap-1.5">
-          {letters.map((l) => (
-            <div key={l} className={`rounded-xl px-3 py-2 border ${l === q.answer ? 'border-emerald-400/60 bg-emerald-500/10' : l === chosen ? 'border-rose-400/60 bg-rose-500/10' : 'border-white/10'}`}>
-              <b>{l})</b> <AltContent q={q} l={l} /> {l === q.answer && '✔'}
-            </div>
+          {q.path.map((p) => (
+            <span key={p} className="rounded-full bg-white/10 px-2 py-1">
+              {p}
+            </span>
           ))}
         </div>
-        <div className="rounded-2xl bg-violet-500/10 border border-violet-400/30 p-4">
-          <div className="font-display font-bold text-violet-200 mb-1">Resposta: {q.answer ?? '—'}</div>
-          <div className="whitespace-pre-line text-white/90">{q.explanationFull || q.explanation}</div>
+        <div>
+          <div className="text-[11px] uppercase tracking-wide text-white/40 mb-1">Frente</div>
+          <p className="text-white/90 whitespace-pre-line">{q.text}</p>
         </div>
-        {q.statusNote && <div className="rounded-xl bg-amber-400/10 border border-amber-300/30 p-3 text-amber-100">⚠️ {q.statusNote}</div>}
-        {q.original?.length ? (
-          <details className="rounded-xl bg-black/20 p-3">
-            <summary className="cursor-pointer text-sky-300 text-xs">📄 Ver questão original (PDF)</summary>
-            {q.original.map((o) => (
-              <img key={o} src={`${import.meta.env.BASE_URL}banco/orig/${o}`} alt="Recorte da prova original" className="w-full mt-2 rounded-lg bg-white" loading="lazy" />
+        {q.images?.map((img) => <img key={img} src={IMG_BASE + img} alt="" className="w-full max-h-80 object-contain rounded-xl bg-white" />)}
+        {q.kind === 'mc' && (
+          <div className="grid gap-1.5">
+            {letters.map((l) => (
+              <div key={l} className={`rounded-xl px-3 py-2 border ${l === q.answer ? 'border-emerald-400/60 bg-emerald-500/10' : l === chosen ? 'border-rose-400/60 bg-rose-500/10' : 'border-white/10'}`}>
+                <b>{l})</b> <AltContent q={q} l={l} /> {l === q.answer && '✔'}
+              </div>
             ))}
-          </details>
-        ) : null}
-        <div className="text-xs text-white/50 space-y-0.5">
-          <div>
-            Fonte: {q.exam} — questão {q.number ?? '—'}. Gabarito: oficial da prova.
           </div>
-          {q.reference && <div>Referência: {q.reference}</div>}
-          {q.explanationSource === 'gerada' && <div>Explicação elaborada para fins didáticos (não faz parte da prova oficial).</div>}
+        )}
+        <div className="rounded-2xl bg-violet-500/10 border border-violet-400/30 p-4">
+          <div className="text-[11px] uppercase tracking-wide text-violet-200/70 mb-1">Verso</div>
+          <div className="whitespace-pre-line text-white/95">{q.answerText}</div>
         </div>
+        {extra && <div className="rounded-xl bg-black/20 p-3 whitespace-pre-line text-white/80">{extra}</div>}
+        {q.tags?.length ? <div className="text-xs text-white/40">Tags: {q.tags.join(', ')}</div> : null}
       </div>
     </Modal>
   );

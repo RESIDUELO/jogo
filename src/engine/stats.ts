@@ -78,7 +78,7 @@ export function recommendation(s: StudyStats): { cat: CategoryId; count: number;
   }).sort((a, b) => a.r - b.r || a.n - b.n);
   const w = scored[0];
   const count = w.r < 0.5 ? 15 : w.r < 0.65 ? 12 : 10;
-  const reason = s.byCat[w.c].n < 3 ? 'poucas questões respondidas nesta área' : `acerto de ${Math.round(w.r * 100)}% nesta área`;
+  const reason = s.byCat[w.c].n < 3 ? 'poucos cartões respondidos nesta área' : `acerto de ${Math.round(w.r * 100)}% nesta área`;
   return { cat: w.c, count, reason };
 }
 
@@ -99,14 +99,15 @@ export function snapshot(player: Player, answers: AnswerRecord[], matches: Match
   let correct = 0;
   let hardCorrect = 0;
   let fastCorrect = 0;
+  const missed = new Set<string>();
   for (const a of answers) {
     catAnswered[a.cat]++;
     if (a.correct) {
       correct++;
       catCorrect[a.cat]++;
-      if (a.diff >= 3) hardCorrect++;
+      if (missed.has(a.qid)) hardCorrect++; // cartão recuperado (já tinha errado)
       if (a.ms < 8000) fastCorrect++;
-    }
+    } else missed.add(a.qid);
   }
   return {
     answered: answers.length,

@@ -25,13 +25,15 @@ export function simulateBotAnswer(bot: BotPersona, q: Question, limitMs: number,
   const knows = hash01(bot.id + q.id + matchSalt.slice(0, 2)) < p;
   const tier = BOT_TIERS[bot.tier];
   const letters = altLetters(q);
-  // tempo: proporcional ao tamanho do texto; erros tendem a demorar mais
-  const lenFactor = clamp(q.text.length / 450, 0.6, 1.8) * 1.6; // relógio de 2 min
+  // tempo: proporcional ao tamanho do texto e ao relógio da rodada; erros tendem a demorar mais
+  const lenFactor = clamp(q.text.length / 120, 0.5, 1.6);
+  const clock = clamp(limitMs / 30_000, 0.5, 2);
   const jitter = 0.65 + Math.random() * 0.7;
-  let ms = tier.meanMs * lenFactor * jitter * (knows ? 1 : 1.25);
+  let ms = tier.meanMs * 0.6 * lenFactor * clock * jitter * (knows ? 1 : 1.25);
   const timeout = !knows && Math.random() < 0.06;
   if (timeout) return { chosen: null, correct: false, ms: limitMs };
-  ms = clamp(ms, 3500, limitMs - 800);
+  ms = clamp(ms, 1500, limitMs - 800);
+  if (q.kind === 'flash') return { chosen: null, correct: knows, ms }; // flashcard: autoavaliação
   if (knows && q.answer) return { chosen: q.answer, correct: true, ms };
   const wrong = letters.filter((l) => l !== q.answer);
   const chosen = wrong[Math.floor(Math.random() * wrong.length)] ?? letters[0];

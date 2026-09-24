@@ -31,9 +31,6 @@ export function SettingsScreen() {
         <Row title="🎡 Reduzir animações" desc="Roleta mais curta e menos movimento.">
           <Seg value={p.settings.reduceMotion ? 'on' : 'off'} onChange={(v) => set('reduceMotion', v === 'on')} options={[{ v: 'off', label: 'Não' }, { v: 'on', label: 'Sim' }]} />
         </Row>
-        <Row title="📚 Incluir anuladas no treino" desc="Questões anuladas nunca entram em partidas PvP/ranqueadas.">
-          <Seg value={p.settings.includeAnnulledInStudy ? 'on' : 'off'} onChange={(v) => set('includeAnnulledInStudy', v === 'on')} options={[{ v: 'off', label: 'Não' }, { v: 'on', label: 'Sim' }]} />
-        </Row>
       </Card>
 
       <div className="mt-4">
@@ -161,7 +158,7 @@ export function Onboarding({ embedded }: { embedded?: boolean }) {
             <h1 className="font-display text-5xl font-bold mt-2">
               Resi<span className="text-amber-300">duelo</span>
             </h1>
-            <p className="text-white/60 mt-2">Perguntados + Duolingo + questões reais de residência. Cada partida são 10–20 questões de prova — disfarçadas de jogo.</p>
+            <p className="text-white/60 mt-2">Perguntados + flashcards de residência. Cada partida é uma revisão de 10–20 cartões disfarçada de jogo.</p>
           </>
         )}
         <Card className="p-5 mt-6 text-left">

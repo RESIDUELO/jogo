@@ -96,7 +96,7 @@ export function Profile() {
                 </div>
                 <Bar pct={cl.pct} color={CAT[c].color} className="mt-1" />
                 <div className="text-[11px] text-white/40 mt-0.5">
-                  {s.byCat[c].n ? `${fmtPct(rate(s.byCat[c]))} de acerto em ${s.byCat[c].n} questões` : 'Nenhuma questão ainda'}
+                  {s.byCat[c].n ? `${fmtPct(rate(s.byCat[c]))} de acerto em ${s.byCat[c].n} cartões` : 'Nenhum cartão ainda'}
                 </div>
               </div>
             );

@@ -13,7 +13,7 @@ export const POWERUPS: PowerUpDef[] = [
   { id: 'time', name: 'Tempo extra', icon: '⏱️', desc: '+15 segundos no relógio.', price: 40 },
   { id: 'second', name: 'Segunda chance', icon: '🔁', desc: 'Se errar, tenta de novo (pontuação reduzida).', price: 80 },
   { id: 'hint', name: 'Dica', icon: '💡', desc: 'Mostra o tema e elimina uma alternativa errada.', price: 50 },
-  { id: 'swap', name: 'Troca de questão', icon: '🔄', desc: 'Troca por outra questão da mesma categoria.', price: 50 },
+  { id: 'swap', name: 'Troca de cartão', icon: '🔄', desc: 'Troca por outro cartão da mesma área.', price: 50 },
 ];
 export const POWERUP: Record<PowerUpId, PowerUpDef> = Object.fromEntries(POWERUPS.map((p) => [p.id, p])) as Record<PowerUpId, PowerUpDef>;
 

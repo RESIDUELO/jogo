@@ -9,50 +9,45 @@ export const LETTERS: Letter[] = ['A', 'B', 'C', 'D', 'E'];
 /** 1 = Fácil, 2 = Média, 3 = Difícil, 4 = Muito difícil */
 export type Difficulty = 1 | 2 | 3 | 4;
 
-export type QuestionStatus = 'ativa' | 'anulada' | 'divergente' | 'rascunho';
-
-// ---------- QUESTIONS ----------
-export interface Question {
-  id: string; // ex.: UNOESTE-2024-012
-  number?: number; // número na prova original
-  text: string; // enunciado original
-  alternatives: Partial<Record<Letter, string>>; // 4 ou 5 alternativas (fiel à prova)
-  answer: Letter | null; // gabarito oficial (null = anulada / sem gabarito)
-  category: CategoryId;
-  subtopic: string;
-  difficulty: Difficulty;
-  difficultySource: 'auto' | 'manual';
-  examId: string; // ex.: UNOESTE-2024
-  exam: string; // nome legível da prova
-  institution: string;
-  year: number;
-  explanation: string; // curta (mostrada no jogo)
-  explanationFull?: string; // detalhada (modal)
-  explanationSource?: 'gerada' | 'oficial' | 'editada';
-  reference?: string;
-  images?: string[]; // arquivos em /banco/img
-  altImages?: Partial<Record<Letter, string>>; // alternativas que são imagens (tabelas etc.)
-  original?: string[]; // recortes da página original do PDF em /banco/orig
-  status: QuestionStatus;
-  statusNote?: string; // motivo de anulação / divergência
+// ---------- FLASHCARDS ----------
+/** Flashcard do baralho (public/cards/deck.json, gerado por tools/build_cards.py). */
+export interface Flashcard {
+  id: string; // estável: hash da frente
+  front: string; // pergunta
+  back: string; // resposta
+  area: CategoryId;
+  path: string[]; // subtemas aninhados, ex.: ["Cardiologia", "Insuficiência cardíaca"]
+  extra?: string; // comentário/explicação opcional
   tags?: string[];
-  updatedAt?: number;
+  images?: string[]; // arquivos em public/cards/img/
 }
 
-export interface ExamMeta {
-  id: string;
-  title: string;
-  institution: string;
-  year: number;
-  file: string;
-  count: number;
-  source?: string;
-}
-
-export interface BankIndex {
+export interface DeckFile {
   version: number;
   generatedAt: string;
-  exams: ExamMeta[];
+  cards: Flashcard[];
+}
+
+/** Formato das respostas na partida. */
+export type AnswerFormat = 'mc' | 'flash'; // múltipla escolha automática | flashcard (autoavaliação)
+
+/** Pergunta jogável, derivada de um flashcard. */
+export interface Question {
+  id: string; // = id do flashcard
+  kind: AnswerFormat;
+  text: string; // frente do flashcard
+  answerText: string; // verso do flashcard
+  alternatives: Partial<Record<Letter, string>>; // só em múltipla escolha
+  answer: Letter | null; // alternativa correta (múltipla escolha)
+  category: CategoryId;
+  path: string[];
+  subtopic: string; // caminho legível: "Cardiologia › Insuficiência cardíaca"
+  difficulty: Difficulty;
+  explanation: string; // verso (+ comentário)
+  explanationFull?: string;
+  images?: string[];
+  altImages?: Partial<Record<Letter, string>>;
+  tags?: string[];
 }
 
 // ---------- ANSWERS ----------
@@ -62,7 +57,7 @@ export interface AnswerRecord {
   sub: string;
   diff: Difficulty;
   correct: boolean;
-  chosen: Letter | null; // null = tempo esgotado
+  chosen: Letter | null; // null = tempo esgotado ou flashcard (autoavaliação)
   ms: number; // tempo de resposta
   at: number; // timestamp
   mode: MatchMode;
@@ -121,17 +116,19 @@ export interface Player {
 
 export interface PlayerSettings {
   sound: boolean;
-  includeAnnulledInStudy: boolean;
   reduceMotion: boolean;
 }
 
 // ---------- MATCHES ----------
 export type MatchMode = 'pvp-bot' | 'pvp-local' | 'pvp-online' | 'ranked' | 'treino';
 
-/** Provas e áreas escolhidas antes da partida (vazio = todas). */
+/** O que está em disputa, escolhido por quem cria a partida/sala. */
 export interface MatchSetupData {
-  exams: string[];
-  cats: CategoryId[];
+  /** Temas escolhidos: chaves "AREA" ou "AREA|Subtema|Sub-subtema" (vazio = todos). */
+  topics: string[];
+  /** Segundos por pergunta. */
+  timeSec: number;
+  format: AnswerFormat;
   long?: boolean;
 }
 

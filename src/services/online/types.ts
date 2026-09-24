@@ -73,5 +73,5 @@ export interface OnlineBackend {
 }
 
 export function setupKey(s: MatchSetupData, ranked: boolean): string {
-  return JSON.stringify({ e: [...s.exams].sort(), c: [...s.cats].sort(), l: !!s.long, r: ranked });
+  return JSON.stringify({ t: [...s.topics].sort(), s: s.timeSec, f: s.format, l: !!s.long, r: ranked });
 }

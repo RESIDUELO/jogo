@@ -1,59 +1,83 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { BOTS, BOT_TIERS, type BotTier } from '../data/bots';
-import { CAT, CATEGORY_IDS } from '../data/categories';
 import { LEAGUES } from '../data/progression';
 import { configFor } from '../engine/match';
-import { matchPool } from '../engine/matchUtils';
+import { DEFAULT_SETUP, inTopics, setupAreas, TIME_OPTIONS } from '../engine/cards';
 import { leagueFor, levelFromXp, nextLeague } from '../engine/progression';
 import { closestBot } from '../services/matchmaking';
 import { setupKey } from '../services/online';
 import { useOnline } from '../state/online';
 import { useStore } from '../state/store';
-import type { CategoryId, MatchSetupData } from '../types';
+import type { AnswerFormat, MatchSetupData } from '../types';
 import { Avatar, Bar, Btn, Card, Header, Seg } from '../ui/common';
-import { ExamPicker } from '../ui/ExamPicker';
+import { TopicPicker } from '../ui/TopicPicker';
 
-const SETUP_KEY = 'rdl.lastSetup';
+const SETUP_KEY = 'rdl.setup';
 function loadSetup(): MatchSetupData {
   try {
-    return { exams: [], cats: [], ...JSON.parse(localStorage.getItem(SETUP_KEY) || '{}') };
+    const s = JSON.parse(localStorage.getItem(SETUP_KEY) || '{}');
+    return {
+      topics: Array.isArray(s.topics) ? s.topics.filter((t: unknown) => typeof t === 'string') : [],
+      timeSec: TIME_OPTIONS.includes(s.timeSec) ? s.timeSec : DEFAULT_SETUP.timeSec,
+      format: s.format === 'flash' ? 'flash' : 'mc',
+      long: !!s.long,
+    };
   } catch {
-    return { exams: [], cats: [] };
+    return { ...DEFAULT_SETUP };
   }
 }
 
-/** Escolha da prova e das áreas em disputa (antes de qualquer partida). */
+/** Temas, tempo e formato da partida (escolhidos por quem cria a partida/sala). */
 export function useSetup() {
   const [setup, setSetup] = useState<MatchSetupData>(loadSetup);
-  useEffect(() => localStorage.setItem(SETUP_KEY, JSON.stringify(setup)), [setup]);
+  useEffect(() => {
+    try {
+      localStorage.setItem(SETUP_KEY, JSON.stringify(setup));
+    } catch {
+      /* sem armazenamento */
+    }
+  }, [setup]);
   return [setup, setSetup] as const;
+}
+
+export const fmtTime = (s: number) => (s < 60 ? `${s} s` : s % 60 ? `${Math.floor(s / 60)}m${s % 60}` : `${s / 60} min`);
+
+export function TimePicker({ value, onChange }: { value: number; onChange: (s: number) => void }) {
+  return <Seg value={value} onChange={onChange} options={TIME_OPTIONS.map((t) => ({ v: t, label: fmtTime(t) }))} />;
+}
+
+export function FormatPicker({ value, onChange }: { value: AnswerFormat; onChange: (f: AnswerFormat) => void }) {
+  return (
+    <Seg
+      value={value}
+      onChange={onChange}
+      options={[
+        { v: 'mc', label: '🔠 Múltipla escolha' },
+        { v: 'flash', label: '🃏 Flashcard' },
+      ]}
+    />
+  );
 }
 
 export function SetupPicker({ setup, onChange }: { setup: MatchSetupData; onChange: (s: MatchSetupData) => void }) {
   const store = useStore();
-  const toggle = <T,>(arr: T[], v: T) => (arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
-  const count = useMemo(() => matchPool(store.questions, 'pvp-bot', setup).length, [store.questions, setup]);
-  const cfg = configFor(setup);
-  const chip = (on: boolean, color = '#8b5cf6') => ({ background: on ? color : 'rgba(0,0,0,.25)', borderColor: on ? color : 'rgba(255,255,255,.1)' });
+  const count = useMemo(() => store.cards.filter((c) => inTopics(c, setup.topics)).length, [store.cards, setup.topics]);
+  const cfg = configFor(setup, setupAreas(setup, store.cards));
   return (
-    <Card className="p-4 space-y-4">
+    <Card className="p-4 space-y-5">
       <div>
-        <div className="font-display font-semibold mb-1">📄 Provas</div>
-        <p className="text-xs text-white/50 mb-2">Toque na faculdade (todos os anos) e ajuste os anos. Dá para combinar várias.</p>
-        <ExamPicker selected={setup.exams} onChange={(exams) => onChange({ ...setup, exams })} />
+        <div className="font-display font-semibold mb-1">🎯 Temas da partida</div>
+        <p className="text-xs text-white/50 mb-2">Marque as grandes áreas e toque em › para escolher os subtemas. A roleta só terá as áreas marcadas.</p>
+        <TopicPicker cards={store.cards} topics={setup.topics} onChange={(topics) => onChange({ ...setup, topics })} />
       </div>
       <div>
-        <div className="font-display font-semibold mb-2">🎯 Áreas em disputa</div>
-        <div className="flex flex-wrap gap-2">
-          <button className="rounded-xl px-3 py-2 text-sm font-semibold border" style={chip(!setup.cats.length)} onClick={() => onChange({ ...setup, cats: [] })}>
-            🌈 Todas
-          </button>
-          {CATEGORY_IDS.map((c) => (
-            <button key={c} className="rounded-xl px-3 py-2 text-sm font-semibold border" style={chip(setup.cats.includes(c), CAT[c].color)} onClick={() => onChange({ ...setup, cats: toggle(setup.cats, c) as CategoryId[] })}>
-              {CAT[c].icon} {CAT[c].name}
-            </button>
-          ))}
-        </div>
+        <div className="font-display font-semibold mb-2">⏱️ Tempo por rodada</div>
+        <TimePicker value={setup.timeSec} onChange={(timeSec) => onChange({ ...setup, timeSec })} />
+      </div>
+      <div>
+        <div className="font-display font-semibold mb-1">🃏 Como responder</div>
+        <p className="text-xs text-white/50 mb-2">{setup.format === 'mc' ? 'O verso certo aparece no meio de 4 opções (as outras são respostas de cartões parecidos).' : 'Veja a pergunta, mostre a resposta e diga se acertou.'}</p>
+        <FormatPicker value={setup.format} onChange={(format) => onChange({ ...setup, format })} />
       </div>
       <div className="flex flex-wrap items-center gap-3 justify-between">
         <Seg
@@ -65,10 +89,10 @@ export function SetupPicker({ setup, onChange }: { setup: MatchSetupData; onChan
           ]}
         />
         <div className="text-xs text-white/60 text-right">
-          {count} questões · vence com {cfg.targetCrowns} coroa{cfg.targetCrowns > 1 ? 's' : ''} · até {cfg.maxRounds} rodadas
+          {count} flashcards · vence com {cfg.targetCrowns} coroa{cfg.targetCrowns > 1 ? 's' : ''} · até {cfg.maxRounds} rodadas
         </div>
       </div>
-      {count < 10 && <p className="text-xs text-amber-300">Poucas questões com essa combinação — algumas podem se repetir.</p>}
+      {count < 10 && <p className="text-xs text-amber-300">Poucos flashcards com essa combinação — alguns podem se repetir.</p>}
     </Card>
   );
 }
@@ -246,7 +270,7 @@ function OnlineCard({ setup }: { setup: MatchSetupData }) {
             </div>
           </div>
           {msg && <p className="text-sm text-rose-300">{msg}</p>}
-          <p className="text-[11px] text-white/40">Na sala com código, vale a prova/área escolhida por quem criou. Itens ficam desativados no online.</p>
+          <p className="text-[11px] text-white/40">Na sala com código, valem os temas, o tempo e o formato escolhidos por quem criou. Itens ficam desativados no online.</p>
         </div>
       )}
     </Card>

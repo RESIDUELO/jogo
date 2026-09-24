@@ -18,10 +18,11 @@ import {
   type Competitor,
   type MatchState,
 } from '../engine/match';
-import { matchRewards, QUESTION_TIME_MS, scoreAnswer } from '../engine/scoring';
+import { matchRewards, scoreAnswer } from '../engine/scoring';
 import { buildHistory, pickQuestion } from '../engine/selection';
 import { spinCategory, uid } from '../engine/util';
 import { matchPool, reportOf } from '../engine/matchUtils';
+import { setupAreas } from '../engine/cards';
 import { playerRepo } from '../services/playerRepo';
 import { useStore, type MatchLaunch } from '../state/store';
 import type { CategoryId, MatchSummary, Player, PowerUpId, Question } from '../types';
@@ -43,7 +44,7 @@ export function MatchScreen({ config }: { config: MatchLaunch }) {
     const b: Competitor = opponentPlayer
       ? competitorFromPlayer(opponentPlayer)
       : { id: bot!.id, name: bot!.name, avatar: bot!.avatar, kind: 'bot', botId: bot!.id, level: BOT_TIERS[bot!.tier].level, rating: BOT_TIERS[bot!.tier].rating };
-    return createMatch(uid('m-'), mode, a, b, config.setup);
+    return createMatch(uid('m-'), mode, a, b, config.setup, setupAreas(config.setup, store.cards));
   });
   const [question, setQ] = useState<Question | null>(null);
   const [feedback, setFeedback] = useState<Feedback | null>(null);
@@ -65,9 +66,10 @@ export function MatchScreen({ config }: { config: MatchLaunch }) {
   const cur = match.players[match.turn];
   const isBotTurn = cur.kind === 'bot';
   const turnPlayer: Player | undefined = cur.kind === 'human' ? (cur.id === me.id ? store.player! : store.getPlayer(cur.id)) : undefined;
-  const cats = setupCats(match.setup);
+  const cats = setupCats(match);
 
-  const pool = useMemo(() => matchPool(store.questions, mode, match.setup), [store.questions, mode, match.setup]);
+  const pool = useMemo(() => matchPool(store.qById.values(), match.setup), [store.qById, match.setup]);
+  const limitMs = match.setup.timeSec * 1000;
   const opponentHistory = useMemo(() => (opponentPlayer ? buildHistory(playerRepo.getAnswers(opponentPlayer.id)) : new Map()), [opponentPlayer]);
 
   const later = (fn: () => void, ms: number) => {
@@ -99,18 +101,18 @@ export function MatchScreen({ config }: { config: MatchLaunch }) {
     const p = m.players[m.turn];
     const hist = p.kind === 'bot' ? new Map() : p.id === me.id ? store.history : opponentHistory;
     const exclude = new Set(m.usedQids);
-    return (
+    const base =
       pickQuestion(pool, hist, { category: cat, exclude, minDifficulty: crown ? 2 : undefined }) ??
       pickQuestion(pool, hist, { category: cat, exclude }) ??
-      pickQuestion(pool, hist, { category: cat }) // área esgotada: permite repetir
-    );
+      pickQuestion(pool, hist, { category: cat }); // área esgotada: permite repetir
+    return base && store.play(base.id, m.setup.format);
   }
 
   // ---------- turno do BOT ----------
   function botStep(m: MatchState) {
     if (!bot) return;
     if (m.phase === 'spin') {
-      const cat = spinCategory(setupCats(m.setup), lastSpunCat(m));
+      const cat = spinCategory(setupCats(m), lastSpunCat(m));
       later(() => setSpin((s) => ({ key: s.key + 1, target: cat })), 500);
     } else if (m.phase === 'crown-choice') {
       const miss = missingCrowns(m.players[m.turn], m);
@@ -130,8 +132,8 @@ export function MatchScreen({ config }: { config: MatchLaunch }) {
     if (!q || !bot) return;
     const m = setQuestion(m0, q.id);
     commit(m);
-    const ans = simulateBotAnswer(bot, q, QUESTION_TIME_MS, m.id);
-    const s = scoreAnswer({ correct: ans.correct, difficulty: q.difficulty, msUsed: ans.ms, msLimit: QUESTION_TIME_MS, streakBefore: m.players[m.turn].streak, crown });
+    const ans = simulateBotAnswer(bot, q, limitMs, m.id);
+    const s = scoreAnswer({ correct: ans.correct, difficulty: q.difficulty, msUsed: ans.ms, msLimit: limitMs, streakBefore: m.players[m.turn].streak, crown });
     const shown = Math.min(4200, Math.max(1800, ans.ms / 12));
     setBotView({ q, phase: 'thinking', correct: ans.correct, chosen: ans.chosen, ms: ans.ms, points: s.points });
     later(() => {
@@ -174,7 +176,7 @@ export function MatchScreen({ config }: { config: MatchLaunch }) {
   function onSpinClick() {
     const m = matchRef.current;
     if (m.players[m.turn].kind === 'bot' || m.phase !== 'spin' || overlay) return;
-    setSpin((s) => ({ key: s.key + 1, target: spinCategory(setupCats(m.setup), lastSpunCat(m)) }));
+    setSpin((s) => ({ key: s.key + 1, target: spinCategory(setupCats(m), lastSpunCat(m)) }));
   }
 
   function onWheelDone(cat: CategoryId) {
@@ -308,7 +310,7 @@ export function MatchScreen({ config }: { config: MatchLaunch }) {
         {question && !isBotTurn ? (
           <QuestionPlay
             question={question}
-            limitMs={QUESTION_TIME_MS}
+            limitMs={limitMs}
             crown={match.crownQuestion}
             inventory={turnPlayer?.inventory}
             powerupsLeft={powerupsLeft}

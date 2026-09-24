@@ -19,7 +19,7 @@ const catName: Record<CategoryId, string> = { GO: 'GO', CLI: 'Clínica', CIR: 'C
 
 const catMission = (cat: CategoryId): MissionTemplate => ({
   id: `answer-${cat}`,
-  text: `Responda 10 questões de ${catName[cat]}`,
+  text: `Responda 10 cartões de ${catName[cat]}`,
   goal: 10,
   reward: { xp: 80, coins: 40 },
   step: (e) => (e.type === 'answer' && e.cat === cat ? 1 : 0),
@@ -31,12 +31,12 @@ export const MISSION_TEMPLATES: MissionTemplate[] = [
   catMission('CIR'),
   catMission('PRE'),
   catMission('PED'),
-  { id: 'answer-20', text: 'Responda 20 questões', goal: 20, reward: { xp: 100, coins: 50, item: 'time' }, step: (e) => (e.type === 'answer' ? 1 : 0) },
-  { id: 'correct-15', text: 'Acerte 15 questões', goal: 15, reward: { xp: 120, coins: 60 }, step: (e) => (e.type === 'answer' && e.correct ? 1 : 0) },
+  { id: 'answer-20', text: 'Responda 20 cartões', goal: 20, reward: { xp: 100, coins: 50, item: 'time' }, step: (e) => (e.type === 'answer' ? 1 : 0) },
+  { id: 'correct-15', text: 'Acerte 15 cartões', goal: 15, reward: { xp: 120, coins: 60 }, step: (e) => (e.type === 'answer' && e.correct ? 1 : 0) },
   { id: 'streak-5', text: 'Consiga 5 acertos consecutivos', goal: 5, reward: { xp: 100, coins: 50, item: 'fifty' }, absolute: true, step: (e) => (e.type === 'answer' ? e.streak : -1) },
   { id: 'win-2', text: 'Vença 2 partidas', goal: 2, reward: { xp: 150, coins: 80, item: 'second' }, step: (e) => (e.type === 'match-end' && e.won && e.mode !== 'treino' ? 1 : 0) },
   { id: 'play-pvp', text: 'Jogue pelo menos uma partida PvP', goal: 1, reward: { xp: 60, coins: 40 }, step: (e) => (e.type === 'match-end' && e.mode !== 'treino' ? 1 : 0) },
-  { id: 'hard-3', text: 'Acerte 3 questões difíceis', goal: 3, reward: { xp: 120, coins: 60, item: 'hint' }, step: (e) => (e.type === 'answer' && e.correct && e.diff >= 3 ? 1 : 0) },
+  { id: 'hard-3', text: 'Consiga 8 acertos consecutivos', goal: 8, reward: { xp: 120, coins: 60, item: 'hint' }, absolute: true, step: (e) => (e.type === 'answer' ? e.streak : -1) },
   { id: 'crowns-3', text: 'Conquiste 3 coroas', goal: 3, reward: { xp: 100, coins: 60 }, step: (e) => (e.type === 'match-end' ? e.crowns : 0) },
   { id: 'train-1', text: 'Complete um treino', goal: 1, reward: { xp: 60, coins: 30, item: 'swap' }, step: (e) => (e.type === 'match-end' && e.mode === 'treino' ? 1 : 0) },
 ];

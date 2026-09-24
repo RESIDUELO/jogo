@@ -6,7 +6,7 @@ import { useStore, type MatchLaunch, type TrainingLaunch } from '../state/store'
 import { CAT } from '../data/categories';
 import type { CategoryId, Letter, MatchSummary, Question, ReportItem } from '../types';
 import { altLetters } from '../types';
-import { AltContent } from '../ui/QuestionPlay';
+import { AltContent, IMG_BASE } from '../ui/QuestionPlay';
 import { Bar, Btn, Card, CatBadge, Header } from '../ui/common';
 import { Particles } from '../ui/Particles';
 
@@ -79,11 +79,11 @@ export function ResultScreen({ summary, rematch, retrain }: { summary: MatchSumm
           </div>
           <MatchReport summary={summary} limit={4} />
           <Btn className="w-full mt-3" onClick={() => store.nav({ name: 'report', summary })}>
-            Ver relatório completo {summary.report && summary.report.length > 4 ? `(${summary.report.length} questões)` : ''}
+            Ver relatório completo {summary.report && summary.report.length > 4 ? `(${summary.report.length} cartões)` : ''}
           </Btn>
           {wrongQs.length > 0 && (
             <Btn variant="danger" className="w-full mt-2" onClick={() => store.nav({ name: 'trainingRun', config: { count: wrongQs.length, categories: [], wrongOnly: false, questionIds: summary.wrongIds } })}>
-              🔁 Revisar questões erradas ({wrongQs.length})
+              🔁 Revisar cartões errados ({wrongQs.length})
             </Btn>
           )}
         </div>
@@ -135,7 +135,8 @@ export function MatchReport({ summary, limit }: { summary: MatchSummary; limit?:
   return (
     <div className="space-y-2">
       {shown.map((it, i) => {
-        const q = store.qById.get(it.qid);
+        // mesma montagem da partida (as alternativas são determinísticas por cartão)
+        const q = it.chosen ? store.play(it.qid, 'mc') : store.qById.get(it.qid);
         if (!q) return null;
         const isOpen = open === it.qid + i;
         return (
@@ -143,20 +144,19 @@ export function MatchReport({ summary, limit }: { summary: MatchSummary; limit?:
             <button className="w-full text-left" onClick={() => setOpen(isOpen ? null : it.qid + i)}>
               <div className="flex items-center gap-2 flex-wrap">
                 <span className={`font-display font-bold ${it.correct ? 'text-emerald-300' : 'text-rose-300'}`}>
-                  {i + 1}. {it.correct ? '✔ Acertou' : it.chosen ? '✖ Errou' : '⏰ Sem resposta'}
+                  {i + 1}. {it.correct ? '✔ Acertou' : it.chosen || it.ms > 0 ? '✖ Errou' : '⏰ Sem resposta'}
                 </span>
                 <CatBadge cat={q.category} small />
                 {it.crown && <span className="text-xs text-amber-300">👑 coroa</span>}
                 <span className="text-xs text-white/50">{q.subtopic}</span>
-                <span className="ml-auto text-[11px] text-white/40">
-                  {q.institution} {q.year} · Q{q.number}
-                </span>
               </div>
-              <div className="text-sm mt-1">
-                Sua resposta: <b className={it.correct ? 'text-emerald-300' : 'text-rose-300'}>{it.chosen ?? '—'}</b> · Correta: <b className="text-emerald-300">{q.answer}</b>
-                {it.ms > 0 && <span className="text-white/40"> · {fmtSec(it.ms)}</span>}
-              </div>
-              {!isOpen && <p className="text-sm text-white/60 mt-1 line-clamp-2 no-print">{q.text}</p>}
+              <p className="text-sm text-white/85 mt-1 whitespace-pre-line">{q.text}</p>
+              {!isOpen && (
+                <p className="text-sm text-emerald-200/80 mt-1 line-clamp-2 no-print">
+                  ➜ {q.answerText}
+                  {it.ms > 0 && <span className="text-white/40"> · {fmtSec(it.ms)}</span>}
+                </p>
+              )}
             </button>
             <div className={isOpen ? '' : 'hidden print-block'}>
               <QuestionFull q={q} chosen={it.chosen} />
@@ -169,25 +169,22 @@ export function MatchReport({ summary, limit }: { summary: MatchSummary; limit?:
 }
 
 function QuestionFull({ q, chosen }: { q: Question; chosen: Letter | null }) {
-  const [orig, setOrig] = useState(false);
+  const extra = q.explanation.startsWith(q.answerText) ? q.explanation.slice(q.answerText.length).trim() : '';
   return (
     <div className="mt-2 space-y-2 text-sm">
-      <p className="text-white/90 whitespace-pre-line">{q.text}</p>
-      {q.images?.map((img) => <img key={img} src={`${import.meta.env.BASE_URL}banco/img/${img}`} alt="" className="max-h-60 rounded-lg bg-white" />)}
-      {altLetters(q).map((l) => (
-        <div key={l} className={`rounded-lg px-2 py-1 ${l === q.answer ? 'bg-emerald-500/15 text-emerald-200' : l === chosen ? 'bg-rose-500/15 text-rose-200' : 'text-white/70'}`}>
-          <b>{l})</b> <AltContent q={q} l={l} /> {l === q.answer ? '✔' : l === chosen ? '✖' : ''}
-        </div>
-      ))}
-      <div className="rounded-lg bg-violet-500/10 p-2 text-white/80">{q.explanationFull || q.explanation}</div>
-      {q.original?.length ? (
-        <div className="no-print">
-          <button className="text-xs underline text-sky-300" onClick={() => setOrig(!orig)}>
-            {orig ? 'ocultar' : '📄 ver questão original (PDF)'}
-          </button>
-          {orig && q.original.map((o) => <img key={o} src={`${import.meta.env.BASE_URL}banco/orig/${o}`} alt="Questão original" className="mt-2 w-full rounded-lg bg-white" />)}
-        </div>
-      ) : null}
+      {q.images?.map((img) => <img key={img} src={IMG_BASE + img} alt="" className="max-h-60 rounded-lg bg-white" />)}
+      {q.kind === 'mc' &&
+        altLetters(q).map((l) => (
+          <div key={l} className={`rounded-lg px-2 py-1 ${l === q.answer ? 'bg-emerald-500/15 text-emerald-200' : l === chosen ? 'bg-rose-500/15 text-rose-200' : 'text-white/70'}`}>
+            <b>{l})</b> <AltContent q={q} l={l} /> {l === q.answer ? '✔' : l === chosen ? '✖ sua resposta' : ''}
+          </div>
+        ))}
+      <div className="rounded-lg bg-emerald-500/10 border border-emerald-400/20 p-2 text-white/90 whitespace-pre-line">
+        <div className="text-[10px] tracking-wider text-emerald-300">RESPOSTA</div>
+        {q.answerText}
+      </div>
+      {extra && <div className="rounded-lg bg-violet-500/10 p-2 text-white/80 whitespace-pre-line">{extra}</div>}
+      <div className="text-[11px] text-white/40">{q.path.join(' › ')}</div>
     </div>
   );
 }

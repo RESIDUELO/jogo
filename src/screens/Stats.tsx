@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react';
-import { CAT, CATEGORY_IDS, DIFFICULTY_COLOR, DIFFICULTY_LABEL } from '../data/categories';
+import { CAT, CATEGORY_IDS } from '../data/categories';
 import { computeStats, rate, recommendation } from '../engine/stats';
 import { fmtPct, fmtSec } from '../engine/util';
 import { useStore } from '../state/store';
-import type { CategoryId, Difficulty } from '../types';
+import type { CategoryId } from '../types';
 import { Bar, Btn, Card, Empty, Header, Seg, Stat } from '../ui/common';
 import { Donut, LineChart } from '../ui/Charts';
 
@@ -18,7 +18,7 @@ export function StatsScreen() {
     return (
       <div>
         <Header title="Meu desempenho" />
-        <Empty icon="📊" text="Responda algumas questões para ver suas estatísticas.">
+        <Empty icon="📊" text="Responda alguns cartões para ver suas estatísticas.">
           <Btn onClick={() => store.nav({ name: 'play' })}>Jogar agora</Btn>
         </Empty>
       </div>
@@ -34,12 +34,12 @@ export function StatsScreen() {
       <Header title="Meu desempenho" subtitle="Seu estudo transformado em dados" />
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
         <Stat label="Respondidas" value={s.total.n} icon="📝" />
-        <Stat label="Questões distintas" value={distinct} icon="🧩" />
+        <Stat label="Cartões distintos" value={distinct} icon="🧩" />
         <Stat label="Acerto geral" value={fmtPct(rate(s.total))} icon="🎯" color="#4ade80" />
         <Stat label="Tempo médio" value={fmtSec(s.total.ms / s.total.n)} icon="⏱️" />
-        <Stat label="Questões erradas" value={wrongCount} icon="❌" color="#f87171" />
-        <Stat label="Difíceis acertadas" value={`${(s.byDiff[3]?.c ?? 0) + (s.byDiff[4]?.c ?? 0)}`} icon="🧗" />
-        <Stat label="Nunca respondidas" value={store.questions.filter((q) => q.status === 'ativa' && !store.history.has(q.id)).length} icon="🆕" />
+        <Stat label="Cartões errados" value={wrongCount} icon="❌" color="#f87171" />
+        <Stat label="Dominados" value={[...store.history.values()].filter((h) => h.lastCorrect && h.correct >= 2).length} icon="🧠" />
+        <Stat label="Nunca respondidas" value={store.cards.filter((c) => !store.history.has(c.id)).length} icon="🆕" />
         <Stat label="Nesta semana" value={s.week.total.n} icon="📅" />
       </div>
 
@@ -63,7 +63,7 @@ export function StatsScreen() {
           <Seg value={range} onChange={setRange} options={[{ v: 14, label: '14d' }, { v: 30, label: '30d' }, { v: 90, label: '90d' }]} />
         </div>
         <LineChart points={days.map((d) => ({ label: d.day.slice(5).split('-').reverse().join('/'), v: rate(d.acc) }))} bars={days.map((d) => d.acc.n)} />
-        <div className="text-[11px] text-white/40">Linha: % de acerto por dia · barras: questões respondidas.</div>
+        <div className="text-[11px] text-white/40">Linha: % de acerto por dia · barras: cartões respondidos.</div>
       </Card>
 
       {(s.weakSubs.length > 0 || rec) && (
@@ -85,7 +85,7 @@ export function StatsScreen() {
           {rec && (
             <div className="mt-3 flex items-center gap-3 rounded-xl bg-violet-500/15 border border-violet-400/30 p-3">
               <div className="flex-1 text-sm">
-                <b>Recomendação de estudo:</b> {rec.count} questões de {CAT[rec.cat].full}.
+                <b>Recomendação de estudo:</b> {rec.count} cartões de {CAT[rec.cat].full}.
               </div>
               <Btn onClick={() => store.nav({ name: 'trainingRun', config: { count: rec.count, categories: [rec.cat], wrongOnly: false } })}>Treinar</Btn>
             </div>
@@ -93,23 +93,6 @@ export function StatsScreen() {
         </Card>
       )}
 
-      <Card className="p-4 mt-4">
-        <div className="font-display font-semibold mb-2">Por dificuldade</div>
-        <div className="space-y-2">
-          {([1, 2, 3, 4] as Difficulty[]).map((d) => {
-            const a = s.byDiff[d];
-            return (
-              <div key={d} className="flex items-center gap-2 text-sm">
-                <span className="w-28 shrink-0" style={{ color: DIFFICULTY_COLOR[d] }}>
-                  {DIFFICULTY_LABEL[d]}
-                </span>
-                <Bar pct={rate(a)} color={DIFFICULTY_COLOR[d]} />
-                <span className="w-24 text-right shrink-0 text-white/60 text-xs">{a.n ? `${fmtPct(rate(a))} (${a.n})` : '—'}</span>
-              </div>
-            );
-          })}
-        </div>
-      </Card>
 
       <Card className="p-4 mt-4">
         <div className="flex items-center justify-between gap-2 flex-wrap mb-2">

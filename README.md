@@ -1,9 +1,9 @@
-# 🩺 Residuelo — duelos de questões de residência médica
+# 🩺 Residuelo — duelos de flashcards de residência médica
 
-Jogo web estilo **Perguntados** para estudar para provas de residência médica. Você gira a roleta, responde questões **reais** de provas anteriores, junta coroas das 5 grandes áreas e sobe de nível. Na prática, cada partida tem de 10 a 20 questões de prova.
+Jogo web estilo **Perguntados** com **flashcards** de residência médica. Você gira a roleta, responde cartões das 5 grandes áreas, junta coroas e sobe de nível.
 
-- **5 categorias:** GO · Clínica · Cirurgia · Preventiva · Pediatria
-- **Banco inicial:** 500 questões das provas **UNOESTE/HRPP R1 Acesso Direto 2022 a 2026**, com o gabarito oficial, 6 questões anuladas sinalizadas e 26 imagens (ECG, TC, RX)
+- **5 grandes áreas:** GO · Clínica · Cirurgia · Preventiva · Pediatria, cada uma com subtemas aninhados (ex.: Clínica › Cardiologia › Arritmias I)
+- **Baralho atual:** 5801 flashcards (91 baralhos MEDCARDS)
 
 ## Como rodar
 
@@ -15,12 +15,11 @@ npm run build      # typecheck + build em dist/
 
 ## O que já funciona
 
-- **Antes da partida:** escolha a(s) **prova(s)** e as **áreas** em disputa (a roleta só tem as áreas escolhidas), e se a partida é rápida ou longa.
-- **Partida estilo Perguntados:** roleta, 2 minutos por questão, medidor de coroa, questão da coroa, vitória por coroas; bots (Interno → Especialista), PvP local e **PvP online**.
-- **Online (Supabase):** login por e-mail/senha, **buscar adversário** (rating parecido, janela crescente, oferta de BOT se ninguém aparecer), **sala privada com código/link**, partida sincronizada em tempo real, **ranking de jogadores** (geral, semanal, rating e por área).
-- **Relatório de fim de partida:** todas as questões respondidas, acerto/erro, sua resposta × correta, enunciado completo, recorte da **questão original do PDF** e opção de **salvar em PDF/imprimir**. Também acessível pelo histórico no Perfil.
-- **Fidelidade:** texto extraído do PDF com correção da hifenização e, para cada questão, o recorte da página original ("ver questão original").
-- Progressão (XP, níveis, coins, missões, conquistas, streak), itens (fora do online), estatísticas, questões erradas, treino, loja.
+- **Antes da partida**, quem cria a partida/sala escolhe: **temas** (grandes áreas e subtemas, com caixas de seleção em árvore), **tempo por rodada** (15 s a 2 min), **formato** (múltipla escolha automática ou flashcard com autoavaliação) e partida rápida/longa. A roleta só tem as áreas escolhidas.
+- **Múltipla escolha automática:** o verso certo aparece com 3 respostas de cartões do mesmo subtema (sempre as mesmas para o mesmo cartão).
+- **Quem espera a vez vê a pergunta** que o adversário está respondendo e, depois, a resposta e o resultado.
+- Bots (Interno → Especialista), PvP local e **PvP online** (Supabase: conta ou visitante, buscar adversário, sala com código, ranking).
+- **Relatório de fim de partida** com cada cartão, acerto/erro e resposta; **Baralho** para navegar e buscar cartões; treino, cartões errados, estatísticas, XP, missões, conquistas, loja.
 
 ## Publicação
 
@@ -39,18 +38,14 @@ A cada push, o GitHub Actions (`.github/workflows/build.yml`) compila o site e o
 
 Modelo de confiança: as estatísticas do perfil (XP, rating) são enviadas pelo próprio cliente — adequado para um grupo de estudo; para competição aberta, mover o cálculo de rating para funções no servidor.
 
-## Adicionar provas (quantas quiser)
+## Adicionar flashcards
 
-**Jeito 1 — pelo site do GitHub (sem instalar nada):**
-1. Abra o repositório → pasta **`provas/`** → **Add file → Upload files**.
-2. Arraste os PDFs. O nome precisa começar pela instituição e ter o ano: `UEL-R1-2024.pdf`, `FAMERP-R1_Acesso_Direto-2025.pdf`.
-3. **Commit changes**. Em ~3 minutos o GitHub Actions importa as provas, monta o banco e publica o site.
+1. No Anki, exporte o baralho como **.apkg** (marque "compatível com versões antigas" se aparecer).
+2. Coloque o arquivo na pasta **`flashcards/`** (pelo site do GitHub: *Add file → Upload files*).
+3. Diga em que área/subtema ele entra em **`tools/cards-map.json`** (ex.: `{ "match": "arritmias", "path": ["CLI", "Cardiologia"] }`). Baralhos com subdecks no formato `CLI::Cardiologia::Arritmias` não precisam disso.
+4. **Commit.** O GitHub Actions monta `public/cards/deck.json` e publica o site. Se um baralho ficar sem área, o build avisa quais faltam.
 
-**Jeito 2 — mandar os PDFs para o Claude**, que importa, confere o gabarito e as áreas e publica.
-
-O importador (`tools/import_provas.py`) aceita 4 ou 5 alternativas, gabarito em grade (qualquer número de colunas) ou em pares (`1-A`), `X` = anulada, imagens nas questões e alternativas em forma de imagem. As **áreas** de cada questão vêm de `tools/provas.json` (faixas por prova) ou, se não houver faixas, são **detectadas automaticamente** (a prova é dividida nos 5 blocos de área mais prováveis — ~95% de acerto nas provas atuais). Para corrigir uma prova, adicione a faixa em `tools/provas.json`, ex.: `"UEL-2024": "1-20 CLI; 21-40 CIR; 41-60 GO; 61-80 PED; 81-100 PRE"`. Nome de exibição da instituição: seção `instituicoes` do mesmo arquivo.
-
-Localmente: `pip install pymupdf && python3 tools/import_provas.py && python3 tools/build_bank.py`.
+Ou mande os .apkg para o Claude. Localmente: `python3 tools/build_cards.py`.
 
 ## Testes locais do online
 
@@ -59,36 +54,26 @@ Localmente: `pip install pymupdf && python3 tools/import_provas.py && python3 to
 ## Arquitetura
 
 ```
-public/banco/               ← BANCO DE QUESTÕES (dados, separados do código)
-  index.json                   lista de provas
-  unoeste-2022.json …          uma prova por arquivo: { exam, questions[] }
-  img/                         imagens das questões
-tools/                      ← pipeline do banco (Python)
-  extract_unoeste.py           PDF → tools/raw/*.json (enunciado, alternativas, gabarito, anuladas, imagens)
-  annotations/*.txt            anotações pedagógicas opcionais (subtema, dificuldade, explicações)
-  exams.json                   metadados + faixas de categoria de cada prova
-  build_bank.py                raw + anotações → public/banco/*.json
+flashcards/*.apkg           ← baralhos do Anki (fonte)
+tools/cards-map.json        ← baralho → área › subtemas
+tools/build_cards.py        ← .apkg → public/cards/deck.json (+ imagens em public/cards/img/)
 src/
-  types/        modelo de dados em "tabelas": Question, Player (USERS), AnswerRecord (ANSWERS), MatchSummary (MATCHES), RankingEntry…
-  data/         conteúdo de jogo: categorias, níveis/ligas, bots, loja, conquistas, missões
-  engine/       regras puras, sem React: match.ts (máquina de estados da partida), scoring, elo, selection (anti-repetição), bot, player (XP, missões, conquistas), stats, classify, importers/
-  services/     questionRepo (banco estático), playerRepo (localStorage), online/ (Supabase + backend simulado), rankings
-  state/        store React: liga UI ↔ motor ↔ repositórios
+  types/        modelo de dados: Flashcard, Question (pergunta jogável), Player, AnswerRecord, MatchSummary…
+  data/         categorias, níveis/ligas, bots, loja, conquistas, missões
+  engine/       regras puras: cards.ts (árvore de temas, múltipla escolha), match.ts, scoring, elo, selection (anti-repetição), bot, player, stats
+  services/     questionRepo (baralho estático), playerRepo (localStorage), online/ (Supabase + simulado), rankings
+  state/        store React
   ui/ screens/  componentes e telas
 ```
 
-**Motor ≠ banco ≠ interface.** O motor recebe estado e devolve novo estado e eventos. A interface só desenha e toca sons. As questões ficam em JSON, nunca nos componentes. O banco base é carregado por `fetch`. 
+**Motor ≠ baralho ≠ interface.** O motor recebe estado e devolve novo estado e eventos. A interface só desenha e toca sons. Os flashcards ficam em JSON, carregados por `fetch`.
 
 **Anti-repetição** (`engine/selection.ts`): a escolha da questão é aleatória com pesos. Questões nunca vistas têm peso alto. Questões erradas voltam depois de algumas horas, como revisão. Questões acertadas reaparecem devagar, conforme o tempo passa. Questões vistas há menos de 30 min quase nunca saem. Na partida, a mesma questão não se repete, nem entre os dois jogadores.
 
-**Integridade:** a resposta sempre vem do gabarito oficial. Questões **anuladas** nunca entram em partidas normais. No treino, elas entram só se a opção estiver ligada em Ajustes. Questões **divergentes** só aparecem no treino, com um aviso.
-
 ## Como alterar categorias
 
-Edite `src/data/categories.ts` (nome, ícone, cor) e o tipo `CategoryId` em `src/types/index.ts`. A roleta, os filtros, as estatísticas e os rankings se ajustam sozinhos. As palavras-chave da classificação automática ficam em `src/engine/classify.ts`.
+Edite `src/data/categories.ts` (nome, ícone, cor) e o tipo `CategoryId` em `src/types/index.ts`. A roleta, os filtros, as estatísticas e os rankings se ajustam sozinhos.
 
 ## O que ainda falta
 
-- Explicações: só 2022 Q1–20 têm explicação; as demais mostram o gabarito oficial.
-- Subtemas/dificuldade estimados automaticamente (muitos ficam "Geral").
 - Rating calculado no cliente (ver "Modelo de confiança").

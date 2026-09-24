@@ -3,7 +3,8 @@ import { CAT, CATEGORIES } from '../data/categories';
 import { missingCrowns, setupCats, type CompetitorState, type MatchState } from '../engine/match';
 import type { CategoryId, Question } from '../types';
 import { altLetters } from '../types';
-import { AltContent } from './QuestionPlay';
+import { AltContent, IMG_BASE } from './QuestionPlay';
+import { topicLabel } from '../engine/cards';
 import { COSMETIC } from '../data/shop';
 import type { Competitor } from '../engine/match';
 import { levelFromXp } from '../engine/progression';
@@ -50,7 +51,7 @@ export function Overlays({ overlay, match }: { overlay: Overlay; match: MatchSta
       <div className="text-center animate-pop">
         <div className="text-7xl mb-2">{overlay.crown ? '👑' : CAT[overlay.cat].icon}</div>
         <div className="font-display text-5xl font-bold text-white drop-shadow-[0_4px_0_rgba(0,0,0,.35)]">{CAT[overlay.cat].name}!</div>
-        {overlay.crown && <div className="text-amber-200 mt-1 font-semibold">Questão da coroa</div>}
+        {overlay.crown && <div className="text-amber-200 mt-1 font-semibold">Pergunta da coroa</div>}
       </div>
     </div>
   );
@@ -92,7 +93,7 @@ export function MatchHud({ match }: { match: MatchState }) {
           </div>
         </div>
         <div className={`mt-2 flex ${idx === 1 ? 'justify-end' : ''}`}>
-          <CrownSlots p={p} small cats={setupCats(match.setup)} />
+          <CrownSlots p={p} small cats={setupCats(match)} />
         </div>
         <div className={`mt-2 flex items-center gap-2 ${idx === 1 ? 'flex-row-reverse' : ''}`}>
           <div className="flex gap-1">
@@ -127,12 +128,17 @@ function VsIntro({ a, b, mode, match }: { a: CompetitorState; b: CompetitorState
     <div className="fixed inset-0 z-[75] grid place-items-center bg-gradient-to-br from-indigo-950 via-ink-950 to-fuchsia-950">
       <div className="w-full max-w-md px-6">
         <div className="text-center text-xs tracking-[0.3em] text-white/50 mb-2">{mode === 'ranked' ? 'PARTIDA RANQUEADA' : mode === 'pvp-local' ? 'DUELO LOCAL' : mode === 'pvp-online' ? 'DUELO ONLINE' : 'DUELO'}</div>
-        <div className="flex justify-center gap-1 mb-6">
-          {setupCats(match.setup).map((c) => (
+        <div className="flex justify-center gap-1">
+          {setupCats(match).map((c) => (
             <span key={c} className="w-7 h-7 rounded-full grid place-items-center text-sm" style={{ background: CAT[c].color }}>
               {CAT[c].icon}
             </span>
           ))}
+        </div>
+        <div className="text-center text-[11px] text-white/50 mt-2 mb-6 px-2">
+          {match.setup.topics?.length ? match.setup.topics.slice(0, 3).map((t) => topicLabel(t) || CAT[t as CategoryId]?.name).join(' · ') + (match.setup.topics.length > 3 ? ` +${match.setup.topics.length - 3}` : '') : 'Todos os temas'}
+          <br />
+          {match.setup.format === 'flash' ? '🃏 Flashcard' : '🔠 Múltipla escolha'} · ⏱️ {match.setup.timeSec} s por pergunta
         </div>
         <div className="flex items-center justify-between">
           <div className="text-center animate-slideIn">
@@ -162,7 +168,7 @@ export function CrownChoice({ player, match, onChoose }: { player: CompetitorSta
     <div className="text-center animate-pop pt-4">
       <div className="text-6xl animate-glow">👑</div>
       <h2 className="font-display text-3xl font-bold mt-2">Medidor cheio!</h2>
-      <p className="text-white/60 mt-1 mb-5">Escolha a coroa que você quer disputar. A questão será um pouco mais difícil.</p>
+      <p className="text-white/60 mt-1 mb-5">Escolha a coroa que você quer disputar. Acertando a pergunta, a coroa é sua.</p>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-lg mx-auto">
         {miss.map((c) => (
           <button
@@ -182,28 +188,43 @@ export function CrownChoice({ player, match, onChoose }: { player: CompetitorSta
 
 export function OpponentTurnCard({ view, name, avatar, onSkip }: { view: OpponentView; name: string; avatar: string; onSkip?: () => void }) {
   const c = CAT[view.q.category];
+  const done = view.phase === 'result';
+  const flash = view.q.kind === 'flash';
   return (
     <div className="rounded-3xl p-5 border border-white/10 bg-ink-800/80 animate-slideIn">
       <div className="flex items-center gap-3">
         <div className="text-4xl">{avatar}</div>
-        <div>
-          <div className="font-display font-semibold">{name}</div>
-          <div className="text-xs" style={{ color: c.color }}>
+        <div className="min-w-0">
+          <div className="font-display font-semibold">{name} está respondendo</div>
+          <div className="text-xs truncate" style={{ color: c.color }}>
             {c.icon} {c.name} · {view.q.subtopic}
           </div>
         </div>
       </div>
-      <details className="mt-3 text-sm text-white/70">
-        <summary className="cursor-pointer text-white/50 text-xs">ver a questão do adversário</summary>
-        <p className="mt-2 whitespace-pre-line">{view.q.text}</p>
-        <div className="mt-2 space-y-0.5 text-white/60">
+      <div className="mt-4 rounded-2xl bg-black/25 p-4">
+        <p className="text-base sm:text-lg leading-relaxed whitespace-pre-line">{view.q.text}</p>
+        {view.q.images?.map((img) => <img key={img} src={IMG_BASE + img} alt="" className="mt-2 w-full max-h-60 object-contain rounded-xl bg-white" loading="lazy" />)}
+      </div>
+      {!flash && (
+        <div className="mt-3 space-y-1.5 text-sm">
           {altLetters(view.q).map((l) => (
-            <div key={l} className={view.phase === 'result' && l === view.q.answer ? 'text-emerald-300' : ''}>
-              <b>{l})</b> <AltContent q={view.q} l={l} />
+            <div
+              key={l}
+              className={`rounded-xl px-3 py-2 border ${
+                done && l === view.q.answer ? 'border-emerald-400/60 bg-emerald-500/15 text-emerald-100' : done && l === view.chosen ? 'border-rose-400/60 bg-rose-500/15 text-rose-100' : 'border-white/10 bg-white/5 text-white/80'
+              }`}
+            >
+              <b className="mr-1">{l})</b> <AltContent q={view.q} l={l} />
             </div>
           ))}
         </div>
-      </details>
+      )}
+      {flash && done && (
+        <div className="mt-3 rounded-2xl border border-emerald-400/30 bg-emerald-500/10 p-3 text-sm whitespace-pre-line">
+          <div className="text-[11px] tracking-wider text-emerald-300 mb-1">RESPOSTA</div>
+          {view.q.answerText}
+        </div>
+      )}
       {view.phase === 'thinking' ? (
         <div className="mt-4 flex items-center gap-2 text-white/80">
           <span className="thinking-dots">
@@ -215,13 +236,13 @@ export function OpponentTurnCard({ view, name, avatar, onSkip }: { view: Opponen
         </div>
       ) : (
         <div className={`mt-4 rounded-2xl p-3 font-display text-xl font-bold animate-pop ${view.correct ? 'bg-emerald-500/20 text-emerald-300' : 'bg-rose-500/20 text-rose-300'}`}>
-          {view.correct ? `✔ Acertou! +${view.points} pts` : view.chosen ? `✖ Errou (marcou ${view.chosen})` : '⏰ Tempo esgotado'}
+          {view.correct ? `✔ Acertou! +${view.points} pts` : view.chosen ? `✖ Errou (marcou ${view.chosen})` : flash && view.ms > 0 ? '✖ Errou' : '⏰ Tempo esgotado'}
           <span className="block text-xs font-sans font-normal text-white/50 mt-0.5">
-            {(view.ms / 1000).toFixed(1)} s · resposta correta: {view.q.answer}
+            {(view.ms / 1000).toFixed(1)} s{!flash && view.q.answer ? ` · resposta correta: ${view.q.answer}` : ''}
           </span>
         </div>
       )}
-      {view.phase === 'result' && onSkip && (
+      {done && onSkip && (
         <div className="mt-3 text-right">
           <button onClick={onSkip} className="text-xs text-white/50 hover:text-white underline">
             pular ›

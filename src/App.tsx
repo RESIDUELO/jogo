@@ -99,13 +99,13 @@ export function App() {
         {error ? (
           <div className="py-24 text-center">
             <div className="text-5xl">⚠️</div>
-            <p className="mt-3 text-white/70">Não foi possível carregar o banco de questões.</p>
+            <p className="mt-3 text-white/70">Não foi possível carregar os flashcards.</p>
             <p className="text-xs text-white/40 mt-1">{error}</p>
           </div>
         ) : !ready ? (
           <div className="py-32 text-center">
             <div className="text-6xl animate-spin inline-block">🎡</div>
-            <p className="mt-4 font-display text-lg text-white/70">Carregando questões...</p>
+            <p className="mt-4 font-display text-lg text-white/70">Carregando flashcards...</p>
           </div>
         ) : !player ? (
           <Onboarding />

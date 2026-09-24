@@ -7,8 +7,9 @@ import { COSMETIC } from '../data/shop';
 import { eloDelta } from '../engine/elo';
 import { advance, applyAnswer, applyCrownChoice, applySpin, createMatch, forfeit, lastSpunCat, setQuestion, setupCats, type Competitor, type MatchState } from '../engine/match';
 import { matchPool, reportOf } from '../engine/matchUtils';
+import { setupAreas } from '../engine/cards';
 import { levelFromXp } from '../engine/progression';
-import { matchRewards, QUESTION_TIME_MS, scoreAnswer } from '../engine/scoring';
+import { matchRewards, scoreAnswer } from '../engine/scoring';
 import { pickQuestion } from '../engine/selection';
 import { spinCategory } from '../engine/util';
 import type { OnlineMatchRow } from '../services/online';
@@ -21,7 +22,7 @@ import { Particles } from '../ui/Particles';
 import { QuestionPlay, type AnswerResult, type Feedback } from '../ui/QuestionPlay';
 import { Wheel } from '../ui/Wheel';
 
-const INACTIVE_MS = 180_000; // 2 min de questão + margem
+const INACTIVE_MARGIN_MS = 60_000; // tempo da rodada + margem
 
 export function OnlineMatchScreen({ matchId }: { matchId: string }) {
   const store = useStore();
@@ -48,7 +49,9 @@ export function OnlineMatchScreen({ matchId }: { matchId: string }) {
   const myIdx = state ? (state.players[0].id === account?.id ? 0 : 1) : 0;
   const oppIdx = myIdx === 0 ? 1 : 0;
   const myTurn = !!state && state.turn === myIdx && state.phase !== 'end';
-  const pool = useMemo(() => (row ? matchPool(store.questions, 'pvp-online', row.config) : []), [store.questions, row?.config]); // eslint-disable-line react-hooks/exhaustive-deps
+  const pool = useMemo(() => (row ? matchPool(store.qById.values(), row.config) : []), [store.qById, row?.config]); // eslint-disable-line react-hooks/exhaustive-deps
+  const q = useMemo(() => (state?.qid ? store.play(state.qid, state.setup.format) : undefined), [state?.qid, state?.setup.format, store.play]); // eslint-disable-line react-hooks/exhaustive-deps
+  const limitMs = (state?.setup.timeSec ?? 30) * 1000;
 
   const accept = (r: OnlineMatchRow) => {
     if (rowRef.current && r.version < rowRef.current.version) return;
@@ -75,7 +78,7 @@ export function OnlineMatchScreen({ matchId }: { matchId: string }) {
       const opp = await backend.getProfile(row.player_b!);
       const a: Competitor = { id: account!.id, name: me.name, avatar: COSMETIC[me.cosmetics.avatar]?.value ?? '🩺', frame: COSMETIC[me.cosmetics.frame]?.value, kind: 'human', level: levelFromXp(me.xp).level, rating: me.rating };
       const b: Competitor = { id: row.player_b!, name: opp?.name ?? 'Adversário', avatar: opp?.avatar ?? '🩺', kind: 'human', level: opp?.level ?? 1, rating: opp?.rating ?? 1000 };
-      await push(createMatch(row.id, 'pvp-online', a, b, row.config));
+      await push(createMatch(row.id, 'pvp-online', a, b, row.config, setupAreas(row.config, store.cards)));
     })();
   }, [row, backend, account]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -126,7 +129,7 @@ export function OnlineMatchScreen({ matchId }: { matchId: string }) {
   function onSpinClick() {
     if (!myTurn || state!.phase !== 'spin' || spinning) return;
     setSpinning(true);
-    setSpin((s) => ({ key: s.key + 1, target: spinCategory(setupCats(state!.setup), lastSpunCat(state!)) }));
+    setSpin((s) => ({ key: s.key + 1, target: spinCategory(setupCats(state!), lastSpunCat(state!)) }));
   }
 
   function onWheelDone(cat: CategoryId) {
@@ -149,8 +152,7 @@ export function OnlineMatchScreen({ matchId }: { matchId: string }) {
 
   function onAnswer(r: AnswerResult) {
     const m = rowRef.current!.state!;
-    const q = store.qById.get(m.qid!);
-    if (!q) return;
+    if (!q || q.id !== m.qid) return;
     const p = m.players[myIdx];
     const s = scoreAnswer({ correct: r.correct, difficulty: q.difficulty, msUsed: r.ms, msLimit: r.msLimit, streakBefore: p.streak, secondChance: r.secondChance, crown: m.crownQuestion });
     const res = applyAnswer(m, { chosen: r.chosen, correct: r.correct, ms: r.ms, points: s.points, xp: s.xp });
@@ -233,9 +235,8 @@ export function OnlineMatchScreen({ matchId }: { matchId: string }) {
 
   const cur = state.players[state.turn];
   const opp = state.players[oppIdx];
-  const q = state.qid ? store.qById.get(state.qid) : undefined;
   const lastLog = state.log[state.log.length - 1];
-  const inactive = !myTurn && state.phase !== 'end' && now - new Date(row.updated_at).getTime() > INACTIVE_MS;
+  const inactive = !myTurn && state.phase !== 'end' && now - new Date(row.updated_at).getTime() > limitMs + INACTIVE_MARGIN_MS;
   const oppView: OpponentView | null =
     !myTurn && q && (state.phase === 'question' || state.phase === 'feedback') && !spinning
       ? {
@@ -255,7 +256,7 @@ export function OnlineMatchScreen({ matchId }: { matchId: string }) {
         {myTurn && (state.phase === 'question' || state.phase === 'feedback') && q ? (
           <QuestionPlay
             question={q}
-            limitMs={QUESTION_TIME_MS}
+            limitMs={limitMs}
             crown={state.crownQuestion}
             powerupsAllowed={false}
             onAnswer={onAnswer}
@@ -274,7 +275,7 @@ export function OnlineMatchScreen({ matchId }: { matchId: string }) {
           <div className="flex flex-col items-center pt-2">
             <div className="font-display text-lg text-white/80 mb-4 h-7">{myTurn ? '🎡 Gire a roleta!' : <span className="animate-pulse">{cur.avatar} Vez de {cur.name}...</span>}</div>
             <Wheel
-              categories={setupCats(state.setup)}
+              categories={setupCats(state)}
               target={spin.target}
               spinKey={spin.key}
               onDone={onWheelDone}
@@ -289,7 +290,7 @@ export function OnlineMatchScreen({ matchId }: { matchId: string }) {
 
       {inactive && (
         <div className="mt-4 rounded-2xl bg-amber-400/15 border border-amber-300/30 p-4 text-center">
-          <p className="text-sm">{opp.name} está sem jogar há mais de 3 minutos.</p>
+          <p className="text-sm">{opp.name} está sem jogar há um bom tempo.</p>
           <Btn variant="gold" className="mt-2" onClick={() => quit(oppIdx as 0 | 1)}>
             Reivindicar vitória
           </Btn>

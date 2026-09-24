@@ -1,12 +1,10 @@
-import type { MatchMode, MatchSetupData, Question, ReportItem } from '../types';
+import type { MatchSetupData, Question, ReportItem } from '../types';
+import { inTopics } from './cards';
 import type { MatchState } from './match';
-import { isPlayable } from './selection';
 
-/** Questões elegíveis para a partida, respeitando provas e áreas escolhidas. */
-export function matchPool(questions: Question[], mode: MatchMode, setup: MatchSetupData): Question[] {
-  return questions.filter(
-    (q) => isPlayable(q, mode, false) && (!setup.exams.length || setup.exams.includes(q.examId)) && (!setup.cats.length || setup.cats.includes(q.category)),
-  );
+/** Cartões (como perguntas-base) dentro dos temas escolhidos. */
+export function matchPool(questions: Iterable<Question>, setup: Pick<MatchSetupData, 'topics'>): Question[] {
+  return [...questions].filter((q) => inTopics({ area: q.category, path: q.path }, setup.topics));
 }
 
 /** Relatório da partida (questões do jogador idx, na ordem). */

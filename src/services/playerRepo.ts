@@ -50,7 +50,7 @@ function migrate(p: Player): Player {
     ...p,
     catXp: { ...emptyCatRecord(0), ...p.catXp },
     inventory: Object.assign({ fifty: 0, time: 0, second: 0, hint: 0, swap: 0 }, p.inventory),
-    settings: Object.assign({ sound: true, includeAnnulledInStudy: false, reduceMotion: false }, p.settings),
+    settings: Object.assign({ sound: true, reduceMotion: false }, p.settings),
   });
 }
 

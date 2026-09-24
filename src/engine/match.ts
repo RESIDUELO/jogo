@@ -19,17 +19,18 @@ export interface MatchConfig {
 export const QUICK_MATCH: MatchConfig = { targetCrowns: 3, maxRounds: 10, meterSize: 2 };
 export const LONG_MATCH: MatchConfig = { targetCrowns: 5, maxRounds: 18, meterSize: 2 };
 
-/** O que está em disputa: provas e áreas escolhidas antes da partida (vazio = todas). */
+/** O que está em disputa: temas, tempo e formato escolhidos antes da partida. */
 export type MatchSetup = MatchSetupData;
 
 /** Ajusta coroas/medidor ao número de áreas escolhidas. */
-export function configFor(setup: MatchSetup): MatchConfig {
-  const n = setup.cats.length || CATEGORY_IDS.length;
+export function configFor(setup: MatchSetup, areas: CategoryId[]): MatchConfig {
+  const n = areas.length || CATEGORY_IDS.length;
   const base = setup.long ? LONG_MATCH : QUICK_MATCH;
   return { ...base, targetCrowns: Math.min(base.targetCrowns, n), meterSize: n <= 2 ? 3 : base.meterSize };
 }
 
-export const setupCats = (s: MatchSetup): CategoryId[] => (s.cats.length ? CATEGORY_IDS.filter((c) => s.cats.includes(c)) : CATEGORY_IDS);
+/** Áreas em disputa na partida (definidas ao criar, só as que têm cartões). */
+export const setupCats = (m: Pick<MatchState, 'areas'>): CategoryId[] => (m.areas?.length ? m.areas : CATEGORY_IDS);
 
 export interface Competitor {
   id: string;
@@ -75,6 +76,7 @@ export interface MatchState {
   mode: MatchMode;
   config: MatchConfig;
   setup: MatchSetup;
+  areas: CategoryId[];
   players: [CompetitorState, CompetitorState];
   turn: 0 | 1;
   round: number;
@@ -93,12 +95,13 @@ function initCompetitor(c: Competitor): CompetitorState {
   return { ...c, crowns: [], meter: 0, score: 0, correct: 0, answered: 0, streak: 0, bestStreak: 0, totalMs: 0, wrongIds: [], powerupsUsed: 0 };
 }
 
-export function createMatch(id: string, mode: MatchMode, a: Competitor, b: Competitor, setup: MatchSetup = { exams: [], cats: [] }): MatchState {
+export function createMatch(id: string, mode: MatchMode, a: Competitor, b: Competitor, setup: MatchSetup, areas: CategoryId[]): MatchState {
   return {
     id,
     mode,
-    config: configFor(setup),
+    config: configFor(setup, areas),
     setup,
+    areas,
     players: [initCompetitor(a), initCompetitor(b)],
     turn: 0,
     round: 1,
@@ -116,7 +119,7 @@ export function createMatch(id: string, mode: MatchMode, a: Competitor, b: Compe
 export const current = (m: MatchState) => m.players[m.turn];
 
 export function missingCrowns(p: CompetitorState, m: MatchState): CategoryId[] {
-  return setupCats(m.setup).filter((c) => !p.crowns.includes(c));
+  return setupCats(m).filter((c) => !p.crowns.includes(c));
 }
 
 /** Última área sorteada (para a roleta evitar repetições seguidas). */

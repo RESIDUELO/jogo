@@ -1,4 +1,4 @@
-import type { AnswerRecord, CategoryId, Difficulty, MatchMode, Question } from '../types';
+import type { AnswerRecord, CategoryId, Difficulty, Question } from '../types';
 import { weightedPick } from './util';
 
 /** Resumo do histórico do jogador por questão (derivado de ANSWERS). */
@@ -24,15 +24,6 @@ export function buildHistory(answers: AnswerRecord[]): Map<string, QHistory> {
     m.set(a.qid, h);
   }
   return m;
-}
-
-/** Questões elegíveis para um modo de jogo (integridade: anuladas nunca entram em partidas normais). */
-export function isPlayable(q: Question, mode: MatchMode, includeAnnulledInStudy: boolean): boolean {
-  if (q.status === 'rascunho') return false;
-  if (!q.answer) return false; // sem gabarito não dá para corrigir
-  if (q.status === 'anulada') return mode === 'treino' && includeAnnulledInStudy;
-  if (q.status === 'divergente') return mode === 'treino';
-  return true;
 }
 
 export interface PickOptions {

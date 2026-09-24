@@ -1,226 +1,157 @@
-// Banco de questões: consultas ("quantas de Cirurgia?", "quais de trauma?",
-// "quais de Clínica eu errei?", "quais nunca respondi?"...).
+// Baralho: navegar pelos flashcards (área › subtemas), buscar e virar cartões.
 import { useMemo, useState } from 'react';
-import { CAT, CATEGORY_IDS, DIFFICULTY_COLOR, DIFFICULTY_LABEL } from '../data/categories';
+import { CAT } from '../data/categories';
+import { cardKey, SEP, type TopicNode } from '../engine/cards';
 import { normalize } from '../engine/util';
 import { useStore } from '../state/store';
-import { groupExams } from '../ui/ExamPicker';
-import type { CategoryId, Question, QuestionStatus } from '../types';
-import { Bar, Btn, Card, CatBadge, Header } from '../ui/common';
-import { ExplanationModal } from '../ui/QuestionPlay';
+import type { Flashcard } from '../types';
+import { Btn, Card, Header, Seg } from '../ui/common';
+import { IMG_BASE } from '../ui/QuestionPlay';
+import { useTopicTree } from '../ui/TopicPicker';
 
-export type MyFilter = '' | 'respondidas' | 'nunca' | 'erradas' | 'acertadas';
-
-export interface BrowserFilters {
-  text: string;
-  cat: CategoryId | '';
-  exam: string;
-  diff: string;
-  status: QuestionStatus | '';
-  mine: MyFilter;
-  sub: string;
-}
-
-export const EMPTY_FILTERS: BrowserFilters = { text: '', cat: '', exam: '', diff: '', status: '', mine: '', sub: '' };
-
-export function useFiltered(f: BrowserFilters) {
-  const store = useStore();
-  return useMemo(() => {
-    const t = normalize(f.text.trim());
-    return store.questions
-      .filter((q) => {
-        if (f.cat && q.category !== f.cat) return false;
-        if (f.exam && q.examId !== f.exam) return false;
-        if (f.diff && String(q.difficulty) !== f.diff) return false;
-        if (f.status && q.status !== f.status) return false;
-        if (f.sub && q.subtopic !== f.sub) return false;
-        const h = store.history.get(q.id);
-        if (f.mine === 'respondidas' && !h) return false;
-        if (f.mine === 'nunca' && h) return false;
-        if (f.mine === 'erradas' && !(h && h.wrong > 0)) return false;
-        if (f.mine === 'acertadas' && !(h && h.correct > 0)) return false;
-        if (t) {
-          if (/^\d+$/.test(t)) return q.number === Number(t) || q.id.includes(t);
-          const hay = normalize(q.text + ' ' + q.subtopic + ' ' + Object.values(q.alternatives).join(' ') + ' ' + (q.tags ?? []).join(' '));
-          return t.split(/\s+/).every((w) => hay.includes(w));
-        }
-        return true;
-      })
-      .sort((a, b) => a.examId.localeCompare(b.examId) || (a.number ?? 0) - (b.number ?? 0));
-  }, [store.questions, store.history, f]);
-}
-
-export function FilterBar({ f, set, subs }: { f: BrowserFilters; set: (f: BrowserFilters) => void; subs: string[] }) {
-  const store = useStore();
-  return (
-    <div className="space-y-2">
-      <input className="input" placeholder="🔎 Buscar: trauma, pré-eclâmpsia, insuficiência cardíaca, nº da questão..." value={f.text} onChange={(e) => set({ ...f, text: e.target.value })} />
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
-        <select className="input" value={f.cat} onChange={(e) => set({ ...f, cat: e.target.value as CategoryId | '', sub: '' })}>
-          <option value="">Categoria</option>
-          {CATEGORY_IDS.map((c) => (
-            <option key={c} value={c}>
-              {CAT[c].name}
-            </option>
-          ))}
-        </select>
-        <select className="input" value={f.sub} onChange={(e) => set({ ...f, sub: e.target.value })}>
-          <option value="">Subtema</option>
-          {subs.map((s) => (
-            <option key={s}>{s}</option>
-          ))}
-        </select>
-        <select className="input" value={f.exam} onChange={(e) => set({ ...f, exam: e.target.value })}>
-          <option value="">Prova</option>
-          {groupExams(store.exams).map((g) => (
-            <optgroup key={g.institution} label={g.institution}>
-              {g.exams.map((e) => (
-                <option key={e.id} value={e.id}>
-                  {e.title}
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        </select>
-        <select className="input" value={f.diff} onChange={(e) => set({ ...f, diff: e.target.value })}>
-          <option value="">Dificuldade</option>
-          {[1, 2, 3, 4].map((d) => (
-            <option key={d} value={d}>
-              {DIFFICULTY_LABEL[d as 1]}
-            </option>
-          ))}
-        </select>
-        <select className="input" value={f.status} onChange={(e) => set({ ...f, status: e.target.value as QuestionStatus | '' })}>
-          <option value="">Status</option>
-          <option value="ativa">Ativa</option>
-          <option value="anulada">Anulada</option>
-          <option value="divergente">Divergente</option>
-          <option value="rascunho">Rascunho</option>
-        </select>
-        <select className="input" value={f.mine} onChange={(e) => set({ ...f, mine: e.target.value as MyFilter })}>
-          <option value="">Meu histórico</option>
-          <option value="respondidas">Já respondi</option>
-          <option value="nunca">Nunca respondi</option>
-          <option value="erradas">Errei</option>
-          <option value="acertadas">Acertei</option>
-        </select>
-      </div>
-    </div>
-  );
-}
-
-export function QuestionRow({ q, onOpen, actions }: { q: Question; onOpen: () => void; actions?: React.ReactNode }) {
-  const store = useStore();
-  const h = store.history.get(q.id);
-  return (
-    <div className="rounded-2xl bg-ink-800/70 border border-white/10 p-3 hover:border-white/25 transition">
-      <div className="flex items-center gap-2 flex-wrap cursor-pointer" onClick={onOpen}>
-        <span className="font-mono text-[11px] text-white/40">{q.id}</span>
-        <CatBadge cat={q.category} small />
-        <span className="text-xs text-white/70">{q.subtopic}</span>
-        <span className="text-[11px]" style={{ color: DIFFICULTY_COLOR[q.difficulty] }}>
-          {DIFFICULTY_LABEL[q.difficulty]}
-        </span>
-        {q.status !== 'ativa' && <span className="text-[10px] rounded-full bg-rose-500/25 text-rose-200 px-2 py-0.5 uppercase">{q.status}</span>}
-        {q.images?.length ? <span className="text-[11px]">🖼️</span> : null}
-        {h && <span className={`text-[11px] ml-auto ${h.lastCorrect ? 'text-emerald-300' : 'text-rose-300'}`}>{h.lastCorrect ? '✔' : '✖'} {h.seen}x</span>}
-      </div>
-      <p className="text-sm text-white/80 mt-1.5 line-clamp-2 cursor-pointer" onClick={onOpen}>
-        {q.text}
-      </p>
-      {actions && <div className="flex gap-2 mt-2 justify-end">{actions}</div>}
-    </div>
-  );
-}
+type Mine = '' | 'nunca' | 'erradas' | 'acertadas';
+const PAGE = 40;
 
 export function BankScreen() {
   const store = useStore();
-  const [f, setF] = useState<BrowserFilters>(EMPTY_FILTERS);
-  const [open, setOpen] = useState<Question | null>(null);
-  const [limit, setLimit] = useState(40);
-  const list = useFiltered(f);
-  const subs = useMemo(() => [...new Set(store.questions.filter((q) => !f.cat || q.category === f.cat).map((q) => q.subtopic))].sort(), [store.questions, f.cat]);
-  const topSubs = useMemo(() => {
-    const m = new Map<string, { n: number; cat: CategoryId }>();
-    store.questions.forEach((q) => m.set(q.subtopic, { n: (m.get(q.subtopic)?.n ?? 0) + 1, cat: q.category }));
-    return [...m.entries()].sort((a, b) => b[1].n - a[1].n).slice(0, 12);
-  }, [store.questions]);
-  const byCat = CATEGORY_IDS.map((c) => ({ c, n: store.questions.filter((q) => q.category === c).length, active: store.questions.filter((q) => q.category === c && q.status === 'ativa').length }));
-  const maxSub = topSubs[0]?.[1].n ?? 1;
+  const { tree } = useTopicTree(store.cards);
+  const [path, setPath] = useState<string>(''); // chave do nó aberto ('' = raiz)
+  const [text, setText] = useState('');
+  const [mine, setMine] = useState<Mine>('');
+  const [limit, setLimit] = useState(PAGE);
+  const [flipped, setFlipped] = useState<Set<string>>(new Set());
+
+  const node = useMemo(() => {
+    if (!path) return null;
+    let found: TopicNode | null = null;
+    const walk = (n: TopicNode) => (n.key === path ? (found = n) : n.children.forEach(walk));
+    tree.forEach(walk);
+    return found as TopicNode | null;
+  }, [path, tree]);
+  const children = node ? node.children : tree;
+  const crumbs = path ? path.split(SEP).map((_, i, a) => a.slice(0, i + 1).join(SEP)) : [];
+
+  const list = useMemo(() => {
+    const t = normalize(text.trim());
+    return store.cards.filter((c) => {
+      if (path) {
+        const k = cardKey(c);
+        if (k !== path && !k.startsWith(path + SEP)) return false;
+      }
+      const h = store.history.get(c.id);
+      if (mine === 'nunca' && h) return false;
+      if (mine === 'erradas' && !(h && h.wrong > 0)) return false;
+      if (mine === 'acertadas' && !(h && h.lastCorrect)) return false;
+      return !t || normalize(c.front + ' ' + c.back).includes(t);
+    });
+  }, [store.cards, store.history, path, text, mine]);
+
+  const go = (key: string) => {
+    setPath(key);
+    setLimit(PAGE);
+  };
+  const flip = (id: string) =>
+    setFlipped((f) => {
+      const s = new Set(f);
+      s.has(id) ? s.delete(id) : s.add(id);
+      return s;
+    });
 
   return (
     <div className="pb-10">
-      <Header title="Banco de questões" subtitle={`${store.questions.length} questões · ${store.exams.length} provas`} />
-      <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
-        {byCat.map(({ c, n, active }) => (
-          <button key={c} onClick={() => setF({ ...EMPTY_FILTERS, cat: c })} className="rounded-2xl p-3 text-left border border-white/10 hover:-translate-y-0.5 transition" style={{ background: `linear-gradient(150deg, ${CAT[c].color}44, #1b1842)` }}>
-            <div className="text-2xl">{CAT[c].icon}</div>
-            <div className="font-display font-bold text-2xl">{n}</div>
-            <div className="text-[11px] text-white/60">
-              {CAT[c].name} · {active} ativas
-            </div>
+      <Header title="Baralho" subtitle={`${store.cards.length} flashcards`} />
+
+      <Card className="p-3 space-y-3">
+        <input className="input" placeholder="🔎 Buscar na frente ou no verso..." value={text} onChange={(e) => (setText(e.target.value), setLimit(PAGE))} />
+        <Seg
+          value={mine}
+          onChange={(v) => (setMine(v), setLimit(PAGE))}
+          options={[
+            { v: '', label: 'Todos' },
+            { v: 'nunca', label: 'Nunca vi' },
+            { v: 'erradas', label: 'Errei' },
+            { v: 'acertadas', label: 'Acertei' },
+          ]}
+        />
+        <div className="flex flex-wrap items-center gap-1 text-sm">
+          <button onClick={() => go('')} className={`underline-offset-2 ${path ? 'text-violet-300 underline' : 'font-semibold'}`}>
+            Todas as áreas
           </button>
-        ))}
-      </div>
-
-      <Card className="p-4 mt-4">
-        <div className="font-display font-semibold mb-2">Assuntos que mais aparecem</div>
-        <div className="space-y-1.5">
-          {topSubs.map(([s, { n, cat }]) => (
-            <button key={s} onClick={() => setF({ ...EMPTY_FILTERS, sub: s, cat })} className="w-full flex items-center gap-2 text-sm text-left hover:bg-white/5 rounded-lg px-1">
-              <span className="w-44 sm:w-64 truncate" style={{ color: CAT[cat].color }}>
-                {s}
-              </span>
-              <Bar pct={n / maxSub} color={CAT[cat].color} h="h-2" />
-              <span className="w-8 text-right text-white/60">{n}</span>
-            </button>
+          {crumbs.map((k, i) => (
+            <span key={k} className="flex items-center gap-1">
+              <span className="text-white/30">›</span>
+              <button onClick={() => go(k)} className={i < crumbs.length - 1 ? 'text-violet-300 underline underline-offset-2' : 'font-semibold'}>
+                {i === 0 ? `${CAT[k as keyof typeof CAT].icon} ${CAT[k as keyof typeof CAT].name}` : k.split(SEP)[i]}
+              </button>
+            </span>
           ))}
         </div>
-      </Card>
-
-      <Card className="p-4 mt-4">
-        <div className="font-display font-semibold mb-2">Por faculdade e ano</div>
-        <div className="space-y-2 text-sm">
-          {groupExams(store.exams).map((g) => (
-            <div key={g.institution} className="rounded-xl bg-black/20 p-2.5">
-              <div className="flex justify-between mb-1.5">
-                <b>{g.institution}</b>
-                <span className="text-white/50">{g.exams.reduce((a, e) => a + e.count, 0)} questões</span>
-              </div>
-              <div className="flex flex-wrap gap-1.5">
-                {g.exams.map((e) => (
-                  <button key={e.id} onClick={() => setF({ ...EMPTY_FILTERS, exam: e.id })} className="rounded-lg bg-white/5 hover:bg-white/10 px-2.5 py-1">
-                    {e.year} <span className="text-white/40">({e.count})</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </Card>
-
-      <div className="mt-4">
-        <FilterBar f={f} set={(x) => (setF(x), setLimit(40))} subs={subs} />
-        <div className="flex items-center justify-between mt-3 mb-2">
-          <div className="text-sm text-white/60">
-            <b className="text-white">{list.length}</b> questão(ões) encontradas
+        {children.length > 0 && (
+          <div className="grid gap-1.5 sm:grid-cols-2">
+            {children.map((n) => (
+              <button
+                key={n.key}
+                onClick={() => go(n.key)}
+                className="flex items-center gap-2 rounded-xl bg-black/25 border border-white/10 px-3 py-2 text-left hover:border-white/30"
+                style={{ borderLeft: `4px solid ${CAT[n.area].color}` }}
+              >
+                <span className="flex-1 min-w-0 text-sm leading-snug">{n.depth === 0 ? `${CAT[n.area].icon} ${CAT[n.area].name}` : n.label}</span>
+                <span className="text-[11px] text-white/45 shrink-0">{n.count}</span>
+                {n.children.length > 0 && <span className="text-white/40">›</span>}
+              </button>
+            ))}
           </div>
-          {list.filter((q) => q.answer).length > 0 && (
-            <Btn onClick={() => store.nav({ name: 'trainingRun', config: { count: Math.min(50, list.length), categories: [], wrongOnly: false, questionIds: list.filter((q) => q.answer).map((q) => q.id) } })}>📚 Treinar estas</Btn>
-          )}
-        </div>
-        <div className="space-y-2">
-          {list.slice(0, limit).map((q) => (
-            <QuestionRow key={q.id} q={q} onOpen={() => setOpen(q)} />
-          ))}
-        </div>
-        {list.length > limit && (
-          <Btn variant="ghost" className="w-full mt-2" onClick={() => setLimit((l) => l + 60)}>
-            Mostrar mais
+        )}
+      </Card>
+
+      <div className="flex items-center justify-between gap-2 mt-4 mb-2">
+        <div className="text-sm text-white/60">{list.length} cartões · toque para virar</div>
+        {list.length > 0 && (
+          <Btn onClick={() => store.nav({ name: 'trainingRun', config: { count: Math.min(50, list.length), categories: [], wrongOnly: false, questionIds: list.map((c) => c.id), format: 'flash', timeSec: 60 } })}>
+            📚 Treinar estes
           </Btn>
         )}
       </div>
-      {open && <ExplanationModal q={open} open onClose={() => setOpen(null)} />}
+      <div className="space-y-2">
+        {list.slice(0, limit).map((c) => (
+          <FlashRow key={c.id} c={c} open={flipped.has(c.id)} onFlip={() => flip(c.id)} showPath={!node || node.children.length > 0} />
+        ))}
+      </div>
+      {list.length > limit && (
+        <div className="text-center mt-3">
+          <Btn variant="secondary" onClick={() => setLimit((l) => l + PAGE * 2)}>
+            Mostrar mais ({list.length - limit})
+          </Btn>
+        </div>
+      )}
     </div>
+  );
+}
+
+function FlashRow({ c, open, onFlip, showPath }: { c: Flashcard; open: boolean; onFlip: () => void; showPath: boolean }) {
+  const store = useStore();
+  const h = store.history.get(c.id);
+  return (
+    <Card className="p-3 cursor-pointer hover:border-white/25 transition" onClick={onFlip}>
+      {showPath && (
+        <div className="text-[11px] mb-1" style={{ color: CAT[c.area].color }}>
+          {CAT[c.area].icon} {c.path.join(' › ')}
+        </div>
+      )}
+      <p className="text-sm text-white/90 whitespace-pre-line">{c.front}</p>
+      {open && (
+        <div className="mt-2 rounded-xl bg-emerald-500/10 border border-emerald-400/20 p-2 text-sm whitespace-pre-line animate-pop">
+          {c.back}
+          {c.extra && <div className="mt-1 text-white/60">{c.extra}</div>}
+          {c.images?.map((img) => <img key={img} src={IMG_BASE + img} alt="" className="mt-2 max-h-60 rounded-lg bg-white" loading="lazy" />)}
+        </div>
+      )}
+      {h && (
+        <div className="mt-1.5 flex gap-3 text-[11px]">
+          {h.correct > 0 && <span className="text-emerald-300">✔ {h.correct}x</span>}
+          {h.wrong > 0 && <span className="text-rose-300">✖ {h.wrong}x</span>}
+        </div>
+      )}
+    </Card>
   );
 }

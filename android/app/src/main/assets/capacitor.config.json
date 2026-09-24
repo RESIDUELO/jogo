@@ -1,8 +1,0 @@
-{
-	"appId": "com.residuelo.app",
-	"appName": "Residuelo",
-	"webDir": "dist",
-	"android": {
-		"backgroundColor": "#0b0a1f"
-	}
-}
