@@ -1,0 +1,20 @@
+# Testa o modo online contra o Supabase configurado em public/online-config.json.
+name: Teste do online
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/nice-hawking-1x3urx]
+    paths: ['tools/online-check.mjs', '.github/workflows/online-check.yml', 'supabase/**']
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node tools/online-check.mjs
