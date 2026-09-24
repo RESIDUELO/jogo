@@ -66,15 +66,20 @@ if (mid) {
 
   // 4. tempo real: B escuta, A grava
   await step('tempo real (B recebe a jogada de A)', async () => {
+    const { data: sess } = await B.auth.getSession();
+    await B.realtime.setAuth(sess.session?.access_token);
+    const statuses = [];
     const got = new Promise((resolve) => {
       const ch = B.channel('t-' + mid)
         .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'online_matches', filter: `id=eq.${mid}` }, (p) => {
           if (p.new?.state?.teste) resolve(true);
         })
-        .subscribe(async (status) => {
+        .subscribe(async (status, err) => {
+          statuses.push(status + (err ? ':' + err.message : ''));
           if (status === 'SUBSCRIBED') {
+            await new Promise((r) => setTimeout(r, 1500));
             const { data, error } = await A.from('online_matches').update({ state: { teste: 1 }, version: 1 }).eq('id', mid).eq('version', 0).select('id');
-            if (error || data.length !== 1) resolve('update falhou: ' + (error?.message ?? 'versão'));
+            statuses.push('update:' + (error ? error.message : (data ?? []).length + ' linha'));
           }
         });
       setTimeout(() => {
@@ -83,7 +88,8 @@ if (mid) {
       }, 15000);
     });
     const r = await got;
-    check('tempo real (B recebe a jogada de A)', r === true, r === true ? '' : String(r));
+    const { data: pub } = await B.from('online_matches').select('version,state').eq('id', mid).single();
+    check('tempo real (B recebe a jogada de A)', r === true, `status: ${statuses.join(' → ')} | linha agora: ${JSON.stringify(pub)}`);
   });
 
   await step('controle de versão bloqueia gravação antiga', async () => {
