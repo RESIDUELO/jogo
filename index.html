@@ -1,135 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FlashAnki</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="topbar">
-    <div class="brand" data-nav="decks">⚡ FlashAnki</div>
-    <nav>
-      <button data-nav="decks">Baralhos</button>
-      <button data-nav="add">Adicionar</button>
-      <button data-nav="browse">Navegar</button>
-      <button data-nav="stats">Estatísticas</button>
-    </nav>
-    <div class="player">
-      <span title="Nível" id="level">Nv 1</span>
-      <div class="xpbar" title="Experiência"><div id="xpfill"></div></div>
-      <span title="Sequência de dias" id="streak">🔥 0</span>
-    </div>
-  </header>
-
-  <main>
-    <!-- Baralhos -->
-    <section id="view-decks" class="view">
-      <table class="decks">
-        <thead>
-          <tr><th>Baralho</th><th class="n new">Novos</th><th class="n learn">Aprender</th><th class="n due">Revisar</th><th></th></tr>
-        </thead>
-        <tbody id="deck-list"></tbody>
-      </table>
-      <div class="actions">
-        <button id="btn-new-deck">Criar baralho</button>
-        <button id="btn-import">Importar</button>
-        <button id="btn-export">Exportar</button>
-        <input type="file" id="import-file" accept=".json,.txt,.csv,.tsv" hidden />
-      </div>
-      <p class="hint">Importar aceita o JSON exportado por este app ou texto com <code>frente;verso</code> (ou separado por TAB) em cada linha, como o “Texto simples” do Anki.</p>
-    </section>
-
-    <!-- Visão geral do baralho -->
-    <section id="view-overview" class="view">
-      <h2 id="ov-title"></h2>
-      <div class="ov-counts">
-        <div><span class="new" id="ov-new">0</span>Novos</div>
-        <div><span class="learn" id="ov-learn">0</span>Aprendendo</div>
-        <div><span class="due" id="ov-due">0</span>Para revisar</div>
-      </div>
-      <button class="primary big" id="btn-study">Estudar agora</button>
-      <div class="actions">
-        <button id="btn-rename-deck">Renomear</button>
-        <button id="btn-delete-deck" class="danger">Excluir baralho</button>
-      </div>
-    </section>
-
-    <!-- Estudo -->
-    <section id="view-study" class="view">
-      <div class="study-head">
-        <span class="counts"><b class="new" id="st-new">0</b> + <b class="learn" id="st-learn">0</b> + <b class="due" id="st-due">0</b></span>
-        <span id="combo" class="combo"></span>
-        <span id="timer" class="timer"></span>
-      </div>
-      <div class="card" id="card">
-        <div class="front" id="card-front"></div>
-        <hr id="card-sep" />
-        <div class="back" id="card-back"></div>
-      </div>
-      <div class="answer-bar">
-        <button class="primary big" id="btn-show">Mostrar resposta <kbd>Espaço</kbd></button>
-        <div class="ease" id="ease-buttons">
-          <button data-ease="1" class="again"><small id="iv-1"></small>Errei <kbd>1</kbd></button>
-          <button data-ease="2" class="hard"><small id="iv-2"></small>Difícil <kbd>2</kbd></button>
-          <button data-ease="3" class="good"><small id="iv-3"></small>Bom <kbd>3</kbd></button>
-          <button data-ease="4" class="easy"><small id="iv-4"></small>Fácil <kbd>4</kbd></button>
-        </div>
-      </div>
-      <div class="study-tools">
-        <button id="btn-edit-current">Editar cartão</button>
-        <button id="btn-undo">Desfazer (Ctrl+Z)</button>
-      </div>
-    </section>
-
-    <!-- Fim da sessão -->
-    <section id="view-done" class="view">
-      <h2>🎉 Parabéns!</h2>
-      <p>Você terminou este baralho por agora.</p>
-      <div class="summary" id="summary"></div>
-      <button class="primary" data-nav="decks">Voltar aos baralhos</button>
-    </section>
-
-    <!-- Adicionar / editar -->
-    <section id="view-add" class="view">
-      <h2 id="add-title">Adicionar cartão</h2>
-      <form id="add-form">
-        <label>Baralho <select id="add-deck"></select></label>
-        <label>Frente <textarea id="add-front" rows="3" required></textarea></label>
-        <label>Verso <textarea id="add-back" rows="3" required></textarea></label>
-        <label class="check"><input type="checkbox" id="add-reverse" /> Criar também o cartão invertido (verso → frente)</label>
-        <div class="actions">
-          <button type="submit" class="primary" id="add-submit">Adicionar <kbd>Ctrl+Enter</kbd></button>
-          <button type="button" id="add-cancel" hidden>Cancelar</button>
-        </div>
-        <p class="flash" id="add-flash"></p>
-      </form>
-    </section>
-
-    <!-- Navegar -->
-    <section id="view-browse" class="view">
-      <div class="browse-bar">
-        <input type="search" id="search" placeholder="Pesquisar cartões…" />
-        <select id="browse-deck"></select>
-      </div>
-      <table class="browse">
-        <thead><tr><th>Frente</th><th>Verso</th><th>Baralho</th><th>Vence</th><th>Int.</th><th></th></tr></thead>
-        <tbody id="browse-list"></tbody>
-      </table>
-    </section>
-
-    <!-- Estatísticas -->
-    <section id="view-stats" class="view">
-      <h2>Estatísticas</h2>
-      <div class="stat-grid" id="stat-grid"></div>
-      <h3>Revisões nos últimos 30 dias</h3>
-      <div class="chart" id="chart"></div>
-      <h3>Conquistas</h3>
-      <ul class="badges" id="badges"></ul>
-    </section>
-  </main>
-
-  <div class="toast" id="toast"></div>
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d0b09" />
+    <title>Residência Quest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>" />
+    <script type="module" crossorigin src="./assets/index-DrDnIBc4.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CGjs4fhH.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
