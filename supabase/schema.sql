@@ -44,6 +44,11 @@ drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created after insert on auth.users
   for each row execute function public.handle_new_user();
 
+-- contas criadas antes deste script: cria os perfis que faltam
+insert into public.profiles (id, name)
+select id, coalesce(nullif(raw_user_meta_data ->> 'name', ''), split_part(email, '@', 1)) from auth.users
+on conflict (id) do nothing;
+
 -- ============================================================ MATCHES
 create table if not exists public.online_matches (
   id uuid primary key default gen_random_uuid(),
