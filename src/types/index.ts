@@ -26,6 +26,8 @@ export interface DeckFile {
   version: number;
   generatedAt: string;
   cards: Flashcard[];
+  /** Baralhos do Anki para download: chave da pasta ('' = todos) → arquivo em cards/apkg/. */
+  apkg?: Record<string, string>;
 }
 
 /** Formato das respostas na partida. */

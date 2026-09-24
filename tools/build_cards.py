@@ -2,6 +2,7 @@
 
 Entrada:
   flashcards/*.apkg  (ou *.colpkg / *.zip com .apkg dentro) -> baralhos exportados do Anki
+Saída: public/cards/deck.json (jogo) e public/cards/apkg/*.apkg (downloads por pasta)
   tools/cards-map.json                                      -> em que área/subtema cada baralho aparece
 
 Cada nota vira um cartão: 1º campo = frente (pergunta), 2º = verso (resposta),
@@ -23,6 +24,9 @@ import tempfile
 import unicodedata
 import zipfile
 from datetime import datetime, timezone
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from export_apkg import export_all, load_template  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "flashcards")
@@ -131,7 +135,13 @@ def main():
     rules = load_map()
     cards, seen, used = [], set(), {}
     report, unmapped = [], []
+    template = None
     for label, data in sources():
+        if template is None:
+            try:
+                template = load_template(data)
+            except (KeyError, StopIteration, sqlite3.Error):
+                pass
         notes, media = read_apkg(data, label)
         per = {}
         for deck, flds, tags in notes:
@@ -169,18 +179,19 @@ def main():
         with open(os.path.join(IMG, name), "wb") as f:
             f.write(data)
     cards.sort(key=lambda c: (c["area"], c["path"], c["id"]))
-    out = {"version": 1, "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"), "cards": cards}
+    apkg = export_all(template, cards, os.path.join(OUT, "apkg"), IMG) if template else {}
+    out = {"version": 1, "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"), "cards": cards, "apkg": apkg}
     path = os.path.join(OUT, "deck.json")
     try:  # mantém a data se nada mudou (evita commits vazios no CI)
         old = json.load(open(path, encoding="utf-8"))
-        if old.get("cards") == cards:
+        if old.get("cards") == cards and old.get("apkg") == apkg:
             out["generatedAt"] = old.get("generatedAt", out["generatedAt"])
     except (OSError, ValueError):
         pass
     with open(path, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
     print("\n".join(sorted(report)))
-    print(f"\n{len(cards)} cartões, {len(used)} imagens -> public/cards/deck.json")
+    print(f"\n{len(cards)} cartões, {len(used)} imagens, {len(apkg)} baralhos .apkg -> public/cards/")
     if unmapped:
         print("\nBaralhos SEM área (adicione em tools/cards-map.json):")
         for d in sorted(set(unmapped)):

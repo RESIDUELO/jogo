@@ -46,6 +46,9 @@ export function BankScreen() {
     });
   }, [store.cards, store.history, path, text, mine]);
 
+  const folder = useMemo(() => (path ? store.cards.filter((c) => cardKey(c) === path || cardKey(c).startsWith(path + SEP)) : store.cards), [store.cards, path]);
+  const folderName = !path ? 'todos os flashcards' : node ? (node.depth === 0 ? CAT[node.area].full : node.label) : path;
+
   const go = (key: string) => {
     setPath(key);
     setLimit(PAGE);
@@ -104,6 +107,27 @@ export function BankScreen() {
         )}
       </Card>
 
+      <Card className="p-3 mt-3">
+        <div className="text-sm">
+          ⬇️ Baixar <b>{folderName}</b> <span className="text-white/50">({folder.length} cartões)</span>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <Btn disabled={!folder.length} onClick={() => downloadTxt(folder, path)}>
+            📄 .txt
+          </Btn>
+          {store.apkg[path] ? (
+            <a href={`${import.meta.env.BASE_URL}cards/apkg/${store.apkg[path]}`} download className="btn3d bg-gradient-to-b from-violet-500 to-indigo-600 border-indigo-900 text-white px-4 py-2.5 text-sm text-center">
+              🗂️ .apkg (Anki)
+            </a>
+          ) : (
+            <Btn variant="secondary" disabled>
+              .apkg indisponível
+            </Btn>
+          )}
+        </div>
+        <p className="text-[11px] text-white/40 mt-2">O .apkg abre direto no Anki com as pastas por área e subtema. O .txt (pergunta e resposta separadas por TAB) também pode ser importado no Anki ou aberto no bloco de notas.</p>
+      </Card>
+
       <div className="flex items-center justify-between gap-2 mt-4 mb-2">
         <div className="text-sm text-white/60">{list.length} cartões · toque para virar</div>
         {list.length > 0 && (
@@ -126,6 +150,28 @@ export function BankScreen() {
       )}
     </div>
   );
+}
+
+const AREA_NAMES: Record<string, string> = { GO: 'Ginecologia e Obstetrícia', CLI: 'Clínica Médica', CIR: 'Cirurgia', PRE: 'Medicina Preventiva', PED: 'Pediatria' };
+const toHtml = (t: string) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\t/g, ' ').replace(/\r?\n/g, '<br>');
+
+/** Texto no formato do Anki (Arquivo → Importar): pergunta, resposta e pasta separados por TAB. */
+function downloadTxt(cards: Flashcard[], path: string) {
+  const lines = ['#separator:tab', '#html:true', '#deck column:3', '#tags column:4'];
+  for (const c of cards) {
+    const back = toHtml(c.back) + (c.extra ? '<br><br>' + toHtml(c.extra) : '');
+    const deck = ['Residuelo', AREA_NAMES[c.area], ...c.path].join('::');
+    lines.push([toHtml(c.front), back, deck, (c.tags ?? []).join(' ')].join('\t'));
+  }
+  const name = 'residuelo-' + (path ? normalize(path).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) : 'todos') + '.txt';
+  const url = URL.createObjectURL(new Blob([lines.join('\n') + '\n'], { type: 'text/plain;charset=utf-8' }));
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = name;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 5000);
 }
 
 function FlashRow({ c, open, onFlip, showPath }: { c: Flashcard; open: boolean; onFlip: () => void; showPath: boolean }) {

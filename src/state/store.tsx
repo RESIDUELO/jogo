@@ -67,6 +67,8 @@ interface Store {
   ready: boolean;
   error?: string;
   cards: Flashcard[];
+  /** Arquivos .apkg para download por pasta ('' = todos). */
+  apkg: Record<string, string>;
   /** Cartão por id, já como pergunta jogável. */
   qById: Map<string, Question>;
   players: Player[];
@@ -100,6 +102,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
   const [error, setError] = useState<string>();
   const [cards, setCards] = useState<Flashcard[]>([]);
+  const [apkg, setApkg] = useState<Record<string, string>>({});
   const [players, setPlayers] = useState<Player[]>(() => playerRepo.listPlayers());
   const [activeId, setActiveId] = useState<string | null>(() => playerRepo.getActiveId());
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
@@ -114,8 +117,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     cardRepo
       .loadAll()
-      .then((cards) => {
-        setCards(cards);
+      .then((deck) => {
+        setCards(deck.cards);
+        setApkg(deck.apkg ?? {});
         setReady(true);
       })
       .catch((e) => setError(String(e)));
@@ -161,6 +165,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     ready,
     error,
     cards,
+    apkg,
     qById,
     players,
     player,

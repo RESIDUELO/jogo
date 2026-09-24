@@ -33,6 +33,7 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,png,svg,ico,woff2}', 'cards/deck.json'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         navigateFallback: 'index.html',
+        navigateFallbackDenylist: [/\/cards\//], // downloads (.apkg) não viram a página do app
         runtimeCaching: [
           {
             // imagens dos cartões: guardadas conforme aparecem

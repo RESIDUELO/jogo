@@ -17,8 +17,8 @@ npm run build      # typecheck + build em dist/
 
 - **Antes da partida**, quem cria a partida/sala escolhe: **temas** (grandes áreas e subtemas, com caixas de seleção em árvore), **tempo por rodada** (15 s a 2 min) e partida rápida/longa. Na vez de responder, você vê a pergunta, mostra a resposta e diz se acertou. A roleta só tem as áreas escolhidas.
 - **Quem espera a vez vê a pergunta** que o adversário está respondendo e, depois, a resposta e o resultado.
-- Bots (Interno → Especialista), PvP local e **PvP online** (Supabase: conta ou visitante, buscar adversário, sala com código, ranking).
-- **Relatório de fim de partida** com cada cartão, acerto/erro e resposta; **Baralho** para navegar e buscar cartões; treino, cartões errados, estatísticas, XP, missões, conquistas, loja.
+- Bots (Interno → Especialista), PvP local e **PvP online** (Supabase: conta ou visitante, **sala de espera** (lista de quem está disponível; convite que a outra pessoa aceita ou recusa), sala com código, ranking).
+- **Relatório de fim de partida** com cada cartão, acerto/erro e resposta; **Baralho** para navegar, buscar e **baixar** cartões (.txt ou .apkg do Anki, de tudo ou de qualquer área/subtema); treino, cartões errados, estatísticas, XP, missões, conquistas, loja.
 
 ## Publicação
 
@@ -27,7 +27,7 @@ A cada push, o GitHub Actions (`.github/workflows/build.yml`) compila o site e o
 ## Configurar o online (uma vez)
 
 1. Crie um projeto grátis em https://supabase.com.
-2. **SQL Editor** → cole `supabase/schema.sql` → **Run**.
+2. **SQL Editor** → cole `supabase/schema.sql` → **Run** (já inclui a sala de espera; quem já tinha rodado antes só precisa rodar `supabase/lobby.sql`).
 3. **Authentication → Providers → Email**: deixe habilitado. Para testar rápido, desative *Confirm email* (senão cada cadastro precisa confirmar pelo e-mail). Em **Authentication → URL Configuration**, coloque o endereço do site em *Site URL*.
 4. **Project Settings → API**: copie a *Project URL* e a chave *anon public* para `public/online-config.json`:
    ```json
@@ -56,6 +56,7 @@ Ou mande os .apkg para o Claude. Localmente: `python3 tools/build_cards.py`.
 flashcards/*.apkg           ← baralhos do Anki (fonte)
 tools/cards-map.json        ← baralho → área › subtemas
 tools/build_cards.py        ← .apkg → public/cards/deck.json (+ imagens em public/cards/img/)
+tools/export_apkg.py        ← gera public/cards/apkg/*.apkg (um por pasta, para download)
 src/
   types/        modelo de dados: Flashcard, Question (pergunta jogável), Player, AnswerRecord, MatchSummary…
   data/         categorias, níveis/ligas, bots, loja, conquistas, missões
