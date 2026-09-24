@@ -93,6 +93,10 @@ export async function createSupabaseBackend(url: string, anonKey: string): Promi
       return data as OnlineMatchRow;
     },
     subscribeMatch(id, cb) {
+      // garante que o tempo real use o login atual (senão as regras de acesso bloqueiam os eventos)
+      void sb.auth.getSession().then(({ data }) => {
+        if (data.session) void sb.realtime.setAuth(data.session.access_token);
+      });
       const ch = sb
         .channel('match-' + id)
         .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'online_matches', filter: `id=eq.${id}` }, (payload) => cb(payload.new as OnlineMatchRow))
