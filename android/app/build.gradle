@@ -13,8 +13,8 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         // o CI passa -PversionCode=<número da build> para cada APK ser uma atualização
-        versionCode (project.findProperty('versionCode') ?: '1') as Integer
-        versionName "1." + ((project.findProperty('versionCode') ?: '0') as String)
+        versionCode Integer.parseInt((project.findProperty('versionCode') ?: '1').toString())
+        versionName "1." + (project.findProperty('versionCode') ?: '0').toString()
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
