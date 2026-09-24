@@ -22,6 +22,13 @@ npm run build      # typecheck + build em dist/
 - **Fidelidade:** texto extraído do PDF com correção da hifenização e, para cada questão, o recorte da página original ("ver questão original").
 - Progressão (XP, níveis, coins, missões, conquistas, streak), itens (fora do online), estatísticas, questões erradas, treino, loja.
 
+## App Android (APK) e publicação
+
+- A cada push, o GitHub Actions (`.github/workflows/build.yml`) compila **o site e o APK**: o APK vai para os **Releases** do GitHub e para `…/seila/residuelo.apk`; o site é publicado no GitHub Pages (branch `gh-pages`).
+- O APK é feito com **Capacitor** (`android/`, `capacitor.config.ts`) e leva o jogo inteiro dentro (funciona 100% offline). Build local: `npm run build:android` e depois abrir `android/` no Android Studio.
+- Assinatura fixa em `android/keystore/` para que cada versão instale por cima da anterior sem perder o progresso. Como o repositório é público, a chave fica visível: para uso sério, mova-a para *secrets* do GitHub.
+- Ícones e telas de abertura: `python3 tools/make_icons.py`.
+
 ## Configurar o online (uma vez)
 
 1. Crie um projeto grátis em https://supabase.com.
