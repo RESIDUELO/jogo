@@ -27,8 +27,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q001-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-002",
@@ -50,8 +53,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q002-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-003",
@@ -73,8 +79,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q003-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-004",
@@ -96,8 +105,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q004-1.jpg",
+    "2024-q004-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-005",
@@ -119,8 +132,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q005-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-006",
@@ -142,8 +158,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q006-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-007",
@@ -165,8 +184,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q007-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-008",
@@ -188,8 +210,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q008-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-009",
@@ -211,8 +236,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q009-1.jpg",
+    "2024-q009-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-010",
@@ -234,8 +263,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q010-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-011",
@@ -257,8 +289,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q011-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-012",
@@ -280,8 +315,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q012-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-013",
@@ -303,8 +341,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q013-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-014",
@@ -326,8 +367,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q014-1.jpg",
+    "2024-q014-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-015",
@@ -349,8 +394,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q015-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-016",
@@ -372,8 +420,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q016-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-017",
@@ -395,8 +446,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q017-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-018",
@@ -418,8 +472,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q018-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-019",
@@ -441,8 +498,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q019-1.jpg",
+    "2024-q019-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-020",
@@ -464,8 +525,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q020-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-021",
@@ -487,8 +551,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q021-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-022",
@@ -510,8 +577,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q022-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-023",
@@ -533,8 +603,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q023-1.jpg",
+    "2024-q023-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-024",
@@ -556,8 +630,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q024-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-025",
@@ -579,8 +656,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q025-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-026",
@@ -602,8 +682,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q026-1.jpg",
+    "2024-q026-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-027",
@@ -625,8 +709,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q027-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-028",
@@ -648,8 +735,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q028-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-029",
@@ -671,8 +761,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q029-1.jpg",
+    "2024-q029-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-030",
@@ -694,8 +788,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q030-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-031",
@@ -717,8 +814,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q031-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-032",
@@ -740,8 +840,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q032-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-033",
@@ -763,8 +866,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q033-1.jpg",
+    "2024-q033-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-034",
@@ -786,8 +893,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q034-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-035",
@@ -809,8 +919,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q035-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-036",
@@ -832,8 +945,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q036-1.jpg",
+    "2024-q036-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-037",
@@ -855,8 +972,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q037-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-038",
@@ -878,8 +998,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q038-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-039",
@@ -901,8 +1024,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q039-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-040",
@@ -924,8 +1050,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q040-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-041",
@@ -947,8 +1076,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q041-1.jpg",
+    "2024-q041-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-042",
@@ -970,8 +1103,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q042-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-043",
@@ -993,8 +1129,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q043-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-044",
@@ -1016,8 +1155,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q044-1.jpg",
+    "2024-q044-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-045",
@@ -1039,8 +1182,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q045-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-046",
@@ -1062,8 +1208,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q046-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-047",
@@ -1085,8 +1234,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q047-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-048",
@@ -1108,8 +1260,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q048-1.jpg",
+    "2024-q048-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-049",
@@ -1131,8 +1287,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q049-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-050",
@@ -1154,8 +1313,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q050-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-051",
@@ -1177,8 +1339,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q051-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-052",
@@ -1200,8 +1365,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q052-1.jpg",
+    "2024-q052-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-053",
@@ -1223,8 +1392,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q053-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-054",
@@ -1246,8 +1418,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q054-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-055",
@@ -1269,8 +1444,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q055-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-056",
@@ -1292,8 +1470,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q056-1.jpg",
+    "2024-q056-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-057",
@@ -1315,8 +1497,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q057-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-058",
@@ -1338,8 +1523,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q058-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-059",
@@ -1361,8 +1549,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q059-1.jpg",
+    "2024-q059-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-060",
@@ -1384,8 +1576,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q060-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-061",
@@ -1407,13 +1602,16 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q061-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-062",
    "number": 62,
-   "text": "K.S.M., 20 anos, primigesta, vem ao pronto-socorro obstétrico com queixa de sangramento vaginal escuro, náuseas e vômitos, tontura e cefaléia fronto occipital. Realizado teste de gravidez positivo. Refere história de amenorreia de 3 meses anteriormente ao sangramento atual. Ao exame físico: volume uterino aumentado, com AU 20 cm, PA 160 x 110 mmHg, FC 85 bpm. Ultrassom transvaginal demonstra volume uterino de 400cc, eco endometrial heterogêneo, com espessura de 60 mm, com imagens císticas, anecogênicas de permeio. Não identificado embrião. Ovários com cistos tecaluteínicos. Com base no caso clínico e suspeita diagnóstica, assinale a conduta mais adequada, inicialmente.",
+   "text": "K.S.M., 20 anos, primigesta, vem ao pronto-socorro obstétrico com queixa de sangramento vaginal escuro, náuseas e vômitos, tontura e cefaléia fronto occipital. Realizado teste de gravidez positivo. Refere história de amenorreia de 3 meses anteriormente ao sangramento atual. Ao exame físico: volume uterino aumentado, com AU 20 cm, PA 160 x 110 mmHg, FC 85 bpm. Ultrassom transvaginal demonstra volume uterino de 400cc, eco endometrial heterogêneo, com espessura de 60 mm, com imagens císticas, anecogênicas de permeio. Não identificado embrião. Ovários com cistos teca-luteínicos. Com base no caso clínico e suspeita diagnóstica, assinale a conduta mais adequada, inicialmente.",
    "alternatives": {
     "A": "Expansão volêmica.",
     "B": "Antieméticos.",
@@ -1430,13 +1628,17 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q062-1.jpg",
+    "2024-q062-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-063",
    "number": 63,
-   "text": "K.S.M., 20 anos, primigesta, vem ao pronto-socorro obstétrico com queixa de sangramento vaginal escuro, náuseas e vômitos, tontura e cefaléia fronto occipital. Realizado teste de gravidez positivo. Refere história de amenorreia de 3 meses anteriormente ao sangramento atual. Ao exame físico: volume uterino aumentado, com AU 20 cm, PA 160 x 110 mmHg, FC 85 bpm. Ultrassom transvaginal demonstra volume uterino de 400cc, eco endometrial heterogêneo, com espessura de 60 mm, com imagens císticas, anecogênicas de permeio. Não identificado embrião. Ovários com cistos tecaluteínicos. Controlado o caso clínico inicial, a paciente foi internada. Assinale a alternativa que representa a melhor técnica para o tratamento da patologia representada na imagem ultrassonográfica descrita.",
+   "text": "K.S.M., 20 anos, primigesta, vem ao pronto-socorro obstétrico com queixa de sangramento vaginal escuro, náuseas e vômitos, tontura e cefaléia fronto occipital. Realizado teste de gravidez positivo. Refere história de amenorreia de 3 meses anteriormente ao sangramento atual. Ao exame físico: volume uterino aumentado, com AU 20 cm, PA 160 x 110 mmHg, FC 85 bpm. Ultrassom transvaginal demonstra volume uterino de 400cc, eco endometrial heterogêneo, com espessura de 60 mm, com imagens císticas, anecogênicas de permeio. Não identificado embrião. Ovários com cistos teca-luteínicos. Controlado o caso clínico inicial, a paciente foi internada. Assinale a alternativa que representa a melhor técnica para o tratamento da patologia representada na imagem ultrassonográfica descrita.",
    "alternatives": {
     "A": "AMIU (aspiração manual intra-uterina).",
     "B": "Curetagem uterina.",
@@ -1453,13 +1655,16 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q063-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-064",
    "number": 64,
-   "text": "K.S.M., 20 anos, primigesta, vem ao pronto-socorro obstétrico com queixa de sangramento vaginal escuro, náuseas e vômitos, tontura e cefaléia fronto occipital. Realizado teste de gravidez positivo. Refere história de amenorreia de 3 meses anteriormente ao sangramento atual. Ao exame físico: volume uterino aumentado, com AU 20 cm, PA 160 x 110 mmHg, FC 85 bpm. Ultrassom transvaginal demonstra volume uterino de 400cc, eco endometrial heterogêneo, com espessura de 60 mm, com imagens císticas, anecogênicas de permeio. Não identificado embrião. Ovários com cistos tecaluteínicos. Dando prosseguimento ao atendimento, assinale a alternativa que representa orientação adequada de seguimento da paciente.",
+   "text": "K.S.M., 20 anos, primigesta, vem ao pronto-socorro obstétrico com queixa de sangramento vaginal escuro, náuseas e vômitos, tontura e cefaléia fronto occipital. Realizado teste de gravidez positivo. Refere história de amenorreia de 3 meses anteriormente ao sangramento atual. Ao exame físico: volume uterino aumentado, com AU 20 cm, PA 160 x 110 mmHg, FC 85 bpm. Ultrassom transvaginal demonstra volume uterino de 400cc, eco endometrial heterogêneo, com espessura de 60 mm, com imagens císticas, anecogênicas de permeio. Não identificado embrião. Ovários com cistos teca-luteínicos. Dando prosseguimento ao atendimento, assinale a alternativa que representa orientação adequada de seguimento da paciente.",
    "alternatives": {
     "A": "Iniciar o seguimento pós-molar somente após o resultado anátomo patológico confirmar a doença.",
     "B": "Repetir ultrassom 7 dias após o procedimento cirúrgico, a fim de avaliar a existência de resquícios da doença.",
@@ -1476,8 +1681,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q064-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-065",
@@ -1499,8 +1707,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q065-1.jpg",
+    "2024-q065-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-066",
@@ -1522,8 +1734,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q066-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-067",
@@ -1534,7 +1749,7 @@
     "B": "A vaginite atrófica ocorre principalmente em mulheres na perimenopausa e está associada a baixos níveis de progesterona.",
     "C": "A doxiciclina por 7 dias é o tratamento de escolha para Chlamydia, visto que há baixo índice de cura com dose única de Azitromicina.",
     "D": "Secreção volumosa tipo leite coalhado, disúria inicial, prurido vulvar, dor, edema e hiperemia são compatíveis com quadro de vaginose bacteriana.",
-    "E": "Na vaginose bacteriana há perda de lactobacilos, pH > 4,5 e whifftest positivo."
+    "E": "Na vaginose bacteriana há perda de lactobacilos, pH > 4,5 e whiff-test positivo."
    },
    "answer": "E",
    "category": "GO",
@@ -1545,8 +1760,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q067-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-068",
@@ -1568,8 +1786,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q068-1.jpg",
+    "2024-q068-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-069",
@@ -1591,13 +1813,16 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q069-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-070",
    "number": 70,
-   "text": "A puberdade é um período dinâmico de crescimento físico, maturação sexual e transformação psicossocial. O desenvolvimento puberal é mediado por uma complexa interação de fatores inibidores e ativadores que atuam no eixo hipotálamo-hipófiseovariano (HHO). Assinale a alternativa que representa o sinal clínico que primeiro surge, em decorrência da ativação do eixo HHO no início da puberdade fisiológica.",
+   "text": "A puberdade é um período dinâmico de crescimento físico, maturação sexual e transformação psicossocial. O desenvolvimento puberal é mediado por uma complexa interação de fatores inibidores e ativadores que atuam no eixo hipotálamo-hipófise-ovariano (HHO). Assinale a alternativa que representa o sinal clínico que primeiro surge, em decorrência da ativação do eixo HHO no início da puberdade fisiológica.",
    "alternatives": {
     "A": "Pubarca.",
     "B": "Axilarca.",
@@ -1614,8 +1839,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q070-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-071",
@@ -1637,8 +1865,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q071-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-072",
@@ -1660,8 +1891,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q072-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-073",
@@ -1683,8 +1917,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q073-1.jpg",
+    "2024-q073-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-074",
@@ -1706,8 +1944,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q074-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-075",
@@ -1729,8 +1970,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q075-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-076",
@@ -1752,8 +1996,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q076-1.jpg",
+    "2024-q076-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-077",
@@ -1775,8 +2023,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q077-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-078",
@@ -1798,8 +2049,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q078-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-079",
@@ -1821,8 +2075,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q079-1.jpg",
+    "2024-q079-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-080",
@@ -1844,8 +2102,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q080-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-081",
@@ -1867,8 +2128,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q081-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-082",
@@ -1890,8 +2154,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q082-1.jpg",
+    "2024-q082-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-083",
@@ -1913,8 +2181,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q083-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-084",
@@ -1936,8 +2207,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q084-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-085",
@@ -1959,8 +2233,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q085-1.jpg",
+    "2024-q085-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-086",
@@ -1982,8 +2260,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q086-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-087",
@@ -2005,8 +2286,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q087-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-088",
@@ -2028,8 +2312,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q088-1.jpg",
+    "2024-q088-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-089",
@@ -2051,8 +2339,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q089-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-090",
@@ -2074,8 +2365,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q090-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-091",
@@ -2097,8 +2391,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q091-1.jpg",
+    "2024-q091-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-092",
@@ -2120,8 +2418,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q092-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-093",
@@ -2143,8 +2444,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q093-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-094",
@@ -2166,8 +2470,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q094-1.jpg",
+    "2024-q094-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-095",
@@ -2189,8 +2497,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q095-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-096",
@@ -2212,8 +2523,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q096-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-097",
@@ -2235,8 +2549,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q097-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-098",
@@ -2258,8 +2575,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q098-1.jpg",
+    "2024-q098-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-099",
@@ -2281,8 +2602,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q099-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2024-100",
@@ -2304,8 +2628,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2024-q100-1.jpg"
+   ]
   }
  ]
 }

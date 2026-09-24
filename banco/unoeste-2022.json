@@ -31,7 +31,10 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "O quadro (febre, tosse produtiva, estertores crepitantes localizados em hemitórax direito, leucocitose e PCR elevada) sugere pneumonia adquirida na comunidade, possivelmente sobre DPOC não diagnosticada. O diagnóstico de PAC exige quadro clínico compatível + infiltrado novo na imagem, por isso a radiografia de tórax (PA e perfil) é o exame indicado. Hemoculturas e culturas ficam reservadas a casos graves/internados; marcadores de necrose miocárdica não têm indicação sem dor torácica; alfa-1 antitripsina é investigação de enfisema em jovens; teste para SARS-CoV-2 pode complementar, mas não substitui a imagem.",
-   "reference": "Diretrizes brasileiras de PAC (SBPT)."
+   "reference": "Diretrizes brasileiras de PAC (SBPT).",
+   "original": [
+    "2022-q001-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-002",
@@ -57,7 +60,11 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "O CURB-65 soma 1 ponto para cada: Confusão mental, Ureia > 50 mg/dL (ou > 7 mmol/L), FR ≥ 30 irpm, PAS < 90 ou PAD ≤ 60 mmHg e idade ≥ 65 anos. O paciente pontua apenas pela idade: escore 0–1 corresponde a mortalidade em torno de 1,5% e permite tratamento ambulatorial. Escore 2 = risco intermediário (~9%, considerar internação); 3–5 = alto risco (15–40%, internação e avaliar UTI). Comorbidades não entram no cálculo do CURB-65.",
-   "reference": "Lim WS et al., Thorax 2003; Diretriz SBPT de PAC."
+   "reference": "Lim WS et al., Thorax 2003; Diretriz SBPT de PAC.",
+   "original": [
+    "2022-q002-1.jpg",
+    "2022-q002-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-003",
@@ -83,12 +90,15 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "Com CURB-65 0–1, sinais vitais estáveis, SatO₂ 93% em ar ambiente e boa condição clínica, a PAC pode ser tratada ambulatorialmente com antibioticoterapia empírica (ex.: amoxicilina ± macrolídeo, ou betalactâmico + macrolídeo/quinolona respiratória conforme comorbidades). Internação em enfermaria ou UTI seria indicada para escores maiores ou critérios de gravidade (ATS/IDSA). Antifúngico não tem papel e diurético isolado não trata infecção.",
-   "reference": "Diretriz SBPT de PAC."
+   "reference": "Diretriz SBPT de PAC.",
+   "original": [
+    "2022-q003-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-004",
    "number": 4,
-   "text": "Paciente de 34 anos, puérpera recente, com história de hipertensão arterial durante cirurgia de cesariana há 10 dias, evoluindo no pós-operatório imediato com persistência de níveis pressóricos elevados, obtendo alta hospitalar com três classes de antihipertensivos para controle pressórico. Durante a internação, foi repetido exames de investigação de gestose hipertensiva, com transaminases normais e proteinúria de 24 h menor 10 mg, similar aos níveis da vigésima semana de gestação. Nega hipertensão arterial durante toda a gestação atual ou antes de engravidar. Procura ambulatório de clínica médica para orientação e tratamento. Ao exame físico, apresentava PA = 138 x 85 mmHg, FC = 78 bpm e ausculta cardíaca normal. Realizou um eletrocardiograma de repouso que demostrou ritmo sinusal e alterações inespecíficas difusas da repolarização ventricular. Diante da hipótese diagnóstica, qual exame complementar deve ser realizado nesse caso?",
+   "text": "Paciente de 34 anos, puérpera recente, com história de hipertensão arterial durante cirurgia de cesariana há 10 dias, evoluindo no pós-operatório imediato com persistência de níveis pressóricos elevados, obtendo alta hospitalar com três classes de anti-hipertensivos para controle pressórico. Durante a internação, foi repetido exames de investigação de gestose hipertensiva, com transaminases normais e proteinúria de 24 h menor 10 mg, similar aos níveis da vigésima semana de gestação. Nega hipertensão arterial durante toda a gestação atual ou antes de engravidar. Procura ambulatório de clínica médica para orientação e tratamento. Ao exame físico, apresentava PA = 138 x 85 mmHg, FC = 78 bpm e ausculta cardíaca normal. Realizou um eletrocardiograma de repouso que demostrou ritmo sinusal e alterações inespecíficas difusas da repolarização ventricular. Diante da hipótese diagnóstica, qual exame complementar deve ser realizado nesse caso?",
    "alternatives": {
     "A": "Holter 24h.",
     "B": "Teste ergométrico.",
@@ -109,12 +119,15 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "Mulher jovem com hipertensão de difícil controle (3 classes) persistente no puerpério, sem critérios de pré-eclâmpsia (proteinúria e transaminases normais) e sem HAS prévia: é preciso pensar em hipertensão secundária. Em mulheres jovens, a displasia fibromuscular de artéria renal é causa clássica, e o ultrassom doppler de artérias renais é o exame de triagem. Holter, teste ergométrico e angiotomografia coronariana avaliam isquemia/arritmia, não a causa da HAS; doppler de carótidas avalia aterosclerose.",
-   "reference": "Diretrizes Brasileiras de Hipertensão Arterial 2020."
+   "reference": "Diretrizes Brasileiras de Hipertensão Arterial 2020.",
+   "original": [
+    "2022-q004-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-005",
    "number": 5,
-   "text": "Paciente de 34 anos, puérpera recente, com história de hipertensão arterial durante cirurgia de cesariana há 10 dias, evoluindo no pós-operatório imediato com persistência de níveis pressóricos elevados, obtendo alta hospitalar com três classes de antihipertensivos para controle pressórico. Durante a internação, foi repetido exames de investigação de gestose hipertensiva, com transaminases normais e proteinúria de 24 h menor 10 mg, similar aos níveis da vigésima semana de gestação. Nega hipertensão arterial durante toda a gestação atual ou antes de engravidar. Procura ambulatório de clínica médica para orientação e tratamento. Ao exame físico, apresentava PA = 138 x 85 mmHg, FC = 78 bpm e ausculta cardíaca normal. Realizou um eletrocardiograma de repouso que demostrou ritmo sinusal e alterações inespecíficas difusas da repolarização ventricular. Assinale a alternativa que apresenta a estratégia terapêutica anti-hipertensiva segura para o lactente, segundo as diretrizes brasileiras atuais.",
+   "text": "Paciente de 34 anos, puérpera recente, com história de hipertensão arterial durante cirurgia de cesariana há 10 dias, evoluindo no pós-operatório imediato com persistência de níveis pressóricos elevados, obtendo alta hospitalar com três classes de anti-hipertensivos para controle pressórico. Durante a internação, foi repetido exames de investigação de gestose hipertensiva, com transaminases normais e proteinúria de 24 h menor 10 mg, similar aos níveis da vigésima semana de gestação. Nega hipertensão arterial durante toda a gestação atual ou antes de engravidar. Procura ambulatório de clínica médica para orientação e tratamento. Ao exame físico, apresentava PA = 138 x 85 mmHg, FC = 78 bpm e ausculta cardíaca normal. Realizou um eletrocardiograma de repouso que demostrou ritmo sinusal e alterações inespecíficas difusas da repolarização ventricular. Assinale a alternativa que apresenta a estratégia terapêutica anti-hipertensiva segura para o lactente, segundo as diretrizes brasileiras atuais.",
    "alternatives": {
     "A": "Telmisartana.",
     "B": "Sacubitril + valsartana.",
@@ -135,7 +148,10 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "As diretrizes brasileiras consideram compatíveis com a amamentação: metildopa, hidralazina, nifedipino, anlodipino e os IECA captopril e enalapril. BRA (telmisartana), sacubitril-valsartana e finerenona não têm segurança estabelecida na lactação e devem ser evitados; prazosina tem poucos dados. Assim, a hidralazina é a alternativa segura para o lactente.",
-   "reference": "Diretrizes Brasileiras de Hipertensão Arterial 2020 — hipertensão na gestação e lactação."
+   "reference": "Diretrizes Brasileiras de Hipertensão Arterial 2020 — hipertensão na gestação e lactação.",
+   "original": [
+    "2022-q005-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-006",
@@ -161,7 +177,10 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "Diante de nódulo tireoidiano palpável, a avaliação inicial é dosagem de TSH e ultrassonografia da tireoide. Se o TSH estiver suprimido, faz-se cintilografia para pesquisar nódulo hiperfuncionante (geralmente benigno, dispensa PAAF). Com TSH normal/elevado, a indicação de punção aspirativa por agulha fina é guiada pelas características ultrassonográficas (TI-RADS/ATA) e pelo tamanho. Ressonância não tem papel inicial e o encaminhamento cirúrgico depende do resultado citológico.",
-   "reference": "American Thyroid Association 2015; SBEM."
+   "reference": "American Thyroid Association 2015; SBEM.",
+   "original": [
+    "2022-q006-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-007",
@@ -187,7 +206,10 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "O anticorpo antipeptídeo citrulinado cíclico (anti-CCP) tem especificidade em torno de 95% e sensibilidade semelhante ou superior à do fator reumatoide, além de valor prognóstico (doença mais erosiva). O fator reumatoide é menos específico (positivo em hepatopatias, infecções crônicas, Sjögren, idosos). VHS e PCR são marcadores inflamatórios inespecíficos; FAN é típico do lúpus; complemento não é útil no diagnóstico da AR.",
-   "reference": "Critérios ACR/EULAR 2010."
+   "reference": "Critérios ACR/EULAR 2010.",
+   "original": [
+    "2022-q007-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-008",
@@ -216,6 +238,10 @@
    "reference": "Diretriz SBC de IAM com supradesnivelamento do ST; AHA/ACC.",
    "images": [
     "2022-q008-1.jpg"
+   ],
+   "original": [
+    "2022-q008-1.jpg",
+    "2022-q008-2.jpg"
    ]
   },
   {
@@ -245,6 +271,10 @@
    "reference": "Diretriz Brasileira de Dislipidemias 2017; ESC 2023 SCA.",
    "images": [
     "2022-q009-1.jpg"
+   ],
+   "original": [
+    "2022-q009-1.jpg",
+    "2022-q009-2.jpg"
    ]
   },
   {
@@ -271,7 +301,10 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "Na síndrome de Lynch (câncer colorretal hereditário não polipose), o risco de CCR é muito elevado e a colonoscopia deve começar aos 20–25 anos (ou 2–5 anos antes do caso mais jovem da família), repetida a cada 1–2 anos. Parente de 1º grau com adenoma avançado ou CCR antecipa o rastreamento para 40 anos (ou 10 anos antes do caso índice). A doença inflamatória intestinal também exige vigilância, mas não se enquadra como \"história familiar\". Doença celíaca e câncer não gastrointestinal não modificam o rastreamento.",
-   "reference": "US Multi-Society Task Force on Colorectal Cancer."
+   "reference": "US Multi-Society Task Force on Colorectal Cancer.",
+   "original": [
+    "2022-q010-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-011",
@@ -297,12 +330,15 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "O paciente tem síndrome nefrítica (hematúria, cilindros, proteinúria) com insuficiência renal grave de instalação rápida, além de sintomas sistêmicos e de vias aéreas superiores (rouquidão, odinofagia, artralgias). Essa combinação configura glomerulonefrite rapidamente progressiva (GNRP), cujo substrato é a glomerulonefrite crescêntica. Nefropatia por IgA costuma causar hematúria episódica sem perda tão rápida de função; síndrome nefrótica não explica a hematúria intensa com IRA; nefrolitíase não causa proteinúria nefrótica.",
-   "reference": "KDIGO Glomerular Diseases 2021."
+   "reference": "KDIGO Glomerular Diseases 2021.",
+   "original": [
+    "2022-q011-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-012",
    "number": 12,
-   "text": "Paciente do sexo masculino, 42 anos de idade, com história de disúria, hematúria e febre vespertina sem calafrios, de início há 7 dias. Como antecedentes prévios, relatava episódios de artralgia generalizada há 3 anos, com episódios de repetição de rouquidão e odinofagia. Realizou exames complementares que evidenciaram: hemoglobina de 9,8 mg/dL, hematócrito de 29%, anisocitose, leucograma e plaquetas normais, ureia 190 mg/dL e creatinina sérica de 8,7 mg/dL. Urina 1 com 3+ de proteína, 4+ de hemoglobina, incontáveis hemácias, depósitos de uratos amorfos (++), cilindros granulosos grossos e presença de corpos ovais e proteinúria de 24 h foi de 3750 mg. Durante a investigação do quadro clínico, foi solicitada a pesquisa do ANCA, cujo resultado foi positivo com padrão citoplasmático (c-ANCA), título de 1:40, e p-ANCA (perinuclear) negativo. Diante da hipótese diagnóstica, com base no exame complementar, o quadro etiológica da insuficiência renal aguda decorre de",
+   "text": "Paciente do sexo masculino, 42 anos de idade, com história de disúria, hematúria e febre vespertina sem calafrios, de início há 7 dias. Como antecedentes prévios, relatava episódios de artralgia generalizada há 3 anos, com episódios de repetição de rouquidão e odinofagia. Realizou exames complementares que evidenciaram: hemoglobina de 9,8 mg/dL, hematócrito de 29%, anisocitose, leucograma e plaquetas normais, ureia 190 mg/dL e creatinina sérica de 8,7 mg/dL. Urina 1 com 3+ de proteína, 4+ de hemoglobina, incontáveis hemácias, depósitos de uratos amorfos (++), cilindros granulosos grossos e presença de corpos ovais e proteinúria de 24 h foi de 3750 mg. Durante a investigação do quadro clínico, foi solicitada a pesquisa do ANCA, cujo resultado foi positivo com padrão citoplasmático (c-ANCA), título de 1:40, e pANCA (perinuclear) negativo. Diante da hipótese diagnóstica, com base no exame complementar, o quadro etiológica da insuficiência renal aguda decorre de",
    "alternatives": {
     "A": "granulomatose de Wegener.",
     "B": "síndrome de Churg-Strauss.",
@@ -323,7 +359,11 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "A granulomatose com poliangeíte (antiga granulomatose de Wegener) acomete vias aéreas superiores (sinusite, rouquidão), pulmões e rins (GNRP pauci-imune), com c-ANCA/anti-PR3 positivo em até 90% dos casos. Churg-Strauss (granulomatose eosinofílica) se associa a asma, eosinofilia e p-ANCA; poliarterite nodosa é ANCA-negativa e não causa glomerulonefrite; vasculite leucocitoclástica é cutânea. Artrite reumatoide juvenil não explica o quadro.",
-   "reference": "Classificação de Chapel Hill 2012; ACR/EULAR 2022."
+   "reference": "Classificação de Chapel Hill 2012; ACR/EULAR 2022.",
+   "original": [
+    "2022-q012-1.jpg",
+    "2022-q012-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-013",
@@ -349,7 +389,10 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "Compressões torácicas efetivas (100–120/min, 5–6 cm de profundidade, retorno completo do tórax e mínimas interrupções) mantêm a perfusão coronariana e cerebral e são o pilar do suporte básico. Intubação precoce não melhora sobrevida e pode interromper compressões; adrenalina é administrada depois, a cada 3–5 min; ventilação com máscara é importante mas secundária às compressões. \"Cardioversão\" não é o termo para ritmos de PCR — em FV/TV sem pulso faz-se desfibrilação.",
-   "reference": "AHA Guidelines for CPR and ECC 2020."
+   "reference": "AHA Guidelines for CPR and ECC 2020.",
+   "original": [
+    "2022-q013-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-014",
@@ -375,7 +418,10 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "Critérios de Wells para TEP: sinais clínicos de TVP (3), TEP como diagnóstico mais provável (3), FC > 100 bpm (1,5), imobilização ≥ 3 dias ou cirurgia nas últimas 4 semanas (1,5), TVP/TEP prévio (1,5), hemoptise (1) e câncer ativo (1). Idade > 65 anos aparece no escore de Genebra, não no de Wells. AVC prévio e PAS > 100 mmHg não fazem parte; a janela cirúrgica é de 4 semanas, e não 8.",
-   "reference": "Wells PS et al., 2000; ESC Pulmonary Embolism 2019."
+   "reference": "Wells PS et al., 2000; ESC Pulmonary Embolism 2019.",
+   "original": [
+    "2022-q014-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-015",
@@ -401,7 +447,10 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "Tiazídicos e diuréticos de alça aumentam a reabsorção tubular de urato, elevando o ácido úrico sérico e desencadeando crises gotosas. Losartana, ao contrário, tem efeito uricosúrico leve; os iSGLT2 (empagliflozina) também reduzem o ácido úrico. Metformina e sinvastatina não têm associação relevante com gota.",
-   "reference": "ACR Gout Guideline 2020."
+   "reference": "ACR Gout Guideline 2020.",
+   "original": [
+    "2022-q015-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-016",
@@ -427,7 +476,10 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "A doença hepática gordurosa não alcoólica (hoje MASLD) está ligada à síndrome metabólica e à resistência à insulina: obesidade, DM2, dislipidemia, hipotireoidismo, apneia do sono e síndrome dos ovários policísticos. Hepatite A é aguda e não evolui para cronicidade; hiperprolactinemia, hipertireoidismo e hipergonadismo não são associações fisiopatológicas clássicas (o hipogonadismo, sim).",
-   "reference": "AASLD Practice Guidance NAFLD 2023."
+   "reference": "AASLD Practice Guidance NAFLD 2023.",
+   "original": [
+    "2022-q016-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-017",
@@ -453,7 +505,11 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "Pela Lista Nacional de Notificação Compulsória (Portaria de Consolidação nº 4/2017 e atualizações), febre amarela exige notificação imediata às três esferas de gestão, pelo potencial de urbanização e surtos. Tétano, hanseníase e sífilis são de notificação semanal; zika é semanal (imediata apenas óbitos ou casos em gestantes em algumas situações). A pergunta destaca que, apesar de existir vacina, a febre amarela continua exigindo notificação imediata.",
-   "reference": "Ministério da Saúde — Lista Nacional de Notificação Compulsória."
+   "reference": "Ministério da Saúde — Lista Nacional de Notificação Compulsória.",
+   "original": [
+    "2022-q017-1.jpg",
+    "2022-q017-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-018",
@@ -479,7 +535,10 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "O linfoma de Hodgkin clássico se caracteriza pelas células de Reed-Sternberg (grandes, binucleadas, com nucléolos proeminentes em \"olhos de coruja\"), CD15+ e CD30+, em meio a infiltrado inflamatório reativo. Células de Leydig são células testiculares produtoras de testosterona; \"mielócitos azurófilos\" e relação neutrófilo-linfócito não são achados diagnósticos de linfoma.",
-   "reference": "Classificação OMS das neoplasias linfoides."
+   "reference": "Classificação OMS das neoplasias linfoides.",
+   "original": [
+    "2022-q018-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-019",
@@ -508,6 +567,10 @@
    "reference": "Light RW, 1972; Diretriz SBPT de derrame pleural.",
    "images": [
     "2022-q019-1.jpg"
+   ],
+   "original": [
+    "2022-q019-1.jpg",
+    "2022-q019-2.jpg"
    ]
   },
   {
@@ -534,7 +597,10 @@
    "explanationSource": "gerada",
    "status": "ativa",
    "explanationFull": "ITU complicada é aquela associada a condições que aumentam o risco de falha terapêutica: obstrução ou alteração estrutural do trato urinário (prolapso genital com resíduo pós-miccional, litíase, bexiga neurogênica), cateteres, imunossupressão, gestação, sexo masculino e DRC. Diuréticos, enurese noturna e hipertensão arterial não são fatores de complicação; \"espessamento vesical\" isolado é achado inespecífico.",
-   "reference": "EAU Guidelines on Urological Infections."
+   "reference": "EAU Guidelines on Urological Infections.",
+   "original": [
+    "2022-q020-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-021",
@@ -556,8 +622,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q021-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-022",
@@ -579,8 +648,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q022-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-023",
@@ -602,9 +674,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
    "status": "ativa",
    "images": [
+    "2022-q023-1.jpg"
+   ],
+   "original": [
     "2022-q023-1.jpg"
    ]
   },
@@ -628,8 +703,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q024-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-025",
@@ -651,8 +729,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q025-1.jpg",
+    "2022-q025-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-026",
@@ -674,8 +756,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q026-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-027",
@@ -697,8 +782,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q027-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-028",
@@ -720,8 +808,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q028-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-029",
@@ -743,8 +834,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q029-1.jpg",
+    "2022-q029-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-030",
@@ -766,8 +861,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q030-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-031",
@@ -789,8 +887,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q031-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-032",
@@ -812,8 +913,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q032-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-033",
@@ -835,8 +939,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q033-1.jpg",
+    "2022-q033-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-034",
@@ -858,8 +966,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q034-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-035",
@@ -881,8 +992,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q035-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-036",
@@ -904,8 +1018,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q036-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-037",
@@ -927,8 +1044,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q037-1.jpg",
+    "2022-q037-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-038",
@@ -950,8 +1071,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q038-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-039",
@@ -973,8 +1097,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q039-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-040",
@@ -996,8 +1123,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q040-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-041",
@@ -1019,8 +1149,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q041-1.jpg",
+    "2022-q041-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-042",
@@ -1042,9 +1176,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
    "status": "ativa",
    "images": [
+    "2022-q042-1.jpg"
+   ],
+   "original": [
     "2022-q042-1.jpg"
    ]
   },
@@ -1068,10 +1205,14 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
    "status": "ativa",
    "images": [
     "2022-q043-1.jpg"
+   ],
+   "original": [
+    "2022-q043-1.jpg",
+    "2022-q043-2.jpg"
    ]
   },
   {
@@ -1094,8 +1235,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q044-1.jpg",
+    "2022-q044-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-045",
@@ -1117,8 +1262,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q045-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-046",
@@ -1140,8 +1288,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q046-1.jpg",
+    "2022-q046-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-047",
@@ -1163,8 +1315,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q047-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-048",
@@ -1186,8 +1341,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q048-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-049",
@@ -1209,8 +1367,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q049-1.jpg",
+    "2022-q049-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-050",
@@ -1232,8 +1394,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q050-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-051",
@@ -1255,8 +1420,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q051-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-052",
@@ -1278,8 +1446,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q052-1.jpg",
+    "2022-q052-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-053",
@@ -1301,8 +1473,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q053-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-054",
@@ -1324,8 +1499,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q054-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-055",
@@ -1333,7 +1511,7 @@
    "text": "Um lactente de 1 ano estava cianótico e desacordado nos braços de sua mãe, numa via pública. Você, único profissional de saúde qualificado para iniciar um atendimento de emergência inicial no local, checa responsividade do bebê e ele não responde. Solicita ajuda e inicia, de forma sistemática, os procedimentos para a reanimação cardiopulmonar, pois o pulso e a respiração estão ausentes. Nesse caso, quais são as recomendações mais adequadas?",
    "alternatives": {
     "A": "Deve-se iniciar com as compressões torácicas, realizando-se, após, a ventilação boca a boca, em uma relação de 15 compressões para 1 ventilação.",
-    "B": "Deve-se iniciar com as compressões torácicas, que deverão ser realizadas com a técnica dos dois polegares preferencialmente para essa idade e situação apresentada, retirandose os dedos do contato do tórax a cada movimento para evitar a exaustão do reanimador.",
+    "B": "Deve-se iniciar com as compressões torácicas, que deverão ser realizadas com a técnica dos dois polegares preferencialmente para essa idade e situação apresentada, retirando-se os dedos do contato do tórax a cada movimento para evitar a exaustão do reanimador.",
     "C": "Deve-se iniciar pela ventilação de resgate (2 ventilações boca a boca) e, após, compressões torácicas, numa relação de 15 compressões para 2 ventilações.",
     "D": "Quando realizadas as compressões torácicas, deve-se se atentar à frequência de, no mínimo, 100 movimentos/minuto e, no máximo,120/minuto.",
     "E": "Após iniciada a reanimação de alta qualidade nessa faixa etária e nessa situação, as compressões não devem ser interrompidas para a instalação do desfibrilador externo automático, quando esse equipamento estiver disponível com a chegada do apoio de resgate."
@@ -1347,8 +1525,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q055-1.jpg",
+    "2022-q055-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-056",
@@ -1370,8 +1552,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q056-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-057",
@@ -1393,8 +1578,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q057-1.jpg",
+    "2022-q057-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-058",
@@ -1416,8 +1605,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q058-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-059",
@@ -1439,8 +1631,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q059-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-060",
@@ -1462,8 +1657,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q060-1.jpg",
+    "2022-q060-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-061",
@@ -1485,8 +1684,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q061-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-062",
@@ -1508,8 +1710,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q062-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-063",
@@ -1531,10 +1736,14 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
    "status": "ativa",
    "images": [
     "2022-q063-1.jpg"
+   ],
+   "original": [
+    "2022-q063-1.jpg",
+    "2022-q063-2.jpg"
    ]
   },
   {
@@ -1557,8 +1766,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q064-1.jpg",
+    "2022-q064-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-065",
@@ -1580,8 +1793,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q065-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-066",
@@ -1603,8 +1819,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q066-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-067",
@@ -1627,6 +1846,10 @@
    "year": 2022,
    "explanation": "Questão anulada pela banca.",
    "status": "anulada",
+   "original": [
+    "2022-q067-1.jpg",
+    "2022-q067-2.jpg"
+   ],
    "statusNote": "Questão ANULADA no gabarito oficial da prova. Não aparece em partidas normais."
   },
   {
@@ -1649,8 +1872,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q068-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-069",
@@ -1672,8 +1898,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q069-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-070",
@@ -1695,8 +1924,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q070-1.jpg",
+    "2022-q070-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-071",
@@ -1718,8 +1951,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q071-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-072",
@@ -1741,8 +1977,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q072-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-073",
@@ -1764,8 +2003,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q073-1.jpg",
+    "2022-q073-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-074",
@@ -1787,8 +2030,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q074-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-075",
@@ -1810,8 +2056,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q075-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-076",
@@ -1833,8 +2082,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q076-1.jpg",
+    "2022-q076-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-077",
@@ -1856,8 +2109,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q077-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-078",
@@ -1879,8 +2135,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q078-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-079",
@@ -1902,8 +2161,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q079-1.jpg",
+    "2022-q079-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-080",
@@ -1925,8 +2188,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q080-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-081",
@@ -1948,8 +2214,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q081-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-082",
@@ -1971,8 +2240,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q082-1.jpg",
+    "2022-q082-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-083",
@@ -1994,8 +2267,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q083-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-084",
@@ -2017,8 +2293,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q084-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-085",
@@ -2040,8 +2319,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q085-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-086",
@@ -2063,8 +2345,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q086-1.jpg",
+    "2022-q086-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-087",
@@ -2086,8 +2372,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q087-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-088",
@@ -2109,8 +2398,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q088-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-089",
@@ -2132,8 +2424,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q089-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-090",
@@ -2155,8 +2450,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q090-1.jpg",
+    "2022-q090-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-091",
@@ -2178,8 +2477,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q091-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-092",
@@ -2201,8 +2503,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q092-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-093",
@@ -2224,8 +2529,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q093-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-094",
@@ -2247,8 +2555,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q094-1.jpg",
+    "2022-q094-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-095",
@@ -2270,8 +2582,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q095-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-096",
@@ -2293,8 +2608,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q096-1.jpg",
+    "2022-q096-2.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-097",
@@ -2316,8 +2635,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q097-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-098",
@@ -2339,8 +2661,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q098-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-099",
@@ -2362,8 +2687,11 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q099-1.jpg"
+   ]
   },
   {
    "id": "UNOESTE-2022-100",
@@ -2385,8 +2713,12 @@
    "exam": "UNOESTE/HRPP R1 Acesso Direto 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
-   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin).",
-   "status": "ativa"
+   "explanation": "Gabarito oficial da prova. Explicação ainda não cadastrada.",
+   "status": "ativa",
+   "original": [
+    "2022-q100-1.jpg",
+    "2022-q100-2.jpg"
+   ]
   }
  ]
 }
