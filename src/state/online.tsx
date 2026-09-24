@@ -15,6 +15,8 @@ interface OnlineCtx {
   signIn: (email: string, password: string) => Promise<void>;
   signUp: (email: string, password: string, name: string) => Promise<{ needsConfirm: boolean }>;
   signOut: () => Promise<void>;
+  signInAsGuest: (name: string) => Promise<void>;
+  upgradeGuest: (email: string, password: string, name: string) => Promise<{ needsConfirm: boolean }>;
   refreshProfile: () => Promise<void>;
 }
 
@@ -122,6 +124,15 @@ export function OnlineProvider({ children }: { children: ReactNode }) {
     },
     signUp: async (e, pw, name) => {
       const r = await backend!.signUp(e, pw, name);
+      setAccount(await backend!.getAccount());
+      return r;
+    },
+    signInAsGuest: async (name) => {
+      await backend!.signInAsGuest(name);
+      setAccount(await backend!.getAccount());
+    },
+    upgradeGuest: async (e, pw, name) => {
+      const r = await backend!.upgradeGuest(e, pw, name);
       setAccount(await backend!.getAccount());
       return r;
     },

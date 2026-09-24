@@ -12,7 +12,8 @@ function fail(error: { message: string } | null) {
 export async function createSupabaseBackend(url: string, anonKey: string): Promise<OnlineBackend> {
   const { createClient } = await import('@supabase/supabase-js');
   const sb: SupabaseClient = createClient(url, anonKey, { auth: { persistSession: true, autoRefreshToken: true } });
-  const toAccount = (u: { id: string; email?: string } | null | undefined): Account | null => (u ? { id: u.id, email: u.email ?? '' } : null);
+  const toAccount = (u: { id: string; email?: string; is_anonymous?: boolean } | null | undefined): Account | null =>
+    u ? { id: u.id, email: u.email ?? '', isGuest: !!u.is_anonymous } : null;
 
   return {
     kind: 'supabase',
@@ -28,6 +29,17 @@ export async function createSupabaseBackend(url: string, anonKey: string): Promi
       const { data, error } = await sb.auth.signUp({ email, password, options: { data: { name }, emailRedirectTo: location.origin + location.pathname } });
       fail(error);
       return { needsConfirm: !data.session };
+    },
+    async signInAsGuest(name) {
+      const { error } = await sb.auth.signInAnonymously({ options: { data: { name } } });
+      if (error && /anonymous/i.test(error.message)) throw new Error('O modo visitante ainda não foi ativado no servidor (Supabase → Authentication → "Allow anonymous sign-ins").');
+      fail(error);
+    },
+    async upgradeGuest(email, password, name) {
+      const { data, error } = await sb.auth.updateUser({ email, password, data: { name } }, { emailRedirectTo: location.origin + location.pathname });
+      fail(error);
+      // com confirmação de e-mail ligada, o e-mail só vale depois do link
+      return { needsConfirm: !!data.user && !data.user.email_confirmed_at && !!data.user.new_email };
     },
     async signIn(email, password) {
       const { error } = await sb.auth.signInWithPassword({ email, password });
@@ -46,7 +58,7 @@ export async function createSupabaseBackend(url: string, anonKey: string): Promi
       fail(error);
     },
     async ranking(order, limit = 100) {
-      const { data, error } = await sb.from('profiles').select('*').order(order, { ascending: false }).limit(limit);
+      const { data, error } = await sb.from('profiles').select('*').eq('is_guest', false).order(order, { ascending: false }).limit(limit);
       fail(error);
       return (data ?? []) as OnlineProfile[];
     },

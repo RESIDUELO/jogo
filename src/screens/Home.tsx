@@ -85,7 +85,7 @@ export function Home() {
           </Btn>
           {online.backend && (
             <button onClick={() => store.nav({ name: 'account' })} className="w-full text-center text-xs mt-3 text-sky-300">
-              {online.account ? `🌐 Online como ${online.profile?.name ?? player.name}` : '🌐 Entre na sua conta para jogar online e entrar no ranking'}
+              {online.account ? `🌐 Online como ${online.profile?.name ?? player.name}${online.account.isGuest ? ' (visitante)' : ''}` : '🌐 Jogue online: entre como visitante ou crie uma conta'}
             </button>
           )}
           <div className="text-center text-[11px] text-white/40 mt-2">{fmtInt(store.questions.filter((q) => q.status === 'ativa').length)} questões ativas · {store.exams.length} provas</div>

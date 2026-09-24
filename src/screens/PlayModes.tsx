@@ -170,11 +170,42 @@ function OnlineCard({ setup }: { setup: MatchSetupData }) {
       <div className="font-display text-lg font-bold">🌐 Online</div>
       {!online.account ? (
         <>
-          <p className="text-sm text-white/60 mb-3">Entre na sua conta para jogar contra outras pessoas e aparecer no ranking.</p>
-          <Btn onClick={() => store.nav({ name: 'account' })}>Entrar / criar conta</Btn>
+          <p className="text-sm text-white/60 mb-3">Jogue contra outras pessoas. Sem conta, você entra como visitante na hora.</p>
+          <div className="grid sm:grid-cols-2 gap-2">
+            <Btn
+              big
+              variant="gold"
+              disabled={busy}
+              onClick={async () => {
+                setBusy(true);
+                setMsg('');
+                try {
+                  await online.signInAsGuest(store.player?.name ?? 'Visitante');
+                } catch (e) {
+                  setMsg(String((e as Error).message));
+                }
+                setBusy(false);
+              }}
+            >
+              👤 Jogar como visitante
+            </Btn>
+            <Btn big variant="secondary" onClick={() => store.nav({ name: 'account' })}>
+              Entrar / criar conta
+            </Btn>
+          </div>
+          {msg && <p className="text-sm text-rose-300 mt-2">{msg}</p>}
+          <p className="text-[11px] text-white/40 mt-2">Visitantes jogam normalmente, mas não aparecem no ranking. Dá para criar a conta depois sem perder o progresso.</p>
         </>
       ) : (
         <div className="space-y-3 mt-2">
+          {online.account.isGuest && (
+            <p className="text-xs text-white/50">
+              👤 Jogando como visitante ·{' '}
+              <button className="underline text-sky-300" onClick={() => store.nav({ name: 'account' })}>
+                criar conta para entrar no ranking
+              </button>
+            </p>
+          )}
           {open.map((m) => (
             <Btn key={m.id} variant="gold" className="w-full" onClick={() => store.nav({ name: 'onlineMatch', matchId: m.id })}>
               ↩️ Voltar para {m.label}
@@ -469,6 +500,53 @@ export function AccountScreen() {
       </div>
     );
 
+  if (online.account?.isGuest)
+    return (
+      <div>
+        <Header title="Visitante" />
+        <Card className="p-5 space-y-3 max-w-md mx-auto">
+          <div className="flex items-center gap-3">
+            <Avatar player={store.player!} size={56} />
+            <div>
+              <div className="font-display text-lg font-bold">{store.player?.name}</div>
+              <div className="text-sm text-white/60">👤 Jogando como visitante</div>
+            </div>
+          </div>
+          <p className="text-sm text-white/60">Você já pode jogar online. Para aparecer no ranking e entrar em outro aparelho, crie uma conta: seu progresso é mantido.</p>
+          <input className="input" placeholder="Nome no ranking" value={name} maxLength={20} onChange={(e) => setName(e.target.value)} />
+          <input className="input" type="email" autoComplete="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input className="input" type="password" autoComplete="new-password" placeholder="Senha (mín. 6 caracteres)" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <Btn
+            className="w-full"
+            disabled={busy || !email || password.length < 6}
+            onClick={async () => {
+              setBusy(true);
+              setMsg('');
+              try {
+                const r = await online.upgradeGuest(email.trim(), password, name.trim() || 'Jogador');
+                if (name.trim()) store.updatePlayer((x) => ({ ...x, name: name.trim() }));
+                setMsg(r.needsConfirm ? 'Quase lá! Confirme pelo link enviado ao seu e-mail.' : 'Conta criada! ✅');
+              } catch (e) {
+                setMsg(String((e as Error).message));
+              }
+              setBusy(false);
+            }}
+          >
+            Criar conta e manter progresso
+          </Btn>
+          {msg && <p className="text-sm text-amber-200">{msg}</p>}
+          <div className="flex gap-2 flex-wrap pt-2">
+            <Btn variant="secondary" onClick={() => store.nav({ name: 'play' })}>
+              Jogar online
+            </Btn>
+            <Btn variant="ghost" onClick={() => online.signOut()}>
+              Sair do modo visitante
+            </Btn>
+          </div>
+        </Card>
+      </div>
+    );
+
   if (online.account)
     return (
       <div>
@@ -522,7 +600,31 @@ export function AccountScreen() {
           {mode === 'login' ? 'Entrar' : 'Criar conta'}
         </Btn>
         {msg && <p className="text-sm text-amber-200">{msg}</p>}
-        <p className="text-[11px] text-white/40">Ao entrar, seu progresso deste aparelho é vinculado à conta.</p>
+        <div className="flex items-center gap-3 text-white/30 text-xs">
+          <div className="h-px flex-1 bg-white/10" />
+          ou
+          <div className="h-px flex-1 bg-white/10" />
+        </div>
+        <Btn
+          big
+          variant="gold"
+          className="w-full"
+          disabled={busy}
+          onClick={async () => {
+            setBusy(true);
+            setMsg('');
+            try {
+              await online.signInAsGuest(name.trim() || store.player?.name || 'Visitante');
+              store.nav({ name: 'play' });
+            } catch (e) {
+              setMsg(String((e as Error).message));
+            }
+            setBusy(false);
+          }}
+        >
+          👤 Jogar como visitante
+        </Btn>
+        <p className="text-[11px] text-white/40">Visitante joga online sem cadastro, mas não aparece no ranking. Ao entrar, seu progresso deste aparelho é vinculado à conta.</p>
       </Card>
     </div>
   );

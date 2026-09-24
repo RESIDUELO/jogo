@@ -6,6 +6,7 @@ import type { CategoryId, MatchSetupData } from '../../types';
 export interface Account {
   id: string;
   email: string;
+  isGuest: boolean; // login anônimo ("jogar como visitante")
 }
 
 export interface OnlineProfile {
@@ -22,6 +23,7 @@ export interface OnlineProfile {
   correct: number;
   best_streak: number;
   win_streak: number;
+  is_guest?: boolean;
   cat_stats: Partial<Record<CategoryId, { n: number; c: number }>>;
   week_xp: number;
   week_start: string | null;
@@ -49,6 +51,10 @@ export interface OnlineBackend {
   onAuthChange(cb: (a: Account | null) => void): () => void;
   signUp(email: string, password: string, name: string): Promise<{ needsConfirm: boolean }>;
   signIn(email: string, password: string): Promise<void>;
+  /** Login anônimo: joga online sem criar conta. */
+  signInAsGuest(name: string): Promise<void>;
+  /** Transforma o visitante em conta com e-mail/senha (mantém o mesmo id e progresso). */
+  upgradeGuest(email: string, password: string, name: string): Promise<{ needsConfirm: boolean }>;
   signOut(): Promise<void>;
   getProfile(id: string): Promise<OnlineProfile | null>;
   saveProfile(p: Partial<OnlineProfile> & { id: string }): Promise<void>;

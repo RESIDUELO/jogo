@@ -43,6 +43,7 @@ export function RankingScreen() {
           <Seg value={source} onChange={setSource} options={[{ v: 'online', label: '🌐 Jogadores' }, { v: 'local', label: '📱 Este aparelho + bots' }]} />
         </div>
       )}
+      {useOnlineSource && online.account?.isGuest && <p className="text-xs text-white/60 mb-2">👤 Visitantes não aparecem no ranking. <button className="underline" onClick={() => store.nav({ name: 'account' })}>Criar conta</button></p>}
       {useOnlineSource && !online.account && (
         <p className="text-xs text-white/60 mb-2">
           <button className="underline" onClick={() => store.nav({ name: 'account' })}>

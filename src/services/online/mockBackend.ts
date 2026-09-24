@@ -80,14 +80,32 @@ export function createMockBackend(slot: string): OnlineBackend {
       db.accounts[email] = { id: uid, password };
       db.profiles[uid] = blankProfile(uid, name);
       save(db);
-      setMe({ id: uid, email });
+      setMe({ id: uid, email, isGuest: false });
+      return { needsConfirm: false };
+    },
+    async signInAsGuest(name) {
+      await delay();
+      const db = load();
+      const uid = id();
+      db.profiles[uid] = { ...blankProfile(uid, name || 'Visitante'), is_guest: true };
+      save(db);
+      setMe({ id: uid, email: '', isGuest: true });
+    },
+    async upgradeGuest(email, password, name) {
+      const a = need();
+      const db = load();
+      if (db.accounts[email]) throw new Error('E-mail já cadastrado');
+      db.accounts[email] = { id: a.id, password };
+      db.profiles[a.id] = { ...db.profiles[a.id], name, is_guest: false };
+      save(db);
+      setMe({ id: a.id, email, isGuest: false });
       return { needsConfirm: false };
     },
     async signIn(email, password) {
       await delay();
       const acc = load().accounts[email];
       if (!acc || acc.password !== password) throw new Error('E-mail ou senha incorretos');
-      setMe({ id: acc.id, email });
+      setMe({ id: acc.id, email, isGuest: false });
     },
     async signOut() {
       setMe(null);
@@ -102,6 +120,7 @@ export function createMockBackend(slot: string): OnlineBackend {
     },
     async ranking(order, limit = 100) {
       return Object.values(load().profiles)
+        .filter((p) => !p.is_guest)
         .sort((a, b) => b[order] - a[order])
         .slice(0, limit);
     },

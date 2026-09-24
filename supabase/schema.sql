@@ -1,5 +1,6 @@
 -- Residuelo — esquema do backend online (Supabase / PostgreSQL).
 -- Como usar: Supabase → SQL Editor → cole este arquivo inteiro → Run.
+-- Para "jogar como visitante": Authentication → Sign In / Providers → ative "Allow anonymous sign-ins".
 -- Pode ser executado de novo sem problemas (idempotente).
 
 -- ============================================================ PROFILES (USERS)
@@ -22,6 +23,8 @@ create table if not exists public.profiles (
   week_start date,
   updated_at timestamptz not null default now()
 );
+-- visitantes (login anônimo) jogam online mas não entram no ranking
+alter table public.profiles add column if not exists is_guest boolean not null default false;
 
 alter table public.profiles enable row level security;
 drop policy if exists "profiles: leitura pública" on public.profiles;
@@ -35,18 +38,38 @@ create policy "profiles: edita o próprio" on public.profiles for update using (
 create or replace function public.handle_new_user() returns trigger
 language plpgsql security definer set search_path = public as $$
 begin
-  insert into public.profiles (id, name)
-  values (new.id, coalesce(nullif(new.raw_user_meta_data ->> 'name', ''), split_part(new.email, '@', 1)))
+  insert into public.profiles (id, name, is_guest)
+  values (
+    new.id,
+    coalesce(nullif(new.raw_user_meta_data ->> 'name', ''), nullif(split_part(coalesce(new.email, ''), '@', 1), ''), 'Visitante'),
+    coalesce((to_jsonb(new) ->> 'is_anonymous')::boolean, false)
+  )
   on conflict (id) do nothing;
   return new;
 end $$;
+
+-- visitante que cria conta (e-mail/senha) deixa de ser visitante
+create or replace function public.handle_user_upgrade() returns trigger
+language plpgsql security definer set search_path = public as $$
+begin
+  if coalesce((to_jsonb(new) ->> 'is_anonymous')::boolean, false) = false then
+    update public.profiles set is_guest = false where id = new.id and is_guest;
+  end if;
+  return new;
+end $$;
+drop trigger if exists on_auth_user_updated on auth.users;
+create trigger on_auth_user_updated after update on auth.users
+  for each row execute function public.handle_user_upgrade();
 drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created after insert on auth.users
   for each row execute function public.handle_new_user();
 
 -- contas criadas antes deste script: cria os perfis que faltam
-insert into public.profiles (id, name)
-select id, coalesce(nullif(raw_user_meta_data ->> 'name', ''), split_part(email, '@', 1)) from auth.users
+insert into public.profiles (id, name, is_guest)
+select id,
+       coalesce(nullif(raw_user_meta_data ->> 'name', ''), nullif(split_part(coalesce(email, ''), '@', 1), ''), 'Visitante'),
+       coalesce((to_jsonb(u) ->> 'is_anonymous')::boolean, false)
+from auth.users u
 on conflict (id) do nothing;
 
 -- ============================================================ MATCHES
