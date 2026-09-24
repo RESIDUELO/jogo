@@ -1,5 +1,5 @@
 // Ranking, Conquistas, Missões e Loja.
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { ACHIEVEMENTS } from '../data/achievements';
 import { CAT, CATEGORY_IDS } from '../data/categories';
 import { MISSION_BY_ID } from '../data/missions';
@@ -8,19 +8,50 @@ import { buyCosmetic, buyPowerUp, equipCosmetic, ownsCosmetic } from '../engine/
 import { leagueFor, levelFromXp } from '../engine/progression';
 import { snapshot } from '../engine/stats';
 import { fmtInt, fmtPct } from '../engine/util';
-import { getRanking, type RankingKind } from '../services/rankings';
+import { getRanking, onlineEntries, sortRanking, type RankingKind } from '../services/rankings';
+import { useOnline } from '../state/online';
+import type { RankingEntry } from '../types';
 import { sfx } from '../audio/sfx';
 import { useStore } from '../state/store';
 import { Avatar, Bar, Btn, Card, Coins, Header, Seg } from '../ui/common';
 
 export function RankingScreen() {
   const store = useStore();
+  const online = useOnline();
   const [kind, setKind] = useState<RankingKind>('geral');
-  const rows = useMemo(() => getRanking(kind), [kind, store.players]); // eslint-disable-line react-hooks/exhaustive-deps
+  const [source, setSource] = useState<'online' | 'local'>('online');
+  const [remote, setRemote] = useState<RankingEntry[] | null>(null);
+  const [err, setErr] = useState('');
+  const useOnlineSource = source === 'online' && !!online.backend;
+  useEffect(() => {
+    if (!useOnlineSource) return;
+    setErr('');
+    const order = kind === 'ranqueado' ? 'rating' : kind === 'semanal' ? 'week_xp' : 'xp';
+    online.backend!.ranking(order, 200).then((ps) => setRemote(onlineEntries(ps)), (e) => setErr(String(e.message ?? e)));
+  }, [useOnlineSource, kind, online.backend]);
+  const rows = useMemo(
+    () => (useOnlineSource ? sortRanking(remote ?? [], kind).filter((r) => !CATEGORY_IDS.includes(kind as never) || r.catAccuracy[kind as 'GO'] > 0) : getRanking(kind)),
+    [useOnlineSource, remote, kind, store.players], // eslint-disable-line react-hooks/exhaustive-deps
+  );
   const isCat = CATEGORY_IDS.includes(kind as never);
+  const myId = useOnlineSource ? online.account?.id : store.player?.id;
   return (
     <div className="pb-10">
-      <Header title="Ranking" subtitle="Jogadores deste aparelho + bots" />
+      <Header title="Ranking" subtitle={useOnlineSource ? 'Jogadores com conta' : 'Perfis deste aparelho + bots'} />
+      {online.backend && (
+        <div className="mb-3">
+          <Seg value={source} onChange={setSource} options={[{ v: 'online', label: '🌐 Jogadores' }, { v: 'local', label: '📱 Este aparelho + bots' }]} />
+        </div>
+      )}
+      {useOnlineSource && !online.account && (
+        <p className="text-xs text-white/60 mb-2">
+          <button className="underline" onClick={() => store.nav({ name: 'account' })}>
+            Entre na sua conta
+          </button>{' '}
+          para aparecer no ranking.
+        </p>
+      )}
+      {err && <p className="text-sm text-rose-300 mb-2">{err}</p>}
       <div className="overflow-x-auto -mx-4 px-4 pb-2">
         <div className="flex gap-2 w-max">
           {(
@@ -47,8 +78,10 @@ export function RankingScreen() {
           <span>{isCat ? CAT[kind as 'GO'].name : 'Acerto'}</span>
           <span>Seq.</span>
         </div>
+        {useOnlineSource && remote && rows.length === 0 && <div className="p-6 text-center text-white/50 text-sm">Ninguém no ranking ainda. Seja o primeiro!</div>}
+        {useOnlineSource && !remote && !err && <div className="p-6 text-center text-white/50 text-sm animate-pulse">Carregando...</div>}
         {rows.map((r, i) => {
-          const me = r.id === store.player?.id;
+          const me = r.id === myId;
           const medal = ['🥇', '🥈', '🥉'][i];
           return (
             <div key={r.id} className={`grid grid-cols-[36px_1fr_auto] sm:grid-cols-[44px_1fr_60px_80px_70px_70px_60px] gap-2 items-center px-4 py-2.5 border-b border-white/5 ${me ? 'bg-violet-500/15' : ''}`}>
@@ -78,7 +111,7 @@ export function RankingScreen() {
           );
         })}
       </Card>
-      <p className="text-[11px] text-white/40 mt-2">No multiplayer online, o ranking passa a ser global (consulta agregada no servidor).</p>
+
     </div>
   );
 }

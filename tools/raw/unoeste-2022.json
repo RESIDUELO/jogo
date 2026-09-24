@@ -11,7 +11,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q001-1.jpg"
+  ]
  },
  {
   "number": 2,
@@ -25,7 +28,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q002-1.jpg",
+   "2022-q002-2.jpg"
+  ]
  },
  {
   "number": 3,
@@ -39,11 +46,14 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q003-1.jpg"
+  ]
  },
  {
   "number": 4,
-  "stem": "Paciente de 34 anos, puérpera recente, com história de hipertensão arterial durante cirurgia de cesariana há 10 dias, evoluindo no pós-operatório imediato com persistência de níveis pressóricos elevados, obtendo alta hospitalar com três classes de antihipertensivos para controle pressórico. Durante a internação, foi repetido exames de investigação de gestose hipertensiva, com transaminases normais e proteinúria de 24 h menor 10 mg, similar aos níveis da vigésima semana de gestação. Nega hipertensão arterial durante toda a gestação atual ou antes de engravidar. Procura ambulatório de clínica médica para orientação e tratamento. Ao exame físico, apresentava PA = 138 x 85 mmHg, FC = 78 bpm e ausculta cardíaca normal. Realizou um eletrocardiograma de repouso que demostrou ritmo sinusal e alterações inespecíficas difusas da repolarização ventricular. Diante da hipótese diagnóstica, qual exame complementar deve ser realizado nesse caso?",
+  "stem": "Paciente de 34 anos, puérpera recente, com história de hipertensão arterial durante cirurgia de cesariana há 10 dias, evoluindo no pós-operatório imediato com persistência de níveis pressóricos elevados, obtendo alta hospitalar com três classes de anti-hipertensivos para controle pressórico. Durante a internação, foi repetido exames de investigação de gestose hipertensiva, com transaminases normais e proteinúria de 24 h menor 10 mg, similar aos níveis da vigésima semana de gestação. Nega hipertensão arterial durante toda a gestação atual ou antes de engravidar. Procura ambulatório de clínica médica para orientação e tratamento. Ao exame físico, apresentava PA = 138 x 85 mmHg, FC = 78 bpm e ausculta cardíaca normal. Realizou um eletrocardiograma de repouso que demostrou ritmo sinusal e alterações inespecíficas difusas da repolarização ventricular. Diante da hipótese diagnóstica, qual exame complementar deve ser realizado nesse caso?",
   "alternatives": {
    "A": "Holter 24h.",
    "B": "Teste ergométrico.",
@@ -53,11 +63,14 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q004-1.jpg"
+  ]
  },
  {
   "number": 5,
-  "stem": "Paciente de 34 anos, puérpera recente, com história de hipertensão arterial durante cirurgia de cesariana há 10 dias, evoluindo no pós-operatório imediato com persistência de níveis pressóricos elevados, obtendo alta hospitalar com três classes de antihipertensivos para controle pressórico. Durante a internação, foi repetido exames de investigação de gestose hipertensiva, com transaminases normais e proteinúria de 24 h menor 10 mg, similar aos níveis da vigésima semana de gestação. Nega hipertensão arterial durante toda a gestação atual ou antes de engravidar. Procura ambulatório de clínica médica para orientação e tratamento. Ao exame físico, apresentava PA = 138 x 85 mmHg, FC = 78 bpm e ausculta cardíaca normal. Realizou um eletrocardiograma de repouso que demostrou ritmo sinusal e alterações inespecíficas difusas da repolarização ventricular. Assinale a alternativa que apresenta a estratégia terapêutica anti-hipertensiva segura para o lactente, segundo as diretrizes brasileiras atuais.",
+  "stem": "Paciente de 34 anos, puérpera recente, com história de hipertensão arterial durante cirurgia de cesariana há 10 dias, evoluindo no pós-operatório imediato com persistência de níveis pressóricos elevados, obtendo alta hospitalar com três classes de anti-hipertensivos para controle pressórico. Durante a internação, foi repetido exames de investigação de gestose hipertensiva, com transaminases normais e proteinúria de 24 h menor 10 mg, similar aos níveis da vigésima semana de gestação. Nega hipertensão arterial durante toda a gestação atual ou antes de engravidar. Procura ambulatório de clínica médica para orientação e tratamento. Ao exame físico, apresentava PA = 138 x 85 mmHg, FC = 78 bpm e ausculta cardíaca normal. Realizou um eletrocardiograma de repouso que demostrou ritmo sinusal e alterações inespecíficas difusas da repolarização ventricular. Assinale a alternativa que apresenta a estratégia terapêutica anti-hipertensiva segura para o lactente, segundo as diretrizes brasileiras atuais.",
   "alternatives": {
    "A": "Telmisartana.",
    "B": "Sacubitril + valsartana.",
@@ -67,7 +80,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q005-1.jpg"
+  ]
  },
  {
   "number": 6,
@@ -81,7 +97,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q006-1.jpg"
+  ]
  },
  {
   "number": 7,
@@ -95,7 +114,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q007-1.jpg"
+  ]
  },
  {
   "number": 8,
@@ -111,6 +133,10 @@
   "annulled": false,
   "images": [
    "2022-q008-1.jpg"
+  ],
+  "original": [
+   "2022-q008-1.jpg",
+   "2022-q008-2.jpg"
   ]
  },
  {
@@ -127,6 +153,10 @@
   "annulled": false,
   "images": [
    "2022-q009-1.jpg"
+  ],
+  "original": [
+   "2022-q009-1.jpg",
+   "2022-q009-2.jpg"
   ]
  },
  {
@@ -141,7 +171,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q010-1.jpg"
+  ]
  },
  {
   "number": 11,
@@ -155,11 +188,14 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q011-1.jpg"
+  ]
  },
  {
   "number": 12,
-  "stem": "Paciente do sexo masculino, 42 anos de idade, com história de disúria, hematúria e febre vespertina sem calafrios, de início há 7 dias. Como antecedentes prévios, relatava episódios de artralgia generalizada há 3 anos, com episódios de repetição de rouquidão e odinofagia. Realizou exames complementares que evidenciaram: hemoglobina de 9,8 mg/dL, hematócrito de 29%, anisocitose, leucograma e plaquetas normais, ureia 190 mg/dL e creatinina sérica de 8,7 mg/dL. Urina 1 com 3+ de proteína, 4+ de hemoglobina, incontáveis hemácias, depósitos de uratos amorfos (++), cilindros granulosos grossos e presença de corpos ovais e proteinúria de 24 h foi de 3750 mg. Durante a investigação do quadro clínico, foi solicitada a pesquisa do ANCA, cujo resultado foi positivo com padrão citoplasmático (c-ANCA), título de 1:40, e p-ANCA (perinuclear) negativo. Diante da hipótese diagnóstica, com base no exame complementar, o quadro etiológica da insuficiência renal aguda decorre de",
+  "stem": "Paciente do sexo masculino, 42 anos de idade, com história de disúria, hematúria e febre vespertina sem calafrios, de início há 7 dias. Como antecedentes prévios, relatava episódios de artralgia generalizada há 3 anos, com episódios de repetição de rouquidão e odinofagia. Realizou exames complementares que evidenciaram: hemoglobina de 9,8 mg/dL, hematócrito de 29%, anisocitose, leucograma e plaquetas normais, ureia 190 mg/dL e creatinina sérica de 8,7 mg/dL. Urina 1 com 3+ de proteína, 4+ de hemoglobina, incontáveis hemácias, depósitos de uratos amorfos (++), cilindros granulosos grossos e presença de corpos ovais e proteinúria de 24 h foi de 3750 mg. Durante a investigação do quadro clínico, foi solicitada a pesquisa do ANCA, cujo resultado foi positivo com padrão citoplasmático (c-ANCA), título de 1:40, e pANCA (perinuclear) negativo. Diante da hipótese diagnóstica, com base no exame complementar, o quadro etiológica da insuficiência renal aguda decorre de",
   "alternatives": {
    "A": "granulomatose de Wegener.",
    "B": "síndrome de Churg-Strauss.",
@@ -169,7 +205,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q012-1.jpg",
+   "2022-q012-2.jpg"
+  ]
  },
  {
   "number": 13,
@@ -183,7 +223,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q013-1.jpg"
+  ]
  },
  {
   "number": 14,
@@ -197,7 +240,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q014-1.jpg"
+  ]
  },
  {
   "number": 15,
@@ -211,7 +257,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q015-1.jpg"
+  ]
  },
  {
   "number": 16,
@@ -225,7 +274,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q016-1.jpg"
+  ]
  },
  {
   "number": 17,
@@ -239,7 +291,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q017-1.jpg",
+   "2022-q017-2.jpg"
+  ]
  },
  {
   "number": 18,
@@ -253,7 +309,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q018-1.jpg"
+  ]
  },
  {
   "number": 19,
@@ -269,6 +328,10 @@
   "annulled": false,
   "images": [
    "2022-q019-1.jpg"
+  ],
+  "original": [
+   "2022-q019-1.jpg",
+   "2022-q019-2.jpg"
   ]
  },
  {
@@ -283,7 +346,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q020-1.jpg"
+  ]
  },
  {
   "number": 21,
@@ -297,7 +363,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q021-1.jpg"
+  ]
  },
  {
   "number": 22,
@@ -311,7 +380,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q022-1.jpg"
+  ]
  },
  {
   "number": 23,
@@ -327,6 +399,9 @@
   "annulled": false,
   "images": [
    "2022-q023-1.jpg"
+  ],
+  "original": [
+   "2022-q023-1.jpg"
   ]
  },
  {
@@ -341,7 +416,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q024-1.jpg"
+  ]
  },
  {
   "number": 25,
@@ -355,7 +433,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q025-1.jpg",
+   "2022-q025-2.jpg"
+  ]
  },
  {
   "number": 26,
@@ -369,7 +451,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q026-1.jpg"
+  ]
  },
  {
   "number": 27,
@@ -383,7 +468,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q027-1.jpg"
+  ]
  },
  {
   "number": 28,
@@ -397,7 +485,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q028-1.jpg"
+  ]
  },
  {
   "number": 29,
@@ -411,7 +502,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q029-1.jpg",
+   "2022-q029-2.jpg"
+  ]
  },
  {
   "number": 30,
@@ -425,7 +520,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q030-1.jpg"
+  ]
  },
  {
   "number": 31,
@@ -439,7 +537,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q031-1.jpg"
+  ]
  },
  {
   "number": 32,
@@ -453,7 +554,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q032-1.jpg"
+  ]
  },
  {
   "number": 33,
@@ -467,7 +571,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q033-1.jpg",
+   "2022-q033-2.jpg"
+  ]
  },
  {
   "number": 34,
@@ -481,7 +589,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q034-1.jpg"
+  ]
  },
  {
   "number": 35,
@@ -495,7 +606,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q035-1.jpg"
+  ]
  },
  {
   "number": 36,
@@ -509,7 +623,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q036-1.jpg"
+  ]
  },
  {
   "number": 37,
@@ -523,7 +640,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q037-1.jpg",
+   "2022-q037-2.jpg"
+  ]
  },
  {
   "number": 38,
@@ -537,7 +658,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q038-1.jpg"
+  ]
  },
  {
   "number": 39,
@@ -551,7 +675,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q039-1.jpg"
+  ]
  },
  {
   "number": 40,
@@ -565,7 +692,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q040-1.jpg"
+  ]
  },
  {
   "number": 41,
@@ -579,7 +709,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q041-1.jpg",
+   "2022-q041-2.jpg"
+  ]
  },
  {
   "number": 42,
@@ -594,6 +728,9 @@
   "answer": "B",
   "annulled": false,
   "images": [
+   "2022-q042-1.jpg"
+  ],
+  "original": [
    "2022-q042-1.jpg"
   ]
  },
@@ -611,6 +748,10 @@
   "annulled": false,
   "images": [
    "2022-q043-1.jpg"
+  ],
+  "original": [
+   "2022-q043-1.jpg",
+   "2022-q043-2.jpg"
   ]
  },
  {
@@ -625,7 +766,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q044-1.jpg",
+   "2022-q044-2.jpg"
+  ]
  },
  {
   "number": 45,
@@ -639,7 +784,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q045-1.jpg"
+  ]
  },
  {
   "number": 46,
@@ -653,7 +801,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q046-1.jpg",
+   "2022-q046-2.jpg"
+  ]
  },
  {
   "number": 47,
@@ -667,7 +819,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q047-1.jpg"
+  ]
  },
  {
   "number": 48,
@@ -681,7 +836,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q048-1.jpg"
+  ]
  },
  {
   "number": 49,
@@ -695,7 +853,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q049-1.jpg",
+   "2022-q049-2.jpg"
+  ]
  },
  {
   "number": 50,
@@ -709,7 +871,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q050-1.jpg"
+  ]
  },
  {
   "number": 51,
@@ -723,7 +888,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q051-1.jpg"
+  ]
  },
  {
   "number": 52,
@@ -737,7 +905,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q052-1.jpg",
+   "2022-q052-2.jpg"
+  ]
  },
  {
   "number": 53,
@@ -751,7 +923,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q053-1.jpg"
+  ]
  },
  {
   "number": 54,
@@ -765,21 +940,28 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q054-1.jpg"
+  ]
  },
  {
   "number": 55,
   "stem": "Um lactente de 1 ano estava cianótico e desacordado nos braços de sua mãe, numa via pública. Você, único profissional de saúde qualificado para iniciar um atendimento de emergência inicial no local, checa responsividade do bebê e ele não responde. Solicita ajuda e inicia, de forma sistemática, os procedimentos para a reanimação cardiopulmonar, pois o pulso e a respiração estão ausentes. Nesse caso, quais são as recomendações mais adequadas?",
   "alternatives": {
    "A": "Deve-se iniciar com as compressões torácicas, realizando-se, após, a ventilação boca a boca, em uma relação de 15 compressões para 1 ventilação.",
-   "B": "Deve-se iniciar com as compressões torácicas, que deverão ser realizadas com a técnica dos dois polegares preferencialmente para essa idade e situação apresentada, retirandose os dedos do contato do tórax a cada movimento para evitar a exaustão do reanimador.",
+   "B": "Deve-se iniciar com as compressões torácicas, que deverão ser realizadas com a técnica dos dois polegares preferencialmente para essa idade e situação apresentada, retirando-se os dedos do contato do tórax a cada movimento para evitar a exaustão do reanimador.",
    "C": "Deve-se iniciar pela ventilação de resgate (2 ventilações boca a boca) e, após, compressões torácicas, numa relação de 15 compressões para 2 ventilações.",
    "D": "Quando realizadas as compressões torácicas, deve-se se atentar à frequência de, no mínimo, 100 movimentos/minuto e, no máximo,120/minuto.",
    "E": "Após iniciada a reanimação de alta qualidade nessa faixa etária e nessa situação, as compressões não devem ser interrompidas para a instalação do desfibrilador externo automático, quando esse equipamento estiver disponível com a chegada do apoio de resgate."
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q055-1.jpg",
+   "2022-q055-2.jpg"
+  ]
  },
  {
   "number": 56,
@@ -793,7 +975,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q056-1.jpg"
+  ]
  },
  {
   "number": 57,
@@ -807,7 +992,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q057-1.jpg",
+   "2022-q057-2.jpg"
+  ]
  },
  {
   "number": 58,
@@ -821,7 +1010,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q058-1.jpg"
+  ]
  },
  {
   "number": 59,
@@ -835,7 +1027,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q059-1.jpg"
+  ]
  },
  {
   "number": 60,
@@ -849,7 +1044,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q060-1.jpg",
+   "2022-q060-2.jpg"
+  ]
  },
  {
   "number": 61,
@@ -863,7 +1062,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q061-1.jpg"
+  ]
  },
  {
   "number": 62,
@@ -877,7 +1079,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q062-1.jpg"
+  ]
  },
  {
   "number": 63,
@@ -893,6 +1098,10 @@
   "annulled": false,
   "images": [
    "2022-q063-1.jpg"
+  ],
+  "original": [
+   "2022-q063-1.jpg",
+   "2022-q063-2.jpg"
   ]
  },
  {
@@ -907,7 +1116,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q064-1.jpg",
+   "2022-q064-2.jpg"
+  ]
  },
  {
   "number": 65,
@@ -921,7 +1134,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q065-1.jpg"
+  ]
  },
  {
   "number": 66,
@@ -935,7 +1151,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q066-1.jpg"
+  ]
  },
  {
   "number": 67,
@@ -949,7 +1168,11 @@
   },
   "answer": null,
   "annulled": true,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q067-1.jpg",
+   "2022-q067-2.jpg"
+  ]
  },
  {
   "number": 68,
@@ -963,7 +1186,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q068-1.jpg"
+  ]
  },
  {
   "number": 69,
@@ -977,7 +1203,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q069-1.jpg"
+  ]
  },
  {
   "number": 70,
@@ -991,7 +1220,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q070-1.jpg",
+   "2022-q070-2.jpg"
+  ]
  },
  {
   "number": 71,
@@ -1005,7 +1238,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q071-1.jpg"
+  ]
  },
  {
   "number": 72,
@@ -1019,7 +1255,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q072-1.jpg"
+  ]
  },
  {
   "number": 73,
@@ -1033,7 +1272,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q073-1.jpg",
+   "2022-q073-2.jpg"
+  ]
  },
  {
   "number": 74,
@@ -1047,7 +1290,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q074-1.jpg"
+  ]
  },
  {
   "number": 75,
@@ -1061,7 +1307,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q075-1.jpg"
+  ]
  },
  {
   "number": 76,
@@ -1075,7 +1324,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q076-1.jpg",
+   "2022-q076-2.jpg"
+  ]
  },
  {
   "number": 77,
@@ -1089,7 +1342,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q077-1.jpg"
+  ]
  },
  {
   "number": 78,
@@ -1103,7 +1359,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q078-1.jpg"
+  ]
  },
  {
   "number": 79,
@@ -1117,7 +1376,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q079-1.jpg",
+   "2022-q079-2.jpg"
+  ]
  },
  {
   "number": 80,
@@ -1131,7 +1394,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q080-1.jpg"
+  ]
  },
  {
   "number": 81,
@@ -1145,7 +1411,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q081-1.jpg"
+  ]
  },
  {
   "number": 82,
@@ -1159,7 +1428,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q082-1.jpg",
+   "2022-q082-2.jpg"
+  ]
  },
  {
   "number": 83,
@@ -1173,7 +1446,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q083-1.jpg"
+  ]
  },
  {
   "number": 84,
@@ -1187,7 +1463,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q084-1.jpg"
+  ]
  },
  {
   "number": 85,
@@ -1201,7 +1480,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q085-1.jpg"
+  ]
  },
  {
   "number": 86,
@@ -1215,7 +1497,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q086-1.jpg",
+   "2022-q086-2.jpg"
+  ]
  },
  {
   "number": 87,
@@ -1229,7 +1515,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q087-1.jpg"
+  ]
  },
  {
   "number": 88,
@@ -1243,7 +1532,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q088-1.jpg"
+  ]
  },
  {
   "number": 89,
@@ -1257,7 +1549,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q089-1.jpg"
+  ]
  },
  {
   "number": 90,
@@ -1271,7 +1566,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q090-1.jpg",
+   "2022-q090-2.jpg"
+  ]
  },
  {
   "number": 91,
@@ -1285,7 +1584,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q091-1.jpg"
+  ]
  },
  {
   "number": 92,
@@ -1299,7 +1601,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q092-1.jpg"
+  ]
  },
  {
   "number": 93,
@@ -1313,7 +1618,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q093-1.jpg"
+  ]
  },
  {
   "number": 94,
@@ -1327,7 +1635,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q094-1.jpg",
+   "2022-q094-2.jpg"
+  ]
  },
  {
   "number": 95,
@@ -1341,7 +1653,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q095-1.jpg"
+  ]
  },
  {
   "number": 96,
@@ -1355,7 +1670,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q096-1.jpg",
+   "2022-q096-2.jpg"
+  ]
  },
  {
   "number": 97,
@@ -1369,7 +1688,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q097-1.jpg"
+  ]
  },
  {
   "number": 98,
@@ -1383,7 +1705,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q098-1.jpg"
+  ]
  },
  {
   "number": 99,
@@ -1397,7 +1722,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q099-1.jpg"
+  ]
  },
  {
   "number": 100,
@@ -1411,6 +1739,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2022-q100-1.jpg",
+   "2022-q100-2.jpg"
+  ]
  }
 ]

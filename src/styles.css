@@ -107,3 +107,44 @@ body {
   background: rgba(255, 255, 255, 0.12);
   border-radius: 8px;
 }
+
+/* relatório: impressão / salvar em PDF */
+.print-only {
+  display: none;
+}
+@media print {
+  @page {
+    margin: 12mm;
+  }
+  body,
+  .bg-app {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+    color: #111 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .print-area {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only,
+  .print-block {
+    display: block !important;
+  }
+  .report-item {
+    break-inside: avoid;
+    border: 1px solid #bbb !important;
+  }
+}

@@ -31,6 +31,7 @@ export interface Question {
   explanationSource?: 'gerada' | 'oficial' | 'editada';
   reference?: string;
   images?: string[]; // arquivos em /banco/img
+  original?: string[]; // recortes da página original do PDF em /banco/orig
   status: QuestionStatus;
   statusNote?: string; // motivo de anulação / divergência
   tags?: string[];
@@ -93,6 +94,7 @@ export interface MissionProgress {
 export interface Player {
   id: string;
   name: string;
+  accountId?: string; // conta online vinculada (login)
   createdAt: number;
   xp: number;
   coins: number;
@@ -118,13 +120,30 @@ export interface Player {
 
 export interface PlayerSettings {
   sound: boolean;
-  timerMode: 'adaptativo' | 'fixo30' | 'relaxado';
   includeAnnulledInStudy: boolean;
   reduceMotion: boolean;
 }
 
 // ---------- MATCHES ----------
-export type MatchMode = 'pvp-bot' | 'pvp-local' | 'ranked' | 'treino';
+export type MatchMode = 'pvp-bot' | 'pvp-local' | 'pvp-online' | 'ranked' | 'treino';
+
+/** Provas e áreas escolhidas antes da partida (vazio = todas). */
+export interface MatchSetupData {
+  exams: string[];
+  cats: CategoryId[];
+  long?: boolean;
+}
+
+/** Linha do relatório de fim de partida. */
+export interface ReportItem {
+  qid: string;
+  cat: CategoryId;
+  chosen: Letter | null;
+  correct: boolean;
+  ms: number;
+  crown?: boolean;
+  points: number;
+}
 
 export interface MatchSummary {
   id: string;
@@ -145,6 +164,8 @@ export interface MatchSummary {
   ratingDelta: number;
   wrongIds: string[];
   botId?: string;
+  report?: ReportItem[];
+  setup?: MatchSetupData;
 }
 
 // ---------- RANKINGS ----------

@@ -11,7 +11,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q001-1.jpg"
+  ]
  },
  {
   "number": 2,
@@ -25,7 +28,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q002-1.jpg"
+  ]
  },
  {
   "number": 3,
@@ -39,7 +45,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q003-1.jpg"
+  ]
  },
  {
   "number": 4,
@@ -53,7 +62,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q004-1.jpg",
+   "2024-q004-2.jpg"
+  ]
  },
  {
   "number": 5,
@@ -67,7 +80,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q005-1.jpg"
+  ]
  },
  {
   "number": 6,
@@ -81,7 +97,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q006-1.jpg"
+  ]
  },
  {
   "number": 7,
@@ -95,7 +114,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q007-1.jpg"
+  ]
  },
  {
   "number": 8,
@@ -109,7 +131,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q008-1.jpg"
+  ]
  },
  {
   "number": 9,
@@ -123,7 +148,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q009-1.jpg",
+   "2024-q009-2.jpg"
+  ]
  },
  {
   "number": 10,
@@ -137,7 +166,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q010-1.jpg"
+  ]
  },
  {
   "number": 11,
@@ -151,7 +183,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q011-1.jpg"
+  ]
  },
  {
   "number": 12,
@@ -165,7 +200,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q012-1.jpg"
+  ]
  },
  {
   "number": 13,
@@ -179,7 +217,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q013-1.jpg"
+  ]
  },
  {
   "number": 14,
@@ -193,7 +234,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q014-1.jpg",
+   "2024-q014-2.jpg"
+  ]
  },
  {
   "number": 15,
@@ -207,7 +252,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q015-1.jpg"
+  ]
  },
  {
   "number": 16,
@@ -221,7 +269,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q016-1.jpg"
+  ]
  },
  {
   "number": 17,
@@ -235,7 +286,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q017-1.jpg"
+  ]
  },
  {
   "number": 18,
@@ -249,7 +303,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q018-1.jpg"
+  ]
  },
  {
   "number": 19,
@@ -263,7 +320,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q019-1.jpg",
+   "2024-q019-2.jpg"
+  ]
  },
  {
   "number": 20,
@@ -277,7 +338,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q020-1.jpg"
+  ]
  },
  {
   "number": 21,
@@ -291,7 +355,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q021-1.jpg"
+  ]
  },
  {
   "number": 22,
@@ -305,7 +372,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q022-1.jpg"
+  ]
  },
  {
   "number": 23,
@@ -319,7 +389,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q023-1.jpg",
+   "2024-q023-2.jpg"
+  ]
  },
  {
   "number": 24,
@@ -333,7 +407,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q024-1.jpg"
+  ]
  },
  {
   "number": 25,
@@ -347,7 +424,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q025-1.jpg"
+  ]
  },
  {
   "number": 26,
@@ -361,7 +441,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q026-1.jpg",
+   "2024-q026-2.jpg"
+  ]
  },
  {
   "number": 27,
@@ -375,7 +459,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q027-1.jpg"
+  ]
  },
  {
   "number": 28,
@@ -389,7 +476,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q028-1.jpg"
+  ]
  },
  {
   "number": 29,
@@ -403,7 +493,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q029-1.jpg",
+   "2024-q029-2.jpg"
+  ]
  },
  {
   "number": 30,
@@ -417,7 +511,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q030-1.jpg"
+  ]
  },
  {
   "number": 31,
@@ -431,7 +528,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q031-1.jpg"
+  ]
  },
  {
   "number": 32,
@@ -445,7 +545,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q032-1.jpg"
+  ]
  },
  {
   "number": 33,
@@ -459,7 +562,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q033-1.jpg",
+   "2024-q033-2.jpg"
+  ]
  },
  {
   "number": 34,
@@ -473,7 +580,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q034-1.jpg"
+  ]
  },
  {
   "number": 35,
@@ -487,7 +597,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q035-1.jpg"
+  ]
  },
  {
   "number": 36,
@@ -501,7 +614,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q036-1.jpg",
+   "2024-q036-2.jpg"
+  ]
  },
  {
   "number": 37,
@@ -515,7 +632,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q037-1.jpg"
+  ]
  },
  {
   "number": 38,
@@ -529,7 +649,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q038-1.jpg"
+  ]
  },
  {
   "number": 39,
@@ -543,7 +666,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q039-1.jpg"
+  ]
  },
  {
   "number": 40,
@@ -557,7 +683,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q040-1.jpg"
+  ]
  },
  {
   "number": 41,
@@ -571,7 +700,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q041-1.jpg",
+   "2024-q041-2.jpg"
+  ]
  },
  {
   "number": 42,
@@ -585,7 +718,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q042-1.jpg"
+  ]
  },
  {
   "number": 43,
@@ -599,7 +735,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q043-1.jpg"
+  ]
  },
  {
   "number": 44,
@@ -613,7 +752,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q044-1.jpg",
+   "2024-q044-2.jpg"
+  ]
  },
  {
   "number": 45,
@@ -627,7 +770,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q045-1.jpg"
+  ]
  },
  {
   "number": 46,
@@ -641,7 +787,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q046-1.jpg"
+  ]
  },
  {
   "number": 47,
@@ -655,7 +804,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q047-1.jpg"
+  ]
  },
  {
   "number": 48,
@@ -669,7 +821,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q048-1.jpg",
+   "2024-q048-2.jpg"
+  ]
  },
  {
   "number": 49,
@@ -683,7 +839,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q049-1.jpg"
+  ]
  },
  {
   "number": 50,
@@ -697,7 +856,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q050-1.jpg"
+  ]
  },
  {
   "number": 51,
@@ -711,7 +873,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q051-1.jpg"
+  ]
  },
  {
   "number": 52,
@@ -725,7 +890,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q052-1.jpg",
+   "2024-q052-2.jpg"
+  ]
  },
  {
   "number": 53,
@@ -739,7 +908,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q053-1.jpg"
+  ]
  },
  {
   "number": 54,
@@ -753,7 +925,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q054-1.jpg"
+  ]
  },
  {
   "number": 55,
@@ -767,7 +942,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q055-1.jpg"
+  ]
  },
  {
   "number": 56,
@@ -781,7 +959,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q056-1.jpg",
+   "2024-q056-2.jpg"
+  ]
  },
  {
   "number": 57,
@@ -795,7 +977,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q057-1.jpg"
+  ]
  },
  {
   "number": 58,
@@ -809,7 +994,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q058-1.jpg"
+  ]
  },
  {
   "number": 59,
@@ -823,7 +1011,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q059-1.jpg",
+   "2024-q059-2.jpg"
+  ]
  },
  {
   "number": 60,
@@ -837,7 +1029,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q060-1.jpg"
+  ]
  },
  {
   "number": 61,
@@ -851,11 +1046,14 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q061-1.jpg"
+  ]
  },
  {
   "number": 62,
-  "stem": "K.S.M., 20 anos, primigesta, vem ao pronto-socorro obstétrico com queixa de sangramento vaginal escuro, náuseas e vômitos, tontura e cefaléia fronto occipital. Realizado teste de gravidez positivo. Refere história de amenorreia de 3 meses anteriormente ao sangramento atual. Ao exame físico: volume uterino aumentado, com AU 20 cm, PA 160 x 110 mmHg, FC 85 bpm. Ultrassom transvaginal demonstra volume uterino de 400cc, eco endometrial heterogêneo, com espessura de 60 mm, com imagens císticas, anecogênicas de permeio. Não identificado embrião. Ovários com cistos tecaluteínicos. Com base no caso clínico e suspeita diagnóstica, assinale a conduta mais adequada, inicialmente.",
+  "stem": "K.S.M., 20 anos, primigesta, vem ao pronto-socorro obstétrico com queixa de sangramento vaginal escuro, náuseas e vômitos, tontura e cefaléia fronto occipital. Realizado teste de gravidez positivo. Refere história de amenorreia de 3 meses anteriormente ao sangramento atual. Ao exame físico: volume uterino aumentado, com AU 20 cm, PA 160 x 110 mmHg, FC 85 bpm. Ultrassom transvaginal demonstra volume uterino de 400cc, eco endometrial heterogêneo, com espessura de 60 mm, com imagens císticas, anecogênicas de permeio. Não identificado embrião. Ovários com cistos teca-luteínicos. Com base no caso clínico e suspeita diagnóstica, assinale a conduta mais adequada, inicialmente.",
   "alternatives": {
    "A": "Expansão volêmica.",
    "B": "Antieméticos.",
@@ -865,11 +1063,15 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q062-1.jpg",
+   "2024-q062-2.jpg"
+  ]
  },
  {
   "number": 63,
-  "stem": "K.S.M., 20 anos, primigesta, vem ao pronto-socorro obstétrico com queixa de sangramento vaginal escuro, náuseas e vômitos, tontura e cefaléia fronto occipital. Realizado teste de gravidez positivo. Refere história de amenorreia de 3 meses anteriormente ao sangramento atual. Ao exame físico: volume uterino aumentado, com AU 20 cm, PA 160 x 110 mmHg, FC 85 bpm. Ultrassom transvaginal demonstra volume uterino de 400cc, eco endometrial heterogêneo, com espessura de 60 mm, com imagens císticas, anecogênicas de permeio. Não identificado embrião. Ovários com cistos tecaluteínicos. Controlado o caso clínico inicial, a paciente foi internada. Assinale a alternativa que representa a melhor técnica para o tratamento da patologia representada na imagem ultrassonográfica descrita.",
+  "stem": "K.S.M., 20 anos, primigesta, vem ao pronto-socorro obstétrico com queixa de sangramento vaginal escuro, náuseas e vômitos, tontura e cefaléia fronto occipital. Realizado teste de gravidez positivo. Refere história de amenorreia de 3 meses anteriormente ao sangramento atual. Ao exame físico: volume uterino aumentado, com AU 20 cm, PA 160 x 110 mmHg, FC 85 bpm. Ultrassom transvaginal demonstra volume uterino de 400cc, eco endometrial heterogêneo, com espessura de 60 mm, com imagens císticas, anecogênicas de permeio. Não identificado embrião. Ovários com cistos teca-luteínicos. Controlado o caso clínico inicial, a paciente foi internada. Assinale a alternativa que representa a melhor técnica para o tratamento da patologia representada na imagem ultrassonográfica descrita.",
   "alternatives": {
    "A": "AMIU (aspiração manual intra-uterina).",
    "B": "Curetagem uterina.",
@@ -879,11 +1081,14 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q063-1.jpg"
+  ]
  },
  {
   "number": 64,
-  "stem": "K.S.M., 20 anos, primigesta, vem ao pronto-socorro obstétrico com queixa de sangramento vaginal escuro, náuseas e vômitos, tontura e cefaléia fronto occipital. Realizado teste de gravidez positivo. Refere história de amenorreia de 3 meses anteriormente ao sangramento atual. Ao exame físico: volume uterino aumentado, com AU 20 cm, PA 160 x 110 mmHg, FC 85 bpm. Ultrassom transvaginal demonstra volume uterino de 400cc, eco endometrial heterogêneo, com espessura de 60 mm, com imagens císticas, anecogênicas de permeio. Não identificado embrião. Ovários com cistos tecaluteínicos. Dando prosseguimento ao atendimento, assinale a alternativa que representa orientação adequada de seguimento da paciente.",
+  "stem": "K.S.M., 20 anos, primigesta, vem ao pronto-socorro obstétrico com queixa de sangramento vaginal escuro, náuseas e vômitos, tontura e cefaléia fronto occipital. Realizado teste de gravidez positivo. Refere história de amenorreia de 3 meses anteriormente ao sangramento atual. Ao exame físico: volume uterino aumentado, com AU 20 cm, PA 160 x 110 mmHg, FC 85 bpm. Ultrassom transvaginal demonstra volume uterino de 400cc, eco endometrial heterogêneo, com espessura de 60 mm, com imagens císticas, anecogênicas de permeio. Não identificado embrião. Ovários com cistos teca-luteínicos. Dando prosseguimento ao atendimento, assinale a alternativa que representa orientação adequada de seguimento da paciente.",
   "alternatives": {
    "A": "Iniciar o seguimento pós-molar somente após o resultado anátomo patológico confirmar a doença.",
    "B": "Repetir ultrassom 7 dias após o procedimento cirúrgico, a fim de avaliar a existência de resquícios da doença.",
@@ -893,7 +1098,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q064-1.jpg"
+  ]
  },
  {
   "number": 65,
@@ -907,7 +1115,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q065-1.jpg",
+   "2024-q065-2.jpg"
+  ]
  },
  {
   "number": 66,
@@ -921,7 +1133,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q066-1.jpg"
+  ]
  },
  {
   "number": 67,
@@ -931,11 +1146,14 @@
    "B": "A vaginite atrófica ocorre principalmente em mulheres na perimenopausa e está associada a baixos níveis de progesterona.",
    "C": "A doxiciclina por 7 dias é o tratamento de escolha para Chlamydia, visto que há baixo índice de cura com dose única de Azitromicina.",
    "D": "Secreção volumosa tipo leite coalhado, disúria inicial, prurido vulvar, dor, edema e hiperemia são compatíveis com quadro de vaginose bacteriana.",
-   "E": "Na vaginose bacteriana há perda de lactobacilos, pH > 4,5 e whifftest positivo."
+   "E": "Na vaginose bacteriana há perda de lactobacilos, pH > 4,5 e whiff-test positivo."
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q067-1.jpg"
+  ]
  },
  {
   "number": 68,
@@ -949,7 +1167,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q068-1.jpg",
+   "2024-q068-2.jpg"
+  ]
  },
  {
   "number": 69,
@@ -963,11 +1185,14 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q069-1.jpg"
+  ]
  },
  {
   "number": 70,
-  "stem": "A puberdade é um período dinâmico de crescimento físico, maturação sexual e transformação psicossocial. O desenvolvimento puberal é mediado por uma complexa interação de fatores inibidores e ativadores que atuam no eixo hipotálamo-hipófiseovariano (HHO). Assinale a alternativa que representa o sinal clínico que primeiro surge, em decorrência da ativação do eixo HHO no início da puberdade fisiológica.",
+  "stem": "A puberdade é um período dinâmico de crescimento físico, maturação sexual e transformação psicossocial. O desenvolvimento puberal é mediado por uma complexa interação de fatores inibidores e ativadores que atuam no eixo hipotálamo-hipófise-ovariano (HHO). Assinale a alternativa que representa o sinal clínico que primeiro surge, em decorrência da ativação do eixo HHO no início da puberdade fisiológica.",
   "alternatives": {
    "A": "Pubarca.",
    "B": "Axilarca.",
@@ -977,7 +1202,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q070-1.jpg"
+  ]
  },
  {
   "number": 71,
@@ -991,7 +1219,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q071-1.jpg"
+  ]
  },
  {
   "number": 72,
@@ -1005,7 +1236,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q072-1.jpg"
+  ]
  },
  {
   "number": 73,
@@ -1019,7 +1253,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q073-1.jpg",
+   "2024-q073-2.jpg"
+  ]
  },
  {
   "number": 74,
@@ -1033,7 +1271,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q074-1.jpg"
+  ]
  },
  {
   "number": 75,
@@ -1047,7 +1288,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q075-1.jpg"
+  ]
  },
  {
   "number": 76,
@@ -1061,7 +1305,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q076-1.jpg",
+   "2024-q076-2.jpg"
+  ]
  },
  {
   "number": 77,
@@ -1075,7 +1323,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q077-1.jpg"
+  ]
  },
  {
   "number": 78,
@@ -1089,7 +1340,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q078-1.jpg"
+  ]
  },
  {
   "number": 79,
@@ -1103,7 +1357,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q079-1.jpg",
+   "2024-q079-2.jpg"
+  ]
  },
  {
   "number": 80,
@@ -1117,7 +1375,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q080-1.jpg"
+  ]
  },
  {
   "number": 81,
@@ -1131,7 +1392,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q081-1.jpg"
+  ]
  },
  {
   "number": 82,
@@ -1145,7 +1409,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q082-1.jpg",
+   "2024-q082-2.jpg"
+  ]
  },
  {
   "number": 83,
@@ -1159,7 +1427,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q083-1.jpg"
+  ]
  },
  {
   "number": 84,
@@ -1173,7 +1444,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q084-1.jpg"
+  ]
  },
  {
   "number": 85,
@@ -1187,7 +1461,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q085-1.jpg",
+   "2024-q085-2.jpg"
+  ]
  },
  {
   "number": 86,
@@ -1201,7 +1479,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q086-1.jpg"
+  ]
  },
  {
   "number": 87,
@@ -1215,7 +1496,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q087-1.jpg"
+  ]
  },
  {
   "number": 88,
@@ -1229,7 +1513,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q088-1.jpg",
+   "2024-q088-2.jpg"
+  ]
  },
  {
   "number": 89,
@@ -1243,7 +1531,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q089-1.jpg"
+  ]
  },
  {
   "number": 90,
@@ -1257,7 +1548,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q090-1.jpg"
+  ]
  },
  {
   "number": 91,
@@ -1271,7 +1565,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q091-1.jpg",
+   "2024-q091-2.jpg"
+  ]
  },
  {
   "number": 92,
@@ -1285,7 +1583,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q092-1.jpg"
+  ]
  },
  {
   "number": 93,
@@ -1299,7 +1600,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q093-1.jpg"
+  ]
  },
  {
   "number": 94,
@@ -1313,7 +1617,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q094-1.jpg",
+   "2024-q094-2.jpg"
+  ]
  },
  {
   "number": 95,
@@ -1327,7 +1635,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q095-1.jpg"
+  ]
  },
  {
   "number": 96,
@@ -1341,7 +1652,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q096-1.jpg"
+  ]
  },
  {
   "number": 97,
@@ -1355,7 +1669,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q097-1.jpg"
+  ]
  },
  {
   "number": 98,
@@ -1369,7 +1686,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q098-1.jpg",
+   "2024-q098-2.jpg"
+  ]
  },
  {
   "number": 99,
@@ -1383,7 +1704,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q099-1.jpg"
+  ]
  },
  {
   "number": 100,
@@ -1397,6 +1721,9 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2024-q100-1.jpg"
+  ]
  }
 ]

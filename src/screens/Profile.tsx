@@ -118,15 +118,15 @@ export function Profile() {
       )}
 
       <Card className="p-4 mt-4">
-        <div className="font-display font-semibold mb-2">Histórico de partidas</div>
+        <div className="font-display font-semibold mb-2">Histórico de partidas <span className="text-xs text-white/40 font-sans">(toque para ver o relatório)</span></div>
         {history.length === 0 && <p className="text-sm text-white/50">Nenhuma partida ainda.</p>}
         <div className="divide-y divide-white/5">
           {history.slice(0, 30).map((m) => (
-            <div key={m.id} className="py-2 flex items-center gap-3 text-sm">
+            <button key={m.id} onClick={() => store.nav({ name: 'report', summary: m })} className="w-full text-left py-2 flex items-center gap-3 text-sm hover:bg-white/5 rounded-lg">
               <span className="text-lg">{m.result === 'win' ? '🏆' : m.result === 'loss' ? '💔' : m.result === 'draw' ? '🤝' : '📚'}</span>
               <div className="flex-1 min-w-0">
                 <div className="truncate">
-                  {m.mode === 'treino' ? 'Treino' : `vs ${m.opponentName}`} <span className="text-white/40">· {m.mode === 'ranked' ? 'Ranqueado' : m.mode === 'pvp-local' ? 'Local' : m.mode === 'pvp-bot' ? 'Duelo' : ''}</span>
+                  {m.mode === 'treino' ? 'Treino' : `vs ${m.opponentName}`} <span className="text-white/40">· {m.mode === 'ranked' ? 'Ranqueado' : m.mode === 'pvp-local' ? 'Local' : m.mode === 'pvp-bot' ? 'vs BOT' : m.mode === 'pvp-online' ? 'Online' : ''}</span>
                 </div>
                 <div className="text-[11px] text-white/40">
                   {new Date(m.at).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })} · {m.correct}/{m.total} acertos
@@ -137,7 +137,7 @@ export function Profile() {
                 <div className="text-violet-300">+{m.xp} XP</div>
                 {m.ratingDelta !== 0 && <div className={m.ratingDelta > 0 ? 'text-emerald-300' : 'text-rose-300'}>{m.ratingDelta > 0 ? '+' : ''}{m.ratingDelta}</div>}
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </Card>

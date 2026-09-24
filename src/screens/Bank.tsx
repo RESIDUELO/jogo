@@ -1,5 +1,5 @@
 // Banco de questões: consultas ("quantas de Cirurgia?", "quais de trauma?",
-// "quais de Clínica eu errei?", "quais nunca respondi?"...). Também usado pelo Admin.
+// "quais de Clínica eu errei?", "quais nunca respondi?"...).
 import { useMemo, useState } from 'react';
 import { CAT, CATEGORY_IDS, DIFFICULTY_COLOR, DIFFICULTY_LABEL } from '../data/categories';
 import { normalize } from '../engine/util';

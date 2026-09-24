@@ -83,7 +83,7 @@ def main():
                 note = a["divergence"]
             if not r["answer"] and not r["annulled"]:
                 status = "rascunho"
-            expl = a.get("explanation") or ("Gabarito oficial da prova. Explicação ainda não cadastrada (pode ser adicionada no painel Admin)." if r["answer"] else "Questão anulada pela banca.")
+            expl = a.get("explanation") or ("Gabarito oficial da prova. Explicação ainda não cadastrada." if r["answer"] else "Questão anulada pela banca.")
             q = {
                 "id": f"{meta['id']}-{n:03d}",
                 "number": n,
@@ -109,6 +109,8 @@ def main():
                 q["reference"] = a["reference"]
             if r["images"]:
                 q["images"] = r["images"]
+            if r.get("original"):
+                q["original"] = r["original"]  # recorte da página do PDF (fidelidade)
             if note:
                 q["statusNote"] = note
             q = {k: v for k, v in q.items() if v is not None}

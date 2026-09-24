@@ -26,7 +26,7 @@ export function simulateBotAnswer(bot: BotPersona, q: Question, limitMs: number,
   const tier = BOT_TIERS[bot.tier];
   const letters = LETTERS.filter((l) => q.alternatives[l]);
   // tempo: proporcional ao tamanho do texto; erros tendem a demorar mais
-  const lenFactor = clamp(q.text.length / 450, 0.6, 1.8);
+  const lenFactor = clamp(q.text.length / 450, 0.6, 1.8) * 1.6; // relógio de 2 min
   const jitter = 0.65 + Math.random() * 0.7;
   let ms = tier.meanMs * lenFactor * jitter * (knows ? 1 : 1.25);
   const timeout = !knows && Math.random() < 0.06;

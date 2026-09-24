@@ -11,7 +11,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q001-1.jpg"
+  ]
  },
  {
   "number": 2,
@@ -25,7 +28,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q002-1.jpg"
+  ]
  },
  {
   "number": 3,
@@ -39,7 +45,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q003-1.jpg",
+   "2026-q003-2.jpg"
+  ]
  },
  {
   "number": 4,
@@ -53,7 +63,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q004-1.jpg"
+  ]
  },
  {
   "number": 5,
@@ -67,7 +80,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q005-1.jpg"
+  ]
  },
  {
   "number": 6,
@@ -81,7 +97,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q006-1.jpg",
+   "2026-q006-2.jpg"
+  ]
  },
  {
   "number": 7,
@@ -95,7 +115,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q007-1.jpg"
+  ]
  },
  {
   "number": 8,
@@ -109,7 +132,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q008-1.jpg"
+  ]
  },
  {
   "number": 9,
@@ -123,7 +149,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q009-1.jpg"
+  ]
  },
  {
   "number": 10,
@@ -137,7 +166,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q010-1.jpg"
+  ]
  },
  {
   "number": 11,
@@ -151,7 +183,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q011-1.jpg"
+  ]
  },
  {
   "number": 12,
@@ -165,7 +200,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q012-1.jpg"
+  ]
  },
  {
   "number": 13,
@@ -179,7 +217,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q013-1.jpg",
+   "2026-q013-2.jpg"
+  ]
  },
  {
   "number": 14,
@@ -193,7 +235,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q014-1.jpg"
+  ]
  },
  {
   "number": 15,
@@ -207,7 +252,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q015-1.jpg"
+  ]
  },
  {
   "number": 16,
@@ -221,7 +269,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q016-1.jpg"
+  ]
  },
  {
   "number": 17,
@@ -235,7 +286,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q017-1.jpg",
+   "2026-q017-2.jpg"
+  ]
  },
  {
   "number": 18,
@@ -249,7 +304,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q018-1.jpg"
+  ]
  },
  {
   "number": 19,
@@ -263,7 +321,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q019-1.jpg"
+  ]
  },
  {
   "number": 20,
@@ -277,7 +338,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q020-1.jpg",
+   "2026-q020-2.jpg"
+  ]
  },
  {
   "number": 21,
@@ -291,7 +356,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q021-1.jpg"
+  ]
  },
  {
   "number": 22,
@@ -305,7 +373,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q022-1.jpg"
+  ]
  },
  {
   "number": 23,
@@ -319,7 +390,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q023-1.jpg",
+   "2026-q023-2.jpg"
+  ]
  },
  {
   "number": 24,
@@ -333,7 +408,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q024-1.jpg"
+  ]
  },
  {
   "number": 25,
@@ -347,7 +425,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q025-1.jpg",
+   "2026-q025-2.jpg"
+  ]
  },
  {
   "number": 26,
@@ -361,7 +443,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q026-1.jpg"
+  ]
  },
  {
   "number": 27,
@@ -375,7 +460,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q027-1.jpg"
+  ]
  },
  {
   "number": 28,
@@ -389,7 +477,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q028-1.jpg",
+   "2026-q028-2.jpg"
+  ]
  },
  {
   "number": 29,
@@ -403,7 +495,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q029-1.jpg"
+  ]
  },
  {
   "number": 30,
@@ -417,7 +512,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q030-1.jpg",
+   "2026-q030-2.jpg"
+  ]
  },
  {
   "number": 31,
@@ -433,6 +532,9 @@
   "annulled": false,
   "images": [
    "2026-q031-1.jpg"
+  ],
+  "original": [
+   "2026-q031-1.jpg"
   ]
  },
  {
@@ -447,7 +549,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q032-1.jpg",
+   "2026-q032-2.jpg"
+  ]
  },
  {
   "number": 33,
@@ -461,7 +567,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q033-1.jpg"
+  ]
  },
  {
   "number": 34,
@@ -475,7 +584,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q034-1.jpg"
+  ]
  },
  {
   "number": 35,
@@ -489,7 +601,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q035-1.jpg",
+   "2026-q035-2.jpg"
+  ]
  },
  {
   "number": 36,
@@ -503,7 +619,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q036-1.jpg"
+  ]
  },
  {
   "number": 37,
@@ -517,7 +636,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q037-1.jpg"
+  ]
  },
  {
   "number": 38,
@@ -533,6 +655,10 @@
   "annulled": false,
   "images": [
    "2026-q038-1.jpg"
+  ],
+  "original": [
+   "2026-q038-1.jpg",
+   "2026-q038-2.jpg"
   ]
  },
  {
@@ -547,7 +673,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q039-1.jpg"
+  ]
  },
  {
   "number": 40,
@@ -561,7 +690,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q040-1.jpg",
+   "2026-q040-2.jpg"
+  ]
  },
  {
   "number": 41,
@@ -575,7 +708,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q041-1.jpg"
+  ]
  },
  {
   "number": 42,
@@ -589,7 +725,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q042-1.jpg",
+   "2026-q042-2.jpg"
+  ]
  },
  {
   "number": 43,
@@ -603,7 +743,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q043-1.jpg"
+  ]
  },
  {
   "number": 44,
@@ -617,7 +760,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q044-1.jpg"
+  ]
  },
  {
   "number": 45,
@@ -631,7 +777,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q045-1.jpg"
+  ]
  },
  {
   "number": 46,
@@ -645,7 +794,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q046-1.jpg",
+   "2026-q046-2.jpg"
+  ]
  },
  {
   "number": 47,
@@ -659,7 +812,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q047-1.jpg"
+  ]
  },
  {
   "number": 48,
@@ -673,7 +829,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q048-1.jpg",
+   "2026-q048-2.jpg"
+  ]
  },
  {
   "number": 49,
@@ -687,7 +847,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q049-1.jpg"
+  ]
  },
  {
   "number": 50,
@@ -701,7 +864,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q050-1.jpg"
+  ]
  },
  {
   "number": 51,
@@ -715,7 +881,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q051-1.jpg",
+   "2026-q051-2.jpg"
+  ]
  },
  {
   "number": 52,
@@ -729,7 +899,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q052-1.jpg"
+  ]
  },
  {
   "number": 53,
@@ -743,7 +916,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q053-1.jpg"
+  ]
  },
  {
   "number": 54,
@@ -757,7 +933,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q054-1.jpg",
+   "2026-q054-2.jpg"
+  ]
  },
  {
   "number": 55,
@@ -771,7 +951,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q055-1.jpg"
+  ]
  },
  {
   "number": 56,
@@ -785,7 +968,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q056-1.jpg"
+  ]
  },
  {
   "number": 57,
@@ -799,7 +985,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q057-1.jpg"
+  ]
  },
  {
   "number": 58,
@@ -813,7 +1002,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q058-1.jpg"
+  ]
  },
  {
   "number": 59,
@@ -827,7 +1019,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q059-1.jpg",
+   "2026-q059-2.jpg"
+  ]
  },
  {
   "number": 60,
@@ -841,7 +1037,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q060-1.jpg"
+  ]
  },
  {
   "number": 61,
@@ -855,7 +1054,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q061-1.jpg"
+  ]
  },
  {
   "number": 62,
@@ -869,7 +1071,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q062-1.jpg",
+   "2026-q062-2.jpg"
+  ]
  },
  {
   "number": 63,
@@ -883,7 +1089,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q063-1.jpg"
+  ]
  },
  {
   "number": 64,
@@ -897,7 +1106,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q064-1.jpg"
+  ]
  },
  {
   "number": 65,
@@ -911,7 +1123,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q065-1.jpg",
+   "2026-q065-2.jpg"
+  ]
  },
  {
   "number": 66,
@@ -925,7 +1141,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q066-1.jpg"
+  ]
  },
  {
   "number": 67,
@@ -939,7 +1158,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q067-1.jpg"
+  ]
  },
  {
   "number": 68,
@@ -953,7 +1175,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q068-1.jpg"
+  ]
  },
  {
   "number": 69,
@@ -967,7 +1192,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q069-1.jpg",
+   "2026-q069-2.jpg"
+  ]
  },
  {
   "number": 70,
@@ -981,7 +1210,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q070-1.jpg"
+  ]
  },
  {
   "number": 71,
@@ -995,7 +1227,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q071-1.jpg"
+  ]
  },
  {
   "number": 72,
@@ -1009,7 +1244,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q072-1.jpg"
+  ]
  },
  {
   "number": 73,
@@ -1023,7 +1261,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q073-1.jpg"
+  ]
  },
  {
   "number": 74,
@@ -1037,7 +1278,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q074-1.jpg"
+  ]
  },
  {
   "number": 75,
@@ -1051,7 +1295,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q075-1.jpg"
+  ]
  },
  {
   "number": 76,
@@ -1065,7 +1312,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q076-1.jpg",
+   "2026-q076-2.jpg"
+  ]
  },
  {
   "number": 77,
@@ -1079,7 +1330,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q077-1.jpg"
+  ]
  },
  {
   "number": 78,
@@ -1093,7 +1347,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q078-1.jpg"
+  ]
  },
  {
   "number": 79,
@@ -1107,7 +1364,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q079-1.jpg"
+  ]
  },
  {
   "number": 80,
@@ -1121,7 +1381,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q080-1.jpg"
+  ]
  },
  {
   "number": 81,
@@ -1135,7 +1398,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q081-1.jpg"
+  ]
  },
  {
   "number": 82,
@@ -1149,7 +1415,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q082-1.jpg"
+  ]
  },
  {
   "number": 83,
@@ -1163,7 +1432,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q083-1.jpg"
+  ]
  },
  {
   "number": 84,
@@ -1177,7 +1449,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q084-1.jpg"
+  ]
  },
  {
   "number": 85,
@@ -1191,7 +1466,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q085-1.jpg"
+  ]
  },
  {
   "number": 86,
@@ -1205,7 +1483,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q086-1.jpg"
+  ]
  },
  {
   "number": 87,
@@ -1219,7 +1500,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q087-1.jpg"
+  ]
  },
  {
   "number": 88,
@@ -1233,7 +1517,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q088-1.jpg"
+  ]
  },
  {
   "number": 89,
@@ -1247,7 +1534,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q089-1.jpg",
+   "2026-q089-2.jpg"
+  ]
  },
  {
   "number": 90,
@@ -1261,7 +1552,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q090-1.jpg"
+  ]
  },
  {
   "number": 91,
@@ -1275,7 +1569,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q091-1.jpg"
+  ]
  },
  {
   "number": 92,
@@ -1289,7 +1586,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q092-1.jpg",
+   "2026-q092-2.jpg"
+  ]
  },
  {
   "number": 93,
@@ -1303,7 +1604,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q093-1.jpg"
+  ]
  },
  {
   "number": 94,
@@ -1317,7 +1621,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q094-1.jpg"
+  ]
  },
  {
   "number": 95,
@@ -1331,7 +1638,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q095-1.jpg"
+  ]
  },
  {
   "number": 96,
@@ -1345,7 +1655,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q096-1.jpg"
+  ]
  },
  {
   "number": 97,
@@ -1359,7 +1672,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q097-1.jpg",
+   "2026-q097-2.jpg"
+  ]
  },
  {
   "number": 98,
@@ -1373,7 +1690,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q098-1.jpg"
+  ]
  },
  {
   "number": 99,
@@ -1387,7 +1707,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q099-1.jpg"
+  ]
  },
  {
   "number": 100,
@@ -1401,6 +1724,9 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2026-q100-1.jpg"
+  ]
  }
 ]

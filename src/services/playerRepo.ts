@@ -18,11 +18,14 @@ export interface PlayerRepository {
   importAll(json: string): void;
 }
 
+// ?slot=X na URL isola os dados (usado para simular 2 jogadores no mesmo navegador em testes)
+const slot = new URLSearchParams(location.search).get('slot');
+const NS = slot ? `rdl.${slot}.` : 'rdl.';
 const K = {
-  users: 'rdl.users',
-  active: 'rdl.active',
-  answers: (pid: string) => `rdl.answers.${pid}`,
-  matches: (pid: string) => `rdl.matches.${pid}`,
+  users: NS + 'users',
+  active: NS + 'active',
+  answers: (pid: string) => `${NS}answers.${pid}`,
+  matches: (pid: string) => `${NS}matches.${pid}`,
 };
 
 function read<T>(key: string, fallback: T): T {
@@ -47,7 +50,7 @@ function migrate(p: Player): Player {
     ...p,
     catXp: { ...emptyCatRecord(0), ...p.catXp },
     inventory: Object.assign({ fifty: 0, time: 0, second: 0, hint: 0, swap: 0 }, p.inventory),
-    settings: Object.assign({ sound: true, timerMode: 'adaptativo' as const, includeAnnulledInStudy: false, reduceMotion: false }, p.settings),
+    settings: Object.assign({ sound: true, includeAnnulledInStudy: false, reduceMotion: false }, p.settings),
   });
 }
 

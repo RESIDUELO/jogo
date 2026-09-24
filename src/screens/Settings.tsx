@@ -27,17 +27,6 @@ export function SettingsScreen() {
         <Row title="🔊 Efeitos sonoros" desc="Roleta, acerto, erro, vitória, XP, conquistas.">
           <Seg value={p.settings.sound ? 'on' : 'off'} onChange={(v) => set('sound', v === 'on')} options={[{ v: 'on', label: 'Ligado' }, { v: 'off', label: 'Desligado' }]} />
         </Row>
-        <Row title="⏱️ Tempo por questão" desc="Adaptativo: 30 s + tempo extra para casos longos (até 75 s).">
-          <Seg
-            value={p.settings.timerMode}
-            onChange={(v) => set('timerMode', v)}
-            options={[
-              { v: 'adaptativo', label: 'Adaptativo' },
-              { v: 'fixo30', label: '30 s fixo' },
-              { v: 'relaxado', label: 'Relaxado' },
-            ]}
-          />
-        </Row>
         <Row title="🎡 Reduzir animações" desc="Roleta mais curta e menos movimento.">
           <Seg value={p.settings.reduceMotion ? 'on' : 'off'} onChange={(v) => set('reduceMotion', v === 'on')} options={[{ v: 'off', label: 'Não' }, { v: 'on', label: 'Sim' }]} />
         </Row>

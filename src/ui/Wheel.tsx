@@ -3,7 +3,6 @@ import { sfx } from '../audio/sfx';
 import { CATEGORIES } from '../data/categories';
 import type { CategoryId } from '../types';
 
-const SEG = 360 / CATEGORIES.length;
 
 function arcPath(cx: number, cy: number, r: number, a0: number, a1: number) {
   const rad = (a: number) => ((a - 90) * Math.PI) / 180;
@@ -18,6 +17,8 @@ function arcPath(cx: number, cy: number, r: number, a0: number, a1: number) {
 const easeOut = (t: number) => 1 - Math.pow(1 - t, 4);
 
 interface Props {
+  /** Áreas em disputa (padrão: as 5). */
+  categories?: CategoryId[];
   /** Quando `spinKey` muda e há `target`, a roleta gira até a categoria alvo. */
   target: CategoryId | null;
   spinKey: number;
@@ -28,7 +29,11 @@ interface Props {
   reduceMotion?: boolean;
 }
 
-export function Wheel({ target, spinKey, onDone, onSpinClick, canSpin, size = 300, reduceMotion }: Props) {
+export function Wheel({ categories, target, spinKey, onDone, onSpinClick, canSpin, size = 300, reduceMotion }: Props) {
+  const cats = CATEGORIES.filter((c) => !categories || categories.includes(c.id));
+  const SEG = 360 / cats.length;
+  // só gira quando spinKey muda DEPOIS da montagem (evita regirar para o último alvo ao reaparecer)
+  const handledKey = useRef(spinKey);
   const [rot, setRot] = useState(0);
   const rotRef = useRef(0);
   const [spinning, setSpinning] = useState(false);
@@ -36,8 +41,9 @@ export function Wheel({ target, spinKey, onDone, onSpinClick, canSpin, size = 30
   const raf = useRef(0);
 
   useEffect(() => {
-    if (!spinKey || !target) return;
-    const idx = CATEGORIES.findIndex((c) => c.id === target);
+    if (!target || spinKey === handledKey.current) return;
+    handledKey.current = spinKey;
+    const idx = cats.findIndex((c) => c.id === target);
     const jitter = (Math.random() - 0.5) * SEG * 0.6;
     const want = (((-(idx * SEG + SEG / 2 + jitter)) % 360) + 360) % 360;
     const from = rotRef.current;
@@ -89,7 +95,7 @@ export function Wheel({ target, spinKey, onDone, onSpinClick, canSpin, size = 30
       </div>
       <svg viewBox="0 0 300 300" className="relative w-full h-full" style={{ transform: `rotate(${rot}deg)` }}>
         <circle cx={c} cy={c} r={148} fill="#1b1842" />
-        {CATEGORIES.map((cat, i) => {
+        {cats.map((cat, i) => {
           const a0 = i * SEG;
           const a1 = a0 + SEG;
           const mid = a0 + SEG / 2;
@@ -102,7 +108,7 @@ export function Wheel({ target, spinKey, onDone, onSpinClick, canSpin, size = 30
                   <stop offset="100%" stopColor={cat.dark} />
                 </radialGradient>
               </defs>
-              <path d={arcPath(c, c, r, a0, a1)} fill={`url(#g-${cat.id})`} stroke="#fff" strokeOpacity={0.9} strokeWidth={3} opacity={landed && !hl ? 0.55 : 1} />
+              <path d={cats.length === 1 ? `M${c},${c - r} A${r},${r} 0 1 1 ${c - 0.01},${c - r} Z` : arcPath(c, c, r, a0, a1)} fill={`url(#g-${cat.id})`} stroke="#fff" strokeOpacity={0.9} strokeWidth={3} opacity={landed && !hl ? 0.55 : 1} />
               <g transform={`rotate(${mid} ${c} ${c})`}>
                 <text x={c} y={c - 88} textAnchor="middle" fontSize="34" dominantBaseline="middle">
                   {cat.icon}
@@ -115,7 +121,7 @@ export function Wheel({ target, spinKey, onDone, onSpinClick, canSpin, size = 30
           );
         })}
         {/* pinos */}
-        {Array.from({ length: CATEGORIES.length * 2 }).map((_, i) => {
+        {Array.from({ length: cats.length * 2 }).map((_, i) => {
           const a = ((i * SEG) / 2 - 90) * (Math.PI / 180);
           return <circle key={i} cx={c + 143 * Math.cos(a)} cy={c + 143 * Math.sin(a)} r={i % 2 ? 2.5 : 4} fill="#fde68a" stroke="#92400e" strokeWidth={1} />;
         })}

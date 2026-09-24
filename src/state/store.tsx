@@ -14,7 +14,7 @@ import { dayStreak } from '../engine/stats';
 import { dayKey } from '../engine/util';
 import { playerRepo } from '../services/playerRepo';
 import { questionRepo } from '../services/questionRepo';
-import type { AnswerRecord, ExamMeta, MatchSummary, Player, Question } from '../types';
+import type { AnswerRecord, ExamMeta, MatchSetupData, MatchSummary, Player, Question } from '../types';
 
 export type Screen = (
   | { name: 'home' }
@@ -32,16 +32,20 @@ export type Screen = (
   | { name: 'missions' }
   | { name: 'shop' }
   | { name: 'bank' }
-  | { name: 'admin' }
   | { name: 'settings' }
   | { name: 'players' }
+  | { name: 'account' }
+  | { name: 'onlineSearch'; setup: MatchSetupData; ranked: boolean }
+  | { name: 'onlineRoom'; matchId: string; code: string }
+  | { name: 'onlineMatch'; matchId: string }
+  | { name: 'report'; summary: MatchSummary }
 ) & { nonce?: number };
 
 export interface MatchLaunch {
   mode: 'pvp-bot' | 'pvp-local' | 'ranked';
   botId?: string;
   opponentPlayerId?: string; // hot-seat
-  long?: boolean;
+  setup: MatchSetupData;
 }
 
 export interface TrainingLaunch {
@@ -83,10 +87,6 @@ interface Store {
   finishMatch: (m: MatchSummary, pid?: string) => void;
   claimMissionReward: (id: string) => void;
   claimDaily: () => void;
-  saveQuestion: (q: Question) => Promise<void>;
-  saveQuestions: (qs: Question[]) => Promise<void>;
-  deleteQuestion: (id: string) => Promise<void>;
-  resetBank: () => Promise<void>;
   reloadPlayers: () => void;
   getPlayer: (id: string) => Player | undefined;
   streakDays: number;
@@ -244,32 +244,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       persist(next);
       sfx.coin();
       emit(events);
-    },
-    saveQuestion: async (q) => {
-      await questionRepo.save(q);
-      setQuestions((all) => {
-        const i = all.findIndex((x) => x.id === q.id);
-        if (i < 0) return [...all, q];
-        const c = all.slice();
-        c[i] = q;
-        return c;
-      });
-    },
-    saveQuestions: async (qs) => {
-      await questionRepo.saveMany(qs);
-      const r = await questionRepo.loadAll();
-      setQuestions(r.questions);
-      setExams(r.exams);
-    },
-    deleteQuestion: async (id) => {
-      await questionRepo.remove(id);
-      setQuestions((all) => all.filter((q) => q.id !== id));
-    },
-    resetBank: async () => {
-      await questionRepo.resetToBase();
-      const r = await questionRepo.loadAll();
-      setQuestions(r.questions);
-      setExams(r.exams);
     },
     reloadPlayers: () => {
       setPlayers(playerRepo.listPlayers());

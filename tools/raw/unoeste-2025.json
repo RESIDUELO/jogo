@@ -11,7 +11,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q001-1.jpg"
+  ]
  },
  {
   "number": 2,
@@ -25,7 +28,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q002-1.jpg"
+  ]
  },
  {
   "number": 3,
@@ -39,7 +45,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q003-1.jpg"
+  ]
  },
  {
   "number": 4,
@@ -53,7 +62,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q004-1.jpg"
+  ]
  },
  {
   "number": 5,
@@ -67,7 +79,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q005-1.jpg"
+  ]
  },
  {
   "number": 6,
@@ -81,7 +96,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q006-1.jpg"
+  ]
  },
  {
   "number": 7,
@@ -95,7 +113,10 @@
   },
   "answer": null,
   "annulled": true,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q007-1.jpg"
+  ]
  },
  {
   "number": 8,
@@ -109,7 +130,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q008-1.jpg"
+  ]
  },
  {
   "number": 9,
@@ -123,7 +147,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q009-1.jpg"
+  ]
  },
  {
   "number": 10,
@@ -137,7 +164,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q010-1.jpg"
+  ]
  },
  {
   "number": 11,
@@ -151,7 +181,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q011-1.jpg",
+   "2025-q011-2.jpg"
+  ]
  },
  {
   "number": 12,
@@ -165,7 +199,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q012-1.jpg"
+  ]
  },
  {
   "number": 13,
@@ -179,7 +216,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q013-1.jpg"
+  ]
  },
  {
   "number": 14,
@@ -193,7 +233,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q014-1.jpg"
+  ]
  },
  {
   "number": 15,
@@ -207,7 +250,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q015-1.jpg"
+  ]
  },
  {
   "number": 16,
@@ -221,7 +267,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q016-1.jpg",
+   "2025-q016-2.jpg"
+  ]
  },
  {
   "number": 17,
@@ -235,7 +285,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q017-1.jpg"
+  ]
  },
  {
   "number": 18,
@@ -249,7 +302,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q018-1.jpg"
+  ]
  },
  {
   "number": 19,
@@ -263,7 +319,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q019-1.jpg"
+  ]
  },
  {
   "number": 20,
@@ -277,7 +336,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q020-1.jpg",
+   "2025-q020-2.jpg"
+  ]
  },
  {
   "number": 21,
@@ -291,7 +354,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q021-1.jpg"
+  ]
  },
  {
   "number": 22,
@@ -305,7 +371,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q022-1.jpg"
+  ]
  },
  {
   "number": 23,
@@ -319,7 +388,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q023-1.jpg"
+  ]
  },
  {
   "number": 24,
@@ -335,6 +407,10 @@
   "annulled": false,
   "images": [
    "2025-q024-1.jpg"
+  ],
+  "original": [
+   "2025-q024-1.jpg",
+   "2025-q024-2.jpg"
   ]
  },
  {
@@ -349,7 +425,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q025-1.jpg"
+  ]
  },
  {
   "number": 26,
@@ -363,7 +442,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q026-1.jpg"
+  ]
  },
  {
   "number": 27,
@@ -377,7 +459,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q027-1.jpg",
+   "2025-q027-2.jpg"
+  ]
  },
  {
   "number": 28,
@@ -391,7 +477,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q028-1.jpg"
+  ]
  },
  {
   "number": 29,
@@ -407,6 +496,9 @@
   "annulled": false,
   "images": [
    "2025-q029-1.jpg"
+  ],
+  "original": [
+   "2025-q029-1.jpg"
   ]
  },
  {
@@ -421,7 +513,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q030-1.jpg"
+  ]
  },
  {
   "number": 31,
@@ -435,7 +530,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q031-1.jpg"
+  ]
  },
  {
   "number": 32,
@@ -449,7 +547,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q032-1.jpg"
+  ]
  },
  {
   "number": 33,
@@ -463,7 +564,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q033-1.jpg",
+   "2025-q033-2.jpg"
+  ]
  },
  {
   "number": 34,
@@ -477,7 +582,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q034-1.jpg"
+  ]
  },
  {
   "number": 35,
@@ -491,7 +599,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q035-1.jpg"
+  ]
  },
  {
   "number": 36,
@@ -501,11 +612,14 @@
    "B": "A hipertrigliceridemia e a colecistite aguda são complicações dessa terapia.",
    "C": "Suas contraindicações são: pancreatite aguda grave e fístula êntero-cutânea de baixo débito.",
    "D": "Suas vantagens incluem: fácil disponibilidade e boa tolerância.",
-   "E": "Deve ser utilizada de forma sistemática, no préoperatório de pacientes graves nos 7 a 10 dias que antecedem o ato operatório."
+   "E": "Deve ser utilizada de forma sistemática, no pré-operatório de pacientes graves nos 7 a 10 dias que antecedem o ato operatório."
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q036-1.jpg"
+  ]
  },
  {
   "number": 37,
@@ -519,7 +633,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q037-1.jpg",
+   "2025-q037-2.jpg"
+  ]
  },
  {
   "number": 38,
@@ -534,6 +652,9 @@
   "answer": "B",
   "annulled": false,
   "images": [
+   "2025-q038-1.jpg"
+  ],
+  "original": [
    "2025-q038-1.jpg"
   ]
  },
@@ -551,6 +672,10 @@
   "annulled": false,
   "images": [
    "2025-q039-1.jpg"
+  ],
+  "original": [
+   "2025-q039-1.jpg",
+   "2025-q039-2.jpg"
   ]
  },
  {
@@ -565,7 +690,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q040-1.jpg"
+  ]
  },
  {
   "number": 41,
@@ -579,7 +707,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q041-1.jpg",
+   "2025-q041-2.jpg"
+  ]
  },
  {
   "number": 42,
@@ -593,7 +725,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q042-1.jpg"
+  ]
  },
  {
   "number": 43,
@@ -607,7 +742,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q043-1.jpg"
+  ]
  },
  {
   "number": 44,
@@ -621,7 +759,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q044-1.jpg"
+  ]
  },
  {
   "number": 45,
@@ -635,7 +776,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q045-1.jpg",
+   "2025-q045-2.jpg"
+  ]
  },
  {
   "number": 46,
@@ -649,7 +794,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q046-1.jpg"
+  ]
  },
  {
   "number": 47,
@@ -663,7 +811,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q047-1.jpg"
+  ]
  },
  {
   "number": 48,
@@ -677,7 +828,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q048-1.jpg"
+  ]
  },
  {
   "number": 49,
@@ -691,7 +845,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q049-1.jpg"
+  ]
  },
  {
   "number": 50,
@@ -705,7 +862,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q050-1.jpg"
+  ]
  },
  {
   "number": 51,
@@ -719,7 +879,10 @@
   },
   "answer": null,
   "annulled": true,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q051-1.jpg"
+  ]
  },
  {
   "number": 52,
@@ -733,7 +896,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q052-1.jpg",
+   "2025-q052-2.jpg"
+  ]
  },
  {
   "number": 53,
@@ -747,7 +914,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q053-1.jpg"
+  ]
  },
  {
   "number": 54,
@@ -761,7 +931,10 @@
   },
   "answer": null,
   "annulled": true,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q054-1.jpg"
+  ]
  },
  {
   "number": 55,
@@ -775,7 +948,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q055-1.jpg",
+   "2025-q055-2.jpg"
+  ]
  },
  {
   "number": 56,
@@ -789,7 +966,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q056-1.jpg"
+  ]
  },
  {
   "number": 57,
@@ -803,7 +983,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q057-1.jpg"
+  ]
  },
  {
   "number": 58,
@@ -817,7 +1000,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q058-1.jpg",
+   "2025-q058-2.jpg"
+  ]
  },
  {
   "number": 59,
@@ -831,7 +1018,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q059-1.jpg"
+  ]
  },
  {
   "number": 60,
@@ -845,7 +1035,10 @@
   },
   "answer": null,
   "annulled": true,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q060-1.jpg"
+  ]
  },
  {
   "number": 61,
@@ -859,7 +1052,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q061-1.jpg"
+  ]
  },
  {
   "number": 62,
@@ -873,7 +1069,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q062-1.jpg",
+   "2025-q062-2.jpg"
+  ]
  },
  {
   "number": 63,
@@ -887,7 +1087,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q063-1.jpg"
+  ]
  },
  {
   "number": 64,
@@ -901,7 +1104,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q064-1.jpg"
+  ]
  },
  {
   "number": 65,
@@ -915,7 +1121,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q065-1.jpg"
+  ]
  },
  {
   "number": 66,
@@ -929,7 +1138,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q066-1.jpg"
+  ]
  },
  {
   "number": 67,
@@ -943,7 +1155,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q067-1.jpg"
+  ]
  },
  {
   "number": 68,
@@ -957,11 +1172,14 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q068-1.jpg"
+  ]
  },
  {
   "number": 69,
-  "stem": "A depressão na menopaus é o tipo que possui mais tendência de se tornar crônico. Os sintomas variam em gravidade, mas, se não forem tratados, podem levar a situações de permanência do quadro, com graves prejuíos à qualidade de vida da mulher Assinale a alternativa que representa os sinais ou sintomas que sugerem ao profissional de saúde o diagnóstico de depressão na menopausa.",
+  "stem": "A depressão na menopaus é o tipo que possui mais tendência de se tornar crônico. Os sintomas variam em gravidade, mas, se não forem tratados, podem levar a situações de permanência do quadro, com graves prejuí-os à qualidade de vida da mulher Assinale a alternativa que representa os sinais ou sintomas que sugerem ao profissional de saúde o diagnóstico de depressão na menopausa.",
   "alternatives": {
    "A": "Alterações repentinas de humor, dificuldade de concentração e agressividade.",
    "B": "Tristeza isolada.",
@@ -971,7 +1189,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q069-1.jpg",
+   "2025-q069-2.jpg"
+  ]
  },
  {
   "number": 70,
@@ -985,7 +1207,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q070-1.jpg"
+  ]
  },
  {
   "number": 71,
@@ -999,7 +1224,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q071-1.jpg"
+  ]
  },
  {
   "number": 72,
@@ -1013,7 +1241,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q072-1.jpg"
+  ]
  },
  {
   "number": 73,
@@ -1027,7 +1258,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q073-1.jpg",
+   "2025-q073-2.jpg"
+  ]
  },
  {
   "number": 74,
@@ -1041,7 +1276,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q074-1.jpg"
+  ]
  },
  {
   "number": 75,
@@ -1055,7 +1293,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q075-1.jpg"
+  ]
  },
  {
   "number": 76,
@@ -1069,7 +1310,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q076-1.jpg"
+  ]
  },
  {
   "number": 77,
@@ -1083,7 +1327,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q077-1.jpg",
+   "2025-q077-2.jpg"
+  ]
  },
  {
   "number": 78,
@@ -1097,7 +1345,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q078-1.jpg"
+  ]
  },
  {
   "number": 79,
@@ -1111,7 +1362,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q079-1.jpg"
+  ]
  },
  {
   "number": 80,
@@ -1125,7 +1379,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q080-1.jpg"
+  ]
  },
  {
   "number": 81,
@@ -1139,7 +1396,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q081-1.jpg"
+  ]
  },
  {
   "number": 82,
@@ -1153,7 +1413,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q082-1.jpg"
+  ]
  },
  {
   "number": 83,
@@ -1167,7 +1430,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q083-1.jpg"
+  ]
  },
  {
   "number": 84,
@@ -1181,7 +1447,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q084-1.jpg",
+   "2025-q084-2.jpg"
+  ]
  },
  {
   "number": 85,
@@ -1195,7 +1465,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q085-1.jpg"
+  ]
  },
  {
   "number": 86,
@@ -1209,7 +1482,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q086-1.jpg"
+  ]
  },
  {
   "number": 87,
@@ -1223,7 +1499,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q087-1.jpg"
+  ]
  },
  {
   "number": 88,
@@ -1237,7 +1516,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q088-1.jpg"
+  ]
  },
  {
   "number": 89,
@@ -1251,7 +1533,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q089-1.jpg"
+  ]
  },
  {
   "number": 90,
@@ -1265,7 +1550,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q090-1.jpg"
+  ]
  },
  {
   "number": 91,
@@ -1279,7 +1567,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q091-1.jpg",
+   "2025-q091-2.jpg"
+  ]
  },
  {
   "number": 92,
@@ -1293,7 +1585,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q092-1.jpg"
+  ]
  },
  {
   "number": 93,
@@ -1307,7 +1602,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q093-1.jpg"
+  ]
  },
  {
   "number": 94,
@@ -1321,7 +1619,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q094-1.jpg",
+   "2025-q094-2.jpg"
+  ]
  },
  {
   "number": 95,
@@ -1335,7 +1637,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q095-1.jpg"
+  ]
  },
  {
   "number": 96,
@@ -1349,7 +1654,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q096-1.jpg"
+  ]
  },
  {
   "number": 97,
@@ -1363,7 +1671,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q097-1.jpg",
+   "2025-q097-2.jpg"
+  ]
  },
  {
   "number": 98,
@@ -1377,7 +1689,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q098-1.jpg"
+  ]
  },
  {
   "number": 99,
@@ -1391,7 +1706,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q099-1.jpg"
+  ]
  },
  {
   "number": 100,
@@ -1405,6 +1723,9 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2025-q100-1.jpg"
+  ]
  }
 ]

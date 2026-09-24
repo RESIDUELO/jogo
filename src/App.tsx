@@ -1,8 +1,12 @@
-import { AdminScreen } from './screens/Admin';
 import { BankScreen } from './screens/Bank';
 import { Home } from './screens/Home';
 import { MatchScreen } from './screens/MatchScreen';
-import { PlayScreen, RankedScreen } from './screens/PlayModes';
+import { useEffect } from 'react';
+import { AccountScreen, OnlineRoomScreen, OnlineSearchScreen, PlayScreen, RankedScreen } from './screens/PlayModes';
+import { OnlineMatchScreen } from './screens/OnlineMatchScreen';
+import { ReportScreen } from './screens/ResultScreen';
+import { urlParam } from './services/online';
+import { useOnline } from './state/online';
 import { Profile } from './screens/Profile';
 import { ResultScreen } from './screens/ResultScreen';
 import { Onboarding, PlayersScreen, SettingsScreen } from './screens/Settings';
@@ -47,13 +51,43 @@ function Current() {
       return <ShopScreen />;
     case 'bank':
       return <BankScreen />;
-    case 'admin':
-      return <AdminScreen />;
     case 'settings':
       return <SettingsScreen />;
     case 'players':
       return <PlayersScreen />;
+    case 'account':
+      return <AccountScreen />;
+    case 'onlineSearch':
+      return <OnlineSearchScreen key={screen.nonce} setup={screen.setup} ranked={screen.ranked} />;
+    case 'onlineRoom':
+      return <OnlineRoomScreen matchId={screen.matchId} code={screen.code} />;
+    case 'onlineMatch':
+      return <OnlineMatchScreen key={screen.matchId} matchId={screen.matchId} />;
+    case 'report':
+      return <ReportScreen summary={screen.summary} />;
   }
+}
+
+/** Link de convite (?sala=CODIGO): entra direto na sala após o login. */
+function InviteLink() {
+  const store = useStore();
+  const online = useOnline();
+  useEffect(() => {
+    const code = urlParam('sala');
+    if (!code || online.loading || !online.backend || !store.player) return;
+    if (!online.account) {
+      store.nav({ name: 'account' });
+      return;
+    }
+    const url = new URL(location.href);
+    url.searchParams.delete('sala');
+    history.replaceState(null, '', url);
+    online.backend.joinInvite(code).then(
+      (id) => store.nav({ name: 'onlineMatch', matchId: id }),
+      (e) => alert(String(e.message ?? e)),
+    );
+  }, [online.loading, online.account, online.backend, store.player]); // eslint-disable-line react-hooks/exhaustive-deps
+  return null;
 }
 
 export function App() {
@@ -79,6 +113,7 @@ export function App() {
         )}
       </div>
       <EventLayer />
+      {ready && <InviteLink />}
     </div>
   );
 }

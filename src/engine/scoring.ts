@@ -29,8 +29,8 @@ export function scoreAnswer(opts: {
   if (!opts.correct) return { points: 0, base: 0, speedBonus: 0, streakBonus: 0, xp: opts.msUsed >= opts.msLimit ? 2 : 5 };
   const base = BASE_POINTS[opts.difficulty];
   const remaining = clamp(1 - opts.msUsed / opts.msLimit, 0, 1);
-  // bônus de velocidade suave: só a parte "acima de metade do tempo" conta integralmente
-  const speedBonus = Math.round(base * SPEED_MAX * Math.min(1, remaining * 1.4));
+  // bônus de velocidade: no máximo +20%, proporcional ao tempo que sobrou
+  const speedBonus = Math.round(base * SPEED_MAX * remaining);
   const streakBonus = Math.round(base * Math.min(STREAK_MAX, STREAK_STEP * opts.streakBefore));
   let points = base + speedBonus + streakBonus;
   let xp = BASE_XP[opts.difficulty] + Math.min(15, opts.streakBefore * 3);
@@ -68,10 +68,5 @@ export function matchRewards(opts: { mode: MatchMode; result: 'win' | 'loss' | '
   return { xp, coins };
 }
 
-/** Tempo por questão. Casos clínicos longos recebem mais tempo para raciocinar. */
-export function timeLimitMs(textLength: number, mode: 'adaptativo' | 'fixo30' | 'relaxado'): number {
-  if (mode === 'fixo30') return 30000;
-  const extra = Math.max(0, textLength - 250) / 45; // ~1 s a cada 45 caracteres extras
-  const s = clamp(30 + extra, 30, 75);
-  return Math.round((mode === 'relaxado' ? s * 1.8 : s)) * 1000;
-}
+/** Tempo por questão: 2 minutos, suficiente para ler o caso clínico com calma. */
+export const QUESTION_TIME_MS = 120_000;

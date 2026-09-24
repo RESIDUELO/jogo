@@ -2,11 +2,11 @@ import { useMemo, useRef, useState } from 'react';
 import { sfx } from '../audio/sfx';
 import { CAT } from '../data/categories';
 import { COSMETIC } from '../data/shop';
-import { matchRewards, scoreAnswer, timeLimitMs } from '../engine/scoring';
+import { matchRewards, scoreAnswer, QUESTION_TIME_MS } from '../engine/scoring';
 import { isPlayable, pickQuestion } from '../engine/selection';
 import { uid } from '../engine/util';
 import { useStore, type TrainingLaunch } from '../state/store';
-import type { CategoryId, MatchSummary, PowerUpId, Question } from '../types';
+import type { CategoryId, MatchSummary, PowerUpId, Question, ReportItem } from '../types';
 import { Bar, Btn, Header, Modal } from '../ui/common';
 import { Particles } from '../ui/Particles';
 import { QuestionPlay, type AnswerResult, type Feedback } from '../ui/QuestionPlay';
@@ -37,7 +37,7 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
   const [q, setQ] = useState<Question | undefined>(() => next());
   const [n, setN] = useState(1);
   const [feedback, setFeedback] = useState<Feedback | null>(null);
-  const [stats, setStats] = useState({ correct: 0, answered: 0, ms: 0, points: 0, xp: 0, streak: 0, wrong: [] as string[], catCorrect: {} as Partial<Record<CategoryId, number>> });
+  const [stats, setStats] = useState({ correct: 0, answered: 0, ms: 0, points: 0, xp: 0, streak: 0, wrong: [] as string[], report: [] as ReportItem[], catCorrect: {} as Partial<Record<CategoryId, number>> });
   const [burst, setBurst] = useState(0);
   const [confirmEnd, setConfirmEnd] = useState(false);
   const ended = useRef(false);
@@ -56,6 +56,7 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
       xp: st.xp + s.xp,
       streak,
       wrong: r.correct ? st.wrong : [...st.wrong, q.id],
+      report: [...st.report, { qid: q.id, cat: q.category, chosen: r.chosen, correct: r.correct, ms: Math.round(r.ms), points: s.points }],
       catCorrect: { ...st.catCorrect, [q.category]: (st.catCorrect[q.category] ?? 0) + (r.correct ? 1 : 0) },
     }));
     if (r.correct) setBurst((b) => b + 1);
@@ -84,6 +85,7 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
       coins: rw.coins,
       ratingDelta: 0,
       wrongIds: stats.wrong,
+      report: stats.report,
     };
     if (stats.answered > 0) store.finishMatch(summary);
     sfx.victory();
@@ -141,7 +143,7 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
       </div>
       <QuestionPlay
         question={q}
-        limitMs={timeLimitMs(q.text.length, player.settings.timerMode)}
+        limitMs={QUESTION_TIME_MS}
         inventory={player.inventory}
         onUsePowerup={usePowerup}
         onSwap={() => {

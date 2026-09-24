@@ -83,3 +83,24 @@ export function normalize(s: string): string {
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '');
 }
+
+/** Aleatório criptográfico em [0, 1) — sorteio uniforme de verdade. */
+export function fairRandom(): number {
+  try {
+    const a = new Uint32Array(1);
+    crypto.getRandomValues(a);
+    return a[0] / 4294967296;
+  } catch {
+    return Math.random();
+  }
+}
+
+/**
+ * Sorteio da roleta: uniforme entre as áreas, mas se cair na mesma área do
+ * giro anterior sorteia de novo uma vez (repetições seguidas ficam raras).
+ */
+export function spinCategory<T>(options: T[], last?: T | null): T {
+  let pick = options[Math.floor(fairRandom() * options.length)];
+  if (options.length > 1 && pick === last) pick = options[Math.floor(fairRandom() * options.length)];
+  return pick;
+}

@@ -60,6 +60,7 @@ export function QuestionPlay(p: Props) {
   const [usedHere, setUsedHere] = useState<PowerUpId[]>([]);
   const [showFull, setShowFull] = useState(false);
   const [zoom, setZoom] = useState<string | null>(null);
+  const [showOrig, setShowOrig] = useState(false);
   const t0 = useRef(performance.now());
   const lastSec = useRef(-1);
   const pickMsg = useRef(Math.random());
@@ -135,7 +136,7 @@ export function QuestionPlay(p: Props) {
   // teclado: A–E ou 1–5; Enter continua
   useEffect(() => {
     const h = (e: KeyboardEvent) => {
-      if (showFull || zoom) return;
+      if (showFull || zoom || showOrig) return;
       if (done && p.feedback && (e.key === 'Enter' || e.key === ' ')) {
         e.preventDefault();
         p.onContinue();
@@ -148,7 +149,7 @@ export function QuestionPlay(p: Props) {
     };
     window.addEventListener('keydown', h);
     return () => window.removeEventListener('keydown', h);
-  }, [letters, choose, done, p, showFull, zoom]);
+  }, [letters, choose, done, p, showFull, zoom, showOrig]);
 
   const wrongLetters = letters.filter((l) => l !== q.answer && !eliminated.includes(l));
   const canUse = (id: PowerUpId) =>
@@ -221,7 +222,7 @@ export function QuestionPlay(p: Props) {
                   style={{ transition: 'stroke-dasharray .1s linear' }}
                 />
               </svg>
-              <div className={`absolute inset-0 grid place-items-center font-display font-bold ${danger ? 'text-rose-400 text-xl' : 'text-lg'}`}>{done ? '✓' : secs}</div>
+              <div className={`absolute inset-0 grid place-items-center font-display font-bold ${danger ? 'text-rose-400 text-lg' : 'text-[13px]'}`}>{done ? '✓' : `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, '0')}`}</div>
             </div>
           )}
         </div>
@@ -232,6 +233,11 @@ export function QuestionPlay(p: Props) {
               <img src={`${import.meta.env.BASE_URL}banco/img/${img}`} alt="Imagem da questão" className="w-full max-h-72 object-contain" loading="lazy" />
             </button>
           ))}
+          {q.original?.length ? (
+            <button onClick={() => setShowOrig(true)} className="mt-3 text-xs text-sky-300 underline">
+              📄 ver questão original (PDF)
+            </button>
+          ) : null}
           {hint && <div className="mt-3 rounded-xl bg-amber-400/15 border border-amber-300/30 px-3 py-2 text-sm text-amber-100 animate-rise">💡 {hint}</div>}
           {secondChanceArmed && <div className="mt-3 rounded-xl bg-sky-400/15 border border-sky-300/30 px-3 py-2 text-sm text-sky-100">🔁 Segunda chance ativa: se errar, você tenta de novo.</div>}
           {firstWrong && !done && <div className="mt-3 rounded-xl bg-rose-400/15 border border-rose-300/30 px-3 py-2 text-sm text-rose-100 animate-shake">A alternativa {firstWrong} está errada. Tente de novo!</div>}
@@ -324,10 +330,24 @@ export function QuestionPlay(p: Props) {
       )}
 
       <ExplanationModal q={q} open={showFull} onClose={() => setShowFull(false)} chosen={chosen} />
+      <OriginalModal q={q} open={showOrig} onClose={() => setShowOrig(false)} />
       <Modal open={!!zoom} onClose={() => setZoom(null)} wide title="Imagem da questão">
         {zoom && <img src={`${import.meta.env.BASE_URL}banco/img/${zoom}`} alt="" className="w-full rounded-xl bg-white" />}
       </Modal>
     </div>
+  );
+}
+
+export function OriginalModal({ q, open, onClose }: { q: Question; open: boolean; onClose: () => void }) {
+  return (
+    <Modal open={open} onClose={onClose} title={`Questão original — ${q.exam}, Q${q.number ?? ''}`} wide>
+      <div className="space-y-2">
+        {q.original?.map((o) => (
+          <img key={o} src={`${import.meta.env.BASE_URL}banco/orig/${o}`} alt="Recorte da prova original" className="w-full rounded-xl bg-white" />
+        ))}
+        <p className="text-xs text-white/50">Recorte da página da prova em PDF, exatamente como foi aplicada.</p>
+      </div>
+    </Modal>
   );
 }
 
@@ -346,6 +366,7 @@ export function ExplanationModal({ q, open, onClose, chosen }: { q: Question; op
           </span>
         </div>
         <p className="text-white/80 whitespace-pre-line">{q.text}</p>
+        {q.images?.map((img) => <img key={img} src={`${import.meta.env.BASE_URL}banco/img/${img}`} alt="" className="w-full max-h-80 object-contain rounded-xl bg-white" />)}
         <div className="grid gap-1.5">
           {letters.map((l) => (
             <div key={l} className={`rounded-xl px-3 py-2 border ${l === q.answer ? 'border-emerald-400/60 bg-emerald-500/10' : l === chosen ? 'border-rose-400/60 bg-rose-500/10' : 'border-white/10'}`}>
@@ -358,12 +379,20 @@ export function ExplanationModal({ q, open, onClose, chosen }: { q: Question; op
           <div className="whitespace-pre-line text-white/90">{q.explanationFull || q.explanation}</div>
         </div>
         {q.statusNote && <div className="rounded-xl bg-amber-400/10 border border-amber-300/30 p-3 text-amber-100">⚠️ {q.statusNote}</div>}
+        {q.original?.length ? (
+          <details className="rounded-xl bg-black/20 p-3">
+            <summary className="cursor-pointer text-sky-300 text-xs">📄 Ver questão original (PDF)</summary>
+            {q.original.map((o) => (
+              <img key={o} src={`${import.meta.env.BASE_URL}banco/orig/${o}`} alt="Recorte da prova original" className="w-full mt-2 rounded-lg bg-white" loading="lazy" />
+            ))}
+          </details>
+        ) : null}
         <div className="text-xs text-white/50 space-y-0.5">
           <div>
             Fonte: {q.exam} — questão {q.number ?? '—'}. Gabarito: oficial da prova.
           </div>
           {q.reference && <div>Referência: {q.reference}</div>}
-          {q.explanationSource === 'gerada' && <div>Explicação elaborada para fins didáticos (não faz parte da prova oficial). Sugestões podem ser editadas no painel Admin.</div>}
+          {q.explanationSource === 'gerada' && <div>Explicação elaborada para fins didáticos (não faz parte da prova oficial).</div>}
         </div>
       </div>
     </Modal>

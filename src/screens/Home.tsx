@@ -6,6 +6,7 @@ import { dailyRewardFor } from '../engine/player';
 import { leagueFor, levelFromXp } from '../engine/progression';
 import { computeStats, rate, recommendation } from '../engine/stats';
 import { addDays, dayKey, fmtInt } from '../engine/util';
+import { useOnline } from '../state/online';
 import { useStore, type Screen } from '../state/store';
 import { Avatar, Bar, Btn, Card, Coins } from '../ui/common';
 
@@ -20,12 +21,13 @@ const MENU: { s: Screen; label: string; icon: string; color: string }[] = [
   { s: { name: 'achievements' }, label: 'CONQUISTAS', icon: '🏅', color: '#f97316' },
   { s: { name: 'shop' }, label: 'LOJA', icon: '🛍️', color: '#14b8a6' },
   { s: { name: 'bank' }, label: 'BANCO DE QUESTÕES', icon: '🗂️', color: '#6366f1' },
-  { s: { name: 'admin' }, label: 'ADMIN', icon: '🛠️', color: '#64748b' },
+  { s: { name: 'account' }, label: 'CONTA ONLINE', icon: '🌐', color: '#0ea5e9' },
   { s: { name: 'settings' }, label: 'AJUSTES', icon: '⚙️', color: '#475569' },
 ];
 
 export function Home() {
   const store = useStore();
+  const online = useOnline();
   const player = store.player!;
   const lvl = levelFromXp(player.xp);
   const league = leagueFor(player.rating);
@@ -80,6 +82,11 @@ export function Home() {
           <Btn big variant="gold" className="w-full mt-5 text-2xl py-5" onClick={() => store.nav({ name: 'play' })}>
             ⚔️ JOGAR
           </Btn>
+          {online.backend && (
+            <button onClick={() => store.nav({ name: 'account' })} className="w-full text-center text-xs mt-3 text-sky-300">
+              {online.account ? `🌐 Online como ${online.profile?.name ?? player.name}` : '🌐 Entre na sua conta para jogar online e entrar no ranking'}
+            </button>
+          )}
           <div className="text-center text-[11px] text-white/40 mt-2">{fmtInt(store.questions.filter((q) => q.status === 'ativa').length)} questões ativas · {store.exams.length} provas</div>
         </div>
       </div>

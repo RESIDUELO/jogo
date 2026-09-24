@@ -11,7 +11,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q001-1.jpg"
+  ]
  },
  {
   "number": 2,
@@ -25,7 +28,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q002-1.jpg"
+  ]
  },
  {
   "number": 3,
@@ -41,6 +47,9 @@
   "annulled": false,
   "images": [
    "2023-q003-1.jpg"
+  ],
+  "original": [
+   "2023-q003-1.jpg"
   ]
  },
  {
@@ -55,7 +64,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q004-1.jpg",
+   "2023-q004-2.jpg"
+  ]
  },
  {
   "number": 5,
@@ -71,6 +84,9 @@
   "annulled": false,
   "images": [
    "2023-q005-1.jpg"
+  ],
+  "original": [
+   "2023-q005-1.jpg"
   ]
  },
  {
@@ -85,7 +101,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q006-1.jpg"
+  ]
  },
  {
   "number": 7,
@@ -99,7 +118,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q007-1.jpg"
+  ]
  },
  {
   "number": 8,
@@ -113,7 +135,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q008-1.jpg"
+  ]
  },
  {
   "number": 9,
@@ -127,7 +152,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q009-1.jpg",
+   "2023-q009-2.jpg"
+  ]
  },
  {
   "number": 10,
@@ -141,7 +170,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q010-1.jpg"
+  ]
  },
  {
   "number": 11,
@@ -155,7 +187,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q011-1.jpg"
+  ]
  },
  {
   "number": 12,
@@ -171,6 +206,10 @@
   "annulled": false,
   "images": [
    "2023-q012-1.jpg"
+  ],
+  "original": [
+   "2023-q012-1.jpg",
+   "2023-q012-2.jpg"
   ]
  },
  {
@@ -185,7 +224,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q013-1.jpg",
+   "2023-q013-2.jpg"
+  ]
  },
  {
   "number": 14,
@@ -199,7 +242,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q014-1.jpg"
+  ]
  },
  {
   "number": 15,
@@ -213,7 +259,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q015-1.jpg"
+  ]
  },
  {
   "number": 16,
@@ -227,7 +276,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q016-1.jpg"
+  ]
  },
  {
   "number": 17,
@@ -241,7 +293,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q017-1.jpg"
+  ]
  },
  {
   "number": 18,
@@ -255,7 +310,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q018-1.jpg"
+  ]
  },
  {
   "number": 19,
@@ -271,6 +329,10 @@
   "annulled": false,
   "images": [
    "2023-q019-1.jpg"
+  ],
+  "original": [
+   "2023-q019-1.jpg",
+   "2023-q019-2.jpg"
   ]
  },
  {
@@ -285,7 +347,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q020-1.jpg",
+   "2023-q020-2.jpg"
+  ]
  },
  {
   "number": 21,
@@ -299,7 +365,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q021-1.jpg"
+  ]
  },
  {
   "number": 22,
@@ -313,7 +382,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q022-1.jpg"
+  ]
  },
  {
   "number": 23,
@@ -327,7 +399,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q023-1.jpg",
+   "2023-q023-2.jpg"
+  ]
  },
  {
   "number": 24,
@@ -341,7 +417,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q024-1.jpg"
+  ]
  },
  {
   "number": 25,
@@ -357,6 +436,10 @@
   "annulled": false,
   "images": [
    "2023-q025-1.jpg"
+  ],
+  "original": [
+   "2023-q025-1.jpg",
+   "2023-q025-2.jpg"
   ]
  },
  {
@@ -373,6 +456,10 @@
   "annulled": false,
   "images": [
    "2023-q026-1.jpg"
+  ],
+  "original": [
+   "2023-q026-1.jpg",
+   "2023-q026-2.jpg"
   ]
  },
  {
@@ -389,6 +476,10 @@
   "annulled": false,
   "images": [
    "2023-q027-1.jpg"
+  ],
+  "original": [
+   "2023-q027-1.jpg",
+   "2023-q027-2.jpg"
   ]
  },
  {
@@ -405,6 +496,10 @@
   "annulled": false,
   "images": [
    "2023-q028-1.jpg"
+  ],
+  "original": [
+   "2023-q028-1.jpg",
+   "2023-q028-2.jpg"
   ]
  },
  {
@@ -419,7 +514,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q029-1.jpg"
+  ]
  },
  {
   "number": 30,
@@ -433,7 +531,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q030-1.jpg"
+  ]
  },
  {
   "number": 31,
@@ -447,7 +548,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q031-1.jpg"
+  ]
  },
  {
   "number": 32,
@@ -461,7 +565,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q032-1.jpg"
+  ]
  },
  {
   "number": 33,
@@ -477,6 +584,10 @@
   "annulled": false,
   "images": [
    "2023-q033-1.jpg"
+  ],
+  "original": [
+   "2023-q033-1.jpg",
+   "2023-q033-2.jpg"
   ]
  },
  {
@@ -493,6 +604,10 @@
   "annulled": false,
   "images": [
    "2023-q034-1.jpg"
+  ],
+  "original": [
+   "2023-q034-1.jpg",
+   "2023-q034-2.jpg"
   ]
  },
  {
@@ -509,6 +624,10 @@
   "annulled": false,
   "images": [
    "2023-q035-1.jpg"
+  ],
+  "original": [
+   "2023-q035-1.jpg",
+   "2023-q035-2.jpg"
   ]
  },
  {
@@ -523,7 +642,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q036-1.jpg"
+  ]
  },
  {
   "number": 37,
@@ -537,7 +659,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q037-1.jpg",
+   "2023-q037-2.jpg"
+  ]
  },
  {
   "number": 38,
@@ -551,7 +677,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q038-1.jpg"
+  ]
  },
  {
   "number": 39,
@@ -565,7 +694,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q039-1.jpg"
+  ]
  },
  {
   "number": 40,
@@ -579,7 +711,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q040-1.jpg",
+   "2023-q040-2.jpg"
+  ]
  },
  {
   "number": 41,
@@ -593,7 +729,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q041-1.jpg"
+  ]
  },
  {
   "number": 42,
@@ -607,11 +746,14 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q042-1.jpg"
+  ]
  },
  {
   "number": 43,
-  "stem": "Gestante com diagnóstico de doença hipertensiva da gestação, dá entrada no centro obstétrico com 29 semanas de idade gestacional, em pré-eclâmpsia e com sinais de sofrimento fetal agudo, sendo submetida a parto cesáreo. Ao ser extraído, o recémnascido está hipotônico e não apresenta movimento respiratório. Em relação ao clampeamento de cordão, está indicado ser realizado",
+  "stem": "Gestante com diagnóstico de doença hipertensiva da gestação, dá entrada no centro obstétrico com 29 semanas de idade gestacional, em pré-eclâmpsia e com sinais de sofrimento fetal agudo, sendo submetida a parto cesáreo. Ao ser extraído, o recém-nascido está hipotônico e não apresenta movimento respiratório. Em relação ao clampeamento de cordão, está indicado ser realizado",
   "alternatives": {
    "A": "imediatamente, para não atrasar os procedimentos de reanimação.",
    "B": "logo após o cordão ser ordenhado, para garantir bons índices hematimétricos da criança.",
@@ -621,11 +763,14 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q043-1.jpg"
+  ]
  },
  {
   "number": 44,
-  "stem": "Gestante com diagnóstico de doença hipertensiva da gestação, dá entrada no centro obstétrico com 29 semanas de idade gestacional, em pré-eclâmpsia e com sinais de sofrimento fetal agudo, sendo submetida a parto cesáreo. Ao ser extraído, o recémnascido está hipotônico e não apresenta movimento respiratório. Após o clampeamento do cordão o recém-nascido foi levado para a mesa de reanimação, colocado sob fonte de calor radiante, em saco plástico e com touca, posicionado em decúbito dorsal com o pescoço em leve extensão e monitorado. Após esses procedimentos iniciais realizados no primeiro minuto, verifica-se que o recém-nascido apresenta frequência cardíaca de 120 bpm, movimentos respiratórios espontâneos, porém com sinais de desconforto respiratório, saturando 67%. Nesse momento está indicado",
+  "stem": "Gestante com diagnóstico de doença hipertensiva da gestação, dá entrada no centro obstétrico com 29 semanas de idade gestacional, em pré-eclâmpsia e com sinais de sofrimento fetal agudo, sendo submetida a parto cesáreo. Ao ser extraído, o recém-nascido está hipotônico e não apresenta movimento respiratório. Após o clampeamento do cordão o recém-nascido foi levado para a mesa de reanimação, colocado sob fonte de calor radiante, em saco plástico e com touca, posicionado em decúbito dorsal com o pescoço em leve extensão e monitorado. Após esses procedimentos iniciais realizados no primeiro minuto, verifica-se que o recém-nascido apresenta frequência cardíaca de 120 bpm, movimentos respiratórios espontâneos, porém com sinais de desconforto respiratório, saturando 67%. Nesse momento está indicado",
   "alternatives": {
    "A": "aspirar as vias aéreas.",
    "B": "aplicar CPAP por meio de ventilador mecânico manual e máscara facial.",
@@ -635,7 +780,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q044-1.jpg",
+   "2023-q044-2.jpg"
+  ]
  },
  {
   "number": 45,
@@ -649,7 +798,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q045-1.jpg"
+  ]
  },
  {
   "number": 46,
@@ -663,7 +815,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q046-1.jpg"
+  ]
  },
  {
   "number": 47,
@@ -677,7 +832,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q047-1.jpg",
+   "2023-q047-2.jpg"
+  ]
  },
  {
   "number": 48,
@@ -691,7 +850,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q048-1.jpg"
+  ]
  },
  {
   "number": 49,
@@ -705,7 +867,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q049-1.jpg"
+  ]
  },
  {
   "number": 50,
@@ -719,7 +884,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q050-1.jpg"
+  ]
  },
  {
   "number": 51,
@@ -733,7 +901,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q051-1.jpg"
+  ]
  },
  {
   "number": 52,
@@ -747,7 +918,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q052-1.jpg"
+  ]
  },
  {
   "number": 53,
@@ -761,7 +935,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q053-1.jpg"
+  ]
  },
  {
   "number": 54,
@@ -775,7 +952,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q054-1.jpg",
+   "2023-q054-2.jpg"
+  ]
  },
  {
   "number": 55,
@@ -789,7 +970,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q055-1.jpg"
+  ]
  },
  {
   "number": 56,
@@ -803,7 +987,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q056-1.jpg"
+  ]
  },
  {
   "number": 57,
@@ -817,7 +1004,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q057-1.jpg"
+  ]
  },
  {
   "number": 58,
@@ -831,7 +1021,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q058-1.jpg"
+  ]
  },
  {
   "number": 59,
@@ -845,7 +1038,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q059-1.jpg"
+  ]
  },
  {
   "number": 60,
@@ -859,7 +1055,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q060-1.jpg"
+  ]
  },
  {
   "number": 61,
@@ -873,7 +1072,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q061-1.jpg",
+   "2023-q061-2.jpg"
+  ]
  },
  {
   "number": 62,
@@ -887,7 +1090,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q062-1.jpg"
+  ]
  },
  {
   "number": 63,
@@ -901,7 +1107,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q063-1.jpg"
+  ]
  },
  {
   "number": 64,
@@ -915,7 +1124,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q064-1.jpg"
+  ]
  },
  {
   "number": 65,
@@ -929,7 +1141,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q065-1.jpg",
+   "2023-q065-2.jpg"
+  ]
  },
  {
   "number": 66,
@@ -944,6 +1160,9 @@
   "answer": "E",
   "annulled": false,
   "images": [
+   "2023-q066-1.jpg"
+  ],
+  "original": [
    "2023-q066-1.jpg"
   ]
  },
@@ -961,6 +1180,10 @@
   "annulled": false,
   "images": [
    "2023-q067-1.jpg"
+  ],
+  "original": [
+   "2023-q067-1.jpg",
+   "2023-q067-2.jpg"
   ]
  },
  {
@@ -975,7 +1198,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q068-1.jpg"
+  ]
  },
  {
   "number": 69,
@@ -989,7 +1215,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q069-1.jpg"
+  ]
  },
  {
   "number": 70,
@@ -1003,7 +1232,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q070-1.jpg"
+  ]
  },
  {
   "number": 71,
@@ -1017,7 +1249,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q071-1.jpg"
+  ]
  },
  {
   "number": 72,
@@ -1031,7 +1266,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q072-1.jpg",
+   "2023-q072-2.jpg"
+  ]
  },
  {
   "number": 73,
@@ -1045,7 +1284,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q073-1.jpg"
+  ]
  },
  {
   "number": 74,
@@ -1059,7 +1301,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q074-1.jpg"
+  ]
  },
  {
   "number": 75,
@@ -1073,7 +1318,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q075-1.jpg"
+  ]
  },
  {
   "number": 76,
@@ -1087,7 +1335,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q076-1.jpg",
+   "2023-q076-2.jpg"
+  ]
  },
  {
   "number": 77,
@@ -1101,7 +1353,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q077-1.jpg"
+  ]
  },
  {
   "number": 78,
@@ -1115,7 +1370,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q078-1.jpg"
+  ]
  },
  {
   "number": 79,
@@ -1129,7 +1387,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q079-1.jpg",
+   "2023-q079-2.jpg"
+  ]
  },
  {
   "number": 80,
@@ -1143,7 +1405,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q080-1.jpg"
+  ]
  },
  {
   "number": 81,
@@ -1157,7 +1422,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q081-1.jpg"
+  ]
  },
  {
   "number": 82,
@@ -1171,7 +1439,11 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q082-1.jpg",
+   "2023-q082-2.jpg"
+  ]
  },
  {
   "number": 83,
@@ -1185,7 +1457,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q083-1.jpg"
+  ]
  },
  {
   "number": 84,
@@ -1199,7 +1474,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q084-1.jpg",
+   "2023-q084-2.jpg"
+  ]
  },
  {
   "number": 85,
@@ -1213,7 +1492,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q085-1.jpg"
+  ]
  },
  {
   "number": 86,
@@ -1227,7 +1509,10 @@
   },
   "answer": null,
   "annulled": true,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q086-1.jpg"
+  ]
  },
  {
   "number": 87,
@@ -1241,7 +1526,11 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q087-1.jpg",
+   "2023-q087-2.jpg"
+  ]
  },
  {
   "number": 88,
@@ -1255,7 +1544,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q088-1.jpg"
+  ]
  },
  {
   "number": 89,
@@ -1269,7 +1561,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q089-1.jpg"
+  ]
  },
  {
   "number": 90,
@@ -1283,7 +1578,11 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q090-1.jpg",
+   "2023-q090-2.jpg"
+  ]
  },
  {
   "number": 91,
@@ -1297,7 +1596,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q091-1.jpg"
+  ]
  },
  {
   "number": 92,
@@ -1311,7 +1613,11 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q092-1.jpg",
+   "2023-q092-2.jpg"
+  ]
  },
  {
   "number": 93,
@@ -1325,7 +1631,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q093-1.jpg"
+  ]
  },
  {
   "number": 94,
@@ -1339,7 +1648,10 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q094-1.jpg"
+  ]
  },
  {
   "number": 95,
@@ -1353,7 +1665,10 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q095-1.jpg"
+  ]
  },
  {
   "number": 96,
@@ -1367,7 +1682,11 @@
   },
   "answer": "A",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q096-1.jpg",
+   "2023-q096-2.jpg"
+  ]
  },
  {
   "number": 97,
@@ -1381,7 +1700,10 @@
   },
   "answer": "B",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q097-1.jpg"
+  ]
  },
  {
   "number": 98,
@@ -1395,7 +1717,10 @@
   },
   "answer": "D",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q098-1.jpg"
+  ]
  },
  {
   "number": 99,
@@ -1409,7 +1734,10 @@
   },
   "answer": "C",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q099-1.jpg"
+  ]
  },
  {
   "number": 100,
@@ -1423,6 +1751,9 @@
   },
   "answer": "E",
   "annulled": false,
-  "images": []
+  "images": [],
+  "original": [
+   "2023-q100-1.jpg"
+  ]
  }
 ]

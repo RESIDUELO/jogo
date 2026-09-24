@@ -43,7 +43,7 @@ export function newPlayer(name: string, avatar = 'av-steth'): Player {
     achievements: {},
     playDays: [],
     daily: { date: '', missions: [], claimedDailyReward: false },
-    settings: { sound: true, timerMode: 'adaptativo', includeAnnulledInStudy: false, reduceMotion: false },
+    settings: { sound: true, includeAnnulledInStudy: false, reduceMotion: false },
   };
   return ensureDaily(p);
 }

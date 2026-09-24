@@ -7,7 +7,7 @@
 //  5. vence quem juntar `targetCrowns` coroas. Se as rodadas acabarem,
 //     desempata por coroas e depois por pontos.
 // O estado é serializável — pode ser sincronizado com um servidor no multiplayer online.
-import type { CategoryId, Letter, MatchMode } from '../types';
+import type { CategoryId, Letter, MatchMode, MatchSetupData } from '../types';
 import { CATEGORY_IDS } from '../data/categories';
 
 export interface MatchConfig {
@@ -18,6 +18,18 @@ export interface MatchConfig {
 
 export const QUICK_MATCH: MatchConfig = { targetCrowns: 3, maxRounds: 10, meterSize: 2 };
 export const LONG_MATCH: MatchConfig = { targetCrowns: 5, maxRounds: 18, meterSize: 2 };
+
+/** O que está em disputa: provas e áreas escolhidas antes da partida (vazio = todas). */
+export type MatchSetup = MatchSetupData;
+
+/** Ajusta coroas/medidor ao número de áreas escolhidas. */
+export function configFor(setup: MatchSetup): MatchConfig {
+  const n = setup.cats.length || CATEGORY_IDS.length;
+  const base = setup.long ? LONG_MATCH : QUICK_MATCH;
+  return { ...base, targetCrowns: Math.min(base.targetCrowns, n), meterSize: n <= 2 ? 3 : base.meterSize };
+}
+
+export const setupCats = (s: MatchSetup): CategoryId[] => (s.cats.length ? CATEGORY_IDS.filter((c) => s.cats.includes(c)) : CATEGORY_IDS);
 
 export interface Competitor {
   id: string;
@@ -62,6 +74,7 @@ export interface MatchState {
   id: string;
   mode: MatchMode;
   config: MatchConfig;
+  setup: MatchSetup;
   players: [CompetitorState, CompetitorState];
   turn: 0 | 1;
   round: number;
@@ -80,11 +93,12 @@ function initCompetitor(c: Competitor): CompetitorState {
   return { ...c, crowns: [], meter: 0, score: 0, correct: 0, answered: 0, streak: 0, bestStreak: 0, totalMs: 0, wrongIds: [], powerupsUsed: 0 };
 }
 
-export function createMatch(id: string, mode: MatchMode, a: Competitor, b: Competitor, config: MatchConfig = QUICK_MATCH): MatchState {
+export function createMatch(id: string, mode: MatchMode, a: Competitor, b: Competitor, setup: MatchSetup = { exams: [], cats: [] }): MatchState {
   return {
     id,
     mode,
-    config,
+    config: configFor(setup),
+    setup,
     players: [initCompetitor(a), initCompetitor(b)],
     turn: 0,
     round: 1,
@@ -101,9 +115,12 @@ export function createMatch(id: string, mode: MatchMode, a: Competitor, b: Compe
 
 export const current = (m: MatchState) => m.players[m.turn];
 
-export function missingCrowns(p: CompetitorState): CategoryId[] {
-  return CATEGORY_IDS.filter((c) => !p.crowns.includes(c));
+export function missingCrowns(p: CompetitorState, m: MatchState): CategoryId[] {
+  return setupCats(m.setup).filter((c) => !p.crowns.includes(c));
 }
+
+/** Última área sorteada (para a roleta evitar repetições seguidas). */
+export const lastSpunCat = (m: MatchState): CategoryId | null => m.log[m.log.length - 1]?.cat ?? null;
 
 /** Resultado da roleta → abre a questão da categoria. */
 export function applySpin(m: MatchState, cat: CategoryId): MatchState {
@@ -152,7 +169,7 @@ export function applyAnswer(m: MatchState, a: AnswerInput): { match: MatchState;
   }
   players[m.turn] = p;
   const log: TurnLog = { player: m.turn, round: m.round, cat: m.cat!, qid: m.qid!, crown: m.crownQuestion, chosen: a.chosen, correct: a.correct, ms: a.ms, points: a.points, xp: a.xp };
-  const meterFull = !m.crownQuestion && a.correct && p.meter >= m.config.meterSize && missingCrowns(p).length > 0;
+  const meterFull = !m.crownQuestion && a.correct && p.meter >= m.config.meterSize && missingCrowns(p, m).length > 0;
   return { match: { ...m, players, phase: 'feedback', log: [...m.log, log] }, crownWon, meterFull };
 }
 
@@ -165,7 +182,7 @@ export function advance(m: MatchState): MatchState {
   if (p.crowns.length >= m.config.targetCrowns) {
     return { ...m, phase: 'end', winner: m.turn, endReason: 'crowns', qid: null };
   }
-  if (!m.crownQuestion && p.meter >= m.config.meterSize && missingCrowns(p).length > 0 && m.log[m.log.length - 1]?.correct) {
+  if (!m.crownQuestion && p.meter >= m.config.meterSize && missingCrowns(p, m).length > 0 && m.log[m.log.length - 1]?.correct) {
     return { ...m, phase: 'crown-choice', qid: null, cat: null };
   }
   const nextTurn: 0 | 1 = m.turn === 0 ? 1 : 0;
