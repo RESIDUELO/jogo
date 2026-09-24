@@ -1,6 +1,5 @@
-# Compila o site (GitHub Pages) e o APK Android a cada push.
-# O APK fica em: Releases do GitHub e no site (…/seila/residuelo.apk).
-name: Site + APK
+# Compila e publica o site (GitHub Pages) a cada push.
+name: Site
 
 on:
   push:
@@ -26,17 +25,6 @@ jobs:
           node-version: 22
           cache: npm
 
-      - uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: 21
-
-      # o runner ubuntu-latest já tem o Android SDK (ANDROID_HOME); o Gradle baixa o que faltar
-      - name: Android SDK
-        run: |
-          echo "ANDROID_HOME=$ANDROID_HOME"
-          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
-
       - name: Instalar dependências
         run: npm ci
 
@@ -45,33 +33,7 @@ jobs:
           npm run build
           mv dist site
 
-      - name: Build do APK
-        run: |
-          CAP_BUILD=1 npm run build
-          npx cap sync android
-          cd android
-          chmod +x gradlew
-          ./gradlew assembleRelease -PversionCode=${{ github.run_number }} --no-daemon --stacktrace
-          cp app/build/outputs/apk/release/app-release.apk ../site/residuelo.apk
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: residuelo-apk
-          path: site/residuelo.apk
-
-      - name: Publicar Release com o APK
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: v1.${{ github.run_number }}
-          name: Residuelo v1.${{ github.run_number }}
-          target_commitish: ${{ github.sha }}
-          make_latest: true
-          body: |
-            APK do Residuelo (Android). Baixe `residuelo.apk` abaixo e instale no celular.
-            Para atualizar, instale a versão nova por cima: o progresso é mantido.
-          files: site/residuelo.apk
-
-      - name: Publicar site + APK no GitHub Pages
+      - name: Publicar no GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
