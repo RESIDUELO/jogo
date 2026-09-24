@@ -156,7 +156,15 @@ def main():
         with open(os.path.join(OUT, fname), "w", encoding="utf-8") as f:
             json.dump({"exam": exam_meta, "questions": qs}, f, ensure_ascii=False, indent=1)
         index["exams"].append({**exam_meta, "file": fname, "count": len(qs)})
-    with open(os.path.join(OUT, "index.json"), "w", encoding="utf-8") as f:
+    # só atualiza a data se o conteúdo mudou (evita commits vazios no CI)
+    idx_path = os.path.join(OUT, "index.json")
+    try:
+        old = json.load(open(idx_path, encoding="utf-8"))
+        if old.get("exams") == index["exams"]:
+            index["generatedAt"] = old.get("generatedAt", index["generatedAt"])
+    except (OSError, ValueError):
+        pass
+    with open(idx_path, "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False, indent=1)
     print("\n".join(report))
 
