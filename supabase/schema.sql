@@ -180,3 +180,6 @@ begin
     alter publication supabase_realtime add table public.online_matches;
   end if;
 end $$;
+
+-- recarrega o cache da API para reconhecer tabelas e funções novas
+notify pgrst, 'reload schema';
