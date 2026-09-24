@@ -30,8 +30,8 @@ export interface BotPersona {
 }
 
 export const BOTS: BotPersona[] = [
-  { id: 'bot-lucas', name: 'Lucas (Interno)', avatar: '🧑‍🎓', tier: 'interno', skill: { PRE: 0.08, CIR: -0.08 }, taunts: { win: 'Estudei a noite toda pra isso!', lose: 'Vou voltar pro livro...' } },
-  { id: 'bot-bia', name: 'Bia (Interna)', avatar: '👩‍🎓', tier: 'interno', skill: { PED: 0.1, CLI: -0.05 }, taunts: { win: 'Sorte de principiante? Nada disso.', lose: 'Revanche amanhã!' } },
+  { id: 'bot-lucas', name: 'Sérgio (Interno)', avatar: '🧑‍🎓', tier: 'interno', skill: { PRE: 0.08, CIR: -0.08 }, taunts: { win: 'Estudei a noite toda pra isso!', lose: 'Vou voltar pro livro...' } },
+  { id: 'bot-bia', name: 'Marina (Interna)', avatar: '👩‍🎓', tier: 'interno', skill: { PED: 0.1, CLI: -0.05 }, taunts: { win: 'Sorte de principiante? Nada disso.', lose: 'Revanche amanhã!' } },
   { id: 'bot-rafa', name: 'Dr. Rafa (R1 Clínica)', avatar: '👨‍⚕️', tier: 'r1', skill: { CLI: 0.12, GO: -0.1 }, taunts: { win: 'Diagnóstico: vitória.', lose: 'Boa! Vou pedir mais exames.' } },
   { id: 'bot-carla', name: 'Dra. Carla (R1 GO)', avatar: '👩‍⚕️', tier: 'r1', skill: { GO: 0.14, CIR: -0.06 }, taunts: { win: 'Parto normal, sem intercorrências.', lose: 'Você me pegou de surpresa.' } },
   { id: 'bot-ana', name: 'Dra. Ana (R2 Pediatria)', avatar: '👩🏽‍⚕️', tier: 'r2', skill: { PED: 0.14, CIR: -0.08 }, taunts: { win: 'Criança não é adulto pequeno!', lose: 'Mandou bem, colega.' } },
