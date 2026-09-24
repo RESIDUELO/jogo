@@ -1,66 +1,85 @@
-export const MIN = 60_000;
-export const DAY = 24 * 60 * MIN;
+export const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
 
-export function uid(): string {
-  return Date.now().toString(36) + Math.random().toString(36).slice(2, 9);
+export function uid(prefix = ''): string {
+  return prefix + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 }
 
-export function dayKey(t = Date.now()): string {
-  const d = new Date(t);
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+/** Hash determinístico (FNV-1a) → [0, 1). Usado para comportamento consistente dos bots. */
+export function hash01(s: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return ((h >>> 0) % 1_000_000) / 1_000_000;
 }
 
-/** Chave da semana (segunda-feira como início). */
-export function weekKey(t = Date.now()): string {
+/** PRNG com semente (mulberry32). */
+export function seeded(seed: number) {
+  let a = seed >>> 0;
+  return () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+export function shuffle<T>(arr: T[], rnd: () => number = Math.random): T[] {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+export function weightedPick<T>(items: T[], weight: (t: T) => number, rnd: () => number = Math.random): T | undefined {
+  let total = 0;
+  const ws = items.map((i) => {
+    const w = Math.max(0, weight(i));
+    total += w;
+    return w;
+  });
+  if (total <= 0) return items[Math.floor(rnd() * items.length)];
+  let r = rnd() * total;
+  for (let i = 0; i < items.length; i++) {
+    r -= ws[i];
+    if (r <= 0) return items[i];
+  }
+  return items[items.length - 1];
+}
+
+export function dayKey(t: number | Date = Date.now()): string {
   const d = new Date(t);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${dd}`;
+}
+
+export function addDays(key: string, n: number): string {
+  const [y, m, d] = key.split('-').map(Number);
+  return dayKey(new Date(y, m - 1, d + n));
+}
+
+/** Segunda-feira da semana (chave) — ranking semanal. */
+export function weekStart(t = Date.now()): number {
+  const d = new Date(t);
+  const day = (d.getDay() + 6) % 7;
   d.setHours(0, 0, 0, 0);
-  const dow = (d.getDay() + 6) % 7;
-  d.setDate(d.getDate() - dow);
-  return 'W' + dayKey(d.getTime());
-}
-
-export function startOfDay(t = Date.now()): number {
-  const d = new Date(t);
-  d.setHours(0, 0, 0, 0);
+  d.setDate(d.getDate() - day);
   return d.getTime();
 }
 
-export function addDays(t: number, n: number): number {
-  const d = new Date(startOfDay(t));
-  d.setDate(d.getDate() + n);
-  return d.getTime();
-}
-
-export function daysBetween(a: number, b: number): number {
-  return Math.round((startOfDay(b) - startOfDay(a)) / DAY);
-}
-
-export const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
-export const rand = (lo: number, hi: number) => lo + Math.random() * (hi - lo);
-export const randInt = (lo: number, hi: number) => Math.floor(rand(lo, hi + 1));
-export const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
-
-export function fmt(n: number): string {
-  return Math.round(n).toLocaleString('pt-BR');
-}
+export const fmtInt = (n: number) => Math.round(n).toLocaleString('pt-BR');
+export const fmtPct = (n: number) => `${Math.round(n * 100)}%`;
+export const fmtSec = (ms: number) => `${(ms / 1000).toLocaleString('pt-BR', { maximumFractionDigits: 1, minimumFractionDigits: 1 })} s`;
 
 export function normalize(s: string): string {
-  return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
-}
-
-export function fmtInterval(ms: number): string {
-  const m = ms / MIN;
-  if (m < 60) return `${Math.max(1, Math.round(m))}min`;
-  const h = m / 60;
-  if (h < 24) return `${Math.round(h)}h`;
-  const d = ms / DAY;
-  if (d < 30) return `${Math.round(d)}d`;
-  if (d < 365) return `${(d / 30).toFixed(1).replace('.', ',')}m`;
-  return `${(d / 365).toFixed(1).replace('.', ',')}a`;
-}
-
-export function fmtDuration(ms: number): string {
-  const min = Math.round(ms / MIN);
-  if (min < 60) return `${min} min`;
-  return `${Math.floor(min / 60)}h ${String(min % 60).padStart(2, '0')}min`;
+  return s
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '');
 }

@@ -1,117 +1,144 @@
-import { useMemo } from 'react';
-import { useGame } from '../state/store';
-import { Panel, Stat } from '../components/ui';
-import { isMastered } from '../engine/srs';
-import { addDays, fmt, fmtDuration, startOfDay } from '../engine/util';
+import { useMemo, useState } from 'react';
+import { CAT, CATEGORY_IDS, DIFFICULTY_COLOR, DIFFICULTY_LABEL } from '../data/categories';
+import { computeStats, rate, recommendation } from '../engine/stats';
+import { fmtPct, fmtSec } from '../engine/util';
+import { useStore } from '../state/store';
+import type { CategoryId, Difficulty } from '../types';
+import { Bar, Btn, Card, Empty, Header, Seg, Stat } from '../ui/common';
+import { Donut, LineChart } from '../ui/Charts';
 
-export function Stats() {
-  const { s } = useGame();
-  const data = useMemo(() => {
-    const now = Date.now();
-    const today = startOfDay(now);
-    const week = addDays(now, -6);
-    const month = addDays(now, -29);
-    const log = s.log;
-    const inRange = (t0: number) => log.filter(r => r.t >= t0);
-    const acc = (arr: typeof log) => (arr.length ? arr.filter(r => r.grade > 1).length / arr.length : 0);
-    const days = Array.from({ length: 30 }, (_, i) => {
-      const t0 = addDays(now, i - 29);
-      const t1 = addDays(now, i - 28);
-      const rs = log.filter(r => r.t >= t0 && r.t < t1);
-      return { t: t0, n: rs.length, ok: rs.filter(r => r.grade > 1).length, xp: rs.reduce((a, r) => a + r.xp, 0) };
-    });
-    const byDeck = new Map<string, number>();
-    for (const r of log) byDeck.set(r.deckId, (byDeck.get(r.deckId) ?? 0) + 1);
-    const topDeckId = [...byDeck].sort((a, b) => b[1] - a[1])[0]?.[0];
-    const hardest = [...s.cards]
-      .filter(c => c.correct + c.wrong >= 2)
-      .sort((a, b) => b.wrong / (b.correct + b.wrong) - a.wrong / (a.correct + a.wrong) || b.wrong - a.wrong)
-      .slice(0, 8);
-    const grades = [1, 2, 3, 4].map(g => log.filter(r => r.grade === g).length);
-    const forecast = Array.from({ length: 14 }, (_, i) => {
-      const t0 = i === 0 ? 0 : addDays(now, i);
-      const t1 = addDays(now, i + 1);
-      return s.cards.filter(c => c.state === 'review' && c.due >= t0 && c.due < t1).length;
-    });
-    return {
-      today: inRange(today), week: inRange(week), month: inRange(month), acc: acc(log), days, grades, forecast,
-      topDeck: s.decks.find(d => d.id === topDeckId)?.name ?? '—', hardest,
-      mastered: s.cards.filter(isMastered).length,
-    };
-  }, [s]);
+export function StatsScreen() {
+  const store = useStore();
+  const s = useMemo(() => computeStats(store.answers), [store.answers]);
+  const rec = recommendation(s);
+  const [subCat, setSubCat] = useState<CategoryId | 'ALL'>('ALL');
+  const [range, setRange] = useState<14 | 30 | 90>(30);
 
-  const maxDay = Math.max(1, ...data.days.map(d => d.n));
-  const maxFc = Math.max(1, ...data.forecast);
-  const totalGrades = Math.max(1, data.grades.reduce((a, b) => a + b, 0));
-  const gradeInfo = [
-    { label: 'Errei', cls: 'g-again' }, { label: 'Difícil', cls: 'g-hard' }, { label: 'Acertei', cls: 'g-good' }, { label: 'Dominei', cls: 'g-easy' },
-  ];
+  if (s.total.n === 0)
+    return (
+      <div>
+        <Header title="Meu desempenho" />
+        <Empty icon="📊" text="Responda algumas questões para ver suas estatísticas.">
+          <Btn onClick={() => store.nav({ name: 'play' })}>Jogar agora</Btn>
+        </Empty>
+      </div>
+    );
+
+  const days = s.byDay.slice(-range);
+  const subs = s.bySub.filter((x) => subCat === 'ALL' || x.cat === subCat);
+  const wrongCount = new Set(store.answers.filter((a) => !a.correct).map((a) => a.qid)).size;
+  const distinct = new Set(store.answers.map((a) => a.qid)).size;
 
   return (
-    <div className="stats-screen">
-      <div className="stat-grid">
-        <Stat icon="📅" label="Cards hoje" value={data.today.length} />
-        <Stat icon="🗓️" label="Nesta semana" value={data.week.length} />
-        <Stat icon="📆" label="Nos últimos 30 dias" value={data.month.length} />
-        <Stat icon="🎯" label="Taxa de acerto" value={`${Math.round(data.acc * 100)}%`} />
-        <Stat icon="⏱️" label="Tempo estudado" value={fmtDuration(s.stats.studyMs)} />
-        <Stat icon="✨" label="XP total" value={fmt(s.stats.totalXp)} />
-        <Stat icon="⚡" label="Maior combo" value={s.stats.maxCombo} />
-        <Stat icon="⚔️" label="Inimigos derrotados" value={s.stats.enemiesDefeated} />
-        <Stat icon="☠️" label="Bosses derrotados" value={s.stats.bossesDefeated} />
-        <Stat icon="🧠" label="Cards dominados" value={data.mastered} />
-        <Stat icon="📚" label="Deck mais estudado" value={<span className="small-val">{data.topDeck}</span>} />
-        <Stat icon="🔥" label="Maior sequência" value={`${s.streak.best} dias`} />
+    <div className="pb-10">
+      <Header title="Meu desempenho" subtitle="Seu estudo transformado em dados" />
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <Stat label="Respondidas" value={s.total.n} icon="📝" />
+        <Stat label="Questões distintas" value={distinct} icon="🧩" />
+        <Stat label="Acerto geral" value={fmtPct(rate(s.total))} icon="🎯" color="#4ade80" />
+        <Stat label="Tempo médio" value={fmtSec(s.total.ms / s.total.n)} icon="⏱️" />
+        <Stat label="Questões erradas" value={wrongCount} icon="❌" color="#f87171" />
+        <Stat label="Difíceis acertadas" value={`${(s.byDiff[3]?.c ?? 0) + (s.byDiff[4]?.c ?? 0)}`} icon="🧗" />
+        <Stat label="Nunca respondidas" value={store.questions.filter((q) => q.status === 'ativa' && !store.history.has(q.id)).length} icon="🆕" />
+        <Stat label="Nesta semana" value={s.week.total.n} icon="📅" />
       </div>
 
-      <Panel title="Revisões nos últimos 30 dias">
-        <div className="chart">
-          {data.days.map(d => (
-            <div key={d.t} className="chart-col" title={`${new Date(d.t).toLocaleDateString('pt-BR')}: ${d.n} cards, ${d.ok} acertos, ${d.xp} XP`}>
-              <div className="chart-bar" style={{ height: `${(100 * d.n) / maxDay}%` }}>
-                <div className="chart-ok" style={{ height: d.n ? `${(100 * d.ok) / d.n}%` : 0 }} />
+      <Card className="p-4 mt-4">
+        <div className="font-display font-semibold mb-3">Acertos por categoria</div>
+        <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 justify-items-center">
+          {CATEGORY_IDS.map((c) => (
+            <div key={c} className="text-center">
+              <Donut value={rate(s.byCat[c])} color={CAT[c].color} label={`${s.byCat[c].c}/${s.byCat[c].n}`} />
+              <div className="text-xs mt-1" style={{ color: CAT[c].color }}>
+                {CAT[c].icon} {CAT[c].name}
               </div>
             </div>
           ))}
         </div>
-        <div className="chart-legend"><span><i className="lg-ok" />acertos</span><span><i className="lg-bad" />erros</span></div>
-      </Panel>
+      </Card>
 
-      <div className="two-col">
-        <Panel title="Distribuição das respostas">
-          <div className="dist">
-            {gradeInfo.map((g, i) => (
-              <div key={g.label} className="dist-row">
-                <span>{g.label}</span>
-                <div className="dist-bar"><div className={g.cls} style={{ width: `${(100 * data.grades[i]) / totalGrades}%` }} /></div>
-                <b>{data.grades[i]}</b>
+      <Card className="p-4 mt-4">
+        <div className="flex items-center justify-between flex-wrap gap-2 mb-2">
+          <div className="font-display font-semibold">Evolução ao longo do tempo</div>
+          <Seg value={range} onChange={setRange} options={[{ v: 14, label: '14d' }, { v: 30, label: '30d' }, { v: 90, label: '90d' }]} />
+        </div>
+        <LineChart points={days.map((d) => ({ label: d.day.slice(5).split('-').reverse().join('/'), v: rate(d.acc) }))} bars={days.map((d) => d.acc.n)} />
+        <div className="text-[11px] text-white/40">Linha: % de acerto por dia · barras: questões respondidas.</div>
+      </Card>
+
+      {(s.weakSubs.length > 0 || rec) && (
+        <Card className="p-4 mt-4 border-rose-400/20">
+          <div className="font-display font-semibold mb-2">🩹 Onde você mais erra</div>
+          {s.weakSubs.length === 0 && <p className="text-sm text-white/60">Nenhum subtema com baixo desempenho (mín. 2 respostas).</p>}
+          <div className="space-y-2">
+            {s.weakSubs.map((w) => (
+              <div key={w.cat + w.sub} className="flex items-center gap-2 text-sm">
+                <span className="w-2 h-2 rounded-full" style={{ background: CAT[w.cat].color }} />
+                <span className="flex-1 truncate">{w.sub}</span>
+                <span className="text-rose-300">{fmtPct(rate(w.acc))}</span>
+                <span className="text-white/40 text-xs">
+                  ({w.acc.c}/{w.acc.n})
+                </span>
               </div>
             ))}
           </div>
-        </Panel>
-        <Panel title="Previsão de revisões (14 dias)">
-          <div className="chart small">
-            {data.forecast.map((n, i) => (
-              <div key={i} className="chart-col" title={`${i === 0 ? 'Hoje (incl. atrasados)' : `+${i} dia(s)`}: ${n}`}>
-                <div className="chart-bar fc" style={{ height: `${(100 * n) / maxFc}%` }} />
+          {rec && (
+            <div className="mt-3 flex items-center gap-3 rounded-xl bg-violet-500/15 border border-violet-400/30 p-3">
+              <div className="flex-1 text-sm">
+                <b>Recomendação de estudo:</b> {rec.count} questões de {CAT[rec.cat].full}.
               </div>
-            ))}
-          </div>
-        </Panel>
-      </div>
+              <Btn onClick={() => store.nav({ name: 'trainingRun', config: { count: rec.count, categories: [rec.cat], wrongOnly: false } })}>Treinar</Btn>
+            </div>
+          )}
+        </Card>
+      )}
 
-      <Panel title="⚠️ Cards mais difíceis">
-        {data.hardest.length === 0 ? <p className="muted">Responda mais cards para ver esta lista.</p> : (
-          <ul className="hardest">
-            {data.hardest.map(c => (
-              <li key={c.id}>
-                <span>{c.hard && <b className="bad">DIFÍCIL </b>}{c.front}</span>
-                <small className="muted">{c.correct} acertos · {c.wrong} erros</small>
-              </li>
+      <Card className="p-4 mt-4">
+        <div className="font-display font-semibold mb-2">Por dificuldade</div>
+        <div className="space-y-2">
+          {([1, 2, 3, 4] as Difficulty[]).map((d) => {
+            const a = s.byDiff[d];
+            return (
+              <div key={d} className="flex items-center gap-2 text-sm">
+                <span className="w-28 shrink-0" style={{ color: DIFFICULTY_COLOR[d] }}>
+                  {DIFFICULTY_LABEL[d]}
+                </span>
+                <Bar pct={rate(a)} color={DIFFICULTY_COLOR[d]} />
+                <span className="w-24 text-right shrink-0 text-white/60 text-xs">{a.n ? `${fmtPct(rate(a))} (${a.n})` : '—'}</span>
+              </div>
+            );
+          })}
+        </div>
+      </Card>
+
+      <Card className="p-4 mt-4">
+        <div className="flex items-center justify-between gap-2 flex-wrap mb-2">
+          <div className="font-display font-semibold">Acertos por subtema</div>
+          <select className="input !w-auto !py-1.5" value={subCat} onChange={(e) => setSubCat(e.target.value as CategoryId | 'ALL')}>
+            <option value="ALL">Todas as áreas</option>
+            {CATEGORY_IDS.map((c) => (
+              <option key={c} value={c}>
+                {CAT[c].name}
+              </option>
             ))}
-          </ul>
-        )}
-      </Panel>
+          </select>
+        </div>
+        <div className="space-y-2 max-h-[420px] overflow-y-auto pr-1">
+          {subs.map((x) => (
+            <div key={x.cat + x.sub} className="text-sm">
+              <div className="flex justify-between gap-2">
+                <span className="truncate">
+                  <span style={{ color: CAT[x.cat].color }}>●</span> {x.sub}
+                </span>
+                <span className="text-white/60 shrink-0">
+                  {fmtPct(rate(x.acc))} · {x.acc.n}
+                </span>
+              </div>
+              <Bar pct={rate(x.acc)} color={CAT[x.cat].color} h="h-1.5" className="mt-1" />
+            </div>
+          ))}
+        </div>
+      </Card>
     </div>
   );
 }

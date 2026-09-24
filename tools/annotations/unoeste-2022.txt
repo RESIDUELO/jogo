@@ -1,0 +1,100 @@
+#1 CLI | Pneumonia adquirida na comunidade | 1
+S: Tabagista com tosse produtiva, febre e crepitações focais: a suspeita é pneumonia, e o exame inicial para confirmá-la é a radiografia de tórax.
+F: O quadro (febre, tosse produtiva, estertores crepitantes localizados em hemitórax direito, leucocitose e PCR elevada) sugere pneumonia adquirida na comunidade, possivelmente sobre DPOC não diagnosticada. O diagnóstico de PAC exige quadro clínico compatível + infiltrado novo na imagem, por isso a radiografia de tórax (PA e perfil) é o exame indicado. Hemoculturas e culturas ficam reservadas a casos graves/internados; marcadores de necrose miocárdica não têm indicação sem dor torácica; alfa-1 antitripsina é investigação de enfisema em jovens; teste para SARS-CoV-2 pode complementar, mas não substitui a imagem.
+R: Diretrizes brasileiras de PAC (SBPT).
+
+#2 CLI | Pneumonia adquirida na comunidade | 2
+S: CURB-65: só a idade ≥ 65 pontua (sem confusão, FR < 30, PA normal, ureia limítrofe) → escore 0–1, baixa mortalidade (~1,5%).
+F: O CURB-65 soma 1 ponto para cada: Confusão mental, Ureia > 50 mg/dL (ou > 7 mmol/L), FR ≥ 30 irpm, PAS < 90 ou PAD ≤ 60 mmHg e idade ≥ 65 anos. O paciente pontua apenas pela idade: escore 0–1 corresponde a mortalidade em torno de 1,5% e permite tratamento ambulatorial. Escore 2 = risco intermediário (~9%, considerar internação); 3–5 = alto risco (15–40%, internação e avaliar UTI). Comorbidades não entram no cálculo do CURB-65.
+R: Lim WS et al., Thorax 2003; Diretriz SBPT de PAC.
+
+#3 CLI | Pneumonia adquirida na comunidade | 2
+S: CURB-65 de baixo risco, estável e sem hipoxemia importante: tratamento ambulatorial com antibiótico empírico.
+F: Com CURB-65 0–1, sinais vitais estáveis, SatO₂ 93% em ar ambiente e boa condição clínica, a PAC pode ser tratada ambulatorialmente com antibioticoterapia empírica (ex.: amoxicilina ± macrolídeo, ou betalactâmico + macrolídeo/quinolona respiratória conforme comorbidades). Internação em enfermaria ou UTI seria indicada para escores maiores ou critérios de gravidade (ATS/IDSA). Antifúngico não tem papel e diurético isolado não trata infecção.
+R: Diretriz SBPT de PAC.
+
+#4 CLI | Hipertensão secundária | 3
+S: Hipertensão que exige 3 drogas, sem proteinúria e sem HAS prévia em mulher jovem sugere causa secundária — investigar estenose de artéria renal (doppler de artérias renais).
+F: Mulher jovem com hipertensão de difícil controle (3 classes) persistente no puerpério, sem critérios de pré-eclâmpsia (proteinúria e transaminases normais) e sem HAS prévia: é preciso pensar em hipertensão secundária. Em mulheres jovens, a displasia fibromuscular de artéria renal é causa clássica, e o ultrassom doppler de artérias renais é o exame de triagem. Holter, teste ergométrico e angiotomografia coronariana avaliam isquemia/arritmia, não a causa da HAS; doppler de carótidas avalia aterosclerose.
+R: Diretrizes Brasileiras de Hipertensão Arterial 2020.
+
+#5 CLI | Hipertensão na lactação | 2
+S: Na lactação, anti-hipertensivos seguros incluem metildopa, hidralazina, nifedipino e captopril/enalapril; a hidralazina é a opção correta entre as alternativas.
+F: As diretrizes brasileiras consideram compatíveis com a amamentação: metildopa, hidralazina, nifedipino, anlodipino e os IECA captopril e enalapril. BRA (telmisartana), sacubitril-valsartana e finerenona não têm segurança estabelecida na lactação e devem ser evitados; prazosina tem poucos dados. Assim, a hidralazina é a alternativa segura para o lactente.
+R: Diretrizes Brasileiras de Hipertensão Arterial 2020 — hipertensão na gestação e lactação.
+
+#6 CLI | Nódulo tireoidiano | 1
+S: Todo nódulo tireoidiano começa com TSH e ultrassom de tireoide; a cintilografia só entra se o TSH vier baixo.
+F: Diante de nódulo tireoidiano palpável, a avaliação inicial é dosagem de TSH e ultrassonografia da tireoide. Se o TSH estiver suprimido, faz-se cintilografia para pesquisar nódulo hiperfuncionante (geralmente benigno, dispensa PAAF). Com TSH normal/elevado, a indicação de punção aspirativa por agulha fina é guiada pelas características ultrassonográficas (TI-RADS/ATA) e pelo tamanho. Ressonância não tem papel inicial e o encaminhamento cirúrgico depende do resultado citológico.
+R: American Thyroid Association 2015; SBEM.
+
+#7 CLI | Artrite reumatoide | 1
+S: O anti-CCP é o exame mais específico (e com boa sensibilidade) para artrite reumatoide.
+F: O anticorpo antipeptídeo citrulinado cíclico (anti-CCP) tem especificidade em torno de 95% e sensibilidade semelhante ou superior à do fator reumatoide, além de valor prognóstico (doença mais erosiva). O fator reumatoide é menos específico (positivo em hepatopatias, infecções crônicas, Sjögren, idosos). VHS e PCR são marcadores inflamatórios inespecíficos; FAN é típico do lúpus; complemento não é útil no diagnóstico da AR.
+R: Critérios ACR/EULAR 2010.
+
+#8 CLI | Síndrome coronariana aguda | 3
+S: Dor torácica há 30 min com supra de ST, em local sem hemodinâmica e sem acesso rápido à angioplastia: a conduta é fibrinólise endovenosa.
+F: O ECG mostra infarto agudo do miocárdio com supradesnivelamento de ST. A reperfusão é a prioridade: angioplastia primária se o tempo porta-balão for < 90–120 min; em UPA rural, sem acesso à hemodinâmica nesse prazo, o fibrinolítico deve ser feito em até 30 min da chegada (idealmente nas primeiras 3 h de sintomas), seguido de transferência para centro com cateterismo. Aguardar transferência de 6 h, fazer angiotomografia ou cardioversão elétrica atrasaria a reperfusão; heparina isolada não reperfunde.
+R: Diretriz SBC de IAM com supradesnivelamento do ST; AHA/ACC.
+
+#9 CLI | Síndrome coronariana aguda | 2
+S: Todo paciente pós-IAM deve receber estatina de alta potência, como atorvastatina 80 mg, independentemente do LDL basal.
+F: Na prevenção secundária após síndrome coronariana aguda, recomenda-se estatina de alta intensidade (atorvastatina 40–80 mg ou rosuvastatina 20–40 mg) para reduzir eventos, com meta de LDL < 50–55 mg/dL. O AAS de manutenção é 100 mg/dia (300 mg é dose de ataque). Cilostazol é usado em claudicação. A anticoagulação da FA seria considerada separadamente, mas a medicação classicamente indicada no pós-alta do IAM entre as opções é a estatina de alta potência.
+R: Diretriz Brasileira de Dislipidemias 2017; ESC 2023 SCA.
+
+#10 CLI | Rastreamento de câncer colorretal | 2
+S: Síndrome de Lynch exige rastreamento precoce (colonoscopia a partir de 20–25 anos, a cada 1–2 anos).
+F: Na síndrome de Lynch (câncer colorretal hereditário não polipose), o risco de CCR é muito elevado e a colonoscopia deve começar aos 20–25 anos (ou 2–5 anos antes do caso mais jovem da família), repetida a cada 1–2 anos. Parente de 1º grau com adenoma avançado ou CCR antecipa o rastreamento para 40 anos (ou 10 anos antes do caso índice). A doença inflamatória intestinal também exige vigilância, mas não se enquadra como "história familiar". Doença celíaca e câncer não gastrointestinal não modificam o rastreamento.
+R: US Multi-Society Task Force on Colorectal Cancer.
+
+#11 CLI | Glomerulopatias | 3
+S: Hematúria dismórfica/cilindros, proteinúria e perda rápida de função renal (Cr 8,7) em dias = glomerulonefrite rapidamente progressiva.
+F: O paciente tem síndrome nefrítica (hematúria, cilindros, proteinúria) com insuficiência renal grave de instalação rápida, além de sintomas sistêmicos e de vias aéreas superiores (rouquidão, odinofagia, artralgias). Essa combinação configura glomerulonefrite rapidamente progressiva (GNRP), cujo substrato é a glomerulonefrite crescêntica. Nefropatia por IgA costuma causar hematúria episódica sem perda tão rápida de função; síndrome nefrótica não explica a hematúria intensa com IRA; nefrolitíase não causa proteinúria nefrótica.
+R: KDIGO Glomerular Diseases 2021.
+
+#12 CLI | Vasculites | 2
+S: GNRP + vias aéreas superiores + c-ANCA (anti-PR3) positivo = granulomatose com poliangeíte (Wegener).
+F: A granulomatose com poliangeíte (antiga granulomatose de Wegener) acomete vias aéreas superiores (sinusite, rouquidão), pulmões e rins (GNRP pauci-imune), com c-ANCA/anti-PR3 positivo em até 90% dos casos. Churg-Strauss (granulomatose eosinofílica) se associa a asma, eosinofilia e p-ANCA; poliarterite nodosa é ANCA-negativa e não causa glomerulonefrite; vasculite leucocitoclástica é cutânea. Artrite reumatoide juvenil não explica o quadro.
+R: Classificação de Chapel Hill 2012; ACR/EULAR 2022.
+
+#13 CLI | Parada cardiorrespiratória | 1
+S: Na PCR, o que mais reduz mortalidade no início é compressão torácica de alta qualidade (e desfibrilação precoce quando indicada).
+F: Compressões torácicas efetivas (100–120/min, 5–6 cm de profundidade, retorno completo do tórax e mínimas interrupções) mantêm a perfusão coronariana e cerebral e são o pilar do suporte básico. Intubação precoce não melhora sobrevida e pode interromper compressões; adrenalina é administrada depois, a cada 3–5 min; ventilação com máscara é importante mas secundária às compressões. "Cardioversão" não é o termo para ritmos de PCR — em FV/TV sem pulso faz-se desfibrilação.
+R: AHA Guidelines for CPR and ECC 2020.
+
+#14 CLI | Tromboembolismo pulmonar | 2
+S: Hemoptise é um dos critérios do escore de Wells para TEP.
+F: Critérios de Wells para TEP: sinais clínicos de TVP (3), TEP como diagnóstico mais provável (3), FC > 100 bpm (1,5), imobilização ≥ 3 dias ou cirurgia nas últimas 4 semanas (1,5), TVP/TEP prévio (1,5), hemoptise (1) e câncer ativo (1). Idade > 65 anos aparece no escore de Genebra, não no de Wells. AVC prévio e PAS > 100 mmHg não fazem parte; a janela cirúrgica é de 4 semanas, e não 8.
+R: Wells PS et al., 2000; ESC Pulmonary Embolism 2019.
+
+#15 CLI | Gota | 1
+S: Diuréticos tiazídicos (hidroclorotiazida) reduzem a excreção renal de ácido úrico e precipitam crises de gota.
+F: Tiazídicos e diuréticos de alça aumentam a reabsorção tubular de urato, elevando o ácido úrico sérico e desencadeando crises gotosas. Losartana, ao contrário, tem efeito uricosúrico leve; os iSGLT2 (empagliflozina) também reduzem o ácido úrico. Metformina e sinvastatina não têm associação relevante com gota.
+R: ACR Gout Guideline 2020.
+
+#16 CLI | Doença hepática gordurosa (DHGNA/MASLD) | 2
+S: A DHGNA é manifestação hepática da resistência insulínica — por isso se associa à síndrome dos ovários policísticos.
+F: A doença hepática gordurosa não alcoólica (hoje MASLD) está ligada à síndrome metabólica e à resistência à insulina: obesidade, DM2, dislipidemia, hipotireoidismo, apneia do sono e síndrome dos ovários policísticos. Hepatite A é aguda e não evolui para cronicidade; hiperprolactinemia, hipertireoidismo e hipergonadismo não são associações fisiopatológicas clássicas (o hipogonadismo, sim).
+R: AASLD Practice Guidance NAFLD 2023.
+
+#17 PRE | Notificação compulsória | 2
+S: Febre amarela é de notificação compulsória imediata (em até 24 h) mesmo existindo vacina.
+F: Pela Lista Nacional de Notificação Compulsória (Portaria de Consolidação nº 4/2017 e atualizações), febre amarela exige notificação imediata às três esferas de gestão, pelo potencial de urbanização e surtos. Tétano, hanseníase e sífilis são de notificação semanal; zika é semanal (imediata apenas óbitos ou casos em gestantes em algumas situações). A pergunta destaca que, apesar de existir vacina, a febre amarela continua exigindo notificação imediata.
+R: Ministério da Saúde — Lista Nacional de Notificação Compulsória.
+
+#18 CLI | Linfomas | 1
+S: Células de Reed-Sternberg na biópsia de linfonodo são a marca do linfoma de Hodgkin.
+F: O linfoma de Hodgkin clássico se caracteriza pelas células de Reed-Sternberg (grandes, binucleadas, com nucléolos proeminentes em "olhos de coruja"), CD15+ e CD30+, em meio a infiltrado inflamatório reativo. Células de Leydig são células testiculares produtoras de testosterona; "mielócitos azurófilos" e relação neutrófilo-linfócito não são achados diagnósticos de linfoma.
+R: Classificação OMS das neoplasias linfoides.
+
+#19 CLI | Derrame pleural | 2
+S: Derrame por linfoma é exsudato; pelos critérios de Light, LDH pleural/sérico > 0,6 define exsudato.
+F: Critérios de Light (basta 1 para exsudato): proteína pleural/sérica > 0,5; LDH pleural/sérica > 0,6; LDH pleural > 2/3 do limite superior normal sérico. Derrames neoplásicos (como no linfoma) são exsudatos. As alternativas A e C descrevem características de transudato; glicose > 50 mg/dL e leucócitos baixos não fazem parte dos critérios de Light.
+R: Light RW, 1972; Diretriz SBPT de derrame pleural.
+
+#20 CLI | Infecção urinária | 2
+S: Alterações anatômicas/obstrutivas do trato urinário, como o prolapso genital, tornam a ITU complicada.
+F: ITU complicada é aquela associada a condições que aumentam o risco de falha terapêutica: obstrução ou alteração estrutural do trato urinário (prolapso genital com resíduo pós-miccional, litíase, bexiga neurogênica), cateteres, imunossupressão, gestação, sexo masculino e DRC. Diuréticos, enurese noturna e hipertensão arterial não são fatores de complicação; "espessamento vesical" isolado é achado inespecífico.
+R: EAU Guidelines on Urological Infections.
+

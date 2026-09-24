@@ -1,0 +1,1410 @@
+[
+ {
+  "number": 1,
+  "stem": "Homem de 65 anos, portador de DPOC, queixa-se de dispneia aos moderados esforços há 1 ano. Durante avaliação, apresentou VEF 1 de 72%, mMRC de 1 e eosinófilos plasmáticos de 330 células/μL. No último ano, teve dois episódios de exacerbações, sem necessidade de internação hospitalar. O tratamento mais adequado para este paciente deve ser:",
+  "alternatives": {
+   "A": "β 2-agonista inalatório de longa ação, anticolinérgico inalatório de longa ação e corticoide inalatório.",
+   "B": "β 2-agonista inalatório de longa ação e corticoide inalatório, apenas.",
+   "C": "Anticolinérgico inalatório de longa ação e corticoide inalatório, apenas.",
+   "D": "β 2-agonista inalatório de longa ação, apenas.",
+   "E": "Corticoide inalatório, apenas."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 2,
+  "stem": "Homem de 37 anos, trabalhador de uma empresa de manipulação de aves, procura atendimento médico por tosse seca há 1 mês, acompanhada de dispneia progressiva. Ao exame físico, possui ausculta pulmonar com redução do murmúrio vesicular em bases pulmonares bilateralmente e crepitações finas. A tomografia computadorizada de tórax mostrou presença de vidro fosco esparso, além de áreas de aprisionamento aéreo alternadas com áreas pulmonares sem lesão. Diante dos achados, a principal hipótese diagnóstica é",
+  "alternatives": {
+   "A": "Pneumonia de organização criptogênica.",
+   "B": "Fibrose pulmonar idiopática.",
+   "C": "Pneumonite por hipersensibilidade.",
+   "D": "Sarcoidose.",
+   "E": "Pneumonia eosinofílica aguda."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 3,
+  "stem": "Homem de 37 anos queixa-se de dor lombar há 6 meses, com piora progressiva. Refere que a dor é mais frequente durante a noite e que melhora ao se levantar da cama e com a caminhada. Há 8 meses, refere ter apresentado crises ocasionais de dor e edema em dedos de mãos, que melhoram com uso de anti-inflamatórios. Apresenta radiografias de coluna torácica, lombar e bacia normais. Para uma investigação adequada da principal hipótese diagnóstica, deve-se realizar",
+  "alternatives": {
+   "A": "Dosagem de HLA DQ2.",
+   "B": "Dosagem de HLA DQ8.",
+   "C": "Tomografia de coluna lombar.",
+   "D": "Ressonância magnética de coluna lombar.",
+   "E": "Ressonância magnética de bacia para sacroilíacas."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 4,
+  "stem": "Mulher de 22 anos apresenta-se com queixa de fadiga há 2 anos e episódios de febre com a máxima temperatura aferida de 38,5 oC. Refere apresentar úlceras orais com frequência, além de dor, edema e eritema em articulações de mãos. As queixas apresentam resolução espontânea. Não possui outras queixas. Ao exame físico, apresenta eritema malar bilateral, sem demais alterações. Laboratorialmente, apresenta FAN positivo, com anticorpos Anti-DNAd, Anti-SSA e Anti-SSB positivos, com exames de hemograma, complemento sérico, creatinina, sumário de urina e proteinúria negativos. Considerando a principal hipótese diagnóstica, o tratamento mais apropriado para esta paciente é",
+  "alternatives": {
+   "A": "Hidroxicloroquina e anti-inflamatórios não esteroidais.",
+   "B": "Hidroxicloroquina e corticoides tópicos.",
+   "C": "Anti-inflamatórios não esteroidais e corticoides sistêmicos.",
+   "D": "Anti-inflamatórios não esteroidais e metotrexato.",
+   "E": "Metotrexato e corticoides sistêmicos."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 5,
+  "stem": "Mulher de 58 anos, portadora de diabete melito tipo 2, apresenta em avaliação de rotina valor de FIB-4 de 2,0. A próxima conduta deve ser",
+  "alternatives": {
+   "A": "Repetir o escore FIB-4 em 2 anos.",
+   "B": "Repetir o escore FIB-4 em 1 ano.",
+   "C": "Solicitar RNM hepática.",
+   "D": "Solicitar elastografia hepática.",
+   "E": "Realizar biópsia hepática."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 6,
+  "stem": "Homem de 64 anos apresenta queixa de diarreia há 8 meses. O paciente caracteriza as fezes como volumosas e claras, com aspecto gorduroso. Há 1 ano, foi diagnosticado com diabete melito. Em investigação, apresenta pâncreas atrofiado e com calcificações em tomografia de abdome. A principal etiologia para o quadro clínico citado é",
+  "alternatives": {
+   "A": "Litíase biliar.",
+   "B": "Ingestão crônica de álcool.",
+   "C": "Hipercalcemia.",
+   "D": "Pancreas divisum.",
+   "E": "Neoplasia."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 7,
+  "stem": "Mulher de 51 anos possui histórico de fraqueza e adinamia há 3 meses. Ela realizou hemograma para investigação com resultado de 10,2 g/dL de hemoglobina, leucócitos de 45000 células/mm3 e plaquetas de 90000/mm3. No mielograma, apresenta 17% de blastos. Para realizar o diagnóstico de leucemia mieloide aguda, deve-se complementar a investigação com",
+  "alternatives": {
+   "A": "Exame de citogenética.",
+   "B": "Imunofenotipagem.",
+   "C": "Teste de biologia molecular.",
+   "D": "Marcadores bioquímicos (DHL e ácido úrico).",
+   "E": "Tempo de atividade de protrombina, D-dímero e fibrinogênio."
+  },
+  "answer": null,
+  "annulled": true,
+  "images": []
+ },
+ {
+  "number": 8,
+  "stem": "Homem de 23 anos, portador de anemia falciforme, apresenta-se no pronto-socorro com dor torácica e tosse há 6 horas. Ao exame físico, possuía saturação periférica de oxigênio de 85% em ar ambiente, necessitando de oxigênio por cateter nasal 2 L/min, e crepitações finas em base de hemitórax direito. Radiografia de tórax mostrou presença de opacidade pulmonar em base pulmonar direita. Hemograma com hemoglobina de 10 g/dL. De acordo com esee caso, é correto afirmar que",
+  "alternatives": {
+   "A": "Está indicada transfusão com alvo de hemoglobina de 12 g/dL.",
+   "B": "Está indicada realização de eritrocitoaférese na situação clínica descrita.",
+   "C": "Antibioticoterapia empírica deve ser iniciada precocemente.",
+   "D": "Existe indicação para realização de AAS e anticoagulação terapêutica.",
+   "E": "Restrição hídrica deve ser iniciada pelo risco de congestão pulmonar por comprometimento cardíaco."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 9,
+  "stem": "Mulher de 42 anos, portadora do vírus do HIV, encontra-se atualmente assintomática com dosagem de linfócitos T CD4 de 170 células/mm3. Deve-se realizar profilaxia primária para",
+  "alternatives": {
+   "A": "Toxoplasmose.",
+   "B": "Citomegalovírus.",
+   "C": "Criptococose.",
+   "D": "Histoplasmose.",
+   "E": "Pneumocistose."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 10,
+  "stem": "Homem de 38 anos apresenta-se com eritema cutâneo, linfadenopatia generalizada e febre. Durante a investigação, paciente apresentou VDRL reagente e teste rápido para sífilis não reagente. Diante de tal achado, a próxima conduta deve ser",
+  "alternatives": {
+   "A": "Considerar o VDRL como falso positivo.",
+   "B": "Repetir o teste rápido para sífilis.",
+   "C": "Repetir o VDRL.",
+   "D": "Solicitar FTA-Abs.",
+   "E": "Considerar sífilis tratada."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 11,
+  "stem": "De acordo com os novos critérios globais para o diagnóstico de síndrome do desconforto respiratório agudo de 2023, é possível afirmar que",
+  "alternatives": {
+   "A": "É possível utilizar a relação entre SpO2/FiO2 como substituto do PaO2/FiOS2 em cenários de poucos recursos, considerando lesão valores abaixo de 350.",
+   "B": "A ultrassonografia pulmonar pode ser utilizada como exame de imagem substituindo tomografia ou radiografia de tórax para realização do diagnóstico.",
+   "C": "A congestão pulmonar pode ser excluída ao utilizar valores de pressão venosa central menores que 12 mmHg.",
+   "D": "É necessária presença de ventilação mecânica invasiva com valores mínimos de PEEP de 5 cm H2O para realização do diagnóstico.",
+   "E": "O dano pulmonar deve ser instalado no prazo de 1 mês para ser considerado o quadro agudo, não sendo possível o diagnóstico após esse período."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 12,
+  "stem": "De acordo com os critérios de Beers (2019), é uma droga associada a forte efeito anticolinérgico, com possibilidade de hipotensão ortostática:",
+  "alternatives": {
+   "A": "Gabapentina.",
+   "B": "Duloxetina.",
+   "C": "Carbamazepina.",
+   "D": "Nortriptilina.",
+   "E": "Ranitidina."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 13,
+  "stem": "Homem de 62 anos com confusão mental e rebaixamento do nível de consciência. Exame físico com pressão arterial de 85 x 52 mmHg, sem outras alterações. Exames laboratoriais com sódio sérico 125 mEq/L e sódio urinário 68 mEq/L. A principal hipótese diagnóstica é",
+  "alternatives": {
+   "A": "Diarreia.",
+   "B": "Hipotireoidismo.",
+   "C": "Insuficiência adrenal primária.",
+   "D": "Insuficiência adrenal secundária.",
+   "E": "SIADH."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 14,
+  "stem": "Mulher de 50 anos apresenta-se em consulta de rotina, assintomática, para avaliação. Ao exame físico, apresenta a pressão arterial de 142 x 88 mmHg, sendo então solicitado MAPA. Para o diagnóstico de hipertensão arterial sistêmica, o resultado deve ser",
+  "alternatives": {
+   "A": "125 x 75 mmHg durante o sono, sendo classificado como hipertensão estágio I.",
+   "B": "130 x 80 mmHg na vigília, sendo classificada como hipertensão estágio I.",
+   "C": "125 x 75 mmHg na média de 24 horas, sendo classificada como hipertensão estágio I.",
+   "D": "125 x 75 mmHg durante o sono, sendo classificado como hipertensão limítrofe.",
+   "E": "130 x 80 mmHg na vigília, sendo classificado como hipertensão limítrofe."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 15,
+  "stem": "Homem de 78 anos refere febre, com temperatura máxima de 38,5 °C e tosse há 3 dias. Há 1 dia, apresenta dispneia. Ao exame físico, apresenta-se consciente, orientado, pressão arterial de 110 x 70 mmHg, frequência respiratória de 24 irpm, saturação periférica de oxigênio de 88% em ar ambiente, ausculta respiratória com crepitações finas em hemitórax esquerdo. O tratamento deve ser",
+  "alternatives": {
+   "A": "Ambulatorial com macrolideo.",
+   "B": "Ambulatorial com beta-lactâmicos e macrolídeos.",
+   "C": "Hospitalar com quinolona e macrolídeos.",
+   "D": "Hospitalar com cefalosporina de 3a geração e macrolídeo.",
+   "E": "Hospitalar com beta-lactâmicos e quinolona."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 16,
+  "stem": "É indicação de infusão intravenosa de bicarbonato de sódio para pacientes com intoxicação por antidepressivos tricíclicos:",
+  "alternatives": {
+   "A": "Duração do QRS no eletrocardiograma acima de 100 ms.",
+   "B": "Escala de coma de Glasgow de 9.",
+   "C": "Duração do intervalo PR abaixo de 200 ms.",
+   "D": "Duração do intervalo QT no eletrocardiograma acima de 450 ms.",
+   "E": "Presença de sinais e sintomas de síndrome anticolinérgica."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 17,
+  "stem": "Sobre o quadro clínico dos pacientes que apresentam interrupção abrupta do consumo crônico de álcool, é correto afirmar que",
+  "alternatives": {
+   "A": "Crises convulsivas ocorrem tardiamente, geralmente após 72 horas de abstinência.",
+   "B": "Crises convulsivas apresentam-se de modo precoce, geralmente nas primeiras 24 horas de abstinência.",
+   "C": "Alucinose alcoólica ocorre geralmente em até 6 horas da interrupção do consumo de álcool.",
+   "D": "Delirium tremens é a manifestação mais comum em pacientes com abstinência alcoólica.",
+   "E": "Delirium tremens manifesta-se desde períodos precoces até 30 dias após a abstinência."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 18,
+  "stem": "Homem de 63 anos queixa-se de dor torácica precordial difusa de forte intensidade iniciada após evento emocional, fazendo-o procurar o pronto-socorro. Eletrocardiograma mostrou infradesnivelamento do segmento ST de V4 a V6, sem outras alterações. Após tratamento inicial com antiagregação, anticoagulação e nitratos, paciente manteve a dor. Troponina apresentou resultado positivo. A angiografia coronariana invasiva deve ser realizada",
+  "alternatives": {
+   "A": "Imediatamente.",
+   "B": "Em até 6 horas.",
+   "C": "Em até 12 horas.",
+   "D": "Em até 24 horas.",
+   "E": "Em até 48 horas."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 19,
+  "stem": "Homem de 55 anos queixa-se de edema em membros inferiores e face há 3 meses. Evoluiu de maneira progressiva para apresentação de anasarca. Não apresenta outras comorbidades conhecidas ou uso de medicamentos. Ao exame físico, apresenta pressão arterial 110 x 60 mmHg e demais achados normais. Em exames laboratoriais, apresenta proteinúria de 5,8 g em 24 horas e anti-PLA2R positivo. Diante do caso clínico, a principal hipótese diagnóstica é",
+  "alternatives": {
+   "A": "Glomerulopatía membranoproliferativa.",
+   "B": "Glomeruloesclerose segmentar e focal.",
+   "C": "Nefropatia membranosa.",
+   "D": "Doença por lesão mínima.",
+   "E": "Nefropatia por IgA."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 20,
+  "stem": "Homem de 66 anos refere dispneia progressiva aos esforços há 1 ano. Relata que iniciou com dispneia aos grandes esforços, encontrando-se hoje com dispneia aos moderados esforços. Refere ainda despertar noturno devido à dispneia, com necessidade de levantar-se da cama para melhorar, e piora do sintoma ao se deitar. Ao exame físico, possui presença de 3a bulha à ausculta cardíaca e edema de membros inferiores, sem demais alterações. Antecedente patológico de diabete melito tipo 2. É contraindicada para este paciente a introdução de",
+  "alternatives": {
+   "A": "Semaglutida.",
+   "B": "Sitagliptina.",
+   "C": "Liraglutida.",
+   "D": "Linagliptina.",
+   "E": "Saxagliptina."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 21,
+  "stem": "O conceito de antissepsia é:",
+  "alternatives": {
+   "A": "Conjunto das medidas que evitam a chegada dos germes a locais que habitualmente não os contenham.",
+   "B": "Procedimento utilizado para a destruição de todas as formas de vida do arsenal médico cirúrgico (instrumentos e materiais).",
+   "C": "Processo de destruição de microrganismos em determinado objeto, ambiente ou campo operatório.",
+   "D": "Processo empregado na limpeza de superfícies (móveis, parede, soalho) e de excretas.",
+   "E": "Processo que diminui a flora transitória e elimina a flora residente da pele e fâneros."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 22,
+  "stem": "Com relação ao trauma raquimedular, assinale a alternativa correta.",
+  "alternatives": {
+   "A": "No caso do paciente lúcido, consciente, sem deficit neurológicos focais, que não apresenta queixa de dor à palpação da coluna vertebral, sem intoxicação exógena, sem outras lesões graves, os exames de imagem da coluna não são necessários.",
+   "B": "A fratura de Jefferson - fratura completa do processo odontoide da C2 - é causada, mais frequentemente, por mecanismo de enforcamento.",
+   "C": "A síndrome de Brown-Séquard caracteriza-se por deficit motor contralateral e deficit da sensibilidade ipsilateral.",
+   "D": "O exame de maior acurácia diagnóstica para compressão medular após trauma é a mielografia contrastada.",
+   "E": "O perfil obtido por dados estatísticos no Brasil aponta, como maior incidência de trauma raquimedular, mulheres idosas apresentando quedas da própria altura como principal mecanismo de trauma."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 23,
+  "stem": "Curetas, ruginas e cisalhas são consideradas como instrumentos cirúrgicos de",
+  "alternatives": {
+   "A": "Síntese.",
+   "B": "Exérese.",
+   "C": "Hemostasia.",
+   "D": "Diérese.",
+   "E": "Diaferese."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 24,
+  "stem": "Uma criança, sexo feminino, 5 anos de idade, deu entrada na sala de cirurgia para realização de cirurgia eletiva (correção de refluxo gastroesofágico) e foi submetida à anestesia geral. Após intubação orotraqueal, a saturação de oxigênio caiu para 83%. O anestesista solicitou rX de tórax, conforme demonstra a imagem. A hipoxemia da criança foi causada por qual das situações a seguir?",
+  "alternatives": {
+   "A": "Pneumotórax simples.",
+   "B": "Intubação seletiva.",
+   "C": "Pneumotórax hipertensivo.",
+   "D": "Fístula esofagotraqueal.",
+   "E": "Lesão traqueobrônquica."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [
+   "2025-q024-1.jpg"
+  ]
+ },
+ {
+  "number": 25,
+  "stem": "O fio de sutura poliglecaprone é classificado como sendo",
+  "alternatives": {
+   "A": "Inabsorvível, orgânico e monofilamentar.",
+   "B": "Inabsorvível, sintético e monofilamentar.",
+   "C": "Inabsorvível, sintético e multifilamentar.",
+   "D": "Absorvível, orgânico e monofilamentar.",
+   "E": "Absorvível, sintético e monofilamentar."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 26,
+  "stem": "Segundo critérios adotados pelo Colégio Americano e Brasileiro de Cirurgiões, é considerada como cirurgia limpa e sem indicação de antibioticoprofilaxia (considerando-se paciente não portador de imunodeficiência ou comorbidades):",
+  "alternatives": {
+   "A": "Colecistectomia eletiva por colelitíase assintomática.",
+   "B": "Prostatectomia por hiperplasia prostática benigna.",
+   "C": "Artroscopia de joelho por rotura de menisco.",
+   "D": "Diverticulectomia de Meckel.",
+   "E": "Exérese de lesão leucoplásica da boca."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 27,
+  "stem": "O cálculo do índice tornozelo-braquial (ITB) pode auxiliar na avaliação de qual das situações a seguir?",
+  "alternatives": {
+   "A": "Neuropatias de origem metabólica, como diabetes mellitus, ou degenerativas, em que o cálculo do ITB contribui para a mensuração do grau de neuropatia, o que auxilia na opção terapêutica.",
+   "B": "Encurtamento de membros ocasionado por fraturas de membros inferiores, mal avaliadas e inadequadamente tratadas, gerando prejuízo em sua consolidação e na recuperação do paciente.",
+   "C": "Se estiver diminuído, indica risco aumentado de trombose venosa profunda de membros inferiores e tromboembolismo pulmonar, por maior chance de formação de trombos em veias profundas.",
+   "D": "Presença da doença arterial periférica e seguimento pós-operatório de procedimentos arteriais, seja como parâmetro de revascularização do membro, seja no diagnóstico de possíveis complicações.",
+   "E": "Aneurismas de aorta torácica, em que a diferença das medidas de aferição da pressão arterial no membro superior e inferior aponta fortemente para o diagnóstico de dissecção."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 28,
+  "stem": "Em relação aos aspectos etiopatológicos da pancreatite aguda, assinale a alternativa correta.",
+  "alternatives": {
+   "A": "Em aproximadamente 80% dos casos, o fator epidemiológico é conhecido, sendo o fator biliar o mais comum da forma aguda.",
+   "B": "A presença de calcificação parenquimatosa no pâncreas sugere fortemente o diagnóstico da pancreatite de etiologia biliar.",
+   "C": "O emprego de agentes antirretrovirais usados para o tratamento de AIDS não é considerado fator etiológico da pancreatite aguda.",
+   "D": "As malformações congênitas pancreáticas, como pâncreas anular, pancreas divisum e agenesia dorsal do pâncreas não estão relacionadas com a pancreatite aguda e crônica.",
+   "E": "1% a 4% dos pacientes têm uma resposta inflamatória rapidamente progressiva, evoluindo para formas graves da pancreatite."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 29,
+  "stem": "Mulher de 32 anos deu entrada em unidade de pronto atendimento com quadro de dor abdominal de início súbito, em facada, há 40 minutos, intensa; inicialmente em epigástrio e posteriormente irradiou-se para todo o abdome, associada a náuseas sem vômitos. Refere ser portadora de Lúpus, em uso de corticoides e anti-inflamatórios. Monitorização revela estabilidade hemodinâmica. Ao exame clínico, o abdome estava rígido e com ausência de ruídos hidroaéreos. A radiografia de abdome (posição ortostática) está demonstrada a seguir. A conduta mais indicada para essa paciente deverá ser",
+  "alternatives": {
+   "A": "Videolaparoscopia.",
+   "B": "Endoscopia digestiva alta.",
+   "C": "Ultrassonografia com contraste.",
+   "D": "Colonoscopia virtual.",
+   "E": "Colangiorressonância."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [
+   "2025-q029-1.jpg"
+  ]
+ },
+ {
+  "number": 30,
+  "stem": "Com relação aos divertículos medioesofágicos, assinale a alternativa correta.",
+  "alternatives": {
+   "A": "Na maioria dos casos, trata-se de um pseudodivertículo de pulsão.",
+   "B": "São realizados estudos manométricos em todos os pacientes, sintomáticos ou não, para identificar um distúrbio motor primário.",
+   "C": "A hemoptise é sintoma comum, ocorrendo por fistulização do divertículo para a traqueia.",
+   "D": "Em geral estão à esquerda, em virtude da sobreabundância de estruturas na região mediotorácica, no lado direito.",
+   "E": "A endoscopia não é importante no diagnóstico, pois esse tipo de divertículo não está relacionado ao câncer esofágico."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 31,
+  "stem": "Homem de 34 anos apresentou-se em consulta com uma tumoração em região inguinal direita há 8 meses, que aumenta com esforços. Nega dor ou vermelhidão local. Nega cirurgias prévias. No exame físico, o cirurgião realizou a manobra de Landivar e, pelo exame, o abaulamento pôde ser notado na ponta do seu dedo indicador. Indicada cirurgia e, durante ela, observou-se que o anel inguinal interno estava dilatado, e a parede inguinal posterior estava intacta. O diagnóstico do paciente é hérnia inguinal classificada como:",
+  "alternatives": {
+   "A": "Nyhus la.",
+   "B": "Nyhus lb.",
+   "C": "Nyhus II.",
+   "D": "Nyhus Illa.",
+   "E": "Nyhus IVb."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 32,
+  "stem": "Homem de 55 anos deu entrada no Pronto-Socorro com quadro de dor abdominal em baixo ventre e fossa ilíaca esquerda há 2 dias, associado à febre baixa nas últimas 24 horas. Nega quaisquer outras queixas clínicas. Nega quadro clínico semelhante prévio. Ao exame físico, encontrava-se em bom estado geral, subfebril (37,7 °C) e estável hemodinamicamente. Apresentava abdome flácido, com sinais de irritação peritoneal localizada em fossa ilíaca esquerda. O exame padrão-ouro para confirmar a hipótese diagnóstica do paciente é:",
+  "alternatives": {
+   "A": "Colonoscopia.",
+   "B": "Ultrassom abdominal com contraste.",
+   "C": "RX de abdome em 3 posições.",
+   "D": "Enema opaco.",
+   "E": "Tomografia abdominal."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 33,
+  "stem": "A síndrome de Ogilvie caracteriza-se por qual das afirmações a seguir?",
+  "alternatives": {
+   "A": "Laceração da parede do esôfago, causada por vômitos frequentes, levando à hemorragia digestiva alta.",
+   "B": "Perfuração não traumática do esôfago, causada por esforço excessivo (vômitos, deglutição forçada ou obstrução tumoral).",
+   "C": "Individualização da densidade de partes moles da parede intestinal com o gás intraluminal e no peritônio.",
+   "D": "Distensão do cólon, com sinais e sintomas de obstrução colônica, na ausência de uma causa física real de obstrução.",
+   "E": "Trata-se de um distúrbio que se caracteriza por episódios de desconforto abdominal, dor, diarreia e prisão de ventre."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 34,
+  "stem": "Com relação ao câncer gástrico do tipo intestinal, de acordo com a classificação de Lauren, assinale a alternativa correta.",
+  "alternatives": {
+   "A": "Sua incidência é maior no gênero feminino.",
+   "B": "O fator ambiental prevalece sobre o familiar.",
+   "C": "A disseminação é, preferencialmente, por via linfática e transmural.",
+   "D": "É pouco diferenciado, com formação de células em anel de sinete.",
+   "E": "Acomete grupo etário mais jovem que o difuso."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 35,
+  "stem": "Em uma resposta hipermetabólica grave, derivada de cirurgia ou trauma, há um aumento significativo da necessidade de aminoácidos e proteínas, e muitos pacientes recebem suporte nutricional complementar por via enteral. Nessa situação em que o sistema venoso portal transporta os aminoácidos ingeridos até o fígado, a taxa de aminoácidos que atingem a circulação sistêmica para suprir o pool plasmático de aminoácidos é de",
+  "alternatives": {
+   "A": "25%.",
+   "B": "40%.",
+   "C": "55%.",
+   "D": "68%.",
+   "E": "73%."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 36,
+  "stem": "A Nutrição Parenteral Total envolve a administração de nutrientes pré-digeridos via solução hiperosmolar por acesso venoso geralmente central. Assinale a alternativa correta em relação ao exposto.",
+  "alternatives": {
+   "A": "Suas indicações são: desnutrição grave e hipoglicemia persistente.",
+   "B": "A hipertrigliceridemia e a colecistite aguda são complicações dessa terapia.",
+   "C": "Suas contraindicações são: pancreatite aguda grave e fístula êntero-cutânea de baixo débito.",
+   "D": "Suas vantagens incluem: fácil disponibilidade e boa tolerância.",
+   "E": "Deve ser utilizada de forma sistemática, no préoperatório de pacientes graves nos 7 a 10 dias que antecedem o ato operatório."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 37,
+  "stem": "Homem de 30 anos deu entrada na Emergência de um Hospital de Referência em Trauma, por trauma abdominal fechado em hipocôndrio e flanco esquerdos por objeto rombo. Estável hemodinamicamente. Após atendimento inicial, segundo os preceitos do Advanced Trauma Life Support (ATLS®), em que os demais segmentos do corpo estavam sem lesões, foi indicada tomografia de abdome com contraste IV, que revelou um hematoma subcapsular esplênico, não expansivo, área de superfície de 15%; intraparenquimatoso, de 1,5 cm de diâmetro; e uma laceração na cápsula esplênica, com sangramento ativo, 2 cm de profundidade no parênquima que não envolve vasos trabeculares. Ausência de outras lesões abdominais. Taxas de hematócrito e hemoglobina estáveis. Nessa situação, a abordagem mais indicada, atualmente é:",
+  "alternatives": {
+   "A": "Sutura da laceração por laparotomia.",
+   "B": "Esplenectomia subtotal.",
+   "C": "Tratamento não operatório.",
+   "D": "Angiografia com embolização da artéria esplênica.",
+   "E": "Esplenectomia total."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 38,
+  "stem": "Homem de 46 anos sofreu queda da laje; ao ser admitido no hospital, conduzido por familiares, apresentava-se sonolento, com fala arrastada e com otorragia à esquerda e ferimento lacero-contuso em região frontoparietal esquerda e períodos de consciência intercalados com sonolência excessiva e torpor. A tomografia computadorizada é apresentada a seguir. Após medidas iniciais na sala de emergência, é correto afirmar que a conduta indicada com a correta justificativa é:",
+  "alternatives": {
+   "A": "Trepanação por hematoma parenquimatoso à esquerda, devido à lesão da membrana aracnoide.",
+   "B": "Craniotomia descompressiva, por hematoma epidural à esquerda, devido à lesão de artéria meníngea média.",
+   "C": "Trepanação por hematoma subdural agudo à esquerda, devido à lesão das veias subdurais.",
+   "D": "Manitol + anticonvulsivantes IV, em razão de haver concussão cerebral à esquerda com fratura subgaleal concomitante.",
+   "E": "Abordagem conservadora, com corticoide sistêmico por via IV + ventilação e oxigenação em alto fluxo, em razão de haver contusão cerebral à esquerda."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [
+   "2025-q038-1.jpg"
+  ]
+ },
+ {
+  "number": 39,
+  "stem": "Homem de 31 anos sofreu acidente de motocicleta (moto versus auto) e foi conduzido ao Hospital de Trauma pelos bombeiros. Ao exame, observou-se que o paciente estava com colar cervical, sem desvio de traqueia ou estase jugular. Encontrava-se taquicárdico (FC: 132 bpm), hipocorado, PA: 84 x 53 mmHg, pouco agitado, com escoriações em abdome superior e tórax. Exame físico pulmonar sem alterações; BRNF sem sopros. RX tórax e pelve sem alterações; FAST positivo no espaço de Traube (demonstrado na imagem a seguir). Sobre o caso, pode-se afirmar corretamente que:",
+  "alternatives": {
+   "A": "O ATLSTM é uma modalidade de atendimento ao politraumatizado que tem a seguinte avaliação em sequência: vias aéreas, respiração, circulação, exposição e colar cervical.",
+   "B": "Esse paciente pode apresentar pneumotórax hipertensivo que deve ser drenado após a confirmação radiológica.",
+   "C": "Paciente apresenta Escala de Coma de Glasgow de 14 em virtude da agitação observada na avaliação neurológica.",
+   "D": "Pelo exame de imagem, há fortes indícios de lesão diafragmática esquerda com presença de hérnia traumática, sendo indicada a laparoscopia como medida terapêutica.",
+   "E": "Esse paciente pode ter um choque hipovolêmico por trauma abdominal fechado decorrente de lesão esplênica."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": [
+   "2025-q039-1.jpg"
+  ]
+ },
+ {
+  "number": 40,
+  "stem": "Homem de 26 anos, vítima de acidente automobilístico, deu entrada no serviço de emergência e, na avaliação inicial, apresentava-se dispneico, com frequência respiratória de 26 irpm. Na inspeção da parede torácica, apresentou movimento paradoxal na altura de terceiro, quarto e quinto espaços intercostais, ao nível da linha axilar anterior à direita. A ausculta mostrou murmúrio vesicular simétrico e bilateral. Três horas após a admissão, evoluiu em franca insuficiência respiratória com dessaturação de O2. A conduta que deverá ser realizada no paciente e o mecanismo fisiopatológico que explica o quadro são, correta e respectivamente:",
+  "alternatives": {
+   "A": "Drenagem torácica direita - laceração pulmonar.",
+   "B": "Drenagem torácica direita - aspiração de corpo estranho.",
+   "C": "Toracocentese - pneumotórax hipertensivo.",
+   "D": "Intubação orotraqueal - contusão pulmonar.",
+   "E": "Broncoscopia - lesão traqueal baixa."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 41,
+  "stem": "Lactente de 2 anos e 4 meses, previamente hígido, foi levado à Unidade Básica de Saúde (UBS) com história de ter apresentado três episódios de vômitos há um dia. Hoje os vômitos cessaram, mas apresentou febre de 38oC e evacuações líquidas esverdeadas, cerca de cinco episódios até o momento. Ao exame físico, apresenta-se sedento, com boca seca, choro forte e irritado, olhos fundos e sem lágrimas, tempo de enchimento capilar de 3 segundos, pulsos cheios. De acordo com as recomendações atuais do Ministério da Saúde, o plano inicial de tratamento mais adequado para este caso é:",
+  "alternatives": {
+   "A": "Orientação para tratamento domiciliar com líquidos e soro de reidratação oral.",
+   "B": "Soro de reidratação oral 50 a 100 ml/kg em 4 horas na UBS.",
+   "C": "Soro de reidratação oral intercalado com água por gavagem em sonda nasogástrica.",
+   "D": "Fase rápida de hidratação endovenosa com soro fisiológico 20 ml/kg em 30 minutos.",
+   "E": "Ringer lactato 50 ml/kg em 2 horas."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 42,
+  "stem": "Um recém-nascido do sexo masculino, com 7 dias de vida, filho de pais não consanguíneos, é trazido à consulta de puericultura, sem queixas. O pai informa que seu irmão (tio do RN) tem diagnóstico de hemofilia A. A mãe informa que o irmão do seu pai (tio-avô do RN) também tem hemofilia A. Referem ambos que esses são os únicos casos de hemofilia na família. Os pais perguntam qual é a chance de o filho ter hemofilia. Assinale a alternativa correta.",
+  "alternatives": {
+   "A": "100%.",
+   "B": "75%.",
+   "C": "50%.",
+   "D": "25%.",
+   "E": "Nenhuma."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 43,
+  "stem": "Paciente de 8 anos de idade, portador de anemia falciforme, vem ao pronto atendimento com história de tosse, febre, cansaço e dor torácica há 1 dia. Ao exame físico, apresenta-se descorado 2+/4+, hidratado, com retração intercostal bilateralmente, MV presente com estertores finos em base direita, com som claro pulmonar bilateralmente, FR: 28 ipm, saturação de oxigênio ao oxímetro de pulso: 90%, BRNF em 2T e sem sopros, FC: 126 bpm. Abdome flácido, com fígado no RCD e baço a 1 cm do RCE, indolores. PA: 95 x 56 mmHg, tempo de enchimento capilar de 2 segundos. Qual é a hipótese diagnóstica correta para esse caso?",
+  "alternatives": {
+   "A": "Sequestro esplênico.",
+   "B": "Síndrome álgica.",
+   "C": "Infarto agudo do miocárdio.",
+   "D": "Derrame pleural à direita.",
+   "E": "Síndrome torácica aguda."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 44,
+  "stem": "Durante a consulta de puericultura, a mãe de um recém-nascido (RN) a termo, de 18 dias de vida, refere que o filho está em aleitamento materno exclusivo, com boa sucção ao seio, e não apresenta queixas. O RN apresenta bom ganho de peso e exame físico normal para idade. O médico verifica os resultados do teste do pezinho e observa o valor de TSH > 20 mUI/L. Segundo as orientações do Ministério da Saúde, a conduta correta neste caso é:",
+  "alternatives": {
+   "A": "Observação clínica nos próximos 3 meses para detecção de sintomas.",
+   "B": "Repetir o teste do pezinho em 30 dias.",
+   "C": "Repetir o teste do pezinho imediatamente.",
+   "D": "Dosagem sérica de TSH e T4 livre imediatamente.",
+   "E": "Encaminhar ao endocrinologista pediátrico para investigação."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 45,
+  "stem": "Lactente de 4 meses de vida, previamente hígido, vem à consulta com queixa de coriza e tosse há 1 dia, e aumento da temperatura hoje para 37,6 °C. Ao exame físico, está em BEG, corado e hidratado, anictérico, acianótico e T: 37 °C. Apresenta coriza nasal hialina. Membranas timpânicas translúcidas e com brilho. Orofaringe com discreta hiperemia. FR: 45 ipm com MV presente com discretos roncos e vários sibilos em ambos os hemitórax, discreto esforço expiratório. BRNF em 2 T e sem sopros, FC: 110 bpm. Abdome globoso e flácido, sem visceromegalias. O agente etiológico mais provável neste caso é?",
+  "alternatives": {
+   "A": "Metapneumovírus.",
+   "B": "Vírus sincicial respiratório.",
+   "C": "Streptococcus pneumoniae.",
+   "D": "Haemophilus influenzae.",
+   "E": "Micoplasma."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 46,
+  "stem": "Paciente de 4 anos de idade, previamente hígido, foi trazido à consulta pediátrica devido a lesões de pele notadas há 3 dias, pruriginosas, que apareceram depois que viajou para a chácara de familiares no entorno da cidade. Nega febre. Ao exame, apresenta pápulas com vesícula central, com aproximadamente 0,5 cm, com discreta hiperemia ao redor, em membros superiores e inferiores, distribuídas linearmente e aos pares. Não apresenta lesões palmoplantares, face ou tronco. Assinale a alternativa que apresenta a hipótese diagnóstica mais provável para este caso.",
+  "alternatives": {
+   "A": "Estrófulo.",
+   "B": "Síndrome mão-pé-boca.",
+   "C": "Impetigo.",
+   "D": "Varicela.",
+   "E": "Urticária."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 47,
+  "stem": "Assinale a alternativa correta quanto à composição do leite materno.",
+  "alternatives": {
+   "A": "O leite humano maduro fornece cerca de 2,5 g de proteína para cada 100 mL de leite.",
+   "B": "A caseína é uma proteína exclusiva do leite de vaca, não estando presente no leite humano.",
+   "C": "A lactose constitui a principal fonte energética do leite materno dentre os carboidratos.",
+   "D": "Durante a mamada, existe uma redução significativa do conteúdo de gordura no leite posterior.",
+   "E": "O teor de vitaminas no leite materno independe do estado nutricional da nutriz."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 48,
+  "stem": "Uma menina de 9 anos e 3 meses de idade veio à consulta acompanhada da mãe, que relata aparecimento de pelos pubianos na filha há 2 meses. Ao exame físico, a criança encontra-se eutrófica, estatura no Z-escore +0,5 para sexo e idade, genitais típicos femininos com presença de pelos pubianos finos e curtos, ligeiramente pigmentados; elevação da mama e aréola com pequeno montículo. Demais dados do exame físico sem alteração da normalidade. Qual é a conduta mais adequada?",
+  "alternatives": {
+   "A": "RX de idade óssea.",
+   "B": "Acompanhamento clínico ambulatorial.",
+   "C": "Dosar estradiol e testosterona.",
+   "D": "Dosar FSH e LH.",
+   "E": "Ultrassonografia pélvica."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 49,
+  "stem": "Um menino de 3 anos de idade, previamente hígido, chegou ao pronto atendimento com lesões de pele que se iniciaram cerca de 5 minutos após ter ingerido suco de caixinha sabor de caju em uma festa de aniversário. Apresentou um episódio de vômito após a ingestão do suco. Ao exame, apresenta placas pruriginosas elevadas róseas em face, tronco e membros. Tosse seca. Sibilos expiratórios discretos em ambos os hemitórax, sem esforço respiratório. Abdome flácido, indolor, sem visceromegalias. Demais dados do exame físico estão normais. Assinale a alternativa que apresenta o diagnóstico mais adequado para este caso.",
+  "alternatives": {
+   "A": "Urticária.",
+   "B": "Gastroenterite.",
+   "C": "Anafilaxia.",
+   "D": "Crise asmática.",
+   "E": "Broncoaspiração."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 50,
+  "stem": "Escolar de 8 anos de idade, previamente hígido, vem ao pronto atendimento com história de febre de 38,9 oC e odinofagia há um dia. Nega tosse ou coriza. Ao exame físico, apresenta BEG, corado, com amigdalas edemaciadas, com sinais flogísticos e petéquias em palato. No momento está afebril. Realizado teste rápido para detecção de Streptococcus pyogenes em orofaringe, que resultou positivo. A mãe informa que o filho já apresentou urticária ao uso de amoxicilina. A melhor conduta medicamentosa neste caso é:",
+  "alternatives": {
+   "A": "Sulfametoxazol + trimetropim.",
+   "B": "Penicilina benzatina.",
+   "C": "Cefalexina.",
+   "D": "Azitromicina.",
+   "E": "Ibuprofeno."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 51,
+  "stem": "No Brasil, o uso de palivisumabe, na prevenção de infecções por VSR, está regulamentado pelo Ministério da Saúde. Assinale a alternativa que apresenta um caso que NÃO está contemplado a receber essa imunização passiva.",
+  "alternatives": {
+   "A": "Lactentes menores de 2 anos portadores de cardiopatia com repercussão hemodinâmica.",
+   "B": "Lactentes menores de 2 anos portadores de doença pulmonar crônica.",
+   "C": "Lactentes no segundo ano de vida com pneumopatia da prematuridade ainda dependente de oxigênio.",
+   "D": "Lactentes menores de 1 ano nascidos prematuros com ≤ 28 semanas de idade gestacional.",
+   "E": "Lactentes menores de 1 ano nascidos com síndrome de Down confirmada por cariótipo."
+  },
+  "answer": null,
+  "annulled": true,
+  "images": []
+ },
+ {
+  "number": 52,
+  "stem": "Menina de 10 anos de idade apresenta febre há 3 dias de 38,5 oC a 39 oC, dor no corpo e cefaleia. Há 2 dias com dor abdominal leve e fezes pastosas amolecidas. Apresentou 1 episódio de vômito no início do quadro. Hoje iniciou exantema maculopapular em face e tronco. Ao exame físico, apresenta-se no momento afebril, com boca seca, mucosas coradas, ausculta cardiopulmonar normal, abdome flácido e indolor à palpação com fígado a 1 cm do RCD, perfusão periférica normal. PA: 96 x 60 mmHg, FC: 100 bpm, FR: 20 ipm. Prova do laço: incontáveis petéquias em todo antebraço. Realizada detecção de proteína NS1 reagente. Segundo as orientações atualizadas do Ministério da Saúde, qual é a conduta inicial adequada nesse caso?",
+  "alternatives": {
+   "A": "Hidratação oral em casa com acompanhamento ambulatorial.",
+   "B": "Realização de hemograma e hidratação oral hospitalar.",
+   "C": "Realização de hemograma e hidratação venosa com soro fisiológico 10 ml/kg em 1 hora.",
+   "D": "Realização de hemograma, dosagem de albumina, transaminases hepáticas e hidratação venosa com soro fisiológico 10 ml/kg em 1 hora.",
+   "E": "Realização de hemograma, dosagem de albumina, transaminases hepáticas e hidratação venosa com soro fisiológico 20 ml/kg em 20 minutos."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 53,
+  "stem": "Lactente de 11 meses de idade, previamente hígida, apresenta prurido no couro cabeludo com presença de pequenas crostas. A mãe nega que a filha tenha feito qualquer tratamento para esta queixa. Ao exame físico, apresenta lêndeas em grande quantidade nos cabelos e pequenas lesões crostosas em couro cabeludo. Segundo as orientações da Sociedade Brasileira de Pediatria, o tratamento de primeira escolha para esse caso é:",
+  "alternatives": {
+   "A": "Enxofre.",
+   "B": "Benzoato de benzoila.",
+   "C": "Vinagre.",
+   "D": "Permetrina.",
+   "E": "Ivermectina."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 54,
+  "stem": "Lactente de 4 meses com tosse paroxística foi diagnosticado com coqueluche e recebeu o tratamento medicamentoso adequado, apresentando boa evolução do quadro. Ele reside na mesma casa com os pais, um irmão de 2 anos (A), um irmão de 6 anos (B) e a avó de 58 anos. O pai é pedreiro e o único que trabalha fora de casa dentre eles. Somente B frequenta a escola, cursando o primeiro ano do ensino fundamental. A mãe informa que A tomou as vacinas recomendadas pelo PNI (Programa Nacional de Imunização) somente até os 12 meses de idade e que B e os adultos estão com suas vacinações atualizadas segundo o PNI. Assinale a alternativa correta quanto à indicação de quimioprofilaxia para os contactantes, segundo as recomendações do Ministério da Saúde.",
+  "alternatives": {
+   "A": "Não há indicação de quimioprofilaxia a nenhum dos contactantes.",
+   "B": "Somente para A.",
+   "C": "Somente para A e B.",
+   "D": "Para A, B e para contactantes da escola de B.",
+   "E": "Para A, os pais e a avó."
+  },
+  "answer": null,
+  "annulled": true,
+  "images": []
+ },
+ {
+  "number": 55,
+  "stem": "Lactente de 10 meses de idade, previamente hígido, com história de coriza hialina e obstrução nasal leve há um dia, chegou ao pronto atendimento trazido pelos pais, por ter apresentado perda da consciência, cianose e abalos tônico-clônicos, com duração de 6 minutos. Logo após, iniciou choro forte e desaparecimento da cianose. Nega episódios anteriores semelhantes. À avaliação inicial, o lactente apresenta-se choroso, consciente, responsivo, fontanela normotensa, mucosas coradas e hidratadas, acianóticas e anictéricas. Temperatura corporal de 38,8 oC, FC: 110 bpm, PA: 80 x 45 mmHg, FR: 30 ipm, saturação de oxigênio ao oxímetro: 96% em ar ambiente. Pupilas isocóricas e fotorreagentes. Rigidez de nuca ausente. Ausculta cardíaca e pulmonar normais. Abdome flácido, sem visceromegalias e indolor. Perfusão periférica 2 seg. Sem lesões de pele. Sem alterações motoras. Qual é o diagnóstico desse caso?",
+  "alternatives": {
+   "A": "Crise convulsiva febril simples.",
+   "B": "Crise convulsiva febril complexa.",
+   "C": "Crise perda de fôlego.",
+   "D": "Estado de mal epiléptico febril.",
+   "E": "Epilepsia."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 56,
+  "stem": "Uma menina de 8 anos e 2 meses vem à consulta de puericultura. A mãe manifesta preocupação quanto ao crescimento da filha, pois o irmão de 12 anos já está bem maior que ela, com estatura de 162 cm. Durante a avaliação, o médico obtém os seguintes dados: estatura da paciente: 120 cm; estatura da mãe: 163 cm; estatura do pai: 176 cm. Qual é a altura-alvo estimada para essa paciente?",
+  "alternatives": {
+   "A": "155 ± 5 cm.",
+   "B": "163 ± 5 cm.",
+   "C": "167 ± 5 cm.",
+   "D": "174,5 ± 5 cm.",
+   "E": "176 ± 5 cm."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 57,
+  "stem": "Um lactente de 2 meses e 1 dia de vida, nascido a termo com peso adequado para idade gestacional, vem à Unidade Básica de Saúde para receber as doses de vacina recomendadas para a faixa etária. Ele está em aleitamento materno exclusivo e com bom ganho de peso. Ao conversar com a mãe e verificar os dados do cartão vacinal, o médico constata que o lactente recebeu 1 dose de BCG e 1 dose contra hepatite B, ainda na maternidade, e não recebeu quaisquer outras vacinas desde a alta hospitalar. Segundo as recomendações do PNI (Programa Nacional de Imunizações), o lactente deverá receber hoje vacinas contra quais doenças ou agentes?",
+  "alternatives": {
+   "A": "Hepatite B, difteria, tétano, coqueluche, Haemophilus influenzae B, pneumococo, poliomielite e vírus influenza.",
+   "B": "Hepatite B, hepatite A, difteria, tétano, coqueluche, Haemophilus influenzae B, rubéola e rotavírus.",
+   "C": "Hepatite A, difteria, tétano, coqueluche, Haemophilus influenzae B, pneumococo e poliomielite.",
+   "D": "Hepatite B, difteria, tétano, coqueluche, Haemophilus influenzae B, sarampo, caxumba e rubéola.",
+   "E": "Hepatite B, difteria, tétano, coqueluche, Haemophilus influenzae B, pneumococo, poliomielite e rotavírus."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 58,
+  "stem": "Menina de 4 anos, previamente hígida, apresentou quadro de febre por 4 dias, vômitos, disenteria e desidratação leve. Recebeu hidratação oral, antieméticos e antitérmicos com melhora dos sintomas e remissão da febre. Após 2 dias, voltou a apresentar febre baixa, evoluindo com oligúria, edema generalizado, anemia, plaquetopenia, hipertensão arterial e azotemia. Não apresenta lesões de pele. O diagnóstico mais provável para essa criança nesse momento é:",
+  "alternatives": {
+   "A": "Síndrome hemolítico urêmica.",
+   "B": "Síndrome nefrótica.",
+   "C": "Choque séptico.",
+   "D": "Púrpura de Henoch Schoenlein.",
+   "E": "Glomeruloesclerose segmentar e focal."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 59,
+  "stem": "Um lactente de 30 dias de vida nascido a termo, com peso de nascimento de 3 040 g, está em aleitamento materno exclusivo. Apresenta boa sucção ao seio materno e exame neurológico normal. A mãe está com boa produção de leite e mamilo favorável. Na primeira consulta, com 15 dias de vida, ele pesou 3 000 g. Hoje seu peso foi de 3 450 g. A orientação mais adequada quanto à alimentação desse lactente é:",
+  "alternatives": {
+   "A": "Manter aleitamento materno exclusivo.",
+   "B": "Iniciar complementação do leite materno com fórmula de seguimento 10 mL após cada mamada.",
+   "C": "Iniciar complementação do leite materno com fórmula de seguimento 30 mL após cada mamada.",
+   "D": "Substituir o leite materno por fórmula de seguimento 60 mL, alternadamente com as mamadas.",
+   "E": "Substituir as mamadas noturnas e da madrugada por fórmula de seguimento 60 mL."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 60,
+  "stem": "Criança de 4 anos de idade, filha de pai com diagnóstico de tuberculose pulmonar em tratamento com boa adesão, foi adequadamente vacinada com BCG ao nascer e está assintomática e com exame físico normal. Apresenta prova tuberculínica de 7 cm. A conduta preferencial para esse caso é:",
+  "alternatives": {
+   "A": "Observação clínica e reavaliação caso apresente sintomas respiratórios ou febre.",
+   "B": "Coleta seriada de lavado gástrico na tentativa de detectar o M. tuberculosis.",
+   "C": "Iniciar esquema com isoniazida + rifapentina.",
+   "D": "Iniciar esquema com rifampicina + isoniazida + pirazinamida.",
+   "E": "Iniciar tratamento somente se Interferon-Gamma Release Assays (IGRA) for positivo."
+  },
+  "answer": null,
+  "annulled": true,
+  "images": []
+ },
+ {
+  "number": 61,
+  "stem": "G.B.V., 27 anos, primigesta, com idade gestacional de 20 semanas, apresenta-se com nódulo de cerca de 3 cm, de consistência fibroelástica, localizado em quadrante súpero medial de mama esquerda. Assinale a alternativa que representa a conduta mais adequada.",
+  "alternatives": {
+   "A": "Acompanhamento clínico.",
+   "B": "Ultrassonografia de mamas.",
+   "C": "Mamografia com proteção de avental de chumbo.",
+   "D": "Ressonância nuclear magnética de mamas.",
+   "E": "Biópsia cirúrgica."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 62,
+  "stem": "D.N.P., 24 anos, procurou a Unidade Básica de Saúde queixando-se de ardência à micção inicial. No decorrer da consulta relatou apresentar, ainda, prurido vulvar. Nega outros sintomas urinários e alega secreção vaginal esbranquiçada. Submetida a Urina 1: 48.000 leucócitos/ campo. Sobre o caso clínico apresentado, assinale a alternativa mais adequada.",
+  "alternatives": {
+   "A": "Orientação de medicar o parceiro, já que se trata de uma infecção sexualmente transmissível.",
+   "B": "Não há necessidade de exame especular, por se tratar de provável candidíase.",
+   "C": "Deve-se tratar a paciente para cistite bacteriana.",
+   "D": "Caso a secreção vaginal apresente pH < 4,5, pode-se tratar a paciente com fluconazol 150 mg, em dose única.",
+   "E": "Orientação de medicar o parceiro, pois se trata de uma infecção sexualmente transmissível."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 63,
+  "stem": "No Brasil há um risco estimado de 15,4 casos de câncer de colo uterino para cada 100 000 mulheres. A Organização Mundial da Saúde (OMS) coordena uma discussão sobre a eliminação do câncer do colo do útero nos países de renda média e baixa, sobretudo por meio da cobertura vacinal e da implementação do rastreamento organizado e abrangente. Sobre as vacinas contra o HPV, assinale a alternativa correta.",
+  "alternatives": {
+   "A": "As vacinas contra HPV são destinadas à administração, idealmente, em adolescentes após o início da atividade sexual.",
+   "B": "As vacinas profiláticas são capazes de eliminar infecções pré-existentes e lesões associadas.",
+   "C": "As vacinas contêm produtos biológicos vivos.",
+   "D": "A vacina previne novas infecções por HPVs.",
+   "E": "Meninas de 9 a 11 anos devem ser vacinadas pelo SUS com o esquema de 3 doses da vacina (0-2-6 meses)."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 64,
+  "stem": "G.M.A., 32 anos, sexo feminino, apresenta oligomenorreia e infertilidade. Menarca aos 12 anos, desenvolvimento puberal normal. Iniciou uso de contraceptivos orais aos 15 anos, porém, há 2 anos, suspendeu o uso e, desde então, apresentou ciclos irregulares, com oligomenorreia, acne e aumento de peso (IMC 35 kg/m2). Há 2 anos tenta gestar e mantém atividade sexual 4x/semana. Espermograma do parceiro normal. Histerossalpingografia sem alterações. Relação LH/FSH aumentada. De acordo com esse caso, assinale a alternativa que representa o diagnóstico mais provável e a opção de tratamento inicial mais adequada.",
+  "alternatives": {
+   "A": "Síndrome de ovários policísticos; perda ponderal e indução da ovulação.",
+   "B": "Síndrome de Cushing; inibidores da esteroidogênese adrenal.",
+   "C": "Tumor produtor de androgênio; remoção cirúrgica da adrenal.",
+   "D": "Hiperplasia adrenal congênita forma clássica; cortisona.",
+   "E": "Hipotireoidismo; levotiroxina."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 65,
+  "stem": "Mulher de 53 anos, queixando-se de diminuição da concentração e episódios de esquecimento, com impacto negativo em suas atividades cotidianas há 2 anos. Refere data da última menstruação há cerca de 2 anos. Refere, ainda, calorões noturnos. Exames físico e laboratoriais sem alterações, exceto por FSH 70 UI/L. Nega comorbidades. Nega cirurgias prévias. Assinale a alternativa que representa a melhor opção terapêutica.",
+  "alternatives": {
+   "A": "Inibidor seletivo da recaptação de serotonina.",
+   "B": "Modulador seletivo do receptor do estrogênio.",
+   "C": "Terapia hormonal com estrogênio.",
+   "D": "Terapia hormonal com estrogênio e progesterona.",
+   "E": "Fitoestrógenos."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 66,
+  "stem": "Abordar o climatério exige novos conhecimentos, novos entendimentos e novas abordagens. Cabe ao médico, diagnosticar e tratar de forma prudente, com base em informações científicas atuais. Sobre a terapia de reposição hormonal no climatério e seus riscos cardiovasculares, assinale a alternativa correta.",
+  "alternatives": {
+   "A": "Em mulheres sem doenças cardiovasculares, exerce fator protetor quando administrada 10 anos após a menopausa.",
+   "B": "Em mulheres com história de acidente vascular cerebral, sua administração deve ser incentivada nos primeiros 3 anos de pós-menopausa.",
+   "C": "A terapia hormonal via oral diminuiu os riscos de fenômenos tromboembólicos venosos em comparação com outras vias de administração.",
+   "D": "História de tromboembolismo venoso prévio é contraindicação formal para o uso de terapia hormonal.",
+   "E": "Mulheres com hipertensão arterial crônica controlada podem receber terapia de reposição hormonal apenas com estrogênio tópico via vaginal."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 67,
+  "stem": "O diagnóstico e o tratamento das dermatoses vulvares costumam ser desafiadores para o ginecologista, pois a região genital é diferente das superfícies cutâneas extragenitais, queratinizadas e secas. As lesões brancas da vulva, que incluem a despigmentação parcial ou total, podem ser extensas ou limitadas. Sobre o líquen escleroso vulvar, assinale a alternativa correta.",
+  "alternatives": {
+   "A": "Não está relacionado a um risco aumentado de carcinoma de células escamosas.",
+   "B": "Terapia com laser de CO2 tem se demonstrado como o tratamento mais eficaz e com menos efeitos adversos.",
+   "C": "Corticosteroide tópico de alta potência (propionato de clobetasol 0,05%) é o tratamento de primeira linha.",
+   "D": "Tratamento cirúrgico não é recomendado.",
+   "E": "Inibidores de calcineurina são contraindicados como tratamento de segunda linha."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 68,
+  "stem": "A puberdade marca o período de transição entre a infância e a vida adulta. Sobre a puberdade fisiológica e a puberdade tardia, assinale a alternativa que representa as idades que representam o ponto de corte para o diagnóstico da puberdade precoce e tardia, em meninas, respectivamente.",
+  "alternatives": {
+   "A": "6 anos; 11 anos.",
+   "B": "7 anos; 10 anos.",
+   "C": "8 anos; 13 anos.",
+   "D": "9 anos; 14 anos.",
+   "E": "10 anos; 15 anos."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 69,
+  "stem": "A depressão na menopaus é o tipo que possui mais tendência de se tornar crônico. Os sintomas variam em gravidade, mas, se não forem tratados, podem levar a situações de permanência do quadro, com graves prejuíos à qualidade de vida da mulher Assinale a alternativa que representa os sinais ou sintomas que sugerem ao profissional de saúde o diagnóstico de depressão na menopausa.",
+  "alternatives": {
+   "A": "Alterações repentinas de humor, dificuldade de concentração e agressividade.",
+   "B": "Tristeza isolada.",
+   "C": "Crises de pânico e agressividade.",
+   "D": "Alterações no sono, indiferença a acontecimentos importantes familiares profissionais e desistência de projetos de vida.",
+   "E": "Presença de alucinações visuais e/ou auditivas, além de distúrbio cognitivo."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 70,
+  "stem": "A doença inflamatória pélvica pode cursar com a formação de abscesso tubo ovariano, uma coleção de pus nos anexos uterinos (condição grave que requer internação hospitalar para controle e, em alguns casos, tratamento cirúrgico). Assinale a alternativa que representa os agentes etiológicos mais comumente associados a essa condição.",
+  "alternatives": {
+   "A": "C. Trachomatis e N. gonorrhoeae.",
+   "B": "Candida albicans e C. trachomatis.",
+   "C": "Staphylococcus aureus e E. coli.",
+   "D": "Escherichia coli e G. vaginalis.",
+   "E": "Enterococcus faecalis e Estreptococcus pyogenes."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 71,
+  "stem": "No território brasileiro, diferentes fontes mostram taxas de prematuridade similares. Em 2012, o Fundo das Nações Unidas para a infância (UNICEF), juntamente com o Ministério da Saúde (MS), divulgou uma taxa de prematuridade de 11,7% em todo o território nacional. Dados do Sistema Nacional de Nascidos Vivos (SINASC) de 2013 apontam uma taxa de 11,4% de partos prematuros. Assinale a alternativa que representa a intervenção comprovadamente eficaz, por estudos de significância estatística, na prevenção da prematuridade.",
+  "alternatives": {
+   "A": "Suplementação com multivitaminas.",
+   "B": "Repouso no leito e abstinência sexual.",
+   "C": "Antibioticoprofilaxia no segundo trimestre.",
+   "D": "Antibioticoterapia para infecções sintomáticas do trato genital inferior.",
+   "E": "Utilização de pessário em colo < 25 mm sem história de prematuridade anterior."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 72,
+  "stem": "E.G.C., 25 anos, iniciou pré-natal com idade gestacional de 10 semanas e apresenta os seguintes resultados sorológicos para toxoplasmose: - IG 11 semanas: IgG e IgM não reagentes. - IG 22 semanas: IgG não reagente e IgM reagente. - IG 24 semanas: lgG e IgM reagentes e baixa avidez para lgG (15%). Com relação ao caso citado, assinale a alternativa correta.",
+  "alternatives": {
+   "A": "Trata-se de soroconversão há mais de 3, 4 ou 5 meses.",
+   "B": "Trata-se de falso positivo de IgM, não havendo risco para o feto.",
+   "C": "Trata-se de soroconversão aguda para toxoplasmose no segundo trimestre, devendo-se iniciar tratamento com espiramicina e investigar infecção fetal.",
+   "D": "Trata-se de soroconversão aguda para toxoplasmose no segundo trimestre, devendo-se iniciar tratamento com espiramicina, sulfadiazina e ácido folínico.",
+   "E": "A possibilidade de infecção fetal no segundo trimestre é mais baixa do que no primeiro trimestre."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 73,
+  "stem": "A gestação gemelar é definida pela presença simultânea de dois ou mais fetos dentro do útero ou fora dele. Sobre a gestação gemelar, assinale a alternativa correta.",
+  "alternatives": {
+   "A": "A identificacão de fetos do mesmo sexo representa indício de gestação gemelar monocoriônica.",
+   "B": "O período ideal para a classificação da corionicidade é após as 20 semanas de idade gestacional.",
+   "C": "Sinal do T representa gestação gemelar monocoriônica e monoamniótica.",
+   "D": "Sinal do Lambda representa gestação gemelar dicoriônica e diamniótica.",
+   "E": "Gestação gemelar dicoriônica e diamniótica é originada de 2 zigotos."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 74,
+  "stem": "G.B.V., GII PI 1N A0, IG 37 semanas 2 dias, HAC, deu entrada no PSO com queixa de cefaleia ociptofrontal persistente há 2 horas, além de náuses e vômitos. PA 160 x 110 mmHg. Nega comorbidades e refere pré-natal sem outras intercorrências. Assinale a alternativa que representa o diagnóstico e a conduta mais adequados.",
+  "alternatives": {
+   "A": "Urgência hipertensiva; neozine via oral e observação da PA.",
+   "B": "Emergência hipertensiva; metildopa via oral, rotina anti-hipertensiva e internação.",
+   "C": "Pré-eclampsia; hidralazina e rotina anti-hipertensiva.",
+   "D": "Iminência de eclâmpsia; MgSO4, rotina anti-hipertensiva, hidralazina EV e internação.",
+   "E": "Eclâmpsia; MgSO4 e resolução da gestação após estabilização clínica materna."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 75,
+  "stem": "D.N,B., 32 anos, GIII PIII 3N A0, puérpera no 15o dia pós-parto, com antecedente de HAC, vem à consulta puerperal, desejando iniciar, de imediato, um método contraceptivo. Em amamentação materna exclusiva. Nega outras comorbidades. Dentre as alternativas a seguir, assinale a que representa o método anticoncepcional adequado para o caso.",
+  "alternatives": {
+   "A": "Pílula hormonal combinada oral.",
+   "B": "Implante com etonogestrel.",
+   "C": "Anel vaginal.",
+   "D": "DIU de cobre.",
+   "E": "DIU de levonorgestrel."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 76,
+  "stem": "A monitorização externa da frequência cardíaca fetal, obtendo-se um registro com qualidade suficiente é denominado de cardiotocografia. A respeito da interpretação da cardiotocografia, assinale a alternativa correta.",
+  "alternatives": {
+   "A": "As desacelerações variáveis (em forma de V) estão associadas a uma resposta ligada à má perfusão placentária crônica.",
+   "B": "As desacelerações tardias têm um início e um retorno lentos à linha de base ou variabilidade reduzida dentro da desaceleração.",
+   "C": "As desacelerações precoces estão associadas à ocorrência de hipóxia fetal.",
+   "D": "As desacelerações prolongadas são aquelas que têm uma duração superior a 10 minutos.",
+   "E": "As desacelerações que duram mais de 3 minutos passam a ser chamadas de bradicardia fetal."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 77,
+  "stem": "Gestante de 8 semanas de idade gestacional vem em consulta de pré-natal com resultados de exames laboratoriais da semana anterior: glicemia de jejum, de 92 mg/dL. Nega comorbidades. Assinale a alternativa que representa o diagnóstico correto.",
+  "alternatives": {
+   "A": "Trata-se de resistência insulínica.",
+   "B": "Trata-se de diabetes gestacional.",
+   "C": "Trata-se de diabetes pré-gestacional (\"overt\" diabetes).",
+   "D": "Deve-se solicitar hemoglobina glicada para complementação diagnóstica.",
+   "E": "Deve-se solicitar o TOTG (teste oral de tolerância à glicose), com IG de 24-28 semanas para complementação diagnóstica."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 78,
+  "stem": "F.D.C., 38 anos, primigesta, IG 32 semanas, gestação gemelar monocoriônica e diamniótica, vem à consulta de rotina do pré-natal. Ao exame físico: dinâmica uterina ausente, BCF 150 bpm. Cardiotocografias de ambos os fetos normais. A ultrassonografia demonstrou um feto no percentil 10, com MBV (maior bolsão vertical) de 3 cm e o outro feto com peso no p25, com MBV de 6 cm. Doppler normal. Perfil biofísico fetal 10/10. Assinale a alternativa que representa a conduta que deve ser adotada diante desse quadro.",
+  "alternatives": {
+   "A": "Cesárea de emergência.",
+   "B": "Corticoide para maturação pulmonar fetal e cesárea 12 horas após a segunda dose.",
+   "C": "Corticoide para maturação pulmonar fetal e indução do trabalho de parto 12 horas após.",
+   "D": "Corticoide para maturação pulmonar fetal, ampicilina dose de ataque e manutenção e indução do trabalho de parto, de modo concomitante.",
+   "E": "Conduta expectante."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 79,
+  "stem": "B.C.G., 29 anos, primigesta, idade gestacional cronológica de 9 semanas, submetida ao primeiro ultrassom nessa gestação. Identificado saco gestacional e embrião medindo 4 mm, porém, sem batimentos cardioembrionários. Assinale a alternativa que representa a melhor conduta para esse caso.",
+  "alternatives": {
+   "A": "Curetagem uterina com cureta fenestrada.",
+   "B": "AMIU (aspiração manual intrauterina).",
+   "C": "Dosagem de beta HCG quantitativo.",
+   "D": "Repetir o ultrassom com um intervalo de cerca de 10-14 dias.",
+   "E": "Dosagem de progesterona."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 80,
+  "stem": "T.D.L., 31 anos, com história de gestação planejada, tranquila, sem náuseas ou vômitos excessivos. Trabalhou normalmente durante a gestação. Recém-nascido saudável, parto vaginal sem intercorrências. As dificuldades começaram 3 dias após o parto, quando sensações de tristeza e desconforto apareceram. A paciente começou a sentir falta de sua rotina e culpava-se por isso. Sentia-se incapacitada a cuidar do bebê. Falta de vontade de sair de casa, de comer, além de sensações de angústia e infelicidade. Com base nesse caso, assinale a alternativa que representa o diagnóstico mais provável.",
+  "alternatives": {
+   "A": "Depressão pós-parto.",
+   "B": "Blues puerperal.",
+   "C": "Psicose puerperal.",
+   "D": "Distúrbio bipolar.",
+   "E": "Síndrome do pânico."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 81,
+  "stem": "Eventos climáticos extremos ceifaram milhares de vidas nos últimos anos. As mudanças no tempo e no clima também estão ameaçando a segurança alimentar e aumentando as doenças transmitidas por alimentos, água e vetores, além de afetar negativamente a saúde mental de populações. Assinale a alternativa correta sobre essa frase.",
+  "alternatives": {
+   "A": "Eventos climáticos extremos sempre existiram e sempre existirão, e é fundamental que as comunidades reivindiquem dos governos, hospitais preparados para enfrentar os efeitos que repercutem na saúde.",
+   "B": "O Sistema Único de Saúde (SUS) tem um papel fundamental na promoção de saúde nesse difícil contexto, que é o de treinar a população para operações de salvamento nas situações críticas, como, por exemplo, nas enchentes.",
+   "C": "Além de ações governamentais sobre os determinantes dos eventos climáticos extremos, é fundamental que o SUS esteja preparado para aprimorar o sistema de vigilância em saúde e a capacidade diagnóstica da rede assistencial.",
+   "D": "Esse contexto descrito evidencia a importância do SUS em voltar a se preparar prioritariamente para o manejo de doenças infectocontagiosas em relação a doenças crônico-degenerativas.",
+   "E": "Para enfrentar o contexto descrito, o SUS deve se ater prioritariamente na educaçã das populações sobre como respeitar o meio ambiente e economizar recursos naturais, em particular a água, a luz e a alimentação."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 82,
+  "stem": "A região A de um país tem um coeficiente de mortalidade infantil maior do que a região B nos últimos 10 anos. Assinale a alternativa correta.",
+  "alternatives": {
+   "A": "A região A deve ter menores níveis de saúde, de desenvolvimento socioeconômico e de condições de vida.",
+   "B": "A região A deve ter rede hospitalar com menos especialidades médicas do que a região B.",
+   "C": "A população idosa da região A deve ser maior do que a da região B.",
+   "D": "O percentual de mortes devido a causas externas deve ser maior na região A do que na região B.",
+   "E": "O nível de escolaridade da região A deve ser maior do que da região B, mas os cuidados com as crianças devem ser menores."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 83,
+  "stem": "Assinale a alternativa correta sobre a vacina contra a dengue.",
+  "alternatives": {
+   "A": "Trata-se de uma vacina antiga e faz parte do calendário de vacinação do Brasil.",
+   "B": "Trata-se de uma vacina que tem sido aplicada a determinado grupo etário por escassez na fabricação.",
+   "C": "É contraindicada para jovens.",
+   "D": "Provoca efeitos perigosos e, por isso, não é obrigatória.",
+   "E": "Está em teste, não devendo ainda ser aplicada na população."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 84,
+  "stem": "Assinale a alternativa que apresenta a denominação da manifestação, em uma coletividade de animais não humanos, de casos de alguma enfermidade que excede claramente a incidência prevista.",
+  "alternatives": {
+   "A": "Pandemia.",
+   "B": "Endemia.",
+   "C": "Enzootia.",
+   "D": "Epizootia.",
+   "E": "Epidemia."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 85,
+  "stem": "Assinale a alternativa que apresenta, corretamente, uma doença de notificação compulsória de periodicidade semanal.",
+  "alternatives": {
+   "A": "Hipertensão arterial.",
+   "B": "Botulismo.",
+   "C": "Óbito por dengue.",
+   "D": "Violência sexual.",
+   "E": "Tuberculose."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 86,
+  "stem": "A taxa de suicídio entre jovens cresceu 6% ao ano no Brasil entre os anos de 2011 e 2022. Já as taxas de notificações por autolesões na faixa etária de 10 a 24 anos aumentaram 29% a cada ano nesse mesmo período. O número foi maior que na população em geral, cuja taxa de suicídio teve crescimento médio de 3,7% ao ano, e a de autolesão 21% ao ano, neste mesmo período. Assinale a alternativa correta sobre as fontes de informação desse estudo.",
+  "alternatives": {
+   "A": "O referido estudo pode ter utilizado somente o Sistema de Informações sobre Mortalidade (SIM).",
+   "B": "O referido estudo pode ter utilizado somente o Sistema de Informação de Agravos de Notificação (Sinan).",
+   "C": "As fontes de informação podem ter sido o SIM, o Sinan e o Sistema de Informações Hospitalares (SIH).",
+   "D": "Esse estudo só pode ter sido realizado com dados primários.",
+   "E": "As fontes de informação podem ter sido o SIH e o Sistema de Informação Ambulatorial (SIA)."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 87,
+  "stem": "Assinale a alternativa que contém portas de entrada às ações e aos serviços de saúde nas Redes de Atenção à Saúde.",
+  "alternatives": {
+   "A": "Serviços especiais de acesso aberto e de atenção psicossocial.",
+   "B": "Serviços de atenção primária e hospitais de alta complexidade.",
+   "C": "Serviços de atenção primária e ambulatórios de especialidades.",
+   "D": "Serviços de reabilitação e ambulatórios de especialidades.",
+   "E": "Serviços especiais de acesso aberto e de reabilitação."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 88,
+  "stem": "Assinale a alternativa correta sobre a rubéola.",
+  "alternatives": {
+   "A": "É uma doença que acomete somente mulheres.",
+   "B": "O período de transmissibilidade é de 10 dias somente antes do início do exantema.",
+   "C": "É uma doença com características inconfundíveis.",
+   "D": "Trata-se de doença cuja taxa de letalidade vem aumentando.",
+   "E": "A doença promove imunidade duradoura."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 89,
+  "stem": "Assinale a alternativa correta sobre o SUS.",
+  "alternatives": {
+   "A": "As conferências de saúde são instâncias de formulação de políticas públicas, com a representação dos vários segmentos sociais, e se reúnem a cada dois anos, sendo convocadas pelo Ministério da Saúde.",
+   "B": "Faz parte do campo de atuação do SUS a execução de ações de vigilância sanitária e epidemiológica; e de assistência terapêutica integral, excetuando-se a farmacêutica.",
+   "C": "O SUS inclui somente serviços públicos, sendo que aqueles da iniciativa privada só passam a fazer parte da rede se houver aprovação do poder legislativo de cada esfera de governo.",
+   "D": "O conjunto de ações e serviços de saúde, prestados por órgãos e instituições públicas federais, estaduais e municipais, da administração direta e indireta e das fundações mantidas pelo Poder Público, constitui o SUS.",
+   "E": "Legalmente, entende-se por saúde do trabalhador um conjunto de atividades que se destina, através das ações de vigilância epidemiológica e vigilância sanitária, à promoção e proteção da saúde dos trabalhadores especificamente do setor privado."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 90,
+  "stem": "Uma das doenças decorrentes de enchentes é a leptospirose. Assinale a alternativa correta sobre essa doença.",
+  "alternatives": {
+   "A": "Chamada doença do rato, é transmitida por um vírus que produz quadro clínico de média letalidade.",
+   "B": "Trata-se de doença de notificação compulsória, passível de tratamento com antibiótico.",
+   "C": "A quimioprofilaxia deve ser feita a toda a população.",
+   "D": "Trata-se de uma doença que atinge toda a população de forma igual.",
+   "E": "O diagnóstico é clínico, sem exames complementares específicos."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 91,
+  "stem": "Uma vendedora de sapatos de uma loja procura a UBS perto de sua casa com queixa de tristeza, sentimento de impotência, ansiedade e dificuldade para dormir, que a fazem sofrer muito. Durante o acolhimento, a equipe de saúde ouve relatos de pressão e inúmeras humilhações durante sua jornada de trabalho, praticadas por uma supervisora de vendas. Esta, quase diariamente, faz reuniões no final da jornada para avaliar o desempenho em vendas das trabalhadoras. Mesmo nos dias em que elas conseguem atingir as metas, sem fazer qualquer elogio, a supervisora anuncia o aumento da meta do dia seguinte. A equipe conclui que a usuária encontra-se com quadro de sofrimento mental decorrente de assédio moral organizacional. Para fins de notificação compulsória no Sistema de Informação de Agravos de Notificação (Sinan), assinale a alternativa correta.",
+  "alternatives": {
+   "A": "Esse caso só pode ser avaliado e diagnosticado em um Centro de Atenção Psicossocial (CAPS), que conta com psicólogos experientes.",
+   "B": "Trata-se de uma usuária com quadro clínico de sofrimento mental a ser investigado e, para isso, deve ser encaminhada à auditoria fiscal do trabalho, que pode atuar em ambientes de trabalho.",
+   "C": "Como somente serviços de psicologia especializados podem notificar casos de saúde mental, ela deve ser encaminhada a um CAPS para que a notificação ocorra.",
+   "D": "A equipe da UBS deve usar a ficha de notificação de violência, que possui um campo referente à violência psicológica/moral e outro referente à relação com o trabalho ou a ficha de transtorno mental relacionado ao trabalho.",
+   "E": "A equipe da UBS deve usar a ficha de notificação de violência, que possui um campo referente à violência psicológica/moral e outro referente à relação com o trabalho ou a ficha de transtorno mental relacionado ao trabalho."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 92,
+  "stem": "Entre as doenças em que ocorre a transmissão vertical está a sífilis. Assinale a alternativa correta.",
+  "alternatives": {
+   "A": "A transmissão vertical da sífilis ocorre somente no primeiro trimestre da gestação e costuma ter repercussões leves no feto.",
+   "B": "Sempre que há um recém-nascido prematuro, deve-se suspeitar de sífilis congênita, sendo obrigatória a realização de sorologia.",
+   "C": "Ainda não há tratamento do recém-nascido com sífilis congênita.",
+   "D": "A transmissão vertical é maior nos casos em que a mãe está numa fase mais tardia da doença.",
+   "E": "A transmissão vertical da sífilis responde por aumento de incidência de abortos, de natimortos, de prematuros, além de crianças com manifestações clínicas da doença."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 93,
+  "stem": "As evidências atuais sugerem que os sintomas relatados com mais frequência em crianças e adolescentes com covid longa são fadiga, olfato alterado e ansiedade. Mas outros sintomas também foram relatados. Existem sinais como mudanças nos hábitos alimentares, atividade física, comportamento, desempenho acadêmico, interações sociais e no desenvolvimento, que afetam a rotina. Segundo a Organização Mundial da Saúde, os sintomas podem ser novos, após a recuperação inicial de um episódio agudo de covid-19, ou persistir desde a doença inicial. Eles também podem variar ou voltar com o tempo. Assinale a alternativa correta sobre esse cenário.",
+  "alternatives": {
+   "A": "O SUS deve ter referências especializadas em covid longa na população infantil, e todas as crianças e os adolescentes que tiveram a doença devem ser acompanhados por esses serviços.",
+   "B": "É desejável que a atenção primária da saúde seja capacitada a identificar sintomas e sinais de covid longa na atenção dada a crianças e adolescentes sob seus cuidados e encaminhar aqueles que tenham necessidade de avaliação especializada.",
+   "C": "A covid longa na população infantil ainda não é muito conhecida e deve ser objeto de pesquisa, razão pela qual as crianças e os adolescentes que tiveram a doença deveriam ser avaliados periodicamente por hospitais universitários.",
+   "D": "Os quadros clínicos de covid longa na população infantil são inespecíficos e leves, de forma que o diagnóstico é pouco importante no tocante à saúde coletiva.",
+   "E": "A perspectiva de vacinas para as pessoas com covid longa, em particular na população infantil e de adolescentes, coloca a necessidade de se identificar os casos com maior precisão."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 94,
+  "stem": "A infecção pelo HPV é muito frequente, mas transitória, regredindo espontaneamente na maioria das vezes. No pequeno número de casos nos quais a infecção persiste e, especialmente, causada por um tipo viral oncogênico, pode ocorrer o desenvolvimento de lesões precursoras, que se não forem identificadas e tratadas podem progredir para o câncer. Assinale a alternativa que contém o principal órgão atingido por esse câncer na população feminina.",
+  "alternatives": {
+   "A": "Tuba uterina.",
+   "B": "Ovário.",
+   "C": "Mama.",
+   "D": "Colo de útero.",
+   "E": "Vulva"
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 95,
+  "stem": "Em ação de vigilância da saúde, trabalhadores empregados durante muitos anos em uma fábrica de materiais de fricção e vedação passaram a ser acompanhados por centros de referência em saúde do trabalhador da região onde se localiza a empresa, por meio de avaliação clínica e de exames complementares, periodicamente, em decorrência da exposição a uma substância usada no processo produtivo. Assinale a alternativa correta sobre o caso.",
+  "alternatives": {
+   "A": "Esses trabalhadores foram expostos à sílica e podem vir a ter silicose pulmonar.",
+   "B": "Esses trabalhadores foram expostos a amianto e podem vir a ter pneumonias de repetição.",
+   "C": "Esses trabalhadores foram expostos a amianto e podem vir a ter câncer, em especial de pulmão e mesotelioma.",
+   "D": "Esses trabalhadores foram expostos à sílica e podem vir a ter câncer de pulmão e fígado.",
+   "E": "Esses trabalhadores foram expostos a amianto e podem vir a ter cirrose hepática e câncer de rins."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 96,
+  "stem": "O prefeito de um município solicita ao secretário de saúde que desenvolva ações de promoção da saúde como prioridade em todo o território. Assinale a alternativa que expressa ações que atendam ao solicitado.",
+  "alternatives": {
+   "A": "Sugestão para que haja estímulo à produção de alimentos sem agrotóxicos e facilitação do acesso a alimentos in natura.",
+   "B": "Promoção de feiras educativas sobre hipertensão arterial e diabetes e ações de detecção precoce dessas doenças.",
+   "C": "Prover todas as UBS de recursos para realizar Papanicolau em todas as mulheres periodicamente.",
+   "D": "Realização de pesquisa para detecção precoce de doenças cardiovasculares em todos os adultos do município.",
+   "E": "Sugestão para abertura de serviços de acolhimento de mulheres vítimas de violência sexual."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 97,
+  "stem": "Uma agente comunitária da saúde (ACS) pede para a chefia da UBS trocá-la, pois na sua área geográfica de atuação há alguns usuários explicitamente pertencentes à comunidade LGBTQIA+, e, diante dos preceitos de sua religião, ela se sente contrariada. A chefia lhe explica que não dispõe de outra pessoa para cobrir o determinado território e que o SUS não pode excluir nenhum segmento social de suas ações. Diante do caso, assinale a alternativa correta.",
+  "alternatives": {
+   "A": "A chefia da UBS deve atender ao pedido da ACS, pois no Brasil há liberdade religiosa, que deve ser respeitada.",
+   "B": "A ACS pode se recusar a cumprir a atribuição que lhe foi dada, devendo o município providenciar um substituto imediatamente.",
+   "C": "O direito individual às opções religiosas está acima de qualquer outro direito, e a ACS pode se recusar a ter contato com pessoas do segmento explicitado no enunciado.",
+   "D": "O atendimento a qualquer pessoa faz parte das atribuições dos ACS, e a referida ACS não está sendo tolhida na sua opção religiosa.",
+   "E": "A ACS não pode se recusar a cumprir suas atribuições e deve ser demitida imediatamente."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 98,
+  "stem": "Assinale a alternativa correta referente ao Sistema de Informação sobre Mortalidade (SIM).",
+  "alternatives": {
+   "A": "É um sistema que privilegia óbitos por causas externas.",
+   "B": "É alimentado por prontuários hospitalares.",
+   "C": "É um sistema que prioriza informações dos óbitos que não passam pelo Instituto Médico Legal.",
+   "D": "É um sistema com pouca utilidade.",
+   "E": "É alimentado por informações de declarações de óbitos."
+  },
+  "answer": "E",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 99,
+  "stem": "O fumo passivo é a fumaça de produtos derivados do tabaco (como cigarros, bidis e pipes de água). Há mais de 7000 produtos químicos no fumo do tabaco, dos quais pelo menos 250 são conhecidos por serem prejudiciais e, ao menos 69, por causar câncer. Não existe um nível seguro de exposição passiva à fumaça do tabaco, e a redução do consumo é um grande desafio em diferentes países. Assinale a alternativa correta a respeito do fumo.",
+  "alternatives": {
+   "A": "Menos de 10 países no mundo têm ações de controle do consumo do tabaco.",
+   "B": "Em bebês, os efeitos do fumo passivo não são conhecidos.",
+   "C": "O fumo passivo é associado ao baixo peso do bebê no nascimento.",
+   "D": "Proibições de publicidade, promoção e patrocínio do tabaco têm se mostrado inócuas na redução do consumo de tabaco.",
+   "E": "A exposição passiva à fumaça causa doenças, mas não mortes."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": []
+ },
+ {
+  "number": 100,
+  "stem": "Assinale a alternativa correta sobre alcoolismo e ações do SUS.",
+  "alternatives": {
+   "A": "Os ACS distribuem medicamento recomendado na gestão da dependência de álcool a todas as pessoas em situação de rua, adoecidas pelo consumo.",
+   "B": "Os profissionais que atuam nas UBS são os mais indicados para agir na detecção precoce e realizar alguma intervenção em relação ao uso abusivo do álcool.",
+   "C": "A experiência mostra que, em geral, os alcoolistas procuram os serviços de saúde e/ou os profissionais, com queixas do uso nocivo do álcool.",
+   "D": "Embora a atuação interdisciplinar seja importante, o papel do médico na prevenção do alcoolismo em ações do SUS é determinante.",
+   "E": "No tratamento do alcoolismo, a autoridade do profissional de saúde é determinante, pois o seu conhecimento sobre os malefícios do consumo abusivo da substância impõe respeito junto ao usuário."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": []
+ }
+]
