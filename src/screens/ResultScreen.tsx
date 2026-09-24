@@ -5,7 +5,8 @@ import { fmtInt, fmtPct, fmtSec } from '../engine/util';
 import { useStore, type MatchLaunch, type TrainingLaunch } from '../state/store';
 import { CAT } from '../data/categories';
 import type { CategoryId, Letter, MatchSummary, Question, ReportItem } from '../types';
-import { LETTERS } from '../types';
+import { altLetters } from '../types';
+import { AltContent } from '../ui/QuestionPlay';
 import { Bar, Btn, Card, CatBadge, Header } from '../ui/common';
 import { Particles } from '../ui/Particles';
 
@@ -173,9 +174,9 @@ function QuestionFull({ q, chosen }: { q: Question; chosen: Letter | null }) {
     <div className="mt-2 space-y-2 text-sm">
       <p className="text-white/90 whitespace-pre-line">{q.text}</p>
       {q.images?.map((img) => <img key={img} src={`${import.meta.env.BASE_URL}banco/img/${img}`} alt="" className="max-h-60 rounded-lg bg-white" />)}
-      {LETTERS.filter((l) => q.alternatives[l]).map((l) => (
+      {altLetters(q).map((l) => (
         <div key={l} className={`rounded-lg px-2 py-1 ${l === q.answer ? 'bg-emerald-500/15 text-emerald-200' : l === chosen ? 'bg-rose-500/15 text-rose-200' : 'text-white/70'}`}>
-          <b>{l})</b> {q.alternatives[l]} {l === q.answer ? '✔' : l === chosen ? '✖' : ''}
+          <b>{l})</b> <AltContent q={q} l={l} /> {l === q.answer ? '✔' : l === chosen ? '✖' : ''}
         </div>
       ))}
       <div className="rounded-lg bg-violet-500/10 p-2 text-white/80">{q.explanationFull || q.explanation}</div>

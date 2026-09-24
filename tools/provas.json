@@ -1,0 +1,16 @@
+{
+  "_ajuda": "Nome de exibição de cada instituição e, opcionalmente, as faixas de questões por área de cada prova. Sem faixas, as áreas são detectadas automaticamente. Chave: INSTITUICAO-ANO ou INSTITUICAO-* (vale para todos os anos). Áreas: CLI, CIR, GO, PED, PRE.",
+  "instituicoes": {
+    "UNOESTE": "UNOESTE/HRPP",
+    "FAMERP": "FAMERP",
+    "UEL": "UEL"
+  },
+  "faixas": {
+    "UNOESTE-*": "1-20 CLI; 21-40 CIR; 41-60 PED; 61-80 GO; 81-100 PRE",
+    "FAMERP-2022": "1-16 PRE; 17-32 PED; 33-48 GO; 49-64 CLI; 65-80 CIR",
+    "FAMERP-2023": "1-22 PRE; 23-37 PED; 38-51 GO; 52-68 CIR; 69-80 CLI",
+    "FAMERP-2024": "1-16 PRE; 17-32 CIR; 33-48 GO; 49-64 PED; 65-80 CLI",
+    "FAMERP-2025": "1-16 CLI; 17-32 GO; 33-48 PRE; 49-64 PED; 65-80 CIR",
+    "FAMERP-2026": "1-16 PRE; 17-32 GO; 33-48 PED; 49-64 CLI; 65-80 CIR"
+  }
+}

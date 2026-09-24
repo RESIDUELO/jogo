@@ -31,6 +31,7 @@ export interface Question {
   explanationSource?: 'gerada' | 'oficial' | 'editada';
   reference?: string;
   images?: string[]; // arquivos em /banco/img
+  altImages?: Partial<Record<Letter, string>>; // alternativas que são imagens (tabelas etc.)
   original?: string[]; // recortes da página original do PDF em /banco/orig
   status: QuestionStatus;
   statusNote?: string; // motivo de anulação / divergência
@@ -183,4 +184,9 @@ export interface RankingEntry {
   rating: number;
   catAccuracy: Record<CategoryId, number>;
   weekXp: number;
+}
+
+/** Letras das alternativas da questão (inclui alternativas que são só imagem). */
+export function altLetters(q: Pick<Question, 'alternatives' | 'altImages'>): Letter[] {
+  return LETTERS.filter((l) => q.alternatives[l] !== undefined || !!q.altImages?.[l]);
 }

@@ -39,17 +39,18 @@ A cada push, o GitHub Actions (`.github/workflows/build.yml`) compila o site e o
 
 Modelo de confiança: as estatísticas do perfil (XP, rating) são enviadas pelo próprio cliente — adequado para um grupo de estudo; para competição aberta, mover o cálculo de rating para funções no servidor.
 
-## Adicionar questões / provas
+## Adicionar provas (quantas quiser)
 
-As questões **não são editadas no app**. Para adicionar uma prova, envie o PDF ao Claude neste repositório; o pipeline faz o resto:
+**Jeito 1 — pelo site do GitHub (sem instalar nada):**
+1. Abra o repositório → pasta **`provas/`** → **Add file → Upload files**.
+2. Arraste os PDFs. O nome precisa começar pela instituição e ter o ano: `UEL-R1-2024.pdf`, `FAMERP-R1_Acesso_Direto-2025.pdf`.
+3. **Commit changes**. Em ~3 minutos o GitHub Actions importa as provas, monta o banco e publica o site.
 
-```bash
-pip install pymupdf
-python3 tools/extract_unoeste.py prova.pdf      # texto, gabarito, anuladas, imagens e recortes originais
-# registrar a prova em tools/exams.json (id, título, faixas de categoria)
-npm run bank                                     # gera public/banco/*.json
-```
-Explicações/subtemas opcionais em `tools/annotations/<id>.txt` (formato descrito em `tools/build_bank.py`).
+**Jeito 2 — mandar os PDFs para o Claude**, que importa, confere o gabarito e as áreas e publica.
+
+O importador (`tools/import_provas.py`) aceita 4 ou 5 alternativas, gabarito em grade (qualquer número de colunas) ou em pares (`1-A`), `X` = anulada, imagens nas questões e alternativas em forma de imagem. As **áreas** de cada questão vêm de `tools/provas.json` (faixas por prova) ou, se não houver faixas, são **detectadas automaticamente** (a prova é dividida nos 5 blocos de área mais prováveis — ~95% de acerto nas provas atuais). Para corrigir uma prova, adicione a faixa em `tools/provas.json`, ex.: `"UEL-2024": "1-20 CLI; 21-40 CIR; 41-60 GO; 61-80 PED; 81-100 PRE"`. Nome de exibição da instituição: seção `instituicoes` do mesmo arquivo.
+
+Localmente: `pip install pymupdf && python3 tools/import_provas.py && python3 tools/build_bank.py`.
 
 ## Testes locais do online
 

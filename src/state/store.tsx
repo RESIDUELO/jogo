@@ -53,7 +53,7 @@ export interface TrainingLaunch {
   categories: string[]; // vazio = todas
   wrongOnly: boolean;
   questionIds?: string[]; // lista fixa (ex.: revisar erradas de uma partida)
-  examId?: string;
+  exams?: string[]; // provas escolhidas (vazio = todas)
 }
 
 export interface Toast {

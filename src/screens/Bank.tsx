@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import { CAT, CATEGORY_IDS, DIFFICULTY_COLOR, DIFFICULTY_LABEL } from '../data/categories';
 import { normalize } from '../engine/util';
 import { useStore } from '../state/store';
+import { groupExams } from '../ui/ExamPicker';
 import type { CategoryId, Question, QuestionStatus } from '../types';
 import { Bar, Btn, Card, CatBadge, Header } from '../ui/common';
 import { ExplanationModal } from '../ui/QuestionPlay';
@@ -71,10 +72,14 @@ export function FilterBar({ f, set, subs }: { f: BrowserFilters; set: (f: Browse
         </select>
         <select className="input" value={f.exam} onChange={(e) => set({ ...f, exam: e.target.value })}>
           <option value="">Prova</option>
-          {store.exams.map((e) => (
-            <option key={e.id} value={e.id}>
-              {e.title}
-            </option>
+          {groupExams(store.exams).map((g) => (
+            <optgroup key={g.institution} label={g.institution}>
+              {g.exams.map((e) => (
+                <option key={e.id} value={e.id}>
+                  {e.title}
+                </option>
+              ))}
+            </optgroup>
           ))}
         </select>
         <select className="input" value={f.diff} onChange={(e) => set({ ...f, diff: e.target.value })}>
@@ -174,13 +179,22 @@ export function BankScreen() {
       </Card>
 
       <Card className="p-4 mt-4">
-        <div className="font-display font-semibold mb-2">Por prova</div>
-        <div className="grid sm:grid-cols-2 gap-2 text-sm">
-          {store.exams.map((e) => (
-            <button key={e.id} onClick={() => setF({ ...EMPTY_FILTERS, exam: e.id })} className="flex justify-between rounded-xl bg-black/20 px-3 py-2 hover:bg-black/30">
-              <span>{e.title}</span>
-              <span className="text-white/50">{e.count}</span>
-            </button>
+        <div className="font-display font-semibold mb-2">Por faculdade e ano</div>
+        <div className="space-y-2 text-sm">
+          {groupExams(store.exams).map((g) => (
+            <div key={g.institution} className="rounded-xl bg-black/20 p-2.5">
+              <div className="flex justify-between mb-1.5">
+                <b>{g.institution}</b>
+                <span className="text-white/50">{g.exams.reduce((a, e) => a + e.count, 0)} questões</span>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {g.exams.map((e) => (
+                  <button key={e.id} onClick={() => setF({ ...EMPTY_FILTERS, exam: e.id })} className="rounded-lg bg-white/5 hover:bg-white/10 px-2.5 py-1">
+                    {e.year} <span className="text-white/40">({e.count})</span>
+                  </button>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </Card>

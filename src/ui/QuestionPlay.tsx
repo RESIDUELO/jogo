@@ -4,7 +4,7 @@ import { CAT, DIFFICULTY_COLOR, DIFFICULTY_LABEL } from '../data/categories';
 import { POWERUPS } from '../data/shop';
 import { shuffle } from '../engine/util';
 import type { Letter, PowerUpId, Question } from '../types';
-import { LETTERS } from '../types';
+import { altLetters } from '../types';
 import { Btn, Modal } from './common';
 
 export interface AnswerResult {
@@ -47,7 +47,7 @@ const WRONG_SUBS = ['Não deixe essa questão escapar novamente.', 'Ela vai volt
 export function QuestionPlay(p: Props) {
   const q = p.question;
   const cat = CAT[q.category];
-  const letters = useMemo(() => LETTERS.filter((l) => q.alternatives[l]), [q]);
+  const letters = useMemo(() => altLetters(q), [q]);
   const [limit, setLimit] = useState(p.limitMs);
   const [elapsed, setElapsed] = useState(0);
   const [eliminated, setEliminated] = useState<Letter[]>([]);
@@ -257,7 +257,9 @@ export function QuestionPlay(p: Props) {
               className={`alt animate-rise group text-left ${st === 'right' ? 'alt-right' : st === 'wrong' ? 'alt-wrong animate-shake' : st === 'dim' ? 'opacity-45' : st === 'elim' ? 'opacity-25 line-through' : 'hover:-translate-y-0.5 hover:border-violet-400/70'}`}
             >
               <span className={`alt-letter ${st === 'right' ? 'bg-emerald-400 text-emerald-950' : st === 'wrong' ? 'bg-rose-500 text-white' : ''}`}>{l}</span>
-              <span className="flex-1 text-[14.5px] leading-snug">{q.alternatives[l]}</span>
+              <span className="flex-1 text-[14.5px] leading-snug">
+                <AltContent q={q} l={l} />
+              </span>
               {st === 'right' && <span className="text-xl">✔</span>}
               {st === 'wrong' && <span className="text-xl">✖</span>}
             </button>
@@ -338,6 +340,17 @@ export function QuestionPlay(p: Props) {
   );
 }
 
+/** Conteúdo da alternativa: texto e/ou imagem (tabelas, gráficos). */
+export function AltContent({ q, l }: { q: Question; l: Letter }) {
+  const img = q.altImages?.[l];
+  return (
+    <>
+      {q.alternatives[l]}
+      {img && <img src={`${import.meta.env.BASE_URL}banco/img/${img}`} alt={`Alternativa ${l}`} className="mt-1 block w-full max-w-md rounded-lg bg-white" loading="lazy" />}
+    </>
+  );
+}
+
 export function OriginalModal({ q, open, onClose }: { q: Question; open: boolean; onClose: () => void }) {
   return (
     <Modal open={open} onClose={onClose} title={`Questão original — ${q.exam}, Q${q.number ?? ''}`} wide>
@@ -352,7 +365,7 @@ export function OriginalModal({ q, open, onClose }: { q: Question; open: boolean
 }
 
 export function ExplanationModal({ q, open, onClose, chosen }: { q: Question; open: boolean; onClose: () => void; chosen?: Letter | null }) {
-  const letters = LETTERS.filter((l) => q.alternatives[l]);
+  const letters = altLetters(q);
   return (
     <Modal open={open} onClose={onClose} title="Explicação completa" wide>
       <div className="space-y-4 text-sm leading-relaxed">
@@ -370,7 +383,7 @@ export function ExplanationModal({ q, open, onClose, chosen }: { q: Question; op
         <div className="grid gap-1.5">
           {letters.map((l) => (
             <div key={l} className={`rounded-xl px-3 py-2 border ${l === q.answer ? 'border-emerald-400/60 bg-emerald-500/10' : l === chosen ? 'border-rose-400/60 bg-rose-500/10' : 'border-white/10'}`}>
-              <b>{l})</b> {q.alternatives[l]} {l === q.answer && '✔'}
+              <b>{l})</b> <AltContent q={q} l={l} /> {l === q.answer && '✔'}
             </div>
           ))}
         </div>

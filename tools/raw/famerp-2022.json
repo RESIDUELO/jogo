@@ -1,0 +1,1329 @@
+[
+ {
+  "number": 1,
+  "stem": "Paciente masculino, 65 anos, alcoólatra há mais de 30 anos. Segundo a acompanhante, toma em média três copos de pinga e cerveja quase que diariamente. Foi internado no hospital psiquiátrico quatro vezes, apresentando síndrome de abstinência. Em acompanhamento no ambulatório de hepatologia há oito anos, com diagnóstico de Cirrose Hepática e Diabetes. Deu entrada no hospital apresentando confusão mental, ictérico +++/4+, eritema palmar e telangiectasia, distensão abdominal por ascite, hepatoesplenomegalia e ginecomastia. Ao terceiro dia de internação, apresentou episódios de hematêmese, choque hipovolêmico, parada cardiorrespiratória, vindo a falecer. Como deve ser preenchido a Declaração de Óbito?",
+  "alternatives": {
+   "A": "",
+   "B": "",
+   "C": "",
+   "D": ""
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q001-1.jpg"
+  ],
+  "altImages": {
+   "A": "famerp-2022-q001-1.jpg",
+   "B": "famerp-2022-q001-2.jpg",
+   "C": "famerp-2022-q001-3.jpg",
+   "D": "famerp-2022-q001-4.jpg"
+  }
+ },
+ {
+  "number": 2,
+  "stem": "Paciente masculino, 61 anos, foi atendido pelo médico da UBSF do seu bairro, relatando ter notado “estrias de sangue nas fezes” há três dias. Refere que houve mudança no seu hábito intestinal, com diarreias alternando com obstipação intestinal e que vem perdendo peso há três meses. Perguntado sobre doenças na família, referiu que o pai faleceu de “câncer no intestino”. O médico solicitou hemograma, pesquisa de sangue oculto nas fezes, colonoscopia e o encaminhou para marcar os exames. Após quatro meses, o paciente retorna à Unidade de Saúde referindo que o sangramento anal aumentou, que sente muita fraqueza, perda de apetite e que teve um emagrecimento acentuado. O mesmo médico o atendeu e a conversa entre os dois foi assim: DOUTOR: – Bom dia. O Sr. realizou os exames que eu te pedi? PACIENTE: – Bom dia, doutor! Eu não fiz ainda. DOUTOR: – Como não fez? Assim não dá! Como vou saber o que o senhor tem? PACIENTE: – Desculpa, doutor! A culpa não foi minha. Marcaram os exames para daqui a seis meses, e eu só piorando. DOUTOR: – Infelizmente, sem os resultados dos exames não posso fazer nada. PACIENTE: – Paciência, né doutor, paciência. Vamos aguardar. Quem sabe Deus dá um jeitinho. Muito obrigado! Assim que conseguir os exames eu volto. Ao ler esta história fictícia, mas que acontece todos os dias em grande parte dos serviços de saúde do Brasil, qual a diretriz da Política Nacional de Atenção Básica que não foi levada em conta pelo médico e pela equipe de saúde da UBSF?",
+  "alternatives": {
+   "A": "Integralidade do cuidado.",
+   "B": "Humanização do cuidado.",
+   "C": "Coordenação do cuidado.",
+   "D": "Longitudinalidade do cuidado."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q002-1.jpg",
+   "famerp-2022-q002-2.jpg"
+  ]
+ },
+ {
+  "number": 3,
+  "stem": "Leia as reportagens abaixo: “A Hospital Care, holding de administração de serviços de saúde, o Grupo Austa e o Instituto de Moléstias Cardiovasculares (IMC) de Rio Preto estão se fundindo em um grande grupo da área de saúde. As empresas não informaram detalhes como valor da operação ou sobre contratações.” (Diário da Região). “Hapvida compra Grupo HB Saúde por R$ 450 milhões e Cetro por R$ 25 milhões: A Hapvida anunciou nesta quarta-feira as aquisições do Grupo HB Saúde, em São Paulo, por R$ 450 milhões, e do Centro Especializado em Traumatologia Reabilitação e Ortopedia (Cetro), na Bahia, por R$ 25 milhões” (VALOR investe). O setor da Saúde Suplementar, que possui 48 milhões de consumidores e fatura, aproximadamente, 210 bilhões de reais, em que pese a crise econômica brasileira, está em franco aquecimento e movimentação. Este movimento tem impactado consideravelmente na profissão e no mercado de trabalho médico. Baseado nas duas reportagens acima, responda: quais as tendências do mercado da saúde suplementar apontadas pelas reportagens e que impactos estão sendo observados no trabalho médico?",
+  "alternatives": {
+   "A": "Verticalização da cadeia de produção da assistência à saúde, concentração dos usuários nas grandes operadoras, diminuição das práticas liberais em medicina, com crescimento das formas de assalariamento, de contratos como pessoa jurídica e de múltiplos vínculos empregatícios.",
+   "B": "Terceirização das operadoras, através da gestão em parceria com hospitais, clínicas e laboratórios, expansão das cooperativas médicas, aumento das práticas liberais em medicina, com diminuição das formas de assalariamento, com os médicos concentrando suas atividades nos seus consultórios.",
+   "C": "Integração da Rede Assistencial, com formas de gestão horizontalizadas e cooperadas entre várias operadoras de uma mesma região e reestruturação do modelo assistencial com enfoque na prevenção, valorização do trabalho médico, com processos de trabalhos centrados no modelo de cooperativas médicas.",
+   "D": "Expansão do número de operadoras de saúde nos últimos cinco anos, notadamente as filantrópicas e de autogestão, integração da rede assistencial, com modelos de atenção centrados na pessoa e na autonomia médica, de acordo com os Códigos de Ética dos respectivos Conselhos Regionais de Medicina e do CFM."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q003-1.jpg",
+   "famerp-2022-q003-2.jpg"
+  ]
+ },
+ {
+  "number": 4,
+  "stem": "Em relação ao protocolo de mamografia, o INCA/MS traz as seguintes diretrizes: “A mamografia de rastreamento – exame de rotina em mulheres sem sinais e sintomas de câncer de mama – é recomendada na faixa etária de 50 a 69 anos, a cada dois anos. Fora dessa faixa etária e dessa periodicidade, os riscos aumentam e existe maior incerteza sobre benefícios. O Ministério da Saúde recomenda contra o rastreamento com mamografia em mulheres com menos de 50 anos (recomendação contrária forte: os possíveis danos claramente superam os possíveis benefícios)”. Embasado nestas diretrizes, responda a seguinte questão: quando se faz rastreamento com mamografia em massa, indiscriminado para câncer de mama, e quando não se faz o rastreamento recomendado, com mamografia bianual em mulheres de 50 a 69 anos, que níveis de prevenção não estão sendo levados em conta pelos serviços de atendimento à saúde da mulher?",
+  "alternatives": {
+   "A": "Prevenção Primária e Prevenção Terciária.",
+   "B": "Prevenção Secundária e Prevenção Primária.",
+   "C": "Prevenção Quaternária e Prevenção Primária.",
+   "D": "Prevenção Quaternária e Prevenção Secundária."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q004-1.jpg"
+  ]
+ },
+ {
+  "number": 5,
+  "stem": "Após analisar os dados de internações por SRAG, o Ministério da Saúde concluiu que “pessoas com 80 anos ou mais que se internaram na rede pública da capital paulista com COVID-19 grave tiveram menos chance de sobreviver do que aquelas que buscaram atendimento privado”. Os dados estão apresentados na tabela abaixo: TABELA: Número de internações, óbitos e Coeficiente de Mortalidade por SRAG no município de São Paulo, 2021. Em relação às conclusões do estudo, técnicos da saúde e pesquisadores fizeram os seguintes comentários: Pesquisador em saúde pública da Fiocruz e coordenador do projeto Infogripe, que monitora os índices nacionais de covid-19, Marcelo Gomes lembra “que condições prévias desfavoráveis de pessoas em situação de vulnerabilidade socioeconômica ajudam um pouco a explicar a diferença dos números nas redes público e privada. Mesmo se atendidos em rede privada, é possível que muitos desses casos tivessem o mesmo desfecho. Não se trata apenas de um debate sobre a capacidade do SUS de oferecer atendimento adequado”. Técnicos da Secretaria Municipal de Saúde informaram que “não considera correto comparar serviços com perfis assistenciais diferentes, que consequentemente receberam pacientes com perfis distintos. Na fase pré-pandemia, os hospitais sob gestão estadual já respondiam por mais de 65% dos leitos clínicos e de UTI entre os serviços do plano de contingência de enfrentamento da COVID-19 de São Paulo, absorvendo os casos mais graves da doença desde o início da pandemia. A partir dos dados da tabela e dos comentários dos técnicos e pesquisadores, responda: qual o Risco Relativo de Morte por SRAG entre a Rede Pública e a Rede Privada e quais os fatores podem estar interferindo na validade do estudo do Ministério da Saúde?",
+  "alternatives": {
+   "A": "Risco Relativo = 8 e fatores de viés de seleção.",
+   "B": "Risco Relativo = 1,3 e fatores de confundimento.",
+   "C": "Risco Relativo = 8 e fatores de viés de informação.",
+   "D": "Risco Relativo = 1,3 e fatores de viés de informação."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [
+   "famerp-2022-q005-1.jpg"
+  ],
+  "original": [
+   "famerp-2022-q005-1.jpg",
+   "famerp-2022-q005-2.jpg"
+  ]
+ },
+ {
+  "number": 6,
+  "stem": "Paciente de 44 anos comparece no ambulatório de doenças infecto contagiosas com quadro de febre de 39ºC há dois dias, associada a poliartralgia, cefaleia e rash cutâneo. Foi solicitado hemograma, que demonstrou leucopenia, linfopenia, hematócrito normal e plaquetas normais. O PCR apresentou-se elevado. Refere que sua casa se encontra infestada pelo Aedes aegypti e que alguns vizinhos relataram o mesmo quadro. Como dado epidemiológico é importante citar que na sua cidade existem casos autóctones de doenças, cujo vetor é o Aedes aegypti. Foi solicitado Prova de Isolamento Viral e RT-PCR. Qual a hipótese diagnóstica para o caso e a conduta do ponto de vista da Vigilância Epidemiológica?",
+  "alternatives": {
+   "A": "Dengue. Notificação imediata para o Serviço de Vigilância Epidemiológica Municipal.",
+   "B": "Dengue. Notificação semanal para o Serviço de Vigilância Epidemiológica Municipal.",
+   "C": "Chikungunya. Notificação para o Serviço de Vigilância Epidemiológica Municipal somente após a confirmação diagnóstica.",
+   "D": "Chikungunya. Notificação em até 24 horas para o Serviço de Vigilância Epidemiológica Municipal."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q006-1.jpg"
+  ]
+ },
+ {
+  "number": 7,
+  "stem": "Um novo teste rápido para COVID-19 está sendo testado em comparação com o RT PCR. Em uma amostra de 400 pessoas, o RT-PCR deu positivo em 200 e negativo em 200. Naquelas pessoas em que o RT-PCR deu positivo, o novo teste deu negativo em 50, e naqueles que o RT-PCR deu negativo, o novo Teste Rápido deu 150 positivos. Considerando que o RT-PCR, no momento, é o “Padrão Ouro” (a melhor escolha), qual a razão de verossimilhança positiva do novo teste?",
+  "alternatives": {
+   "A": "0,5.",
+   "B": "1,0.",
+   "C": "3,0.",
+   "D": "150."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q007-1.jpg"
+  ]
+ },
+ {
+  "number": 8,
+  "stem": "Enquanto trabalhava no consultório da Unidade de Saúde da Família de Araçuaí do Norte, uma médica recebeu, de um oficial de justiça, uma notificação do juiz da comarca para que ela constatasse um óbito e preenchesse a Declaração de Óbito, cuja causa, segundo informa o documento, é “suspeita de suicídio por arma de fogo” (causa externa). Diante deste fato, como deve proceder a médica?",
+  "alternatives": {
+   "A": "Assinar a notificação, constatar o óbito, descrever as lesões externas do cadáver e seus possíveis agentes causadores, se existirem, e colocar como Causa Básica Causa Desconhecida.",
+   "B": "Assinar a notificação, constatar o óbito, descrever as lesões externas do cadáver e seus possíveis agentes causadores, se existirem, e colocar como Causa Básica Causa Suicídio (CID10 - X74).",
+   "C": "Assinar a notificação, constatar o óbito, mas não preencher a Declaração de Óbito, uma vez que a legislação vigente sobre assunto determina que todo óbito, cuja Causa Básica é um Causa Externa (violenta ou não), deve ser encaminhado para o Instituto Médico Legal (IML), para que, depois de feita a autópsia, o médico legista preencha o Atestado de Óbito.",
+   "D": "Não assinar a notificação, informando ao oficial de justiça que, segundo a legislação vigente, todo óbito, cuja Causa Básica é um Causa Externa (violenta ou não), deve ser encaminhado para o Instituto Médico Legal (IML), para que, depois de feita a autópsia, o médico legista preencha o Atestado de Óbito."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q008-1.jpg",
+   "famerp-2022-q008-2.jpg"
+  ]
+ },
+ {
+  "number": 9,
+  "stem": "Paciente masculino, operador de sistema de reversão do setor de coqueria da Siderurgia Aços AS há 10 anos. No exercício de suas funções opera o sistema de válvulas de gás e de ar nos fornos da coqueria, abastece e descarrega os fornos, manejando um carro de enfornamento e de desenfornamento. Nesta atividade, segundo o Programa de Prevenção de Riscos Ambientais(PPRA) da empresa há exposição ao benzeno, ao xileno, ao lolueno e ao ruido acima de 85 dB. Como médico do trabalho da empresa, quais exames complementares você solicitaria no exame periódico deste trabalhador, de acordo com o Quadro I da NR 7 - programa de controle médico de saúde ocupacional?",
+  "alternatives": {
+   "A": "Fenol urinário, urina I, hemograma e audiometria.",
+   "B": "Fenol urinário, metahemoglobina. Ácido hipúrico e audiometria.",
+   "C": "Hemograma, ácido metil-hipúrico urinário, ácido hipúrico urinário e audiometria.",
+   "D": "Fenol urinário, metanol urinário, dosagem de ácido hipúrico no sangue e audiometria."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q009-1.jpg"
+  ]
+ },
+ {
+  "number": 10,
+  "stem": "Paciente feminina, 83 anos, acamada com sequela de Acidente Vascular Cerebral há 2 anos, reside próximo de uma Unidade Básica de Saúde da Família (UBSF). Na visita domiciliar de rotina do Agente Comunitário de Saúde (ACS), a filha relata que a mãe vem apresentando febre há 1 dia, falta de apetite e diminuição da urina. Na reunião da Equipe na UBSF, no final da manhã do mesmo dia, o ACS relata o caso e uma visita domiciliar foi agendada com o médico e a enfermeira da equipe para o período da tarde. Que princípio doutrinário do SUS está sendo garantido no atendimento domiciliar da paciente?",
+  "alternatives": {
+   "A": "Equidade.",
+   "B": "Integralidade.",
+   "C": "Regionalização.",
+   "D": "Descentralização."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q010-1.jpg"
+  ]
+ },
+ {
+  "number": 11,
+  "stem": "Nas diretrizes políticas consolidadas pela Constituição Federal do Brasil (1988), estão os fundamentos da organização do Sistema Único de Saúde – SUS (Lei 8080/1990), de caráter público, formado por uma rede de serviços regionalizada, hierarquizada e descentralizada, com direção única em casa esfera de governo, e sob controle dos seus usuários pela participação social ( Lei 8.142/1990). Esta participação dos usuários se dá a partir da criação de um Órgão Colegiado de Saúde e das Conferencias de Saúde, nas três esferas do governo, possibilitando a participação dos usuários na formação política públicas, na fiscalização e controle das ações do Estado em defesa do direito à saúde. Qual é a denominação e qual é a composição paritária do Órgão Colegiado da Saúde que assegura a participação dos usuários no controle do SUS?",
+  "alternatives": {
+   "A": "É denominado Comissão de Gestão da Saúde. A sua composição é pactuada pelos gestores de serviços sendo 25% de conselheiros representantes de usuários, enquanto 25% representam trabalhadores da saúde, 25% prestadores do governo e 25% prestadores de bens e serviços de saúde.",
+   "B": "É denominado Conselho de Saúde. A sua composição é pactuada pelos prestadores de serviços sendo 25% de conselheiros representantes de usuários, enquanto 25% representam trabalhadores da saúde, 25% prestadores do governo e 25% prestadores de bens e serviços de saúde.",
+   "C": "É denominado Conselho de Saúde. A sua composição é de 50% de conselheiros representantes de usuários, enquanto 25% representam trabalhadores da saúde e 25% o governo e os prestadores de bens e serviços de saúde.",
+   "D": "É denominado Comissão de Gestão da Saúde. A sua composição é: 50% de conselheiros representantes de usuários, enquanto 25% representam trabalhadores da saúde e 25%, o governo e os prestadores de bens e serviços de saúde."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q011-1.jpg",
+   "famerp-2022-q011-2.jpg"
+  ]
+ },
+ {
+  "number": 12,
+  "stem": "Os últimos casos de Poliomielite no Brasil ocorreram em 1989. Em 1994, o Brasil, juntamente com os demais países das Américas, recebeu da Organização Panamericana de Saúde (OPAS), a Certificação de área livre de circulação do Poliovírus Selvagem do seu território. No cenário global da poliomielite, dados da Organização Mundial de Saúde (OMS,2021) demostram quase 2 países (Afeganistão e Paquistão) permanecem endêmicos com circulação do polivírus selvagem. (Nota Informativa n°204/2019-SVS/ministério da Saúde, 2121). Para manter esta condição, de área livre de circulação de poliovírus selvagem no Brasil, as medidas recomendadas pela Secretaria da Vigilância de Saúde do Ministério da Saúde são:",
+  "alternatives": {
+   "A": "Intensificar a busca ativa de casos de diarreia relacionados a déficit motor de 0 a 29 anos de idades para notificação e identificação do poliovírus selvagem e coleta de uma amostra de fezes até 14 dias do início do déficit motor.",
+   "B": "Todo caso de paralisias flácidas agudas, em menores de quinze anos de idade, independente da hipótese diagnóstica, deverá ter notificação obrigatória e investigação imediata com a coleta de uma amostra de fezes realizada até 14 dias do início do déficit motor.",
+   "C": "Todo caso de tetraparesia em indivíduos 15 a 29 anos de idade, independente da hipótese diagnóstica, deverá ter notificação obrigatória e investigação imediata com a coleta de uma amostra de fezes realizada até 14 dias do início do déficit motor.",
+   "D": "Realizar a atualização da situação vacinal das crianças menores de um ano de idade e monitorar os casos de paralisias flácidas agudas que apresentarem de diarreia nesta faixa etária com coleta de uma amostra de fezes realizada até 14 dias do início dos déficits motor."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q012-1.jpg"
+  ]
+ },
+ {
+  "number": 13,
+  "stem": "O gráfico abaixo mostra a tendência de casos notificados de AIDS, óbitos e número de pessoas vivendo com AIDS no estado de São Paulo no período de 1992 a 2019: A mortalidade pela infecção do HIV aumentou rapidamente de 1992 a 1995, diminuindo a partir 1995 até 2003, com tendência a estabilização até 2015 e posteriormente volta apresentar queda. Esta queda nos óbitos em grande parte pela introdução das novas e altamente ativas terapias antirretrovirais, bem como mudanças no estilo de vida resultantes de educação em saúde pública. Com a queda da mortalidade e o aumento na expectativa de vida de muitas pessoas com vivendo com aids observa-se:",
+  "alternatives": {
+   "A": "O aumento significativo da incidência de AIDS.",
+   "B": "O aumento significativo da prevalência de AIDS.",
+   "C": "A redução significativa da virulência da Infecção pelo HIV.",
+   "D": "A redução significativa do ataque secundário da infecção pelo HIV."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [
+   "famerp-2022-q013-1.jpg"
+  ],
+  "original": [
+   "famerp-2022-q013-1.jpg",
+   "famerp-2022-q013-2.jpg"
+  ]
+ },
+ {
+  "number": 14,
+  "stem": "Criança de 2 anos de idade, feminina, apresenta febre de 38,5ºC há 1 dia, tosse, coriza, conjuntivite, com exantema que surgiu atrás das orelhas, no rosto e se espalhou pelo corpo. Foi a Unidade de Pronto Atendimento (UPA) onde foi feita a suspeita de sarampo. Frequentou a Creche Municipal até o dia anterior ao início dos sintomas. Esta creche atende crianças de 6 meses a 5 anos de idade. Qual a medida de controle recomendada para interromper a cadeia de transmissão do sarampo na Creche e no domicílio desta criança?",
+  "alternatives": {
+   "A": "A medida recomendada é o bloqueio vacinal seletivo, para vacinar os não vacinados, após o contato com o caso suspeito. Deve ser realizado a partir dos 6 meses de idade, no menor tempo possível (prazo máximo de até 72 horas) com a vacina tríplice viral ou tetraviral.",
+   "B": "A medida recomendada é a convocação de faltosos no município onde ocorreu o caso, para vacinar os não vacinados. Deve ser realizado a partir dos 24 meses de idade, prazo máximo de até 7 dias, com a vacina tríplice viral ou tetraviral.",
+   "C": "A medida recomendada é varredura indiscriminada, para vacinar todos os contatos (vacinados ou não), após o contato com o caso suspeito. Deve ser realizado a partir dos 3 meses de idade, prazo máximo de até 10 dias, com a vacina tríplice viral ou tetraviral.",
+   "D": "A medida recomendada é a convocação de faltosos para vacinar com a Vacina Tríplice Viral (SCR), preferencialmente no prazo máximo de até 48 horas, para as crianças menores de 6 meses que não receberam nenhuma dose da tríplice viral."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q014-1.jpg"
+  ]
+ },
+ {
+  "number": 15,
+  "stem": "Paciente masculino, 8 anos, foi mordido pelo cachorro da vizinha, enquanto brincava no quintal da casa dela. A vizinha refere que o animal está bem de saúde, que não sai de casa, porém não foi vacinado na última campanha de vacinação contra raiva. No atendimento na Unidade de Pronto Atendimento (UPA), observou-se que o cachorro provocou ferimento leve no membro inferior direito, com mordedura superficial e pouco extensa. Qual a conduta?",
+  "alternatives": {
+   "A": "Lavar com água e sabão. Iniciar imediatamente o esquema profilático com 4 (quatro) doses de vacina administradas nos dias 0, 3, 7 e 14, pela via intramuscular, e ou nos dias 0, 3, 7 e 28, pela via intradérmica.",
+   "B": "Lavar com água e sabão. Iniciar imediatamente o esquema profilático com soro e 4 (quatro) doses de vacina administradas nos dias 0, 3, 7 e 14, pela via intramuscular, ou nos dias 0, 3, 7 e 28, pela via intradérmica.",
+   "C": "Lavar com água e sabão. Observar o animal durante 10 dias após a exposição. Se o animal permanecer sadio no período de observação, encerrar o caso. Se o animal morrer, desaparecer ou se tornar raivoso, administrar 4 (quatro) doses de vacina nos dias 0, 3, 7 e 14, pela via intramuscular, ou nos dias 0, 3, 7 e 28, pela via intradérmica.",
+   "D": "Lavar com água e sabão. Iniciar o esquema profilático com soro e 4 (quatro) doses de vacina administradas nos dias 0, 3, 7 e 14, pela via intramuscular, ou nos dias 0, 3, 7 e 28, pela via intradérmica. Observar o animal durante 10 dias após a exposição. Se a suspeita de raiva for descartada após o 10º dia de observação, suspender o esquema profilático e encerrar o caso."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q015-1.jpg",
+   "famerp-2022-q015-2.jpg"
+  ]
+ },
+ {
+  "number": 16,
+  "stem": "Após passarem por ensaios clínicos rigorosos, vacinas contra COVID-19 foram aprovadas para uso emergencial e milhões de doses foram aplicadas na população brasileira. Foi necessário estabelecer estratégias e diretrizes para avaliar a segurança do imunizante a partir da análise de Eventos Adversos Pós-Vacinação (EAPV), que são agravos de notificação compulsória e de investigação epidemiológica imediata a ocorrência do evento. Para as vacinas contra o vírus SARS-CoV-2, considera-se caso de evento adverso pós-vacinação:",
+  "alternatives": {
+   "A": "Qualquer ocorrência, de leve a grave, em até 48 horas após a administração da referida vacina, devendo ser notificado no sistema de informação recomendado (no Estado de São Paulo o Sistema Vacivida).",
+   "B": "Qualquer ocorrência, de leve a grave, em até 14 dias após a administração da referida vacina, devendo ser notificado no sistema de informação recomendado (no Estado de São Paulo o Sistema Vacivida).",
+   "C": "Qualquer ocorrência, de leve a grave, em até 60 dias após a administração da referida vacina, devendo ser notificado no sistema de informação recomendado (no Estado de São Paulo o Sistema Vacivida).",
+   "D": "Qualquer ocorrência, de leve a grave, em até 30 dias após a administração da referida vacina, devendo ser notificado no sistema de informação recomendado (no Estado de São Paulo o Sistema Vacivida)."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q016-1.jpg"
+  ]
+ },
+ {
+  "number": 17,
+  "stem": "Escolar apresenta quadro caracterizado pela presença de diarreia crônica, acompanhada de distensão abdominal, perda de peso, diminuição do tecido celular subcutâneo, atrofia da musculatura glútea, falta de apetite, alteração de humor (irritabilidade ou apatia), vômitos e anemia. Considerando a hipótese diagnóstica do paciente acima, assinale a alternativa que contém apenas alimentos seguros para esta criança:",
+  "alternatives": {
+   "A": "Lentilha, soja, ervilha, mandioca e trigo.",
+   "B": "Arroz, feijão, azeite, farinha de milho e ovo.",
+   "C": "Carne bovina, peixes, tubérculos, aveia e centeio.",
+   "D": "Fécula de batata, frutas, hortaliças, leite e cevada."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q017-1.jpg",
+   "famerp-2022-q017-2.jpg"
+  ]
+ },
+ {
+  "number": 18,
+  "stem": "Pré-adolescente, sexo feminino é encaminhada para hospital terciário devido diagnóstico de cetoacidose diabética. Na admissão, é identificada glicemia = 600 mg/dL; pH = 7,1; potássio = 4,0 mEq/L. Ao prescrever as medidas iniciais de tratamento, deve ser considerado que:",
+  "alternatives": {
+   "A": "A correção da acidose provocará redução na calemia.",
+   "B": "A administração de insulina provocará aumento da calemia.",
+   "C": "Existe depleção do potássio extracelular, preservando o potássio intracelular.",
+   "D": "A administração de bicarbonato tem finalidade de reduzir a ocorrência de edema cerebral."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q018-1.jpg"
+  ]
+ },
+ {
+  "number": 19,
+  "stem": "Criança com 4 anos de idade é levada ao pronto atendimento pela mãe, que a tem achado sonolenta há algumas horas e relata que sua filha tem apresentado diarreia há 3 dias, próximo a 6 evacuações diárias, tendo a evacuação característica explosiva. Ela comenta também que observa inapetência e vômitos desde o início do quadro. Refere febre não aferida. Ao ser examinada pelo pediatra, é notado que a criança apresenta importante assadura em região perineal, aumento do peristaltismo e bastante flatulência. Fezes amareladas na fralda, sem muco ou sangue. Assinale a alternativa que revela o mecanismo fisiopatológico da principal hipótese diagnóstica deste paciente:",
+  "alternatives": {
+   "A": "Diarreia secretora.",
+   "B": "Diarreia osmótica.",
+   "C": "Diarreia inflamatória.",
+   "D": "Diarreia por alteração de motilidade."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q019-1.jpg"
+  ]
+ },
+ {
+  "number": 20,
+  "stem": "Criança de 5 anos é levada pelos pais ao consultório, segundo o que relatam, a escola tem se queixado da criança por não acompanhar os colegas no rendimento geral e por não conversar com os amigos e professores. Conforme o médico fazia mais perguntas sobre a criança, os pais explicam que ele sempre foi “difícil de lidar”, que se irrita muito quando tocam nele, que faz “escândalos” quando tentam arrumar o cabelo dele. Mas que adora brincar com dinossauros, inclusive suas primeiras palavras se relacionavam a esses animais, sabendo mais de 30 nomes diferentes. Durante a consulta toda, a criança quase não respondeu às indagações da pediatra e não tirava o olho de uma figura colada na balança. O quadro descrito tem como provável diagnóstico:",
+  "alternatives": {
+   "A": "Paralisia cerebral.",
+   "B": "Transtorno opositor desafiador.",
+   "C": "Transtorno do espectro autista.",
+   "D": "Transtorno de déficit de atenção."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q020-1.jpg"
+  ]
+ },
+ {
+  "number": 21,
+  "stem": "Recém-nascido a termo com peso 3,5 kg, mãe com HBsAg+, nega uso de imunobiológicos durante a gestação, não sabia do diagnóstico até a data do parto e não sabe seu histórico vacinal, qual a conduta em relação ao recém-nascido?",
+  "alternatives": {
+   "A": "Realizar vacinação e imunoglobulina contra hepatite B o mais precoce possível.",
+   "B": "Realizar imunoglobulina humana contra Hepatite B nas primeiras 12 horas e aguardar 7 dias para vacinação contra hepatite B.",
+   "C": "Realizar vacinação contra hepatite B e coletar exame do RN para decidir necessidade de realizar imunoglobulina.",
+   "D": "Realizar vacinação contra hepatite B nas primeiras 12 horas, aguardar 7 dias para realizar imunoglobulina humana contra Hepatite B."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q021-1.jpg",
+   "famerp-2022-q021-2.jpg"
+  ]
+ },
+ {
+  "number": 22,
+  "stem": "Menino de 4 meses de idade, com desenvolvimento pondero-estatural normal, é levado à emergência pediátrica pelos pais, por apresentar piora do desconforto respiratório e diminuição da alimentação. Referem que ele estava bem até ontem, quando iniciou sintomas respiratórios e uma febre baixa. No exame físico, verificou-se palidez e cianose perioral, frequência respiratória de 65mrpm, e sibilos por todo o tórax. A gasometria arterial mostrou pH de 7,15, pCO₂ de 65 mmHg e bicarbonato de 20 mmol/L. Qual das explicações a seguir melhor corresponde à condição apresentada pela criança?",
+  "alternatives": {
+   "A": "É provável que a criança apresente refluxo gastroesofágico e uma aspiração.",
+   "B": "É provável que a criança apresente bronquiolite e esteja em risco para insuficiência respiratória.",
+   "C": "É provável que a criança tenha bronquiolite e seus sintomas deverão melhorar com 2 ou mais administrações de um agonista beta-2 adrenérgico.",
+   "D": "O quadro clínico é compatível com sepse bacteriana e, portanto, dever-se-á iniciar antibióticoterapia."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q022-1.jpg"
+  ]
+ },
+ {
+  "number": 23,
+  "stem": "Menina de 2 meses de idade apresenta sibilância e diarreia há 5 dias. Os pais apresentam um relato subjetivo de febre. Ela continua se alimentando bem. As anormalidades laboratoriais que poderiam sugerir fibrose cística incluem todas as alternativas, exceto:",
+  "alternatives": {
+   "A": "Neutropenia.",
+   "B": "Alcalose metabólica.",
+   "C": "Hiponatremia e hipocloremia.",
+   "D": "Elevação do tempo de protrombina."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q023-1.jpg"
+  ]
+ },
+ {
+  "number": 24,
+  "stem": "Recém-nascido a termo por parto vaginal de gravidez sem complicações. Apresenta aparência normal, mas com desconforto respiratório quando para de chorar. Quando chora, fica rosada; quando não chora, o trabalho respiratório é intenso e começa a ficar cianótico. Qual das alternativas a seguir é a explicação mais provável para esse sintoma?",
+  "alternatives": {
+   "A": "Pneumotórax.",
+   "B": "Narcose neonatal.",
+   "C": "Atresia de coanas.",
+   "D": "Hérnia diafragmática."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q024-1.jpg"
+  ]
+ },
+ {
+  "number": 25,
+  "stem": "Recém-nascido de 2.200 g nasceu com 35 semanas de gestação. Sua mãe realizou pré-natal e afirmou não ter tido problemas. O líquido amniótico tinha uma aparência acastanhada. Ao nascimento, o recém-nascido apresentou exantema pústulo-eritematoso difuso, palidez, recusa da alimentação, taquipneia e cianose. O hemograma completo indicou monocitose acentuada. Ele foi a óbito 4h após o nascimento, em seguida ao início dos antibióticos. Qual a provável hipótese diagnóstica?",
+  "alternatives": {
+   "A": "Listeriose.",
+   "B": "Sífilis congênita.",
+   "C": "Varicela congênita.",
+   "D": "Septicemia por Streptococcus beta-hemolítico do grupo B de Lancefield."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q025-1.jpg",
+   "famerp-2022-q025-2.jpg"
+  ]
+ },
+ {
+  "number": 26,
+  "stem": "Durante o banho, uma mãe percebeu uma massa no abdome do filho de 4 anos e leva o ao consultório médico para avaliação. Ele não possui história de vômitos, de fezes anormais ou de dor abdominal. O exame físico revela pressão arterial em repouso de 130x88 mmHg, frequência cardíaca de 82 bpm, palidez e uma firme massa abdominal lateral esquerda, que não cruza a linha média. Qual das seguintes opções é a explicação mais provável para esses achados?",
+  "alternatives": {
+   "A": "Constipação.",
+   "B": "Intussuscepção.",
+   "C": "Neuroblastoma.",
+   "D": "Tumor de Wilms."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q026-1.jpg"
+  ]
+ },
+ {
+  "number": 27,
+  "stem": "Menina de 2 anos de idade, previamente hígida, apresentou 3 dias de diarreia sanguinolenta, que foi resolvida espontaneamente. Após a resolução do quadro diarreico, a mãe notou que a criança começou a apresentar palidez importante. Procurou a emergência do hospital e, ao exame físico, a criança apresentava-se pálida, irritada, afebril, com frequência cardíaca de 150 bpm, pressão arterial de 150/80 mmHg, com edema nas extremidades inferiores com formação de cacifo e petéquias disseminadas. O diagnóstico mais provável para este caso é:",
+  "alternatives": {
+   "A": "Septicemia.",
+   "B": "Meningococcemia.",
+   "C": "Síndrome hemolítico-urêmica.",
+   "D": "Púrpura trombocitopênica imunológica."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q027-1.jpg"
+  ]
+ },
+ {
+  "number": 28,
+  "stem": "Criança de 3 anos é atendida na emergência pediátrica com mãe referindo infecção urinária de repetição e urgência miccional desde o início do desfralde. A mãe informa também que criança apresenta fezes em cíbalos com dor ao evacuar e faz manobras de retenção fecal. O exame de urina tipo I é normal e a cultura de urina recente foi negativa. No tratamento inicial desta paciente o medicamento que deve ser usado como primeira escolha é:",
+  "alternatives": {
+   "A": "Oxibutina.",
+   "B": "Cefalexina.",
+   "C": "Nitrofurantoina.",
+   "D": "Polietilenoglicol."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q028-1.jpg"
+  ]
+ },
+ {
+  "number": 29,
+  "stem": "Criança de 7 anos apresentou trauma em perna direita durante uma partida de futebol. No dia do trauma, não teve dor ou limitação dos movimentos. Após 5 dias apresentou queda do estado geral, febre, dor de forte intensidade no terço médio da perna direita e dificuldade para caminhar. Qual a hipótese diagnóstica mais provável e o tratamento mais adequado para este caso:",
+  "alternatives": {
+   "A": "Pioartrite, ceftriaxona.",
+   "B": "Osteomielite, oxacilina.",
+   "C": "Fratura, imobilição e analgesia.",
+   "D": "Luxação, redução no centro cirúrgico."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q029-1.jpg",
+   "famerp-2022-q029-2.jpg"
+  ]
+ },
+ {
+  "number": 30,
+  "stem": "Lactente de 6 meses, previamente hígido, internado com quadro de diarreia e vômitos, fezes sem sangue ou muco, afebril durante a internação. Ao exame físico está afebril, FC = 180 bpm, FR = 40 irpm, olhos fundos e presença de irritabilidade. O restante do exame físico se encontra sem anormalidades. Com base neste quadro, a alternativa correta é:",
+  "alternatives": {
+   "A": "Desidratação grave, expansão com albumina 20% e reavaliação após.",
+   "B": "Desidratação grave, expansão com 20 mL/kg de soro fisiológico e repetir até que a criança esteja hidratada.",
+   "C": "Desidratação moderada, iniciar soro de reidratação oral que deverá ser administrado até que desapareçam os sinais de desidratação.",
+   "D": "Desidratação moderada, indicar sonda gástrica e iniciar soro de reidratação oral contínuo até que os sinais de desidratação desapareçam."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q030-1.jpg"
+  ]
+ },
+ {
+  "number": 31,
+  "stem": "Mãe relata que lactente de 3 meses apresenta choro inconsolável e irritabilidade, associado ao movimento das pernas. A mãe pergunta se pode ser cólica do bebê. Quanto à definição de cólica no lactente, segundo os critérios de Wessel, assinale a alternativa correta:",
+  "alternatives": {
+   "A": "Episódios de choro por 3 horas ou mais por dia, em três dias ou mais por semana, persistindo por três semanas ou mais em bebê “saudável e bem alimentado”.",
+   "B": "Choro, agitação ou irritabilidade, recorrentes e prolongados, que começam e param sem causa óbvia em lactentes menores de 5 meses, ausência de baixo ganho de peso, febre ou doença.",
+   "C": "Episódios de choro paroxístico qualitativamente diferente do choro normal (mais alto, mais alto e em tom variável, mais disfônico), hipertonia e inconsolabilidade.",
+   "D": "Episódios de choro, agitação e irritação por mais de 3 horas por dia, em três dias ou mais por semana, que melhora antes de 3 meses de vida (regra dos três), levando à ansiedade dos pais."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q031-1.jpg"
+  ]
+ },
+ {
+  "number": 32,
+  "stem": "Gestante com VDRL positivo não fez tratamento adequado durante a gestação. Foi iniciado tratamento no recém-nascido, porém mãe descontinuou o seguimento, assim como o tratamento. Sobre a falha no tratamento da sífilis no seguimento da criança, assinale a alternativa correta:",
+  "alternatives": {
+   "A": "As crianças deverão ser submetidas à punção lombar completa, com análise do VDRL, e tratadas durante 10 dias com penicilina parenteral, mesmo com histórico de tratamento prévio.",
+   "B": "É indicada por persistência da titulação reagente do teste treponêmico após 3 meses de idade e/ou aumento nos títulos do teste não treponêmico em três diluições ao longo do seguimento.",
+   "C": "É evidenciada por persistência da titulação reagente do teste não treponêmico após 12 meses de idade e/ou aumento nos títulos do teste não treponêmico em quatro diluições ao longo do seguimento.",
+   "D": "As crianças deverão realizar punção lombar completa, com análise do VDRL, e serem tratadas durante 15 dias com agente não penicilínico."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q032-1.jpg",
+   "famerp-2022-q032-2.jpg"
+  ]
+ },
+ {
+  "number": 33,
+  "stem": "Mulher, 52 anos de idade, G = 4 P = 3 (N) A = 1, histerectomizada há 8 anos por miomatose uterina. Refere fogachos, insônia, irritabilidade, palpitações, fadiga, indisposição e diminuição da libido há 1 ano. A hipótese diagnóstica foi de climatério e menopausa. Os exames de rotina estão todos normais, ela não apresenta comorbidades ou antecedentes pessoais e familiares de neoplasias. Você opta pelo tratamento clínico. Qual a opção para esta paciente?",
+  "alternatives": {
+   "A": "Isoflavona.",
+   "B": "Estrogênio isolado.",
+   "C": "Progestogênio isolado.",
+   "D": "Estrogênio com progestogênio."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q033-1.jpg"
+  ]
+ },
+ {
+  "number": 34,
+  "stem": "Mulher de 36 anos de idade, G = 3 P = 3 (C) A = 0, submetida à laqueadura tubária após a última cesárea, há 3 anos, dá entrada na emergência com sangramento uterino excessivo há 2 dias. O exame especular revela grande quantidade de sangue saindo pelo orifício cervical. Ao toque, útero de tamanho normal. Qual alternativa abaixo é a melhor opção para esta paciente?",
+  "alternatives": {
+   "A": "Histerectomia.",
+   "B": "Ácido tranexâmico para cessar o sangramento.",
+   "C": "Aguardar cessar espontaneamente o sangramento.",
+   "D": "Anti-inflamatório não esteroide para cessar o sangramento."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q034-1.jpg"
+  ]
+ },
+ {
+  "number": 35,
+  "stem": "Paciente de 32 anos procura ambulatório especializado referindo dificuldade para engravidar. Ao exame ginecológico nada foi constatado de anormal. Foi solicitado um ultrassom pélvico e transvaginal que revelou conteúdo sólido de 1,5 cm na cavidade uterina, sugestivo de pólipo ou mioma submucoso. A próxima conduta é:",
+  "alternatives": {
+   "A": "Realizar histerectomia devido ao alto risco para câncer de endométrio.",
+   "B": "Encaminhar paciente para serviço de Vídeo Histeroscopia para exérese da lesão.",
+   "C": "Introduzir tratamento com progesterona e indução da ovulação com citrato de clomifeno.",
+   "D": "Introduzir tratamento com anticoncepcional hormonal oral e repetir o ultrassom em 3 meses."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q035-1.jpg"
+  ]
+ },
+ {
+  "number": 36,
+  "stem": "Paciente internada com quadro de dor e distensão abdominal. Refere que os sintomas começaram há 6 meses, após ter sido submetida à exérese de um cisto roto no ovário direito. Após realização de exames complementares, que não foram elucidativos, a paciente é submetida a uma laparotomia exploradora com achado de pseudomixoma peritoneal e apêndice cecal normal. Podemos afirmar que, provavelmente, a paciente teve há 6 meses um:",
+  "alternatives": {
+   "A": "Teratoma ovariano roto.",
+   "B": "Cisto de corpo lúteo roto.",
+   "C": "Cistoadenoma mucinoso do ovário.",
+   "D": "Cistoadenocarcinoma seroso do ovário."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q036-1.jpg"
+  ]
+ },
+ {
+  "number": 37,
+  "stem": "Mulher, 19 anos, G = 1, P = 0, A = 1, coitarca aos 14 anos, usuária de contraceptivo hormonal oral, procurou serviço médico em UBS por conta de corrimento vaginal mucoso de longa data. Realizada a coleta de colpocitologia oncótica, que mostrou suspeita de lesão intraepitelial cervical de alto grau - (NIC = II/III). Submetida à colposcopia e biopsia de lesão, em área de pontilhado fino, foi diagnosticada como NIC = II. A conduta ideal para esta paciente é:",
+  "alternatives": {
+   "A": "Histerectomia simples abdominal ou vaginal.",
+   "B": "Conização de colo de útero com bisturi a frio.",
+   "C": "Seguimento com colpocitologia e colposcopia semestrais por 2 anos.",
+   "D": "Conização de colo de útero com alça (Cirurgia de Alta Frequência – CAF)."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q037-1.jpg"
+  ]
+ },
+ {
+  "number": 38,
+  "stem": "Mulher de 38 anos, tabagista, referindo fluxo menstrual volumoso, nega comorbidades e deseja método contraceptivo da rede pública. No exame físico, PA = 140x90 mmHg, IMC = 46,0 kg/m². Os exames atuais bioquímicos demonstram dislipidemia moderada, o ultrassom transvaginal mostra miomatose intramural com componente submucoso, o ultrassom de mamas mostra cistos mamários bilaterais, a citologia oncótica está normal. Qual opção mais adequada para contracepção disponível no serviço público (UBS)?",
+  "alternatives": {
+   "A": "DIU (dispositivo intrauterino) de Cobre.",
+   "B": "Contraceptivos hormonais orais combinados.",
+   "C": "SIU (sistema intrauterino de levonorgestrel – 20 ng/24h).",
+   "D": "Acetato de medroxiprogesterona de depósito (injetável trimestral)."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q038-1.jpg"
+  ]
+ },
+ {
+  "number": 39,
+  "stem": "Casal deseja engravidar. Ela com 23 anos, ciclos regulares, ultrassonografia para análise de ovários, útero, cavidade uterina e permeabilidade tubária sem alterações. Ele com 26 anos, tabagista, com espermograma avaliado pela classificação da OMS (2010) apresentando os seguintes resultados: • Volume = 1,5 mL; • Concentração/mL = 14.000.000/mL; • Motilidade total = 37%; • Motilidade progressiva = 24%; • Morfologia = 7% de formas normais. Qual alternativa apresenta análise adequada do fator masculino?",
+  "alternatives": {
+   "A": "Azoospermia, teratozoospermia, hipospermia.",
+   "B": "Hipospermia, oligozoospermia, teratozoospermia.",
+   "C": "Polizoospermia, morfologia normal, normoespermia.",
+   "D": "Normoespermia, normozoospermia, astenozoospermia."
+  },
+  "answer": null,
+  "annulled": true,
+  "images": [],
+  "original": [
+   "famerp-2022-q039-1.jpg"
+  ]
+ },
+ {
+  "number": 40,
+  "stem": "Paciente com 20 anos de idade, referindo ciclos menstruais a cada 28 dias, fluxo normal, menarca aos 11 anos, acne facial inflamatória, hirsutismo e índice de massa corpórea de 28 kg/m². Realizou ultrassonografia pélvica transvaginal que revelou ovário esquerdo com 11 cm³ e presença de 24 folículos antrais dispersos no tecido gonadal. Qual é o diagnóstico?",
+  "alternatives": {
+   "A": "Síndrome metabólica.",
+   "B": "Síndrome de Cushing.",
+   "C": "Síndrome adrenal congênita.",
+   "D": "Síndrome dos ovários policísticos."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q040-1.jpg",
+   "famerp-2022-q040-2.jpg"
+  ]
+ },
+ {
+  "number": 41,
+  "stem": "Tercigesta, admitida na maternidade em trabalho de parto. Durante o 3º período clínico do parto apresentou dor súbita e hemorragia intensa que evoluiu para choque hipovolêmico. Ao exame físico, na palpação abdominal, observou-se “fuga da matriz”. Foram realizados tratamento do choque, manobra da Taxe e procedimento de Huntington. De acordo com esses dados, o quadro clínico dessa paciente é compatível com:",
+  "alternatives": {
+   "A": "Rotura uterina.",
+   "B": "Inversão uterina aguda.",
+   "C": "Encarceramento placentário.",
+   "D": "Retenção de fragmentos placentários."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q041-1.jpg"
+  ]
+ },
+ {
+  "number": 42,
+  "stem": "Durante a condução de um parto por via vaginal, aos 6 centímetros de dilatação, foi realizado exame cardiotocográfico que mostrou a ocorrência de desacelerações periódicas da frequência cardíaca fetal, após as contrações uterinas (DIP II ou tardio). Este quadro é observado nos casos de:",
+  "alternatives": {
+   "A": "Hipóxia fetal por insuficiência placentária.",
+   "B": "Hipóxia fetal secundária à compressão do cordão umbilical.",
+   "C": "Hipóxia fetal devido a hiperventilação materna durante as contrações uterinas.",
+   "D": "Hipóxia fetal decorrente de estímulo vagal devido à compressão do polo cefálico."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q042-1.jpg"
+  ]
+ },
+ {
+  "number": 43,
+  "stem": "Durante a evolução de trabalho de parto em primípara, foi constatada a ocorrência de falha de progresso no 1º estágio, constatada aos 7 centímetros de dilatação. Foi realizado amniotomia e, após duas horas não houve progressão da dilatação cervical. Foi oferecido para a parturiente o uso de ocitocina endovenosa. De acordo com as Diretrizes Nacionais de Assistência ao Parto Normal (Ministério da Saúde Do Brasil, 2017), a paciente deverá ser informada:",
+  "alternatives": {
+   "A": "O uso de ocitocina, associado ou não com a amniotomia, poderá diminuir o tempo da ocorrência do parto, mas NÃO irá determinar o tipo de parto.",
+   "B": "A parturiente deve ser encorajada a adotar posições verticalizadas, realização de enema e NÃO oferecimento de medidas farmacológicas para alívio da dor.",
+   "C": "Após a não progressão da dilatação após a realização de amniotomia, o uso de ocitocina endovenosa NÃO deve ser praticado devido ao risco iminente de sofrimento fetal agudo.",
+   "D": "No período expulsivo, mesmo na presença de puxos espontâneos e eficazes, a parturiente NÃO deve ser estimulada a realizá-los devido ao risco de rotura uterina decorrente do uso de ocitócitos."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q043-1.jpg"
+  ]
+ },
+ {
+  "number": 44,
+  "stem": "Primigesta, 38 semanas de gestação, durante o trabalho de parto por via vaginal, na posição de litotomia, após o desprendimento do polo cefálico, constatou-se a ocorrência de distocia de ombros. Assinale a alternativa que contém a conduta imediata a ser realizada:",
+  "alternatives": {
+   "A": "Bloqueio do nervo pudendo interno.",
+   "B": "Manobra de Kristeller associada à episiotomia.",
+   "C": "Mudança de posição materna para quatro apoios.",
+   "D": "Parto cesáreo de emergência com anestesia geral."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q044-1.jpg",
+   "famerp-2022-q044-2.jpg"
+  ]
+ },
+ {
+  "number": 45,
+  "stem": "A introdução da imunoglobulina anti-D diminuiu a incidência de Doença Hemolítica Perinatal. Durante a assistência pré-natal, a administração desse medicamento em gestantes Rh negativo poderá ser realizada no seguinte caso:",
+  "alternatives": {
+   "A": "Teste de Coombs indireto negativo em pacientes com gestação molar completa anterior.",
+   "B": "Teste de Coombs indireto positivo a partir da 12ª semana de gestação e repetir em torno da 32ª semana de gestação.",
+   "C": "Teste de Coombs indireto negativo após a ocorrência de sangramento por via vaginal em qualquer fase da gestação.",
+   "D": "Teste de Coombs indireto positivo mesmo se a paciente for submetida a laqueadura tubária, permitida nas leis brasileiras."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q045-1.jpg"
+  ]
+ },
+ {
+  "number": 46,
+  "stem": "O partograma esquematizado mostra a evolução de um parto por via vaginal, no qual ocorreu uma distócia da dilatação (fase ativa prolongada): Uma das causas envolvidas para essa ocorrência é:",
+  "alternatives": {
+   "A": "Contrações uterinas ineficazes.",
+   "B": "Desproporção cefalopélvica absoluta.",
+   "C": "Desproporção cefalopélvica relativa.",
+   "D": "Distócia de trajeto mole."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [
+   "famerp-2022-q046-1.jpg"
+  ],
+  "original": [
+   "famerp-2022-q046-1.jpg"
+  ]
+ },
+ {
+  "number": 47,
+  "stem": "Paciente na primeira consulta de pré-natal, sem comorbidades, que não sabe informar a data da última menstruação e que também não fez exame ultrassonográfico até o momento. Ao exame obstétrico, é constatado medida da altura uterina de 26 centímetros. Nesses casos, para diferenciar fetos constitucionalmente pequenos de fetos com restrição intraútero, deverá ser realizado(a):",
+  "alternatives": {
+   "A": "Doplervelocimetria da artéria uterina quinzenal.",
+   "B": "Perfil biofísico fetal e cardiotocografia semanais.",
+   "C": "Avaliação mensal do índice de líquido amniótico.",
+   "D": "Avaliação ultrassonográfica da biometria fetal quinzenal."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q047-1.jpg",
+   "famerp-2022-q047-2.jpg"
+  ]
+ },
+ {
+  "number": 48,
+  "stem": "Paciente na 28ª semana de gestação com rotura prematura pré-termo de membranas. Optou-se pelo uso de corticoide para acelerar a maturidade pulmonar fetal. Antes do início dessa terapia, deve ser afastado o diagnóstico de:",
+  "alternatives": {
+   "A": "Oligodramnia.",
+   "B": "Corioamnionite.",
+   "C": "Insuficiência placentária.",
+   "D": "Restrição de crescimento fetal."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q048-1.jpg"
+  ]
+ },
+ {
+  "number": 49,
+  "stem": "Homem de 42 anos de idade procura pronto atendimento com quadro de dor, edema e hiperemia progressivos no tornozelo direito há 14 dias. Há 3 dias com calafrios, tremores e astenia. Foi internado para investigação complementar, colhidas hemoculturas e iniciado vancomicina. Paciente evolui com melhora clínica, afebril e, após 5 dias, temos o seguinte antibiograma: Assinale a alternativa correta:",
+  "alternatives": {
+   "A": "Manter Vancomicina e solicitar RNM de tornozelo.",
+   "B": "Manter Vancomicina e solicitar ecotransesofágico.",
+   "C": "Trocar antibiótico por Oxacilina e solicitar ecocardiograma transtorácico.",
+   "D": "Trocar antibiótico por Linezolida e solicitar Ultrassonografia de articulação do tornozelo direito."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [
+   "famerp-2022-q049-1.jpg"
+  ],
+  "original": [
+   "famerp-2022-q049-1.jpg"
+  ]
+ },
+ {
+  "number": 50,
+  "stem": "Mulher de 32 anos é encaminhada ao hospital universitário com queixa de dor lombar, calafrios e sonolência. Refere estar em uso de antibióticos há 5 dias, sem melhora do quadro. Ao exame físico apresentava-se confusa, pele fria, hipocorada +/4+, com Tempo de Enchimento Capilar (TEC) de 5 segundos. Pressão Arterial (PA): 80x50 mmHg, Frequência Cardíaca (FC) de 110 bpm, temperatura: 37,6ºC, peso habitual: 60 kg. Assinale a alternativa correta:",
+  "alternatives": {
+   "A": "Coletar lactato e hemoculturas, iniciar antibiótico e iniciar noradrenalina.",
+   "B": "Coletar lactato, urocultura, iniciar antibiótico e realizar expansão volêmica com ringer lactato 30 mL/kg.",
+   "C": "Coletar urocultura, solicitar tomografia de rins e vias urinárias, expansão volêmica com SF 0,9% 1800 mL e iniciar antibiótico.",
+   "D": "Coletar exames de Apache II, hemoculturas, urocultura, lactato, iniciar antibiótico e expansão volêmica com 30 mL/kg de soro 0,45%."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q050-1.jpg",
+   "famerp-2022-q050-2.jpg"
+  ]
+ },
+ {
+  "number": 51,
+  "stem": "Homem de 60 anos, diabético, com quadro de fraqueza e astenia há 1 mês. Com dor progressiva de região lombar e braço direito. Na última semana apresentou constipação e confusão mental, evoluindo com sonolência há 2 dias. Foi levado pelos familiares a unidade básica de saúde onde os seguintes exames foram realizados: • Hb: 8,1 g/dL; • Ht: 25%; • Leucócitos: 7.800/mm³; • Plaquetas: 160.000/mm³; • VCM: 85; • HCM: 30; • Ureia: 88 mg/dL; • Creatinina: 2,0 mg/dL; • Albumina: 3,0 g/dL; • Glicose: 98 mg/dL; • Sódio: 135 mEq/L; • Cloro: 110 mEq/L; • Gasometria: o pH = 7,20; o pCO₂ = 35; o HCO₃ = 18; • Urina I: o pH: 6,0; o Densidade: 1030; o Proteínas: 2+/4+; o Glicose: 1+/4+; o Leucócitos: 1/campo; o Hemácias: 2/campo. Qual a principal hipótese diagnóstica?",
+  "alternatives": {
+   "A": "Mieloma múltiplo.",
+   "B": "Síndrome de Sjogren.",
+   "C": "Intoxicação por metformina.",
+   "D": "Glomerulonefrite rapidamente progressiva."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q051-1.jpg"
+  ]
+ },
+ {
+  "number": 52,
+  "stem": "Mulher, 50 anos, hipertensa há 15 anos, há 2 meses com edema de membros inferiores e constipação. Refere cansaço progressivo e ortopneia. Após 3 consultas no pronto atendimento, foi encaminhada para internação hospitalar. Ao exame físico: normocorada, hidratada, frequência respiratória de 24 ipm, frequência cardíaca de 110 bpm, pressão arterial: 160x80 mmHg. Precórdio: ritmo duplo regular, bulhas normofonéticas, sem sopros. Pulmonar: murmúrio vesicular diminuído bilateralmente com creptações até 2/3 médios. Abdome: fígado palpável a 4cm do rebordo costal direito, bordas rombas e dolorosas. Extremidades: presença de cacifo, edema de +++/4+ em membros inferiores. As medicações que devem constar na prescrição inicial de internação:",
+  "alternatives": {
+   "A": "Carvedilol e enalapril.",
+   "B": "Digoxina e dapaglifozina.",
+   "C": "Furosemida e enoxaparina.",
+   "D": "Espironolactona e hidroclorotiazida."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q052-1.jpg",
+   "famerp-2022-q052-2.jpg"
+  ]
+ },
+ {
+  "number": 53,
+  "stem": "Homem de 70 anos chega ao pronto atendimento com quadro de pneumonia comunitária. Realizou o tratamento inicialmente internado e completou antibioticoterapia em esquema residencial. Volta ao ambulatório da unidade básica de saúde assintomático, 2 meses após o episódio de internação. Ele quer saber qual vacina deve tomar após o episódio de pneumonia. Qual alternativa contém a melhor orientação?",
+  "alternatives": {
+   "A": "Influenza e herpes zoster.",
+   "B": "Pneumocócica e hepatite A e B.",
+   "C": "Tríplice viral e tríplice bacteriana.",
+   "D": "Febre amarela e meningocócica conjugada."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q053-1.jpg"
+  ]
+ },
+ {
+  "number": 54,
+  "stem": "Mulher de 52 anos, com dor em região de hemitórax a direita, astenia e hiporexia há 4 semanas. Há 1 semana evoluiu com dispneia e procura do leito. Exame físico: REG, descorada +/4+, desidratada +/4+, anictérica. Ausculta pulmonar: murmúrio vesicular abolido em base de hemitórax a direita, macicez a percussão na mesma região. Foi realizada toracocentese com retirada de 400 mL de líquido amarelo citrino. Os seguintes exames foram realizados: Qual a conduta correta?",
+  "alternatives": {
+   "A": "Esquema RIPE.",
+   "B": "Metilprednisolona.",
+   "C": "Drenagem de tórax.",
+   "D": "Ceftriaxona e azitromicina."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [
+   "famerp-2022-q054-1.jpg"
+  ],
+  "original": [
+   "famerp-2022-q054-1.jpg"
+  ]
+ },
+ {
+  "number": 55,
+  "stem": "Paciente de 65 anos, masculino, diabético, interna com quadro de fraqueza, mialgia e febre de 38,5ºC. Na admissão foi relatada crise tônico-clônica generalizada, escala de coma de Glasgow = 14 (abertura ocular ao chamado verbal), pupilas isofotorreagentes, sem déficits motores, glicemia capilar de 110 mg/dL, PA de 150x80 mmHg, frequência cardíaca de 110 bpm. Sem antecedentes de epilepsia. Qual a investigação inicial para a crise convulsiva desse paciente?",
+  "alternatives": {
+   "A": "Tomografia de crânio, eletrocardiograma, Na, Ca, Mg, ureia e líquor.",
+   "B": "Ureia, cálcio ionizado, potássio, sódio, hemograma e Tomografia de crânio.",
+   "C": "Hemograma, potássio, Na, Ca, creatinina, Urina tipo 1, hemoculturas e urocultura.",
+   "D": "Fundo de olho, sódio, potássio, creatinina, cálcio, procalcitonina, gasometria arterial e urina tipo 1."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q055-1.jpg",
+   "famerp-2022-q055-2.jpg"
+  ]
+ },
+ {
+  "number": 56,
+  "stem": "Paciente de 50 anos, masculino, é admitido em enfermaria de clínica médica para investigação de astenia e dispneia aos esforços há 2 meses. Ao exame físico, encontra-se descorado ++/4+, afebril, anictérico, taquicárdico (FC = 105 bpm) e ausculta precordial com sopro holossistólico audível em praticamente todos os focos. Faz acompanhamento ambulatorial por diabetes, hipertensão e doença do refluxo gastroesofágico, estando emuso de metformina, gliclazida, enalapril e omeprazol. Exames complementares evidenciaram: • Hb = 7,4 g/dL; • Ht = 22%; • VCM = 110 um³ (80 a 100); • HCM = 35 (28 a 34); • Leucócitos = 3.500/mm³; • Plaquetas = 152 mil/mm³. Assinale a alternativa correta:",
+  "alternatives": {
+   "A": "Devemos colher reticulócitos e Coombs.",
+   "B": "O paciente deve realizar endoscopia digestiva alta e colonoscopia.",
+   "C": "Devemos considerar os fármacos em uso como prováveis causadores do quadro.",
+   "D": "Provavelmente a anemia é de doença crônica, devendo-se realizar hemoculturas e ecocardiograma."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q056-1.jpg"
+  ]
+ },
+ {
+  "number": 57,
+  "stem": "Paciente de 54 anos, feminino, é admitida em unidade de emergência por quadro de dispneia iniciada há 2 horas, enquanto realizava atividades domésticas. Realiza acompanhamento ambulatorial por neoplasia de mama apenas com hormonioterapia. Não possui outras comorbidades e não é tabagista. Ao exame físico, apresentava-se com frequência respiratória de 28 ipm, frequência cardíaca de 110 bpm e saturação de O₂ 88% em ar ambiente. Ausculta pulmonar sem ruídos adventícios e presença de edema assimétrico em membro inferior esquerdo. Assinale a alternativa correta:",
+  "alternatives": {
+   "A": "O exame do d-dímero poderia confirmar o diagnóstico da paciente.",
+   "B": "O próximo passo na investigação diagnóstica seria a realização do d-dímero.",
+   "C": "Uma vez confirmado o diagnóstico devemos solicitar ecocardiograma, pró-BNP e troponina.",
+   "D": "A indicação da anticoagulação está condicionada à realização da tomografia computadorizada."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q057-1.jpg"
+  ]
+ },
+ {
+  "number": 58,
+  "stem": "Paciente de 35 anos, feminino, procura atendimento ambulatorial após realizar exames de rotina com resultado de TSH = 7,5 mUi/L (VR: 0,5 a 4,5). Encontra-se assintomática no momento da consulta. Ao exame físico cervical não há sinais de bócio. Qual a melhor conduta?",
+  "alternatives": {
+   "A": "Solicitar TSH em 3 meses.",
+   "B": "Solicitar T4 livre e T3 livre.",
+   "C": "Solicitar ultrassonografia de tireoide.",
+   "D": "Solicitar auto anticorpos (anti-TPO e anti-tireoglobulina)."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q058-1.jpg",
+   "famerp-2022-q058-2.jpg"
+  ]
+ },
+ {
+  "number": 59,
+  "stem": "Paciente de 55 anos, masculino, procura atendimento ambulatorial por dificuldade no manejo de seus níveis pressóricos. Reporta ser hipertenso há 10 anos em uso regular de clortalidona 25 mg/dia, enalapril 20 mg/dia e anlodipina 10 mg/dia. Nega outros fármacos, tabagismo e comorbidades. Recentemente realizou exames de US Doppler de carótidas, teste ergométrico e exames laboratoriais sem alterações. Exame físico sem achados alterados exceto por PA = 155x92 mmHg em membro superior direito. Segundo o paciente, tais valores são semelhantes aos aferidos em domicílio. Neste caso, qual deve ser a abordagem farmacológica a ser instituída?",
+  "alternatives": {
+   "A": "Atenolol 50 mg/dia.",
+   "B": "Clonidina 0,1 mg/dia.",
+   "C": "Hidralazina 100 mg/dia.",
+   "D": "Espironolactona 25 mg/dia."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q059-1.jpg"
+  ]
+ },
+ {
+  "number": 60,
+  "stem": "Paciente de 60 anos, feminino, encaminhada ao ambulatório de endocrinologia por diabetes mellitus tipo 2 descompensado. Relata diagnóstico há 15 anos, em uso regular de metformina 1,5 g/dia. Queixa-se de poliúria e polidipsia nos últimos 2 meses. Não adere a dieta e está sedentária há 3 anos. Apresenta antecedentes de hipertensão e dislipidemia. Últimos exames realizados não demonstram aparentes sinais de microangiopatia, porém HbA1c = 11%. Neste caso, qual é a conduta farmacológica a ser realizada?",
+  "alternatives": {
+   "A": "Inibidor DPP-4.",
+   "B": "Inibidor SGLT2.",
+   "C": "Análogo de GLP-1.",
+   "D": "Insulinoterapia basal."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q060-1.jpg"
+  ]
+ },
+ {
+  "number": 61,
+  "stem": "Durante estágio na nefrologia, você é solicitado para avaliar um paciente de 72 anos de idade com diabetes mellitus tipo 2, internado para a urologia devido choque séptico urinário secundário a hiperplasia prostática benigna. Já na admissão, ele apresentava creatinina sérica de 3,6 mg/dL, sendo que no sistema hospitalar havia um exame prévio com valor de 1,8 mg/dL, com data de 2 meses atrás. Como deve ser classificada essa piora da função renal?",
+  "alternatives": {
+   "A": "É uma insuficiência renal aguda classificada como estágio KDIGO 1.",
+   "B": "É uma insuficiência renal aguda classificada como estágio KDIGO 2.",
+   "C": "É uma insuficiência renal aguda classificada como estágio KDIGO 3.",
+   "D": "É uma insuficiência renal crônica classificada como estágio KDIGO 5."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q061-1.jpg"
+  ]
+ },
+ {
+  "number": 62,
+  "stem": "Paciente feminina de 18 anos, apresentando transtorno alimentar e em uso de medicações para emagrecer, é admitida na emergência com queixa de fraqueza e dificuldade de deambular há 1 dia. Ao exame físico, seus sinais vitais eram normais, e chamava a atenção a presença de força muscular grau 3 bilateralmente em membros inferiores, com reflexos diminuídos. Em relação ao caso clínico, assinale a alternativa CORRETA:",
+  "alternatives": {
+   "A": "A sibutramina tem ação no túbulo distal bloqueando o transportador sódio-cloro.",
+   "B": "Os análogos de GLP-1 podem ser os causadores dos achados clínicos da paciente.",
+   "C": "A furosemida, por bloquear o canal de sódio-potássio-2 cloros, pode ser uma causa dos achados clínicos da paciente.",
+   "D": "A hidroclorotiazida, por bloquear o transportador sódio-potássio no túbulo distal, pode ser uma causa dos achados clínicos da paciente."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q062-1.jpg",
+   "famerp-2022-q062-2.jpg"
+  ]
+ },
+ {
+  "number": 63,
+  "stem": "Paciente masculino de 67 anos admitido com hemiplegia a direita proporcionada associada a afasia, com histórico de hipertensão arterial e diabetes. Sua pressão arterial é de 170x90 mmHg e com o seguinte eletrocardiograma: Após a fase aguda do AVC isquêmico, o paciente recebe alta hospitalar. Qual a melhor prescrição ambulatorial para esse paciente, além do controle glicêmico?",
+  "alternatives": {
+   "A": "Marevan, atorvastatina, enalapril, metoprolol.",
+   "B": "Marevan, ácido acetil salicílico, atorvastatina, enalapril.",
+   "C": "Clopidogrel, ácido acetil salicílico, atorvastatina, metoprolol.",
+   "D": "Rivarobaxana, ácido acetil salicílico, rosuvastatina, amLodipina."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [
+   "famerp-2022-q063-1.jpg"
+  ],
+  "original": [
+   "famerp-2022-q063-1.jpg"
+  ]
+ },
+ {
+  "number": 64,
+  "stem": "Paciente de 61 anos, feminina, admitida em hospital terciário com dor epigástrica tipo aperto de forte intensidade iniciada há quatro horas, acompanhada de sudorese, náuseas e irradiada para os membros superiores. Ao exame físico: PA = 150x80 mmHg, frequência cardíaca = 98 bpm, precórdio = ritmo cardíaco irregular, bulhas normofonéticas, sem sopros, pulmonar = murmúrio vesicular simétrico e mantido bilateralmente, sem ruídos adventícios. Foi traçado o seguinte eletrocardiograma: Qual o melhor tratamento?",
+  "alternatives": {
+   "A": "Ácido acetil salicílico, plasugrel, alteplase, enoxaparina e atorvastatina.",
+   "B": "Ácido acetil salicílico, clopidogrel, alteplase, metoprolol e dapagliflozina.",
+   "C": "Plasugrel, metoprolol, cineangiocoronariografia, enoxaparina e rosuvastatina.",
+   "D": "Ácido acetil salicílico, clopidogrel, cineangiocoronariografia, enoxaparina e rosuvastatina."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [
+   "famerp-2022-q064-1.jpg"
+  ],
+  "original": [
+   "famerp-2022-q064-1.jpg",
+   "famerp-2022-q064-2.jpg"
+  ]
+ },
+ {
+  "number": 65,
+  "stem": "Uma criança chega a emergência, trazida por seu pai, com história de ter apresentado queda de bicicleta. Apresenta um ferimento corto-contuso em face anterior do antebraço esquerdo. O médico de plantão informa o pai que irá realizar uma sutura. A melhor sequência para realização da sutura, depois da colocação de gorro, máscara e luva estéril, seria:",
+  "alternatives": {
+   "A": "Antissepsia com clorexedine aquoso; colocação de campo estéril; anestesia local; limpeza e exploração da ferida; sutura com pontos alternados.",
+   "B": "Antissepsia com clorexedine alcoólico; anestesia local; limpeza da ferida; colocação de campo estéril; exploração da ferida; sutura com pontos alternados.",
+   "C": "Antissepsia com clorexedine alcoólico; anestesia local; limpeza da ferida com soro fisiológico; colocação de campo estéril; sutura com ponto intradérmico.",
+   "D": "Antissepsia com clorexedine aquoso; limpeza da ferida; anestesia local; colocação de campo estéril; sutura com ponto intradérmico."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q065-1.jpg"
+  ]
+ },
+ {
+  "number": 66,
+  "stem": "Um jovem, vítima de acidente de moto, chega à emergência com a equipe do pré-hospitalar queixando-se de dor abdominal intensa. Seus sinais vitais são: pressão arterial de 80x56 mmhg; frequência cardíaca de 138 bpm; frequência respiratória de 28 ipm. A radiografia de tórax e do quadril estão normais. O ultrassom FAST SCAN é positivo nos três quadrantes abdominais. O médico assistente resolve ativar o Protocolo de Transfusão Maciça baseado no ABC score e Shock Index. Neste momento, a melhor conduta seria:",
+  "alternatives": {
+   "A": "Indicar laparotomia exploradora.",
+   "B": "Iniciar a Transfusão Maciça e reavaliar a necessidade cirúrgica.",
+   "C": "Aguardar melhora dos parâmetros vitais com a Transfusão Maciça.",
+   "D": "Iniciar a Transfusão Maciça e realizar tomografia computadorizada abdominal."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q066-1.jpg"
+  ]
+ },
+ {
+  "number": 67,
+  "stem": "Paciente feminina, vítima de atropelamento em rodovia. Atendida pela equipe médica pré-hospitalar, chega à emergência com intubação orotraqueal, em ventilação mecânica. A Escala de Coma de Glasgow é de 7 (Ocular – 1; Verbal – 1; Motor – 5). Instável hemodinamicamente e com Ultrassom FAST SCAN positivo em todos os quadrantes abdominais, foi iniciado a reposição volêmica e droga vasoativa em veia periférica. O médico assistente resolve, neste momento, traçar o ROTEM (Tromboelastometria) que evidencia um fechamento abrupto da curva do coágulo (figura abaixo): A melhor maneira de corrigir este distúrbio seria com:",
+  "alternatives": {
+   "A": "Plasma.",
+   "B": "Plaqueta.",
+   "C": "Criopreciptado.",
+   "D": "Ácido tranexâmico."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [
+   "famerp-2022-q067-1.jpg"
+  ],
+  "original": [
+   "famerp-2022-q067-1.jpg",
+   "famerp-2022-q067-2.jpg"
+  ]
+ },
+ {
+  "number": 68,
+  "stem": "Um jovem vítima de acidente de moto, com colisão frontal em um anteparo fixo, é levado à emergência cirúrgica. Na avaliação inicial, seus parâmetros vitais são: pressão arterial de 90x75 mmhg; frequência cardíaca de 128 bpm; frequência respiratória de 32 ipm. A ausculta respiratória está diminuída em hemitórax esquerdo e a percussão é timpânica. O médico assistente resolve proceder com a drenagem torácica do lado afetado. Durante a drenagem, com a exploração digital, foi identificado a presença de vísceras abdominais na cavidade torácica. A melhor conduta neste momento é:",
+  "alternatives": {
+   "A": "Interromper a drenagem torácica e indicar toracotomia exploradora.",
+   "B": "Manter a indicação e realizar a drenagem na mesma incisão protegendo as vísceras.",
+   "C": "Manter a indicação de drenagem, porém passar o dreno no segundo espaço intercostal.",
+   "D": "Interromper a drenagem torácica e indicar laparotomia exploradora antes da drenagem torácica."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q068-1.jpg"
+  ]
+ },
+ {
+  "number": 69,
+  "stem": "Masculino, vítima de ferimento por arma branca em região de transição tóraco-abdominal esquerda há duas horas. Assintomático, seus sinais vitais são: pressão arterial de 110x78 mmhg; frequência cardíaca de 112 bpm; frequência respiratória de 28 ipm. A ausculta pulmonar esquerda é discretamente diminuída em relação a direita. O exame físico abdominal é normal, sem dor ou sinais de peritonite. Foi realizado uma tomografia computadorizada de tórax e abdômen que evidenciou pneumotórax laminar a esquerda. A melhor conduta neste caso seria:",
+  "alternatives": {
+   "A": "Drenagem torácica na emergência e videolaparoscopia durante a internação.",
+   "B": "Drenagem torácica na emergência e exame físico abdominal seriado durante a internação.",
+   "C": "Tratamento conservador do pneumotórax oculto e reavaliação seriada abdominal durante a internação.",
+   "D": "Tratamento conservador do pneumotórax e repetir a tomografia de tórax e abdômen em 12 horas."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q069-1.jpg"
+  ]
+ },
+ {
+  "number": 70,
+  "stem": "Durante a visita na enfermaria cirúrgica, o médico assistente está diante de um paciente que se encontra no primeiro pós-operatório de uma colectomia parcial por um tumor carcinoide. O paciente encontra-se apático e pouco comunicativo. Com baixa diurese e ruídos hidroaéreos ausentes. Diante destes achados, podemos afirmar que:",
+  "alternatives": {
+   "A": "O paciente encontra-se na fase anabólica e os achados clínicos estão relacionados com o aumento do hormônio Cortisol.",
+   "B": "O paciente encontra-se na fase catabólica e os achados clínicos correspondem ao aumento dos hormônios ADH, Renina e Angiotensina.",
+   "C": "O paciente encontra-se na fase catabólica e os achados clínicos estão relacionados ao aumento do Glucagon e diminuição da Insulina.",
+   "D": "O paciente encontra-se na fase anabólica e os achados clínicos estão relacionados ao aumento do hormônio ACTH, Glucagon e Cortisol."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q070-1.jpg",
+   "famerp-2022-q070-2.jpg"
+  ]
+ },
+ {
+  "number": 71,
+  "stem": "Masculino, com quadro clínico sugestivo de pancreatite aguda é admitido na emergência do hospital. Na admissão, ele apresenta um hematócrito de 36%; hemoglobina de 12 mg/dL; leucócitos de 12.000; glicemia de 145 mg/dL; AST sérica de 140 U/L; amilase de 1200 U/L; ureia de 20 mg/dL e DHL de 250 UI/L. Submetido aos procedimentos de rotina, como hidratação vigorosa, analgesia e transferido para a Unidade Terapia Intensiva. Com relação a utilização da tomografia computadorizada abdominal, podemos afirmar que:",
+  "alternatives": {
+   "A": "Deve ser utilizada em todos os pacientes com pancreatite aguda, após 72 horas do início dos sintomas.",
+   "B": "Não deve ser empregada antes de três dias após o início dos sintomas, exceto quando houver dúvida diagnóstica.",
+   "C": "Deve ser empregada na fase inicial dos sintomas, pois define a gravidade com o índice de Balthazar-Ranson.",
+   "D": "Pode ser realizada, em pacientes graves, sem o uso de contraste endovenoso para definição da presença de necrose."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q071-1.jpg"
+  ]
+ },
+ {
+  "number": 72,
+  "stem": "Um senhor de 60 anos, sem história de trauma, procura a emergência com queixa de dispneia aos mínimos esforços. Uma radiografia de tórax evidenciou a presença de derrame pleural moderado a direita. O médico realizou uma toracocentese com a finalidade de examinar o líquido pleural. Enviado para análise: relação Proteína Pleural / Proteína Plasmática é maior que 0,5; e, a relação DHL pleural / DHL plasmático é maior que 0,6. Com base nesta informação, podemos dizer que:",
+  "alternatives": {
+   "A": "Trata-se de um exsudato e uma das causas pode ser cirrose.",
+   "B": "Trata-se de um exsudato e uma das causas pode ser neoplasia.",
+   "C": "Trata-se de um transudato e uma das causas pode ser embolia pulmonar.",
+   "D": "Trata-se de um transudato e uma das causas pode ser pneumonia bacteriana."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q072-1.jpg"
+  ]
+ },
+ {
+  "number": 73,
+  "stem": "Um jovem de 20 anos, vítima de acidente de trânsito com colisão frontal, foi arremessado com a região cervical em direção ao volante do carro. Na admissão, apresenta franca insuficiência respiratória, rouquidão, enfisema subcutâneo, dor e crepitação em região cervical anterior. Na avaliação inicial deste paciente, após o insucesso na tentativa de intubação orotraqueal, a melhor maneira de manter e garantir uma via aérea pérvia é através de:",
+  "alternatives": {
+   "A": "Combitube.",
+   "B": "Traqueostomia.",
+   "C": "Cricotireoidostomia cirúrgica.",
+   "D": "Cricotireoidostomia por punção."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q073-1.jpg",
+   "famerp-2022-q073-2.jpg"
+  ]
+ },
+ {
+  "number": 74,
+  "stem": "Uma senhora de 54 anos, atendida em um Hospital Secundário, queixa-se de dor abdominal difusa há quatro dias, associado a episódios de náuseas e vômitos de coloração escura e odor fétido. Informa que já passou por cinco procedimentos cirúrgicos abdominais, sendo o último há dois anos. O exame físico revela uma distensão abdominal difusa, percussão timpânica, mas sem sinais de irritação peritoneal. Realizada radiografia abdominal com “níveis hidroaéreos e empilhamento em moeda” em alças intestinais de delgado e presença de “ar” em reto baixo. Não há pneumoperitônio. O médico assistente faz o diagnóstico de suboclusão intestinal e resolve tratar clinicamente nas primeiras 24 horas. Qual conduta abaixo deveria ser evitada para esta senhora?",
+  "alternatives": {
+   "A": "Hidratação venosa; analgesia.",
+   "B": "Exame físico seriado; sondagem vesical.",
+   "C": "Fleet enema; medicamentos pró-cinéticos.",
+   "D": "Sonda nasogástrica em drenagem; correção de possíveis distúrbios eletrolíticos."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q074-1.jpg"
+  ]
+ },
+ {
+  "number": 75,
+  "stem": "Feminina, 37 anos, com história pregressa de colite de Crohn, em acompanhamento com proctologista e em uso de sulfassalazina, chega à emergência com queixa de febre alta, distensão abdominal e sinais clínicos de sepsis. Os exames laboratoriais mostram leucocitose e provas inflamatórias elevadas. A radiografia abdominal evidencia distensão de todo cólon, sem sinais de pneumoperitônio. Uma provável hipótese diagnóstica e o tratamento seria:",
+  "alternatives": {
+   "A": "Megacólon tóxico; tratamento cirúrgico.",
+   "B": "Perfuração por colite; tratamento cirúrgico.",
+   "C": "Obstrução e provável fístula íleo-sigmoidiana; tratamento clínico.",
+   "D": "Agudização da doença de Crohn; tratamento clínico com corticoide."
+  },
+  "answer": "A",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q075-1.jpg"
+  ]
+ },
+ {
+  "number": 76,
+  "stem": "Uma mulher de 42 anos procura a emergência cirúrgica com queixa de dor intensa em hipocôndrio direito há quatro dias. Associado, apresenta náuseas, vômitos e sensação febril. Ao exame físico, apresenta dor a palpação de hipocôndrio direito, com interrupção da inspiração. Seus sinais vitais estão normais. O ultrassom de abdômen superior evidencia aumento do diâmetro da parede da vesícula biliar, com líquido perivesicular. Possui amilase de 110 U/ L e leucócitos de 19.000/mm³. Segundo o guideline de Tókio de 2018, podemos afirmar que se trata de uma colecistite aguda:",
+  "alternatives": {
+   "A": "Leve, grau I.",
+   "B": "Moderada, grau II.",
+   "C": "Severa, grau I.",
+   "D": "Severa, grau III."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q076-1.jpg"
+  ]
+ },
+ {
+  "number": 77,
+  "stem": "Um jovem chega à emergência com queixa de dor e abaulamento em região inguinal direita há oito horas. O estado geral é bom. Seus sinais vitais são normais. O exame físico abdominal é indolor a palpação e nota-se a presença de uma hérnia inguinal encarcerada a direita. A melhor conduta neste caso é:",
+  "alternatives": {
+   "A": "Indicar tratamento cirúrgico com laparotomia exploradora.",
+   "B": "Indicar tratamento cirúrgico com inguinotomia exploradora.",
+   "C": "Colocar o paciente em posição de Trendelenburg para facilitar a redução da hérnia encarcerada.",
+   "D": "Tentar reduzir a hérnia encarcerada manualmente e, caso não seja possível, indicar tratamento cirúrgico."
+  },
+  "answer": "B",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q077-1.jpg",
+   "famerp-2022-q077-2.jpg"
+  ]
+ },
+ {
+  "number": 78,
+  "stem": "Um jovem de 17 anos, acompanhado de sua mãe, procura a emergência cirúrgica com queixa de dor epigástrica há dois dias, que migrou para fossa ilíaca direita. Associado apresenta náuseas e anorexia. Nega febre. Ao exame físico, encontra-se em bom estado geral e afebril. Apresenta dor a palpação de fossa ilíaca direita com defesa a descompressão brusca. Os exames laboratoriais mostram leucocitose de 14.000/mm³, sem desvio a esquerda (polimorfonucleares < 75%). Para definir a probabilidade diagnóstica de apendicite aguda, podemos afirmar que o Escore de Alvarado:",
+  "alternatives": {
+   "A": "Corresponde a 5 pontos; moderado risco para apendicite aguda (45%).",
+   "B": "Corresponde a 6 pontos; moderado risco para apendicite aguda (45%).",
+   "C": "Corresponde a 7 pontos; alto risco para apendicite aguda (87%).",
+   "D": "Corresponde a 8 pontos; alto risco para apendicite aguda (87%)."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q078-1.jpg"
+  ]
+ },
+ {
+  "number": 79,
+  "stem": "Paciente do sexo masculino, 30 anos, etilista e tabagista, dá entrada no pronto atendimento devido a dor abdominal epigástrica e vômitos com raias de sangue que se iniciaram após uma festa. Durante a investigação diagnóstica, realizou endoscopia digestiva alta, com diagnóstico de síndrome de Mallory Weiss. Considerando o diagnóstico em questão, qual é a região acometida?",
+  "alternatives": {
+   "A": "Esôfago médio.",
+   "B": "Pequena curvatura gástrica.",
+   "C": "Junção esofago-gástrica.",
+   "D": "Junção gastroduodenal."
+  },
+  "answer": "C",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q079-1.jpg"
+  ]
+ },
+ {
+  "number": 80,
+  "stem": "Homem, 37 anos, pedreiro, submetido a hernioplastia inguinal direita com colocação de tela. Na descrição cirúrgica do procedimento, a hérnia consta como “inguinal direita, com alargamento do anel inguinal interno, cujo saco herniário era formado por parte da parede da bexiga e continha parte do grande epiplon e alças de delgado”. Pode-se dizer que se trata de uma hérnia:",
+  "alternatives": {
+   "A": "Nyhus II.",
+   "B": "Nyhus IIIA.",
+   "C": "Inguino-escrotal.",
+   "D": "Por deslizamento."
+  },
+  "answer": "D",
+  "annulled": false,
+  "images": [],
+  "original": [
+   "famerp-2022-q080-1.jpg"
+  ]
+ }
+]

@@ -22,7 +22,7 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
       qs = store.questions.filter((q) => set.has(q.id) && q.answer);
     }
     if (config.categories.length) qs = qs.filter((q) => config.categories.includes(q.category));
-    if (config.examId) qs = qs.filter((q) => q.examId === config.examId);
+    if (config.exams?.length) qs = qs.filter((q) => config.exams!.includes(q.examId));
     return qs;
     // pool fixo durante o treino
     // eslint-disable-next-line react-hooks/exhaustive-deps

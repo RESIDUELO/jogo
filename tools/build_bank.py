@@ -1,10 +1,11 @@
 """Monta o banco de questões do jogo (public/banco/*.json).
 
 Entrada:
-  tools/raw/<prova>.json            -> questões extraídas do PDF (extract_unoeste.py)
-  tools/annotations/<prova>.txt     -> anotações pedagógicas (categoria, subtema,
+  tools/raw/<inst>-<ano>.json       -> questões extraídas do PDF (import_provas.py)
+  tools/annotations/<prova>.txt     -> anotações pedagógicas opcionais (categoria, subtema,
                                         dificuldade, explicações, divergências)
-  tools/exams.json                  -> metadados das provas
+  tools/provas.json                 -> nome das instituições e faixas de área (opcional;
+                                        sem faixas, as áreas são detectadas automaticamente)
 
 Formato das anotações (um bloco por questão):
   #12 CLI | Hipertensão arterial | 2
@@ -16,9 +17,11 @@ Formato das anotações (um bloco por questão):
 Categoria: GO, CLI, CIR, PRE, PED. Dificuldade: 1 fácil, 2 média, 3 difícil, 4 muito difícil.
 Uso: python3 tools/build_bank.py
 """
+import glob
 import json
 import os
 import re
+import sys
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -54,21 +57,49 @@ def parse_annotations(path):
     return ann
 
 
-def range_category(meta, n):
-    for r in meta.get("ranges", []):
-        if r["from"] <= n <= r["to"]:
-            return r["cat"]
-    return "CLI"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from areas import describe, segment  # noqa: E402
+
+
+def parse_ranges(spec):
+    out = {}
+    for a, b, c in re.findall(r"(\d+)\s*-\s*(\d+)\s*[:=]?\s*(GO|CLI|CIR|PRE|PED)", spec or "", re.I):
+        for q in range(int(a), int(b) + 1):
+            out[q] = c.upper()
+    return out
+
+
+def load_exams():
+    cfg = json.load(open(os.path.join(ROOT, "tools", "provas.json"), encoding="utf-8"))
+    pdfs = glob.glob(os.path.join(ROOT, "provas", "*.pdf"))
+    exams = []
+    for raw in sorted(glob.glob(os.path.join(RAW, "*.json"))):
+        base = os.path.basename(raw)[:-5]
+        inst, year = base.rsplit("-", 1)
+        key = f"{inst.upper()}-{year}"
+        name = cfg["instituicoes"].get(inst.upper(), inst.upper())
+        spec = cfg["faixas"].get(key) or cfg["faixas"].get(f"{inst.upper()}-*")
+        src = next((os.path.basename(p) for p in pdfs if os.path.basename(p).upper().startswith(inst.upper()) and year in os.path.basename(p)), "")
+        exams.append({"id": key, "title": f"{name} {year}", "institution": name, "year": int(year), "raw": base + ".json", "source": src, "spec": spec})
+    return sorted(exams, key=lambda e: (e["institution"], e["year"]))
 
 
 def main():
-    exams = json.load(open(os.path.join(ROOT, "tools", "exams.json"), encoding="utf-8"))
+    exams = load_exams()
     os.makedirs(OUT, exist_ok=True)
     index = {"version": 1, "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"), "exams": []}
     report = []
     for meta in exams:
         raw = json.load(open(os.path.join(RAW, meta["raw"]), encoding="utf-8"))
         ann = parse_annotations(os.path.join(ANN, meta["id"].lower() + ".txt"))
+        cats = parse_ranges(meta["spec"])
+        auto_note = ""
+        if not cats or any(r["number"] not in cats for r in raw):
+            # sem faixas configuradas: detecção automática por blocos
+            auto, blocks = segment([r["stem"] + " " + " ".join(r["alternatives"].values()) for r in raw])
+            for r, c in zip(raw, auto):
+                cats.setdefault(r["number"], c)
+            auto_note = f" | áreas detectadas: {describe(blocks)}"
         qs = []
         for r in raw:
             n = r["number"]
@@ -90,7 +121,7 @@ def main():
                 "text": r["stem"],
                 "alternatives": r["alternatives"],
                 "answer": r["answer"],
-                "category": a.get("category", range_category(meta, n)),
+                "category": a.get("category", cats[n]),
                 # sem anotação: subtema/dificuldade são estimados no app (engine/classify.ts)
                 "subtopic": a.get("subtopic", "Geral"),
                 "difficulty": a.get("difficulty", 2),
@@ -109,6 +140,8 @@ def main():
                 q["reference"] = a["reference"]
             if r["images"]:
                 q["images"] = r["images"]
+            if r.get("altImages"):
+                q["altImages"] = r["altImages"]  # alternativas que são imagens
             if r.get("original"):
                 q["original"] = r["original"]  # recorte da página do PDF (fidelidade)
             if note:
@@ -116,7 +149,7 @@ def main():
             q = {k: v for k, v in q.items() if v is not None}
             qs.append(q)
         missing = [r["number"] for r in raw if r["number"] not in ann]
-        report.append(f"{meta['id']}: {len(qs)} questões, {len(ann)} anotadas" + (f", sem anotação: {missing}" if missing else ""))
+        report.append(f"{meta['id']}: {len(qs)} questões, {len(ann)} com explicação{auto_note}")
         fname = meta["id"].lower() + ".json"
         exam_meta = {k: meta[k] for k in ("id", "title", "institution", "year")}
         exam_meta["source"] = meta.get("source", "")

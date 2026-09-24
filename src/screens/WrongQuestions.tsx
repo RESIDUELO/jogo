@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { CAT, CATEGORY_IDS, DIFFICULTY_COLOR, DIFFICULTY_LABEL } from '../data/categories';
 import { useStore } from '../state/store';
+import { groupExams } from '../ui/ExamPicker';
 import type { CategoryId, Question } from '../types';
 import { Btn, Card, CatBadge, Empty, Header, Seg } from '../ui/common';
 import { ExplanationModal } from '../ui/QuestionPlay';
@@ -57,11 +58,15 @@ export function WrongQuestions() {
           </select>
           <select className="input" value={exam} onChange={(e) => setExam(e.target.value)}>
             <option value="">Todas as provas</option>
-            {store.exams.map((e) => (
-              <option key={e.id} value={e.id}>
-                {e.title}
-              </option>
-            ))}
+            {groupExams(store.exams).map((g) => (
+            <optgroup key={g.institution} label={g.institution}>
+              {g.exams.map((e) => (
+                <option key={e.id} value={e.id}>
+                  {e.title}
+                </option>
+              ))}
+            </optgroup>
+          ))}
           </select>
         </div>
         <div className="flex flex-wrap items-center gap-3">

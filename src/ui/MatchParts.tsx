@@ -2,6 +2,8 @@
 import { CAT, CATEGORIES } from '../data/categories';
 import { missingCrowns, setupCats, type CompetitorState, type MatchState } from '../engine/match';
 import type { CategoryId, Question } from '../types';
+import { altLetters } from '../types';
+import { AltContent } from './QuestionPlay';
 import { COSMETIC } from '../data/shop';
 import type { Competitor } from '../engine/match';
 import { levelFromXp } from '../engine/progression';
@@ -195,9 +197,9 @@ export function OpponentTurnCard({ view, name, avatar, onSkip }: { view: Opponen
         <summary className="cursor-pointer text-white/50 text-xs">ver a questão do adversário</summary>
         <p className="mt-2 whitespace-pre-line">{view.q.text}</p>
         <div className="mt-2 space-y-0.5 text-white/60">
-          {Object.entries(view.q.alternatives).map(([l, t]) => (
+          {altLetters(view.q).map((l) => (
             <div key={l} className={view.phase === 'result' && l === view.q.answer ? 'text-emerald-300' : ''}>
-              <b>{l})</b> {t}
+              <b>{l})</b> <AltContent q={view.q} l={l} />
             </div>
           ))}
         </div>

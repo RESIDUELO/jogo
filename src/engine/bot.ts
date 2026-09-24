@@ -1,6 +1,6 @@
 import { BOT_TIERS, type BotPersona } from '../data/bots';
 import type { Letter, Question } from '../types';
-import { LETTERS } from '../types';
+import { altLetters } from '../types';
 import { clamp, hash01 } from './util';
 
 export interface BotAnswer {
@@ -24,7 +24,7 @@ export function simulateBotAnswer(bot: BotPersona, q: Question, limitMs: number,
   const p = botAccuracy(bot, q);
   const knows = hash01(bot.id + q.id + matchSalt.slice(0, 2)) < p;
   const tier = BOT_TIERS[bot.tier];
-  const letters = LETTERS.filter((l) => q.alternatives[l]);
+  const letters = altLetters(q);
   // tempo: proporcional ao tamanho do texto; erros tendem a demorar mais
   const lenFactor = clamp(q.text.length / 450, 0.6, 1.8) * 1.6; // relógio de 2 min
   const jitter = 0.65 + Math.random() * 0.7;

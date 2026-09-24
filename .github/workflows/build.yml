@@ -1,10 +1,11 @@
-# Compila e publica o site (GitHub Pages) a cada push.
+# Importa provas novas, monta o banco de questões e publica o site (GitHub Pages).
+# Para lançar provas: coloque os PDFs na pasta provas/ (nome INSTITUICAO-...-ANO.pdf).
 name: Site
 
 on:
   push:
     branches: [claude/nice-hawking-1x3urx, main]
-    paths-ignore: ['README.md', 'tools/**', 'supabase/**']
+    paths-ignore: ['README.md', 'supabase/**', 'tools/online-check.mjs']
   workflow_dispatch:
 
 permissions:
@@ -19,6 +20,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Importar provas novas e montar o banco
+        run: |
+          pip install --quiet pymupdf pillow
+          python tools/import_provas.py
+          python tools/build_bank.py
+
+      - name: Salvar no repositório o que foi importado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools/raw public/banco
+          if ! git diff --cached --quiet; then
+            git commit -m "Banco de questões: provas importadas automaticamente [skip ci]"
+            git push
+          fi
 
       - uses: actions/setup-node@v4
         with:

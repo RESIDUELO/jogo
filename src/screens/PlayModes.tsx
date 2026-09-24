@@ -11,6 +11,7 @@ import { useOnline } from '../state/online';
 import { useStore } from '../state/store';
 import type { CategoryId, MatchSetupData } from '../types';
 import { Avatar, Bar, Btn, Card, Header, Seg } from '../ui/common';
+import { ExamPicker } from '../ui/ExamPicker';
 
 const SETUP_KEY = 'rdl.lastSetup';
 function loadSetup(): MatchSetupData {
@@ -37,17 +38,9 @@ export function SetupPicker({ setup, onChange }: { setup: MatchSetupData; onChan
   return (
     <Card className="p-4 space-y-4">
       <div>
-        <div className="font-display font-semibold mb-2">📄 Prova</div>
-        <div className="flex flex-wrap gap-2">
-          <button className="rounded-xl px-3 py-2 text-sm font-semibold border" style={chip(!setup.exams.length)} onClick={() => onChange({ ...setup, exams: [] })}>
-            Todas
-          </button>
-          {store.exams.map((e) => (
-            <button key={e.id} className="rounded-xl px-3 py-2 text-sm font-semibold border" style={chip(setup.exams.includes(e.id))} onClick={() => onChange({ ...setup, exams: toggle(setup.exams, e.id) })}>
-              {e.institution.split('/')[0]} {e.year}
-            </button>
-          ))}
-        </div>
+        <div className="font-display font-semibold mb-1">📄 Provas</div>
+        <p className="text-xs text-white/50 mb-2">Toque na faculdade (todos os anos) e ajuste os anos. Dá para combinar várias.</p>
+        <ExamPicker selected={setup.exams} onChange={(exams) => onChange({ ...setup, exams })} />
       </div>
       <div>
         <div className="font-display font-semibold mb-2">🎯 Áreas em disputa</div>

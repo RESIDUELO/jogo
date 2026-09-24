@@ -1,10 +1,55 @@
 {
  "version": 1,
- "generatedAt": "2026-09-24T02:42:30+00:00",
+ "generatedAt": "2026-09-24T12:33:16+00:00",
  "exams": [
   {
+   "id": "FAMERP-2022",
+   "title": "FAMERP 2022",
+   "institution": "FAMERP",
+   "year": 2022,
+   "source": "FAMERP-R1_Acesso_Direto-2022.pdf",
+   "file": "famerp-2022.json",
+   "count": 80
+  },
+  {
+   "id": "FAMERP-2023",
+   "title": "FAMERP 2023",
+   "institution": "FAMERP",
+   "year": 2023,
+   "source": "FAMERP-R1_Acesso_Direto-2023.pdf",
+   "file": "famerp-2023.json",
+   "count": 80
+  },
+  {
+   "id": "FAMERP-2024",
+   "title": "FAMERP 2024",
+   "institution": "FAMERP",
+   "year": 2024,
+   "source": "FAMERP-R1_Acesso_Direto-2024.pdf",
+   "file": "famerp-2024.json",
+   "count": 80
+  },
+  {
+   "id": "FAMERP-2025",
+   "title": "FAMERP 2025",
+   "institution": "FAMERP",
+   "year": 2025,
+   "source": "FAMERP-R1_Acesso_Direto-2025.pdf",
+   "file": "famerp-2025.json",
+   "count": 80
+  },
+  {
+   "id": "FAMERP-2026",
+   "title": "FAMERP 2026",
+   "institution": "FAMERP",
+   "year": 2026,
+   "source": "FAMERP-R1_Acesso_Direto-2026.pdf",
+   "file": "famerp-2026.json",
+   "count": 80
+  },
+  {
    "id": "UNOESTE-2022",
-   "title": "UNOESTE/HRPP R1 Acesso Direto 2022",
+   "title": "UNOESTE/HRPP 2022",
    "institution": "UNOESTE/HRPP",
    "year": 2022,
    "source": "UNOESTE-HRPP-R1_Acesso_Direto-2022.pdf",
@@ -13,7 +58,7 @@
   },
   {
    "id": "UNOESTE-2023",
-   "title": "UNOESTE/HRPP R1 Acesso Direto 2023",
+   "title": "UNOESTE/HRPP 2023",
    "institution": "UNOESTE/HRPP",
    "year": 2023,
    "source": "UNOESTE-HRPP-R1_Acesso_Direto-2023.pdf",
@@ -22,7 +67,7 @@
   },
   {
    "id": "UNOESTE-2024",
-   "title": "UNOESTE/HRPP R1 Acesso Direto 2024",
+   "title": "UNOESTE/HRPP 2024",
    "institution": "UNOESTE/HRPP",
    "year": 2024,
    "source": "UNOESTE-HRPP-R1_Acesso_Direto-2024.pdf",
@@ -31,7 +76,7 @@
   },
   {
    "id": "UNOESTE-2025",
-   "title": "UNOESTE/HRPP R1 Acesso Direto 2025",
+   "title": "UNOESTE/HRPP 2025",
    "institution": "UNOESTE/HRPP",
    "year": 2025,
    "source": "UNOESTE-HRPP-R1_Acesso_Direto-2025.pdf",
@@ -40,7 +85,7 @@
   },
   {
    "id": "UNOESTE-2026",
-   "title": "UNOESTE/HRPP R1 Acesso Direto 2026",
+   "title": "UNOESTE/HRPP 2026",
    "institution": "UNOESTE/HRPP",
    "year": 2026,
    "source": "UNOESTE-HRPP-R1_Acesso_Direto-2026.pdf",

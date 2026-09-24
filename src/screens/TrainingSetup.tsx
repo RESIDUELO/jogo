@@ -4,6 +4,7 @@ import { isPlayable } from '../engine/selection';
 import { useStore } from '../state/store';
 import type { CategoryId } from '../types';
 import { Btn, Card, Header, Seg } from '../ui/common';
+import { ExamPicker } from '../ui/ExamPicker';
 
 export function TrainingSetup() {
   const store = useStore();
@@ -11,17 +12,17 @@ export function TrainingSetup() {
   const [count, setCount] = useState<number | 'inf'>(10);
   const [cats, setCats] = useState<CategoryId[]>([]);
   const [wrongOnly, setWrongOnly] = useState(false);
-  const [examId, setExamId] = useState('');
+  const [exams, setExams] = useState<string[]>([]);
 
   const available = useMemo(() => {
     return store.questions.filter(
       (q) =>
         isPlayable(q, 'treino', player.settings.includeAnnulledInStudy) &&
         (!cats.length || cats.includes(q.category)) &&
-        (!examId || q.examId === examId) &&
+        (!exams.length || exams.includes(q.examId)) &&
         (!wrongOnly || (store.history.get(q.id)?.wrong ?? 0) > 0),
     ).length;
-  }, [store.questions, cats, examId, wrongOnly, store.history, player.settings.includeAnnulledInStudy]);
+  }, [store.questions, cats, exams, wrongOnly, store.history, player.settings.includeAnnulledInStudy]);
 
   const toggle = (c: CategoryId) => setCats((cs) => (cs.includes(c) ? cs.filter((x) => x !== c) : [...cs, c]));
 
@@ -59,15 +60,8 @@ export function TrainingSetup() {
           </div>
         </div>
         <div>
-          <div className="font-display font-semibold mb-2">Prova</div>
-          <select className="input" value={examId} onChange={(e) => setExamId(e.target.value)}>
-            <option value="">Todas as provas</option>
-            {store.exams.map((e) => (
-              <option key={e.id} value={e.id}>
-                {e.title} ({e.count})
-              </option>
-            ))}
-          </select>
+          <div className="font-display font-semibold mb-2">Provas</div>
+          <ExamPicker selected={exams} onChange={setExams} />
         </div>
         <label className="flex items-center gap-3 cursor-pointer">
           <input type="checkbox" checked={wrongOnly} onChange={(e) => setWrongOnly(e.target.checked)} className="w-5 h-5 accent-violet-500" />
@@ -77,7 +71,7 @@ export function TrainingSetup() {
           </span>
         </label>
         <div className="text-sm text-white/60">{available} questões disponíveis com esses filtros.</div>
-        <Btn big className="w-full" disabled={!available} onClick={() => store.nav({ name: 'trainingRun', config: { count, categories: cats, wrongOnly, examId: examId || undefined } })}>
+        <Btn big className="w-full" disabled={!available} onClick={() => store.nav({ name: 'trainingRun', config: { count, categories: cats, wrongOnly, exams } })}>
           📚 COMEÇAR TREINO
         </Btn>
       </Card>
