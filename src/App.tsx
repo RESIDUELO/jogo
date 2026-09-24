@@ -17,6 +17,7 @@ import { TrainingSetup } from './screens/TrainingSetup';
 import { WrongQuestions } from './screens/WrongQuestions';
 import { useStore } from './state/store';
 import { EventLayer } from './ui/EventLayer';
+import { PwaUpdater } from './ui/Pwa';
 
 function Current() {
   const { screen } = useStore();
@@ -94,7 +95,7 @@ export function App() {
   const { ready, error, player } = useStore();
   return (
     <div className="min-h-screen bg-app text-white">
-      <div className="mx-auto max-w-3xl px-4 pb-[env(safe-area-inset-bottom)]">
+      <div className="mx-auto max-w-3xl px-4 pb-[env(safe-area-inset-bottom)] pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))]">
         {error ? (
           <div className="py-24 text-center">
             <div className="text-5xl">⚠️</div>
@@ -114,6 +115,7 @@ export function App() {
       </div>
       <EventLayer />
       {ready && <InviteLink />}
+      <PwaUpdater />
     </div>
   );
 }

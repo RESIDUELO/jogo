@@ -7,6 +7,7 @@ import { leagueFor, levelFromXp } from '../engine/progression';
 import { computeStats, rate, recommendation } from '../engine/stats';
 import { addDays, dayKey, fmtInt } from '../engine/util';
 import { useOnline } from '../state/online';
+import { InstallCard } from '../ui/Pwa';
 import { useStore, type Screen } from '../state/store';
 import { Avatar, Bar, Btn, Card, Coins } from '../ui/common';
 
@@ -90,6 +91,8 @@ export function Home() {
           <div className="text-center text-[11px] text-white/40 mt-2">{fmtInt(store.questions.filter((q) => q.status === 'ativa').length)} questões ativas · {store.exams.length} provas</div>
         </div>
       </div>
+
+      <InstallCard />
 
       {/* streak diário */}
       <Card className="p-4">

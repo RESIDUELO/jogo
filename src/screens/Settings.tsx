@@ -5,6 +5,7 @@ import { playerRepo } from '../services/playerRepo';
 import { useStore } from '../state/store';
 import type { PlayerSettings } from '../types';
 import { Avatar, Btn, Card, Header, Modal, Seg } from '../ui/common';
+import { InstallCard } from '../ui/Pwa';
 
 function download(name: string, content: string, type = 'application/json') {
   const a = document.createElement('a');
@@ -34,6 +35,10 @@ export function SettingsScreen() {
           <Seg value={p.settings.includeAnnulledInStudy ? 'on' : 'off'} onChange={(v) => set('includeAnnulledInStudy', v === 'on')} options={[{ v: 'off', label: 'Não' }, { v: 'on', label: 'Sim' }]} />
         </Row>
       </Card>
+
+      <div className="mt-4">
+        <InstallCard />
+      </div>
 
       <Card className="p-4 mt-4 space-y-3">
         <div className="font-display font-semibold">💾 Dados</div>
