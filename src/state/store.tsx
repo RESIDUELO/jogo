@@ -15,7 +15,7 @@ import { dayKey } from '../engine/util';
 import { playerRepo } from '../services/playerRepo';
 import { cardRepo } from '../services/questionRepo';
 import { toQuestion } from '../engine/cards';
-import type { AnswerFormat, AnswerRecord, Flashcard, MatchSetupData, MatchSummary, Player, Question } from '../types';
+import type { AnswerRecord, Flashcard, MatchSetupData, MatchSummary, Player, Question } from '../types';
 
 export type Screen = (
   | { name: 'home' }
@@ -56,7 +56,6 @@ export interface TrainingLaunch {
   questionIds?: string[]; // lista fixa (ex.: revisar erradas de uma partida)
   topics?: string[]; // temas escolhidos (vazio = todos)
   timeSec?: number; // tempo por cartão
-  format?: AnswerFormat;
 }
 
 export interface Toast {
@@ -68,10 +67,8 @@ interface Store {
   ready: boolean;
   error?: string;
   cards: Flashcard[];
-  /** Cartão por id, já como pergunta no formato flashcard (relatórios, revisão). */
+  /** Cartão por id, já como pergunta jogável. */
   qById: Map<string, Question>;
-  /** Pergunta jogável no formato escolhido (múltipla escolha gera as alternativas). */
-  play: (id: string, format: AnswerFormat) => Question | undefined;
   players: Player[];
   player: Player | null;
   answers: AnswerRecord[];
@@ -134,15 +131,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setSoundEnabled(player?.settings.sound ?? true);
   }, [player?.settings.sound]);
 
-  const qById = useMemo(() => new Map(cards.map((c) => [c.id, toQuestion(c, 'flash', cards)])), [cards]);
-  const cardById = useMemo(() => new Map(cards.map((c) => [c.id, c])), [cards]);
-  const play = useCallback(
-    (id: string, format: AnswerFormat) => {
-      const c = cardById.get(id);
-      return c && toQuestion(c, format, cards);
-    },
-    [cardById, cards],
-  );
+  const qById = useMemo(() => new Map(cards.map((c) => [c.id, toQuestion(c)])), [cards]);
   const history = useMemo(() => buildHistory(answers), [answers]);
 
   const emit = useCallback((events: GameEvent[], pid?: string) => {
@@ -173,7 +162,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     error,
     cards,
     qById,
-    play,
     players,
     player,
     answers,

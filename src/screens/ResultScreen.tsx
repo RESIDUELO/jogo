@@ -135,8 +135,7 @@ export function MatchReport({ summary, limit }: { summary: MatchSummary; limit?:
   return (
     <div className="space-y-2">
       {shown.map((it, i) => {
-        // mesma montagem da partida (as alternativas são determinísticas por cartão)
-        const q = it.chosen ? store.play(it.qid, 'mc') : store.qById.get(it.qid);
+        const q = store.qById.get(it.qid);
         if (!q) return null;
         const isOpen = open === it.qid + i;
         return (

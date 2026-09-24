@@ -105,7 +105,7 @@ export function MatchScreen({ config }: { config: MatchLaunch }) {
       pickQuestion(pool, hist, { category: cat, exclude, minDifficulty: crown ? 2 : undefined }) ??
       pickQuestion(pool, hist, { category: cat, exclude }) ??
       pickQuestion(pool, hist, { category: cat }); // área esgotada: permite repetir
-    return base && store.play(base.id, m.setup.format);
+    return base;
   }
 
   // ---------- turno do BOT ----------

@@ -8,7 +8,7 @@ import { closestBot } from '../services/matchmaking';
 import { setupKey } from '../services/online';
 import { useOnline } from '../state/online';
 import { useStore } from '../state/store';
-import type { AnswerFormat, MatchSetupData } from '../types';
+import type { MatchSetupData } from '../types';
 import { Avatar, Bar, Btn, Card, Header, Seg } from '../ui/common';
 import { TopicPicker } from '../ui/TopicPicker';
 
@@ -19,7 +19,7 @@ function loadSetup(): MatchSetupData {
     return {
       topics: Array.isArray(s.topics) ? s.topics.filter((t: unknown) => typeof t === 'string') : [],
       timeSec: TIME_OPTIONS.includes(s.timeSec) ? s.timeSec : DEFAULT_SETUP.timeSec,
-      format: s.format === 'flash' ? 'flash' : 'mc',
+      format: 'flash',
       long: !!s.long,
     };
   } catch {
@@ -27,7 +27,7 @@ function loadSetup(): MatchSetupData {
   }
 }
 
-/** Temas, tempo e formato da partida (escolhidos por quem cria a partida/sala). */
+/** Temas e tempo da partida (escolhidos por quem cria a partida/sala). */
 export function useSetup() {
   const [setup, setSetup] = useState<MatchSetupData>(loadSetup);
   useEffect(() => {
@@ -46,19 +46,6 @@ export function TimePicker({ value, onChange }: { value: number; onChange: (s: n
   return <Seg value={value} onChange={onChange} options={TIME_OPTIONS.map((t) => ({ v: t, label: fmtTime(t) }))} />;
 }
 
-export function FormatPicker({ value, onChange }: { value: AnswerFormat; onChange: (f: AnswerFormat) => void }) {
-  return (
-    <Seg
-      value={value}
-      onChange={onChange}
-      options={[
-        { v: 'mc', label: '🔠 Múltipla escolha' },
-        { v: 'flash', label: '🃏 Flashcard' },
-      ]}
-    />
-  );
-}
-
 export function SetupPicker({ setup, onChange }: { setup: MatchSetupData; onChange: (s: MatchSetupData) => void }) {
   const store = useStore();
   const count = useMemo(() => store.cards.filter((c) => inTopics(c, setup.topics)).length, [store.cards, setup.topics]);
@@ -73,11 +60,6 @@ export function SetupPicker({ setup, onChange }: { setup: MatchSetupData; onChan
       <div>
         <div className="font-display font-semibold mb-2">⏱️ Tempo por rodada</div>
         <TimePicker value={setup.timeSec} onChange={(timeSec) => onChange({ ...setup, timeSec })} />
-      </div>
-      <div>
-        <div className="font-display font-semibold mb-1">🃏 Como responder</div>
-        <p className="text-xs text-white/50 mb-2">{setup.format === 'mc' ? 'O verso certo aparece no meio de 4 opções (as outras são respostas de cartões parecidos).' : 'Veja a pergunta, mostre a resposta e diga se acertou.'}</p>
-        <FormatPicker value={setup.format} onChange={(format) => onChange({ ...setup, format })} />
       </div>
       <div className="flex flex-wrap items-center gap-3 justify-between">
         <Seg
@@ -270,7 +252,7 @@ function OnlineCard({ setup }: { setup: MatchSetupData }) {
             </div>
           </div>
           {msg && <p className="text-sm text-rose-300">{msg}</p>}
-          <p className="text-[11px] text-white/40">Na sala com código, valem os temas, o tempo e o formato escolhidos por quem criou. Itens ficam desativados no online.</p>
+          <p className="text-[11px] text-white/40">Na sala com código, valem os temas e o tempo escolhidos por quem criou. Itens ficam desativados no online.</p>
         </div>
       )}
     </Card>

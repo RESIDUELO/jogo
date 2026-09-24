@@ -50,7 +50,7 @@ export function OnlineMatchScreen({ matchId }: { matchId: string }) {
   const oppIdx = myIdx === 0 ? 1 : 0;
   const myTurn = !!state && state.turn === myIdx && state.phase !== 'end';
   const pool = useMemo(() => (row ? matchPool(store.qById.values(), row.config) : []), [store.qById, row?.config]); // eslint-disable-line react-hooks/exhaustive-deps
-  const q = useMemo(() => (state?.qid ? store.play(state.qid, state.setup.format) : undefined), [state?.qid, state?.setup.format, store.play]); // eslint-disable-line react-hooks/exhaustive-deps
+  const q = state?.qid ? store.qById.get(state.qid) : undefined;
   const limitMs = (state?.setup.timeSec ?? 30) * 1000;
 
   const accept = (r: OnlineMatchRow) => {

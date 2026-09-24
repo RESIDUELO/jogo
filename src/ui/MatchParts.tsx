@@ -138,7 +138,7 @@ function VsIntro({ a, b, mode, match }: { a: CompetitorState; b: CompetitorState
         <div className="text-center text-[11px] text-white/50 mt-2 mb-6 px-2">
           {match.setup.topics?.length ? match.setup.topics.slice(0, 3).map((t) => topicLabel(t) || CAT[t as CategoryId]?.name).join(' · ') + (match.setup.topics.length > 3 ? ` +${match.setup.topics.length - 3}` : '') : 'Todos os temas'}
           <br />
-          {match.setup.format === 'flash' ? '🃏 Flashcard' : '🔠 Múltipla escolha'} · ⏱️ {match.setup.timeSec} s por pergunta
+          ⏱️ {match.setup.timeSec} s por pergunta
         </div>
         <div className="flex items-center justify-between">
           <div className="text-center animate-slideIn">

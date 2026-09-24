@@ -15,8 +15,7 @@ npm run build      # typecheck + build em dist/
 
 ## O que já funciona
 
-- **Antes da partida**, quem cria a partida/sala escolhe: **temas** (grandes áreas e subtemas, com caixas de seleção em árvore), **tempo por rodada** (15 s a 2 min), **formato** (múltipla escolha automática ou flashcard com autoavaliação) e partida rápida/longa. A roleta só tem as áreas escolhidas.
-- **Múltipla escolha automática:** o verso certo aparece com 3 respostas de cartões do mesmo subtema (sempre as mesmas para o mesmo cartão).
+- **Antes da partida**, quem cria a partida/sala escolhe: **temas** (grandes áreas e subtemas, com caixas de seleção em árvore), **tempo por rodada** (15 s a 2 min) e partida rápida/longa. Na vez de responder, você vê a pergunta, mostra a resposta e diz se acertou. A roleta só tem as áreas escolhidas.
 - **Quem espera a vez vê a pergunta** que o adversário está respondendo e, depois, a resposta e o resultado.
 - Bots (Interno → Especialista), PvP local e **PvP online** (Supabase: conta ou visitante, buscar adversário, sala com código, ranking).
 - **Relatório de fim de partida** com cada cartão, acerto/erro e resposta; **Baralho** para navegar e buscar cartões; treino, cartões errados, estatísticas, XP, missões, conquistas, loja.
@@ -60,7 +59,7 @@ tools/build_cards.py        ← .apkg → public/cards/deck.json (+ imagens em p
 src/
   types/        modelo de dados: Flashcard, Question (pergunta jogável), Player, AnswerRecord, MatchSummary…
   data/         categorias, níveis/ligas, bots, loja, conquistas, missões
-  engine/       regras puras: cards.ts (árvore de temas, múltipla escolha), match.ts, scoring, elo, selection (anti-repetição), bot, player, stats
+  engine/       regras puras: cards.ts (árvore de temas), match.ts, scoring, elo, selection (anti-repetição), bot, player, stats
   services/     questionRepo (baralho estático), playerRepo (localStorage), online/ (Supabase + simulado), rankings
   state/        store React
   ui/ screens/  componentes e telas

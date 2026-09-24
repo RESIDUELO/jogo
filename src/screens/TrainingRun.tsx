@@ -16,7 +16,6 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
   const store = useStore();
   const player = store.player!;
   const id = useRef(uid('t-'));
-  const format = config.format ?? 'mc';
   const limitMs = (config.timeSec ?? 60) * 1000;
   const pool = useMemo(() => {
     let qs = [...store.qById.values()];
@@ -36,7 +35,7 @@ export function TrainingRun({ config }: { config: TrainingLaunch }) {
     const q = pickQuestion(pool, store.history, { exclude: used.current, wrongOnly: config.wrongOnly && !config.questionIds });
     if (!q) return undefined;
     used.current.add(q.id);
-    return store.play(q.id, format);
+    return q;
   };
   const [q, setQ] = useState<Question | undefined>(() => next());
   const [n, setN] = useState(1);

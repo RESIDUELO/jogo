@@ -107,7 +107,7 @@ export function BankScreen() {
       <div className="flex items-center justify-between gap-2 mt-4 mb-2">
         <div className="text-sm text-white/60">{list.length} cartões · toque para virar</div>
         {list.length > 0 && (
-          <Btn onClick={() => store.nav({ name: 'trainingRun', config: { count: Math.min(50, list.length), categories: [], wrongOnly: false, questionIds: list.map((c) => c.id), format: 'flash', timeSec: 60 } })}>
+          <Btn onClick={() => store.nav({ name: 'trainingRun', config: { count: Math.min(50, list.length), categories: [], wrongOnly: false, questionIds: list.map((c) => c.id), timeSec: 60 } })}>
             📚 Treinar estes
           </Btn>
         )}

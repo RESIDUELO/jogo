@@ -1,9 +1,7 @@
 // Flashcards → perguntas do jogo. Árvore de temas (área › subtema › sub-subtema),
-// filtro pelos temas escolhidos e múltipla escolha automática.
+// filtro pelos temas escolhidos.
 import { CATEGORY_IDS } from '../data/categories';
-import type { AnswerFormat, CategoryId, Flashcard, Letter, MatchSetupData, Question } from '../types';
-import { LETTERS } from '../types';
-import { hash01, normalize, seeded, shuffle } from './util';
+import type { CategoryId, Flashcard, MatchSetupData, Question } from '../types';
 
 export const SEP = '|';
 export const cardKey = (c: Pick<Flashcard, 'area' | 'path'>) => [c.area, ...c.path].join(SEP);
@@ -65,37 +63,9 @@ export function setupAreas(setup: Pick<MatchSetupData, 'topics'>, cards?: Flashc
   return withCards.length ? withCards : chosen;
 }
 
-const clean = (s: string) => normalize(s).replace(/\s+/g, ' ').trim();
-
-/** Distratores: versos de outros cartões, do tema mais próximo para o mais distante. */
-function distractors(card: Flashcard, deck: Flashcard[], n: number): string[] {
-  const rnd = seeded(Math.floor(hash01(card.id) * 1e9));
-  const own = clean(card.back);
-  const len = card.back.length;
-  const tiers: Flashcard[][] = [];
-  for (let d = card.path.length; d >= 0; d--) {
-    const prefix = [card.area, ...card.path.slice(0, d)].join(SEP);
-    tiers.push(deck.filter((c) => c.id !== card.id && (cardKey(c) === prefix || cardKey(c).startsWith(prefix + SEP))));
-  }
-  const out: string[] = [];
-  const seen = new Set([own]);
-  for (const tier of tiers) {
-    // prefere respostas de tamanho parecido
-    const cands = shuffle(tier, rnd).sort((a, b) => Math.abs(a.back.length - len) - Math.abs(b.back.length - len));
-    for (const c of cands) {
-      const k = clean(c.back);
-      if (seen.has(k) || c.back.length > 220) continue;
-      seen.add(k);
-      out.push(c.back);
-      if (out.length >= n) return out;
-    }
-  }
-  return out;
-}
-
-/** Transforma um flashcard em pergunta jogável no formato pedido. */
-export function toQuestion(card: Flashcard, format: AnswerFormat, deck: Flashcard[]): Question {
-  const base: Question = {
+/** Transforma um flashcard em pergunta jogável (revelar a resposta e se autoavaliar). */
+export function toQuestion(card: Flashcard): Question {
+  return {
     id: card.id,
     kind: 'flash',
     text: card.front,
@@ -110,15 +80,7 @@ export function toQuestion(card: Flashcard, format: AnswerFormat, deck: Flashcar
     tags: card.tags,
     images: card.images,
   };
-  if (format !== 'mc' || card.back.length > 220) return base;
-  const wrong = distractors(card, deck, 3);
-  if (wrong.length < 3) return base; // poucos cartões parecidos: vira flashcard clássico
-  const rnd = seeded(Math.floor(hash01(card.id + '#pos') * 1e9));
-  const options = shuffle([card.back, ...wrong], rnd);
-  const alternatives: Partial<Record<Letter, string>> = {};
-  options.forEach((o, i) => (alternatives[LETTERS[i]] = o));
-  return { ...base, kind: 'mc', alternatives, answer: LETTERS[options.indexOf(card.back)] };
 }
 
-export const DEFAULT_SETUP: MatchSetupData = { topics: [], timeSec: 30, format: 'mc' };
+export const DEFAULT_SETUP: MatchSetupData = { topics: [], timeSec: 30, format: 'flash' };
 export const TIME_OPTIONS = [15, 20, 30, 45, 60, 90, 120];

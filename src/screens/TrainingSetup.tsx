@@ -1,20 +1,18 @@
 import { useEffect, useMemo, useState } from 'react';
 import { inTopics } from '../engine/cards';
 import { useStore } from '../state/store';
-import type { AnswerFormat } from '../types';
 import { Btn, Card, Header, Seg } from '../ui/common';
 import { TopicPicker } from '../ui/TopicPicker';
-import { FormatPicker, TimePicker } from './PlayModes';
+import { TimePicker } from './PlayModes';
 
 const KEY = 'rdl.trainSetup';
 interface TrainPrefs {
   count: number | 'inf';
   topics: string[];
   timeSec: number;
-  format: AnswerFormat;
   wrongOnly: boolean;
 }
-const DEFAULTS: TrainPrefs = { count: 10, topics: [], timeSec: 60, format: 'flash', wrongOnly: false };
+const DEFAULTS: TrainPrefs = { count: 10, topics: [], timeSec: 60, wrongOnly: false };
 function load(): TrainPrefs {
   try {
     return { ...DEFAULTS, ...JSON.parse(localStorage.getItem(KEY) || '{}') };
@@ -65,10 +63,6 @@ export function TrainingSetup() {
           <div className="font-display font-semibold mb-2">⏱️ Tempo por cartão</div>
           <TimePicker value={t.timeSec} onChange={(timeSec) => set({ timeSec })} />
         </div>
-        <div>
-          <div className="font-display font-semibold mb-2">🃏 Como responder</div>
-          <FormatPicker value={t.format} onChange={(format) => set({ format })} />
-        </div>
         <label className="flex items-center gap-3 cursor-pointer">
           <input type="checkbox" checked={t.wrongOnly} onChange={(e) => set({ wrongOnly: e.target.checked })} className="w-5 h-5 accent-violet-500" />
           <span>
@@ -81,7 +75,7 @@ export function TrainingSetup() {
           big
           className="w-full"
           disabled={!available}
-          onClick={() => store.nav({ name: 'trainingRun', config: { count: t.count, categories: [], wrongOnly: t.wrongOnly, topics: t.topics, timeSec: t.timeSec, format: t.format } })}
+          onClick={() => store.nav({ name: 'trainingRun', config: { count: t.count, categories: [], wrongOnly: t.wrongOnly, topics: t.topics, timeSec: t.timeSec } })}
         >
           📚 COMEÇAR TREINO
         </Btn>
