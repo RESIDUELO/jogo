@@ -1,6 +1,7 @@
 // App instalável: aviso de nova versão, "pronto para offline" e botão de instalar.
 import { useEffect, useState } from 'react';
 import { useRegisterSW } from 'virtual:pwa-register/react';
+import { isNative } from '../native';
 import { Btn, Modal } from './common';
 
 interface InstallPromptEvent extends Event {
@@ -21,7 +22,8 @@ window.addEventListener('appinstalled', () => {
   subs.forEach((f) => f());
 });
 
-export const isStandalone = () => window.matchMedia('(display-mode: standalone)').matches || (navigator as unknown as { standalone?: boolean }).standalone === true;
+const isAndroid = () => /android/i.test(navigator.userAgent);
+export const isStandalone = () => isNative() || window.matchMedia('(display-mode: standalone)').matches || (navigator as unknown as { standalone?: boolean }).standalone === true;
 const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
 export function useInstall() {
@@ -35,6 +37,7 @@ export function useInstall() {
     installed: isStandalone(),
     canPrompt: !!deferred,
     ios: isIOS(),
+    android: isAndroid(),
     prompt: async () => {
       if (!deferred) return false;
       await deferred.prompt();
@@ -52,6 +55,20 @@ export function InstallCard() {
   if (inst.installed) return null;
   return (
     <>
+      {inst.android && (
+        <a
+          href={`${import.meta.env.BASE_URL}residuelo.apk`}
+          download
+          className="mb-2 w-full flex items-center gap-3 rounded-2xl p-3 text-left border border-sky-400/30 bg-sky-500/10 hover:bg-sky-500/15 transition"
+        >
+          <span className="text-3xl">🤖</span>
+          <span className="flex-1">
+            <span className="block font-display font-semibold">Baixar APK (Android)</span>
+            <span className="block text-xs text-white/60">App nativo, funciona 100% offline. Permita "instalar apps desconhecidos" se o Android pedir.</span>
+          </span>
+          <span className="text-xl">⬇</span>
+        </a>
+      )}
       <button
         onClick={async () => {
           if (inst.canPrompt) await inst.prompt();
@@ -105,6 +122,10 @@ export function InstallCard() {
 
 /** Avisos do service worker: nova versão disponível / pronto para offline. */
 export function PwaUpdater() {
+  return isNative() ? null : <PwaUpdaterWeb />;
+}
+
+function PwaUpdaterWeb() {
   const {
     needRefresh: [needRefresh, setNeedRefresh],
     offlineReady: [offlineReady, setOfflineReady],

@@ -1,7 +1,8 @@
 import { BankScreen } from './screens/Bank';
 import { Home } from './screens/Home';
 import { MatchScreen } from './screens/MatchScreen';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { setupBackButton } from './native';
 import { AccountScreen, OnlineRoomScreen, OnlineSearchScreen, PlayScreen, RankedScreen } from './screens/PlayModes';
 import { OnlineMatchScreen } from './screens/OnlineMatchScreen';
 import { ReportScreen } from './screens/ResultScreen';
@@ -91,6 +92,22 @@ function InviteLink() {
   return null;
 }
 
+/** Botão voltar do Android navega dentro do jogo. */
+function NativeBack() {
+  const store = useStore();
+  const ref = useRef(store);
+  ref.current = store;
+  useEffect(() => {
+    void setupBackButton(() => {
+      const s = ref.current;
+      if (s.screen.name === 'home' || !s.player) return false;
+      s.back();
+      return true;
+    });
+  }, []);
+  return null;
+}
+
 export function App() {
   const { ready, error, player } = useStore();
   return (
@@ -116,6 +133,7 @@ export function App() {
       <EventLayer />
       {ready && <InviteLink />}
       <PwaUpdater />
+      <NativeBack />
     </div>
   );
 }

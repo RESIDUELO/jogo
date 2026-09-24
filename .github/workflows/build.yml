@@ -1,0 +1,75 @@
+# Compila o site (GitHub Pages) e o APK Android a cada push.
+# O APK fica em: Releases do GitHub e no site (…/seila/residuelo.apk).
+name: Site + APK
+
+on:
+  push:
+    branches: [claude/nice-hawking-1x3urx, main]
+    paths-ignore: ['README.md', 'tools/**', 'supabase/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Build do site (PWA)
+        run: |
+          npm run build
+          mv dist site
+
+      - name: Build do APK
+        run: |
+          CAP_BUILD=1 npm run build
+          npx cap sync android
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleRelease -PversionCode=${{ github.run_number }} --no-daemon --stacktrace
+          cp app/build/outputs/apk/release/app-release.apk ../site/residuelo.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: residuelo-apk
+          path: site/residuelo.apk
+
+      - name: Publicar Release com o APK
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.${{ github.run_number }}
+          name: Residuelo v1.${{ github.run_number }}
+          target_commitish: ${{ github.sha }}
+          make_latest: true
+          body: |
+            APK do Residuelo (Android). Baixe `residuelo.apk` abaixo e instale no celular.
+            Para atualizar, instale a versão nova por cima: o progresso é mantido.
+          files: site/residuelo.apk
+
+      - name: Publicar site + APK no GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./site

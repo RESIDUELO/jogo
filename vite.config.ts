@@ -2,12 +2,16 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
+// CAP_BUILD=1 → build para o APK (Capacitor): sem service worker, pois os arquivos já vêm dentro do app
+const nativeBuild = process.env.CAP_BUILD === '1';
+
 // base relativa para funcionar no GitHub Pages (/seila/)
 export default defineConfig({
   plugins: [
     react(),
     // App instalável (PWA): manifesto + service worker com cache offline
     VitePWA({
+      disable: nativeBuild,
       registerType: 'prompt', // nova versão só entra quando o jogador aceitar (não interrompe partidas)
       includeAssets: ['icons/apple-touch-icon.png', 'icons/favicon-64.png'],
       manifest: {
